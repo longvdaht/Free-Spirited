@@ -1,0 +1,229 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumb_CA79zc": {
+      "type": "breadcrumb",
+      "settings": {
+        "section_visibility": "always",
+        "color_scheme": "",
+        "top_space_desktop": 15,
+        "bottom_space_desktop": 15,
+        "top_space_mobile": 10,
+        "bottom_space_mobile": 10
+      }
+    },
+    "countdown_wGcfkg": {
+      "type": "countdown",
+      "disabled": true,
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "full_width": true,
+        "layout_style": "stacked-style",
+        "desktop_height": "400px",
+        "mobile_height": "auto",
+        "heading": "Heat Wave Sale Ends In:",
+        "heading_size": "h6",
+        "seo_heading": "h6",
+        "date": "15/7/2026",
+        "enable_glass_background": true,
+        "content_position": "center",
+        "button_style": "solid",
+        "btn_text": "",
+        "btn_link": "",
+        "btn_size": "medium",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#eff341",
+        "overlay_background": "#000000",
+        "overlay_opacity": 0,
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 15,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 10
+      }
+    },
+    "categories_9UpaFm": {
+      "type": "categories",
+      "blocks": {
+        "collection_EefHEp": {
+          "type": "collection",
+          "settings": {
+            "collection": "tie-dye-shirts",
+            "image": "shopify://shop_images/PinkHeartTieDyeTee.jpg",
+            "heading": "Tees"
+          }
+        },
+        "collection_JRGRe3": {
+          "type": "collection",
+          "settings": {
+            "collection": "tank-tops",
+            "heading": "Tanks"
+          }
+        },
+        "collection_Q8KGKV": {
+          "type": "collection",
+          "settings": {
+            "collection": "v-neck-tie-dye-shirts",
+            "image": "shopify://shop_images/desert-rose-v-neck-774380.jpg",
+            "heading": "V-Necks"
+          }
+        },
+        "collection_NnxUHH": {
+          "type": "collection",
+          "settings": {
+            "collection": "tie-dye-dresses",
+            "heading": "Tie-Dye Maxi Dresses"
+          }
+        },
+        "collection_YjDrPj": {
+          "type": "collection",
+          "settings": {
+            "collection": "long-sleeve-tie-dye-shirts",
+            "image": "shopify://shop_images/ReactiveRainbowHandDyedLongSleeve_2.jpg",
+            "heading": "Long Sleeves"
+          }
+        },
+        "collection_ffdq6W": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundle-to-save",
+            "image": "shopify://shop_images/long-sleeve-best-sellers-bundle-927958_95d1c4fd-0d42-4542-a122-4bd4f820529d.png",
+            "heading": "The Best Deal: Bundles"
+          }
+        },
+        "collection_qwbKq6": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-arrivals",
+            "heading": ""
+          }
+        },
+        "collection_ywiaLr": {
+          "type": "collection",
+          "settings": {
+            "collection": "kids-tie-dye-shirt",
+            "heading": "Kids Tie-Dye Tees"
+          }
+        },
+        "collection_WBYPik": {
+          "type": "collection",
+          "settings": {
+            "collection": "long-sleeve-hoodie",
+            "heading": ""
+          }
+        },
+        "collection_XRHh6E": {
+          "type": "collection",
+          "settings": {
+            "collection": "bella-canvas-tee-sale",
+            "heading": "Graphic Tees"
+          }
+        },
+        "collection_MGNkKw": {
+          "type": "collection",
+          "settings": {
+            "collection": "jewelry",
+            "heading": "Jewelry"
+          }
+        }
+      },
+      "block_order": [
+        "collection_EefHEp",
+        "collection_JRGRe3",
+        "collection_Q8KGKV",
+        "collection_NnxUHH",
+        "collection_YjDrPj",
+        "collection_ffdq6W",
+        "collection_qwbKq6",
+        "collection_ywiaLr",
+        "collection_WBYPik",
+        "collection_XRHh6E",
+        "collection_MGNkKw"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "heading": "",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "heading_alignment": "text-center",
+        "column_style": "rounded",
+        "desktop_column_count": 6,
+        "desktop_column_gap": 9,
+        "desktop_column_width": "65%",
+        "card_hover_style": "inside-shadow",
+        "mobile_column_count": "2",
+        "mobile_column_gap": 12,
+        "mobile_column_width": "75%",
+        "enable_swipe_mobile": true,
+        "color_scheme": "",
+        "highlighted_color": "#eff341",
+        "section_background": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 10,
+        "bottom_space_mobile": 0
+      }
+    },
+    "main-collection-banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "collection_title": true,
+        "collection_description": true,
+        "heading_overly": false,
+        "description_overly": false,
+        "collection_image_checker": false,
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "banner_height_desktop": "250px",
+        "banner_height_mobile": "100px",
+        "content_width": "medium",
+        "content_alignment": "text-center",
+        "banner_bg_color": "#f2f2f2",
+        "bg_color_opacity": "#000000",
+        "text_color": "#000000",
+        "overlay_opacity": 50,
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 20,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 20
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "custom_css": [
+        ".product-badges-card {top: 0px !important;}"
+      ],
+      "settings": {
+        "products_per_page": 40,
+        "columns_desktop": 4,
+        "infinte_scroll": false,
+        "infinte_scroll_type": "onscroll",
+        "enable_filtering": true,
+        "filter_type": "dropdown",
+        "enable_sorting": true,
+        "color_scheme": "primary",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 35
+      }
+    }
+  },
+  "order": [
+    "breadcrumb_CA79zc",
+    "countdown_wGcfkg",
+    "categories_9UpaFm",
+    "main-collection-banner",
+    "main-collection"
+  ]
+}

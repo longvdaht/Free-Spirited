@@ -1,0 +1,53 @@
+{% if settings.enable_scroll_to_top %}
+<button class="scroll-to-top position-{{ settings.scroll_btn_position }}" title="Go to top"    onclick="scrollToTop()">
+    <div class="scroll-to-top-inner">
+        <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
+            <path d="M5.89338 2.23386L5.84983 2.27573L2.03117 5.94761C1.90077 6.07297 1.7251 6.14242 1.54313 6.14242C1.45291 6.14242 1.36345 6.12535 1.27979 6.09204C1.19613 6.05872 1.11974 6.00975 1.05512 5.94763C0.990497 5.8855 0.938902 5.81142 0.903587 5.72945C0.868264 5.64747 0.85 5.55939 0.85 5.47028C0.85 5.29007 0.924523 5.11849 1.05512 4.99294L4.91734 1.28C4.91733 1.28001 4.91734 1.27999 4.91734 1.28C5.05945 1.14333 5.22787 1.03519 5.41281 0.96152C5.59775 0.88785 5.79578 0.85 5.99564 0.85C6.19551 0.85 6.39354 0.88785 6.57848 0.96152C6.76341 1.03519 6.93182 1.1433 7.07392 1.27997C7.07391 1.27996 7.07393 1.27998 7.07392 1.27997L10.935 4.99184C11.0014 5.0531 11.0547 5.12674 11.0918 5.20867C11.129 5.29116 11.1489 5.38022 11.15 5.47057C11.151 5.56091 11.1333 5.65041 11.098 5.73374C11.0626 5.81705 11.0105 5.89233 10.945 5.95533C10.8795 6.01831 10.8019 6.06777 10.7169 6.10108C10.6318 6.13439 10.541 6.15096 10.4495 6.14996C10.358 6.14895 10.2675 6.13039 10.1833 6.09522C10.0996 6.06028 10.0236 6.00955 9.95982 5.94572L6.09874 2.23386C6.08578 2.2214 6.07008 2.21122 6.0524 2.20418C6.0347 2.19713 6.01554 2.19344 5.99606 2.19344C5.97658 2.19344 5.95742 2.19713 5.93972 2.20418C5.92204 2.21122 5.90634 2.2214 5.89338 2.23386Z" fill="currentColor"/>
+            <path d="M4.91734 1.28L1.05512 4.99294C0.924523 5.11849 0.85 5.29007 0.85 5.47028C0.85 5.55939 0.868264 5.64747 0.903587 5.72945C0.938902 5.81142 0.990497 5.8855 1.05512 5.94763C1.11974 6.00975 1.19613 6.05872 1.27979 6.09204C1.36345 6.12535 1.45291 6.14242 1.54313 6.14242C1.7251 6.14242 1.90077 6.07297 2.03117 5.94761L5.84983 2.27573L5.89338 2.23386C5.90634 2.2214 5.92204 2.21122 5.93972 2.20418C5.95742 2.19713 5.97658 2.19344 5.99606 2.19344C6.01554 2.19344 6.0347 2.19713 6.0524 2.20418C6.07008 2.21122 6.08578 2.2214 6.09874 2.23386L9.95982 5.94572C10.0236 6.00955 10.0996 6.06028 10.1833 6.09522C10.2675 6.13039 10.358 6.14895 10.4495 6.14996C10.541 6.15096 10.6318 6.13439 10.7169 6.10108C10.8019 6.06777 10.8795 6.01831 10.945 5.95533C11.0105 5.89233 11.0626 5.81705 11.098 5.73374C11.1333 5.65041 11.151 5.56091 11.15 5.47057C11.1489 5.38022 11.129 5.29116 11.0918 5.20867C11.0547 5.12674 11.0014 5.0531 10.935 4.99184L7.07392 1.27997M4.91734 1.28C4.91734 1.27999 4.91733 1.28001 4.91734 1.28ZM4.91734 1.28C5.05945 1.14333 5.22787 1.03519 5.41281 0.96152C5.59775 0.88785 5.79578 0.85 5.99564 0.85C6.19551 0.85 6.39354 0.88785 6.57848 0.96152C6.76341 1.03519 6.93182 1.1433 7.07392 1.27997M7.07392 1.27997C7.07393 1.27998 7.07391 1.27996 7.07392 1.27997Z" stroke="currentColor" stroke-width="0.3"/>
+        </svg>
+    </div>
+    <svg class="scroll-to-top-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+    </svg>
+</button>
+<style>
+.scroll-to-top {
+    --scoll-top-background:{{ settings.stp_background_color }};
+    --scroll-top-color:{{ settings.stp_icon_color }};
+    --scroll-top-vertical-position: {{ settings.bottom_position }}px;
+}
+</style>
+<script>
+  
+var offset = 300;
+var duration = 550;		
+var progressPath = document.querySelector('.scroll-to-top-circle path');
+var pathLength = progressPath.getTotalLength();
+progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+progressPath.style.strokeDashoffset = pathLength;
+progressPath.getBoundingClientRect();
+progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';		
+var updateProgress = function () {
+	var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+	var height =document.body.clientHeight - document.documentElement.clientHeight  ;
+	var progress = pathLength - (scroll * pathLength / height);
+	progressPath.style.strokeDashoffset = progress;
+
+    if (document.documentElement.scrollTop > offset || document.body.scrollTop > offset) {
+		document.querySelector('.scroll-to-top').classList.add('show');
+	} else {
+		document.querySelector('.scroll-to-top').classList.remove('show');
+	}
+}
+updateProgress();
+window.onscroll = function () {
+    updateProgress();
+};	
+	
+function scrollToTop() {
+    jQuery('html, body').animate({ scrollTop: 0 });
+}
+
+</script> 
+{% endif %}

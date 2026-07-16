@@ -1,0 +1,307 @@
+<link rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css">
+
+
+{% if quickView != true %}
+<div class="main-product-image-wrapper {% if section.settings.enable_sticky_content %} sticky{% endif %} {% if section.settings.gallery_style == 'slider' %}{% if section.settings.thumbnail_position == 'bottom' %}position-bottom {% if section.settings.overlapped_thumbnails %}overlay-thumbnails{% endif %}{% else %}{% if product.media.size > 1 %}position-left{%  endif %}{% endif %}{% endif %}">
+<div class="main-product-image">
+{% endif %}
+    <div class="{% if quickView == true %}quickview-product-image-slider{% else %}main-product-image-slider{% endif %} {% if section.settings.gallery_style == 'slider' and product.media.size >1%} slider slider-for {% else %} stacked-image{% endif %} "
+       {% if section.settings.gallery_style == 'slider' and product.media.size >1 %}
+        data-slick='
+          {
+            "slidesToShow": 1,
+            "slidesToScroll": 1,
+            "asNavFor": ".slider-nav",
+            "dots": false,
+            "arrows": true,
+            "swipeToSlide":false,
+            "responsive": [
+              {
+                "breakpoint": 768,
+                "settings": {
+                  "arrows": false,
+                  "dots": {% if section.settings.thumbnial_on_mobile %}false{%else%}true{% endif %}
+                }
+              }
+            ]
+          }
+        '
+        {% endif %}
+        data-product-main-media>
+          {%- if product.media.size > 0 -%}
+            {%- if current_variant.featured_media != null -%}
+              {%- assign featured_media = current_variant.featured_media -%}
+            <div
+              id="productMedia-{{ featured_media.id }}"
+              class="main-product-item {% if quickView == true %} {{ quickviewclass }}{% endif %}"
+              data-media-id="{{ featured_media.id }}"
+              {% if quickView  != true %}
+                data-product-media
+                {% if section.settings.image_zoom == 'lightbox' %}
+                  href="#product-media-popup-{{ section.id }}"
+                  data-popup-header
+                  {% elsif  section.settings.image_zoom == 'clickzoom'%}
+                  data-zoom-hover
+                {% endif %}
+              {% endif %}>
+              <div class="{% if quickView  == true%} {{ innerclass }}{%  else %}main-product-img main-image-first {% if section.settings.image_zoom != 'none' %}cursor-pointer zoom{%  endif %}{% endif %}" data-media-inner>
+                <div class="media-box">
+                  {% liquid
+                    assign height = featured_media.width | divided_by:  featured_media.preview_image.aspect_ratio | round
+                    assign sizes = '100vw'
+                    assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                      assign fetch_priority = 'low'
+                    
+                    echo featured_media | image_url: width: 3840 | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                  %}
+                  {% comment %} {%- render 'image', image: featured_media -%} {% endcomment %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+              {% for media in product.media %}
+                {% unless media.id == current_variant.featured_media.id %}
+                {% case media.media_type %}
+                  {% when 'image' %}
+                    <div
+                      id="productMedia-{{ media.id }}"
+                      class="main-product-item {% if quickView == true %} {{ quickviewclass }}{% endif %}"
+                      data-media-id="{{ media.id }}"
+                      {% if quickView  != true %}
+                      
+                      data-product-media
+                      {% if section.settings.image_zoom == 'lightbox' %}
+                      href="#product-media-popup-{{ section.id }}"
+                      data-popup-header
+                      {% elsif  section.settings.image_zoom == 'clickzoom'%}
+                      data-zoom-hover
+                      {% endif %}
+                      {% endif %}>
+                      <div class="{% if quickView  == true%}{{ innerclass }}{%  else %}main-product-img  {% if section.settings.image_zoom != 'none' %}cursor-pointer zoom{%  endif %}{% endif %}" data-media-inner>
+                        <div class="media-box">
+                            {% render 'image', image: media %}
+    
+                        </div>
+                      </div>
+                    </div>
+                  {%- when 'external_video' -%}
+                    {% liquid
+                      assign videoUrl = media | external_video_url
+                      assign videoClass = 'youtube-video product-media no-js-hidden'
+                      if videoUrl contains 'vimeo'
+                        assign videoClass = 'vimeo-video product-media no-js-hidden'
+                      endif
+                      assign externalMedia = ''
+                      assign autoPlayText = 'product-media no-js-hidden" data-autoplay="false"'
+                    %}
+                    <div
+                      id="productMedia-{{ media.id }}"
+                      class="main-product-item  product-external-video-item cursor-pointer {% if quickView == true %} {{ quickviewclass }}{% endif %}"
+                      data-product-media>
+                      <div class="{% if quickView  == true%} {{ innerclass }}{%  else %}main-product-img cursor-pointer zoom{% endif %}">
+                        <div class="media-box" 
+                        
+                        >
+                          {%- capture externalMedia -%}
+                          {{ media | external_video_url:
+                              autoplay: false,
+                              loop: false,
+                              controls: true
+                            | external_video_tag: class: videoClass, loading: 'lazy'
+                          }}
+                          {%- endcapture -%}
+                          {{ externalMedia | replace: 'product-media no-js-hidden"', autoPlayText }}
+                          <noscript>
+                            <a
+                              href="{{ media | external_video_url }}"
+                              target="_blank"
+                              class="unstyled-link"
+                              aria-label="{{ media.alt | default: product.title | strip_html }}"
+                            >
+                              {% comment %}theme-check-disable ImgWidthAndHeight{% endcomment %}
+                              <img
+                                src="{{ media.preview_image | image_url: width: 2048 }}"
+                                alt="{{ media.preview_image.alt | escape }}"
+                                loading="lazy"
+                              >
+                              {% comment %}theme-check-enable ImgWidthAndHeight{% endcomment %}
+                            </a>
+                          </noscript>
+                        </div>
+                      </div>
+                    </div>
+                  {%- when 'video' -%}
+                    {%- liquid
+                      assign htmlVideo = media.sources[0]
+                      if media.sources[1] != blank
+                        assign htmlVideo = media.sources[1]
+                      endif
+                      assign autoPlayText = 'no-js-hidden" data-autoplay="false"'
+                    %}
+                    <div id="productMedia-{{ media.id }}" class="main-product-item product-video-item{% if quickView == true %} {{ quickviewclass }}{% endif %}" data-product-media>
+                      <div class="main-product-img cursor-pointer{% if quickView  == true%} {{ innerclass }}{% endif %}">
+                        <div class="media-box product-media-item">
+                          <div class="deferred-media-placeholder">
+                            {% render 'image', image:  media.preview_image , sizes: '[80,90,100,125,150,500]'%}
+                            <span class="js-load-media cursor-pointer product-media-play-button" role="button" title="Play button" data-video-play-button="">
+                              <svg width="33" height="38" viewBox="0 0 33 38" fill="none">
+                                <path d="M3.3001 38C2.69618 38 2.09556 37.81 1.56425 37.4338C1.08631 37.0923 0.691864 36.6161 0.418164 36.0503C0.144463 35.4845 0.000544022 34.8476 0 34.1999V3.79939C0 2.48076 0.594018 1.25714 1.56425 0.565529C2.04324 0.226415 2.58926 0.0331475 3.15097 0.00389818C3.71268 -0.0253512 4.27163 0.110378 4.77524 0.398326L31.176 15.5986C31.7242 15.9148 32.1851 16.4004 32.5073 17.001C32.8294 17.6017 33 18.2937 33 18.9997C33 19.7056 32.8294 20.3977 32.5073 20.9983C32.1851 21.599 31.7242 22.0846 31.176 22.4007L4.77524 37.601C4.31323 37.867 3.80172 38 3.3001 38Z" fill="currentColor"></path>
+                              </svg>
+                            </span>
+                          </div>
+                        <deferred-media class="deferred-media autoplay-status-false product-video-media" data-type="{{ section.settings.video_url.type }}">
+                          <template>
+                          {%- capture internalMedia -%}
+                          {{
+                            media
+                            | media_tag:
+                              loading: 'lazy',
+                              class: 'no-js-hidden',
+                              autoplay: false,
+                              loop: true,
+                              controls: true,
+                              preload: 'none'
+                          }}
+                          {%- endcapture -%}
+                          {{ internalMedia | replace: 'no-js-hidden"', autoPlayText }}
+                        </template>
+                          <noscript>
+                            <a href="{{ htmlVideo.url }}" target="_blank">
+                              {% comment %}theme-check-disable ImgWidthAndHeight{% endcomment %}
+                              <img
+                                src="{{ media.preview_image | image_url: width: 2048 }}"
+                                alt="{{ media.preview_image.alt | escape }}"
+                                loading="lazy"
+                                aria-label="{{ media.alt | default: product.title | strip_html }}"
+                              >
+                              {% comment %}theme-check-enable ImgWidthAndHeight{% endcomment %}
+                            </a>
+                          </noscript>
+                        </deferred-media>
+                        </div>
+                      </div>
+                    </div>
+                  {%- when 'model' -%}
+                    {%- liquid
+                      if media.preview_image.aspect_ratio
+                        assign media_aspect_ratio = media.preview_image.aspect_ratio
+                      endif
+                    -%}
+                    <div id="media-main-{{ media.id }}" class="main-product-item product-model-item {% if quickView == true %} {{ quickviewclass }}{% endif %}">
+                      <div class="main-product-img {% if quickView  == true%} {{ innerclass }}{% endif %}">
+                        <div
+                          class="media-box no-js-hidden {{ imageRatioClass }}"
+                          style="--image-ratio: {{ 100 | divided_by: media_aspect_ratio }}%"
+                          data-media-id="{{ media.id }}"
+                          >
+                          {{
+                            media
+                            | model_viewer_tag:
+                              image_size: true,
+                              reveal: 'interaction',
+                              toggleable: true,
+                              data-model-id: media.id
+                          }}
+                          <button class="close-product-model hidden">
+                            <svg width="12" height="12" viewBox="0 0 22 22" fill="none">
+                              <path d="M21.7987 20.826L11.9721 10.9958L21.7987 1.16552C22.0561 0.899047 22.0561 0.476499 21.7987 0.20994C21.5349 -0.0632507 21.0997 -0.0708067 20.8266 0.193065L11 10.0233L1.17343 0.193149C0.907055 -0.0642582 0.484664 -0.0642582 0.218204 0.193149C-0.0548867 0.457021 -0.0624398 0.892415 0.201335 1.16561L10.0279 10.9958L0.201335 20.826C0.0724268 20.9549 1.71925e-08 21.1298 1.71925e-08 21.3122C-8.39964e-05 21.692 0.307751 21.9999 0.687425 22C0.869793 22.0002 1.04469 21.9276 1.17343 21.7984L11 11.9682L20.8266 21.7985C20.9553 21.9277 21.1303 22.0002 21.3127 22C21.4949 21.9999 21.6696 21.9275 21.7985 21.7987C22.0671 21.5301 22.0672 21.0946 21.7987 20.826Z" fill="currentColor"></path>
+                            </svg>
+                          </button>
+                          <button
+                            class="product-model-button button small-btn no-js-hidden d-block d-md-none"
+                            type="button"
+                            aria-label="{{ 'products.product.media.view_in_ar_button' | t }}"
+                            data-shopify-xr
+                            data-shopify-model3d-id="{{ media.id }}"
+                            data-shopify-title="title"
+                            data-shopify-xr-hidden
+                          >
+                            <span>{{ 'products.product.media.view_in_ar_button' | t }}</span>
+                          </button>
+                        </div>
+                      </div>
+
+                      {% comment %}theme-check-disable ImgWidthAndHeight,ImgLazyLoading{% endcomment %}
+                      <noscript>
+                        <img loading="lazy"
+                          src="{{ media.preview_image | image_url: width: 2048 }}"
+                          alt="{{ media.preview_image.alt | escape }}"
+                          aria-label="{{ media.alt | default: product.title | strip_html }}"
+                        >
+                      </noscript>
+                      {% comment %}theme-check-enable ImgWidthAndHeight,ImgLazyLoading{% endcomment %}
+                    </div>
+                {% endcase %}
+              {% endunless %}
+              {% endfor %}
+          {% else %}
+          <div id="productMedia-placeholder-main" class="main-product-item"  data-product-media >
+            <div class="media-box" >
+            {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          </div>
+          {% endif %}
+    </div>
+{% if quickView != true %}
+  </div>
+    {% if section.settings.gallery_style == 'slider' and product.media.size > 1 %}
+      <div class="main-product-thumbnail-image {% if section.settings.thumbnial_on_mobile %} mobile-enabled{% endif %}{% if product.media.size <= 3 %} slick_media{% endif %}">
+        <div
+          class="slider main-product-thumbnail-image-slider slider-nav"
+          data-slick='
+            {
+              "slidesToShow": 4,
+              "slidesToScroll": 1,
+              "asNavFor": ".slider-for",
+              "dots": false,
+              "vertical": {% if section.settings.thumbnail_position == 'bottom' %}false{% else %}true{% endif %},
+              "focusOnSelect": true,
+              "verticalSwiping": {% if section.settings.thumbnail_position == 'bottom' %}false{% else %}true{% endif %},
+              "arrows": false,
+              "responsive": [
+                {
+                  "breakpoint": 991,
+                  "settings": {
+                  "slidesToShow":3
+                  }
+                },
+                {
+                  "breakpoint": 768,
+                  "settings": {
+                    "slidesToShow": {% if product.media.size <= 3 %}{{ product.media.size }}{% else %}3{% endif %},
+                    "vertical": false
+                  }
+                }
+              ]
+            }'
+          >
+            {%- if current_variant.featured_media != null -%}
+              {%- assign featured_media = current_variant.featured_media -%}
+              <div class="main-product-thumbnail-item cursor-pointer">
+                <div class="main-product-thumbnail-img">
+                  {%- render 'image', image: featured_media, sizes: '[80,90,100,125,150]' -%}
+                </div>
+              </div>
+            {% endif %}
+          {% for media in product.media %}
+            {% unless media.id == current_variant.featured_media.id %}
+              <div class="main-product-thumbnail-item cursor-pointer">
+                <div class="main-product-thumbnail-img">
+                  {%- render 'image', image: media, sizes: '[80,90,100,125,150]' -%}
+                </div>
+              </div>
+            {% endunless %}
+          {%- else -%}
+            <div class="main-product-thumbnail-item">
+              <div class="main-product-thumbnail-img">
+                {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
+
+

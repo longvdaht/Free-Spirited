@@ -1,0 +1,145 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page_banner_VGVQQM": {
+      "type": "page-banner",
+      "settings": {
+        "enable_fullwidth": true,
+        "banner_image": "shopify://shop_images/pexels-diva-plavalaguna-6150367_1.jpg",
+        "banner_height_desktop": "350px",
+        "banner_height_mobile": "200px",
+        "heading": "What Our Customers Say",
+        "heading_overly": true,
+        "heading_size": "h2",
+        "seo_heading": "h3",
+        "content_width": "medium",
+        "heading_alignment": "text-center",
+        "banner_bg_color": "#f2f2f2",
+        "bg_color_opacity": "#000000",
+        "text_color": "#FFFFFF",
+        "overlay_opacity": 36,
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "17310012550c87a1a6": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_all_reviews_page_6XpcXx": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_page/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_all_reviews_page_6XpcXx"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "section_visibility": "always",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "slideshow_bNL7HG": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_LwzFAD": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Copy_of_Untitled_14.png",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_2.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "shopify://collections/all",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "quatnary",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 0,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_LwzFAD"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "page_banner_VGVQQM",
+    "main",
+    "17310012550c87a1a6",
+    "slideshow_bNL7HG"
+  ]
+}

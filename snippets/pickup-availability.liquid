@@ -1,0 +1,50 @@
+
+{%- assign pickupAvailabilities = current_variant.store_availabilities | where: 'pick_up_enabled', true -%}
+<div id="pickup-availability-content" class="pickup-availability-content {{ settings.drawer_color_scheme }}-scheme" data-pickup-availability-content>
+  {%- if pickupAvailabilities.size > 0 and current_variant.available -%}
+    {%- liquid
+      assign nearestLocation = pickupAvailabilities.first
+    -%}
+    {%- if nearestLocation.available -%}
+      <span class="pickup-icon success">
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+          <path d="M13.0005 1.00049L5.00018 9.00049L1 5.00067" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      {%- else -%}
+      <span class="pickup-icon error">
+        <svg  width="10" height="10" viewBox="0 0 15 15" fill="none" stroke="var(--error-text-color)">
+          <path d="M14.8627 14.1996L8.16278 7.49713L14.8627 0.794674C15.0382 0.612987 15.0382 0.324886 14.8627 0.143141C14.6829 -0.0431255 14.3862 -0.0482773 14.2 0.131635L7.49998 6.83409L0.800067 0.131693C0.618447 -0.0438124 0.330452 -0.0438124 0.148775 0.131693C-0.0374227 0.311606 -0.0425726 0.608464 0.137274 0.794731L6.83719 7.49713L0.137274 14.1995C0.0493819 14.2874 1.17222e-08 14.4067 1.17222e-08 14.531C-5.72703e-05 14.79 0.20983 14.9999 0.468699 15C0.59304 15.0001 0.71229 14.9507 0.800067 14.8626L7.49998 8.16016L14.2 14.8626C14.2877 14.9507 14.407 15.0002 14.5314 15C14.6556 14.9999 14.7747 14.9506 14.8626 14.8627C15.0457 14.6796 15.0458 14.3827 14.8627 14.1996Z" fill="currentColor"/>
+        </svg>
+      </span>
+    {%- endif -%}
+    <p class="pickup-availability-heading"> 
+      {%- if nearestLocation.available -%}
+        {{
+          'products.product.pickup_availability.pick_up_available_at_html'
+          | t: location_name: nearestLocation.location.name
+        }}
+      {%- else -%}
+        {{
+          'products.product.pickup_availability.pick_up_unavailable_at_html'
+          | t: location_name: nearestLocation.location.name
+        }}
+      {%- endif -%}
+    </p>
+    <p class="pickup-availability-description">{{ nearestLocation.pick_up_time }}</p>
+    <a  href="#" data-id="pickup-side-drawer" id="pickup-availability-button" class="pickup-availability-button text-underline" aria-haspopup="dialog" data-sidedrawer-button>
+      {%- if pickupAvailabilities.size == 1 -%}
+        {{ 'products.product.pickup_availability.view_store_info' | t }}
+      {%- else -%}
+        {{ 'products.product.pickup_availability.check_other_stores' | t }}
+      {%- endif -%}
+    </a>
+  {% endif %}
+</div>
+
+  {% render 'pickupavailability-list',
+    product: product,
+    current_variant: current_variant,
+    pickupAvailabilities: pickupAvailabilities
+  %}
+

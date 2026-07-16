@@ -1,0 +1,92 @@
+<style>
+  #shopify-section-{{ section.id }}{
+    --mainBannerHeight:{{ section.settings.banner_height_desktop }};
+  }
+  @media screen and (max-width:767px){
+    #shopify-section-{{ section.id }}{
+      --mainBannerHeight:{{ section.settings.banner_height_mobile }};
+    }
+  }
+</style>
+<div class="section-container">
+  {%- if page.content != blank -%}
+    <div class="page-content-box">    
+    <div class="{{ settings.container_width }}">
+      <div class="page-content rte">
+        {{
+          page.content
+          | replace: '<table', '<div class="table-main"><table'
+          | replace: '</table>', '</table></div>'
+        }}
+      </div>
+    </div>
+  </div>
+  {%- endif -%}
+</div>
+<style>
+  #shopify-section-{{ section.id }}{
+    --top-spacer: {{ section.settings.top_space_desktop }}px;
+    --bottom-spacer: {{ section.settings.bottom_space_desktop }}px;
+    --banner-height:{{ section.settings.banner_height_desktop }};
+    --banner-background: {{ section.settings.banner_bg_color }};
+    --banner-overlay-background:{{ section.settings.bg_color_opacity }};
+    --banner-overlay-text:{{ section.settings.text_color }};
+    --banner-overlay-opacity:{{ section.settings.overlay_opacity | divided_by: 100.0 }};
+  }
+  @media only screen and (max-width:767px) {
+    #shopify-section-{{ section.id }}{
+      --top-spacer: {{ section.settings.top_space_mobile }}px;
+      --bottom-spacer: {{ section.settings.bottom_space_mobile }}px;
+      --banner-height:{{ section.settings.banner_height_mobile }};
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "main-page",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:global.header.space_section.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:global.top_space_desktop.label",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:global.bottom_space_desktop.label",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:global.top_space_mobile.label",
+      "default": 35,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:global.bottom_space_mobile.label",
+      "default": 35,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    }
+  ]
+}
+{% endschema %}

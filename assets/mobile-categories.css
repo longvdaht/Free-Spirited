@@ -1,0 +1,143 @@
+.mobile-categories-wrapper {
+    position: fixed;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 30px;
+    max-width: 300px;
+    animation: 1.6s infinite pulse-blink;
+}
+
+.mobile-categories-wrapper.position-left {
+    left: 10px;
+}
+
+.mobile-categories-wrapper.position-right {
+    right: 10px;
+}
+
+.mobile-categories-icon-text {
+    background: var(--categoryBackground);
+    color: var( --categoryText);
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 7px;
+    border-radius: 40px;
+}
+
+.mobile-categories-icon {
+    width: 30px;
+    flex: 0 0 30px;
+    border-radius: 100%;
+    overflow: hidden;
+    background: rgb(var(--background));
+}
+
+.mobile-categories-icon-text .mobile-categories-title {
+    color: var( --categoryText);
+    margin-left: 6px;
+    padding-right: 10px;
+}
+
+.mobile-categories-item {
+    background: var(--categoryItemBackground);
+    color: var( --categoryItemText);
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 230px;
+}
+
+.mobile-categories-content {
+    display: none;
+    transition: .4s ease;
+}
+
+.active .mobile-categories-content-inner {
+    animation: fade-up .3s linear;
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0%);
+    }
+}
+
+.mobile-categories-heading {
+    padding-bottom: 3px;
+}
+
+.mobile-categories-item * {
+    color: var( --categoryItemText);
+}
+
+.mobile-categories-description {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 220px;
+    overflow: hidden;
+}
+
+.mobile-categories-item-img {
+    width: 44px;
+    flex: 0 0 44px;
+    margin-right: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: rgb(var(--background));
+}
+
+.close-categories {
+    background: var(--categoryBackground);
+    color: var( --categoryText);
+    display: none;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    justify-content: center;
+}
+
+.mobile-categories-wrapper.position-right .mobile-categories-content-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.mobile-categories-wrapper.position-right .close-categories {
+    margin-left: auto;
+}
+
+.close-categories svg {
+    width: 14px;
+    height: 14px;
+}
+
+.close-categories-fullwidth {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.categories-active .close-categories-fullwidth {
+    background: var(--text-light-color);
+    backdrop-filter: blur(11px);
+    opacity: 1;
+    pointer-events: all;
+}

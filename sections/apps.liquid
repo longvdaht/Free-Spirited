@@ -1,0 +1,122 @@
+{{ 'apps.css' | asset_url | stylesheet_tag }}
+<div class="section-container {{ section.settings.color_scheme }}-scheme">
+  <div class="container">
+    {%- for block in section.blocks -%}
+      {% render block %}
+    {%- endfor -%}
+  </div>
+</div>
+<style>
+  #shopify-section-{{ section.id }}.shopify-section {
+    --top-spacer:{{ section.settings.top_space_desktop }}px;
+    --bottom-spacer:{{ section.settings.bottom_space_desktop }}px;
+  }
+  @media only screen and (max-width:767px) {
+    #shopify-section-{{ section.id }}.shopify-section{
+      --top-spacer:{{ section.settings.top_space_mobile }}px;
+      --bottom-spacer:{{ section.settings.bottom_space_mobile }}px;
+    }
+  }
+  {% if section.settings.section_visibility == 'large' %}
+    @media (max-width: 767px) {
+      #shopify-section-{{ section.id }}{
+        display: none !important;
+      }
+    }
+  {% elsif section.settings.section_visibility == 'small' %}
+    @media (min-width: 768px) {
+      #shopify-section-{{ section.id }}{
+        display: none !important;
+      }
+    }
+  {% endif %}
+</style>
+{% schema %}
+{
+  "name": "t:sections.apps.name",
+  "tag": "section",
+  "class": "app",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:global.header.color_section.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "primary",
+      "label": "t:global.header.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "section_visibility",
+      "label": "t:global.common.section_visibility.label",
+      "default": "always",
+      "options": [
+        {
+          "label": "t:global.common.section_visibility.options.always",
+          "value": "always"
+        },
+        {
+          "label": "t:global.common.section_visibility.options.small",
+          "value": "small"
+        },
+        {
+          "label": "t:global.common.section_visibility.options.large",
+          "value": "large"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.space_section.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:global.top_space_desktop.label",
+      "default": 85,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:global.bottom_space_desktop.label",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:global.top_space_mobile.label",
+      "default": 35,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:global.bottom_space_mobile.label",
+      "default": 35,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.apps.presets.name"
+    }
+  ]
+}
+{% endschema %}

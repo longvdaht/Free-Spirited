@@ -1,0 +1,114 @@
+.images-carousel {
+    position: relative;
+}
+
+.images-carousel-image-box {
+    border-radius: var(--block-radius);
+    height: var(--media-height);
+    overflow: hidden;
+    position: relative;
+}
+
+.images-carousel-images {
+    width: 100%;
+    height: 100%;
+}
+
+.images-carousel-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    clip-path: inset(50% round var(--block-radius));
+    transition: clip-path .3s ease;
+}
+
+.images-carousel-img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--image-bg);
+    transition: transform 1s ease-out;
+}
+
+.images-carousel-content-box {
+    padding-top: 20px;
+}
+
+.images-carousel-content {
+    height: 100%;
+}
+
+.images-carousel-heading {
+    position: relative;
+    padding-bottom: 20px;
+    opacity: .5;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.images-carousel-heading:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background: var(--heading-color);
+    transition: .4s ease;
+}
+
+.images-carousel-content-item.active .images-carousel-heading {
+    opacity: 1;
+}
+
+.images-carousel-content-item.active .images-carousel-heading:before {
+    width: 100%;
+}
+
+.images-carousel-content-list+.images-carousel-content-list {
+    padding-top: 10px;
+}
+
+.images-carousel-img.active,
+.images-carousel-img.processing {
+    opacity: 1;
+    clip-path: inset(0% round var(--block-radius));
+}
+
+@media (min-width:768px) {
+    .images-carousel-wrapper {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .images-carousel-content-box {
+        padding: 20px;
+    }
+}
+
+@media (min-width:992px) {
+    .images-carousel-content-list+.images-carousel-content-list {
+        padding-top: 20px;
+    }
+    .images-carousel-wrapper {
+        gap: 40px;
+    }
+}
+
+@media (min-width:1200px) {
+    .images-carousel-wrapper {
+        gap: 50px;
+    }
+    .images-carousel-wrapper {
+        grid-template-columns: 1.3fr 1fr;
+    }
+}
+
+@media (min-width:1441px) {
+    .images-carousel-wrapper {
+        gap: 80px;
+    }
+}

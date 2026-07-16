@@ -1,0 +1,610 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "slideshow_jpMday": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_wWxJNf": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Copy_of_Untitled_13.png",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_1.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "shopify://collections/all",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 0,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_wWxJNf"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "image_with_text_FcJYKb": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_69djqN": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "About Free Spirit"
+          }
+        },
+        "heading_nCbLAG": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>CELEBRATING INDIVIDUALITY, CREATIVITY, AND FREE SPIRITS EVERYWHERE!</strong>",
+            "heading_size": "h5",
+            "seo_heading": "h2",
+            "highlighted_color": "#006f94"
+          }
+        },
+        "text_cygJmA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Founded with a mission to spread positivity and inclusivity, <strong>Free Spirit</strong> is for those who embrace life with open hearts and colorful spirits. Our \"be wild and free\" ethos isn’t just a slogan—it’s the essence of everything we do.</p>",
+            "text_size": "medium"
+          }
+        },
+        "button_BapFmh": {
+          "type": "button",
+          "settings": {
+            "button_style_1": "solid",
+            "btn_text": "SHOP FREE SPIRIT",
+            "btn_url": "shopify://collections/shop-sale",
+            "btn_size": "regular",
+            "button_style_2": "solid",
+            "btn_text_2": "",
+            "btn_url_2": "",
+            "btn_size_2": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_69djqN",
+        "heading_nCbLAG",
+        "text_cygJmA",
+        "button_BapFmh"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "section_fullwidth": false,
+        "card_background": false,
+        "image": "shopify://shop_images/71EID2n3-sL_a1338c43-0736-463a-9d0f-dfbe51116408.png",
+        "image_overlay_enable": false,
+        "image_width": "medium",
+        "image_position": "left",
+        "content_position": "center",
+        "content_alignment": "flex-start_left",
+        "hide_row_count": false,
+        "color_scheme": "",
+        "section_background": "",
+        "card_color": "",
+        "top_space_desktop": 25,
+        "bottom_space_desktop": 35,
+        "top_space_mobile": 10,
+        "bottom_space_mobile": 50
+      }
+    },
+    "rich_text_E8fQ48": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_U7eeVq": {
+          "type": "heading",
+          "settings": {
+            "heading": "WANT TO KNOW MORE ABOUT BECOMING AN INSIDER?",
+            "heading_size": "h5",
+            "seo_heading": "h2",
+            "highlighted_color": "#eff341"
+          }
+        },
+        "button_6EhV9Q": {
+          "type": "button",
+          "settings": {
+            "button_style": "solid",
+            "text": "LEARN MORE",
+            "link": "shopify://products/free-spirited-insiders",
+            "button_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_U7eeVq",
+        "button_6EhV9Q"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "content_width": "large",
+        "content_alignment": "text-center",
+        "content_postion": "center",
+        "color_scheme": "quatnary",
+        "section_background": "",
+        "top_space_desktop": 65,
+        "bottom_space_desktop": 65,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 40
+      }
+    },
+    "multicolumn_KzrxVe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_R3e9Hn": {
+          "type": "column",
+          "settings": {
+            "heading": "<strong>Handcrafted with Love</strong>",
+            "description": "Each Free Spirited piece is hand-dyed, ensuring that no two items are exactly alike. From bright, bold hues to soft, pastel shades, our tie-dye creations are a reflection of the artistry and care we pour into every garment. We use 100% pre-shrunk cotton to ensure your clothes are not only beautiful but also soft, comfortable, and built to last.\n\nBecause our products are handcrafted, you’re not just buying a shirt or dress—you’re investing in wearable art that’s as unique as you are.",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        },
+        "column_m6cBbC": {
+          "type": "column",
+          "settings": {
+            "heading": "<strong> Quality and Affordability</strong>",
+            "description": "At Free Spirited, we believe that everyone deserves to feel good in what they wear. That’s why we are committed to offering high-quality, affordable apparel. Our tie-dye shirts, starting at just $11.95, prove that quality doesn’t have to come with a high price tag. Whether you’re wearing our pieces to lounge at home or to make a statement while out and about, you can count on comfort, durability, and vibrant colors that stand the test of time.",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        },
+        "column_iQx8fH": {
+          "type": "column",
+          "settings": {
+            "heading": "<strong>Inclusive & Free Spirited at Our Core</strong>",
+            "description": "Free Spirited is a brand that champions inclusivity. We know that style has no size limit, and that’s why we offer a wide range of sizes—from S to 5XL—so everyone can find the perfect fit. Our goal is to make every customer feel welcome and celebrated, no matter their shape, size, or style preference. You deserve to feel beautiful and confident, and we’re here to make that happen.",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        },
+        "column_jPHLEM": {
+          "type": "column",
+          "settings": {
+            "heading": "<strong>Building a Community of Free Spirits</strong>",
+            "description": "Free Spirited isn’t just about selling clothes—it’s about creating a community of like-minded individuals who value creativity, authenticity, and self-expression. Our customers are more than just shoppers; they’re part of the Free Spirited family.\n\nThrough our Insiders membership program, we offer even more ways to connect with our brand and each other. Members get exclusive access to limited-edition designs, early releases, loyalty rewards, and even the chance to vote on future collections. We believe in building relationships, not just transactions, and our community is at the heart of everything we do.",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        },
+        "column_7jQ7q9": {
+          "type": "column",
+          "settings": {
+            "heading": "<strong>Sustainability and Social Responsibility</strong>",
+            "description": "As a brand that celebrates freedom and joy, we also feel a deep responsibility to care for the world we live in. That’s why we’re committed to sustainable practices in our production process. We prioritize eco-friendly materials and ethical manufacturing to minimize our environmental impact. Free Spirited is proud to support hurricane relief efforts and other charitable causes that align with our values, giving back to the communities that support us.\n\nWe’re always looking for ways to improve and do better for the planet, and we invite our customers to join us in this mission.",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        },
+        "column_KPHk6C": {
+          "type": "column",
+          "settings": {
+            "heading": "<strong>Our Promise to You</strong>",
+            "description": "At Free Spirited, we are passionate about creating products that bring joy, comfort, and individuality to your life. Whether you’re a long-time fan or a first-time shopper, we promise to deliver exceptional customer service, fast U.S. shipping, and a hassle-free shopping experience. Your satisfaction is our priority, and we’re always here to help if you need anything.\n\nWhen you wear Free Spirited, you’re not just wearing a piece of clothing—you’re wearing something that represents freedom, creativity, and a love for life. Thank you for being part of our journey!",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        }
+      },
+      "block_order": [
+        "column_R3e9Hn",
+        "column_m6cBbC",
+        "column_iQx8fH",
+        "column_jPHLEM",
+        "column_7jQ7q9",
+        "column_KPHk6C"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "multicolumn_image_size": "square",
+        "layout_type": "stacked",
+        "columns_desktop": 3,
+        "enable_swipe_mobile": false,
+        "heading": "<strong>BE BRIGHT. BE BOLD. BE FREE.</strong>",
+        "heading_size": "h2",
+        "seo_heading": "h3",
+        "heading_alignment": "text-center",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#006f94",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "slideshow_TRqW9V": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_N8cBwD": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/free_spirit_tie_dye.png",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_3.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "shopify://collections/all",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 0,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_N8cBwD"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "video_FmXPRC": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "section_visibility": "always",
+        "video_full_width": false,
+        "make_section_rounded": false,
+        "autoplay": false,
+        "video_height": "550px",
+        "mobile_video_height": "450px",
+        "cover_image": "shopify://shop_images/321321321_b4e860fe-55bb-4a5c-bf3c-95b43cee2663.png",
+        "video_url": "https://vimeo.com/1020214496",
+        "heading": "MEET OUR TEAM",
+        "heading_size": "h2",
+        "seo_heading": "h2",
+        "description": "",
+        "content_width": "small",
+        "content_position": "center",
+        "content_alignment": "center_center",
+        "color_scheme": "",
+        "section_background": "",
+        "text": "#ffffff",
+        "highlighted_color": "#eff341",
+        "button": "#006f94",
+        "button_text": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "rich_text_XYQUai": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9iMXGm": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Join Us on Our Journey</strong>",
+            "heading_size": "h2",
+            "seo_heading": "h2",
+            "highlighted_color": "#006f94"
+          }
+        },
+        "text_49eMfK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to embrace the vibrant, carefree spirit of Free Spirited? Whether you’re shopping for your next favorite tee or joining our Insiders membership for exclusive perks, we’re thrilled to have you with us. Follow us on social media and join our community of free spirits who live boldly, love deeply, and wear their creativity on their sleeves.</p><p></p><h4><strong>Be Wild. Be Free. Be You.</strong></h4>"
+          }
+        },
+        "button_VcTE3q": {
+          "type": "button",
+          "settings": {
+            "button_style": "solid",
+            "text": "SHOP FREE SPIRITED",
+            "link": "shopify://collections/shop-sale",
+            "button_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9iMXGm",
+        "text_49eMfK",
+        "button_VcTE3q"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "content_width": "large",
+        "content_alignment": "text-center",
+        "content_postion": "center",
+        "color_scheme": "",
+        "section_background": "",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "collection_tabs_LxcagR": {
+      "type": "collection-tabs",
+      "blocks": {
+        "collection_YQhBbL": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "new-arrivals"
+          }
+        },
+        "collection_8qLHJx": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "collection": "pullover-hoodies"
+          }
+        },
+        "collection_GkyiqL": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "long-sleeve-hoodie"
+          }
+        },
+        "collection_Lx8DdM": {
+          "type": "collection",
+          "settings": {
+            "heading": "",
+            "collection": "long-sleeve-tie-dye-shirts"
+          }
+        }
+      },
+      "block_order": [
+        "collection_YQhBbL",
+        "collection_8qLHJx",
+        "collection_GkyiqL",
+        "collection_Lx8DdM"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "product_range": 4,
+        "tab_style": "carousel",
+        "enable_swipe_mobile": false,
+        "grid_image_size": "auto",
+        "heading": "",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "heading_alignment": "text-left",
+        "view_all_link": "View all",
+        "color_scheme": "",
+        "highlighted_color": "#eff341",
+        "section_background": "",
+        "top_space_desktop": 20,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "slideshow_eHAgGQ": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_4zYiVD": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Copy_of_Untitled_16.png",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_5.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "shopify://collections/all",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 0,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_4zYiVD"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_jpMday",
+    "image_with_text_FcJYKb",
+    "rich_text_E8fQ48",
+    "multicolumn_KzrxVe",
+    "slideshow_TRqW9V",
+    "video_FmXPRC",
+    "rich_text_XYQUai",
+    "collection_tabs_LxcagR",
+    "slideshow_eHAgGQ"
+  ]
+}

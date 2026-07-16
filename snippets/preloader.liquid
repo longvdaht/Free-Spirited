@@ -1,0 +1,107 @@
+{% if settings.enable_preloader == true %}
+  {% liquid
+    assign is_preloader = false
+    if settings.enable_preloader_on == 'homepage_only' and template.name == 'index'
+      assign is_preloader = true
+    elsif settings.enable_preloader_on == 'all_pages'
+      assign is_preloader = true
+    endif
+  %}
+  {% if is_preloader %}
+    <div class="preloader {{ settings.preloader_color_scheme }}-scheme" data-template="{{ template }}">
+      <div class="preloader-content">
+        <div class="preloader-brand">
+          {% if settings.preloader_logo != blank %}
+            {% comment %} {% render 'image', image: settings.preloader_logo %} {% endcomment %}
+            <img
+              src="{{ settings.preloader_logo | image_url }}"
+              alt="{{ image.alt | escape }}"
+              loading="lazy"
+              style=" max-width: 100%;"
+            >
+          {% else %}
+            <span>{{ shop.name }}</span>
+          {% endif %}
+        </div>
+        <div class="preloader-indicator">
+          <div class="indicator-fill"></div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--body-background);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transition: transform 0.6s ease-in-out;
+      }
+
+      .preloader.open {
+        transform: translate3d(0, -100%, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+      }
+
+      .preloader-content {
+        display: grid;
+        width: 100%;
+        max-width: 275px;
+        grid-row-gap: 36px;
+        justify-content: center;
+      }
+      .preloader-indicator {
+        width: 100%;
+        display: flex;
+        height: 5px;
+        background-color: var(--border-color);
+      }
+      .indicator-fill {
+        width: 0;
+        display: block !important;
+        height: 100%;
+        background-color: var(--text-color);
+        transform: translateY(0%);
+        transition: width 0.7s ease-in-out;
+      }
+      .preloader-brand span {
+        font-size: 55px;
+        font-weight: bold;
+      }
+    </style>
+
+    <script>
+      const preloader = document.querySelector('.preloader');
+      const indicatorFill = document.querySelector('.indicator-fill');
+      const preloaderContent = document.querySelector('.preloader-content');
+
+      let isSharkPreloader = window.localStorage.getItem('is_shark_preloader');
+
+      if (isSharkPreloader == 'loaded' && preloaderAppearance == 'first_time') {
+        preloader.remove();
+      } else {
+        window.addEventListener('load', () => {
+          preloader.classList.add('open');
+          preloaderContent.style.opacity = '0';
+          preloader.addEventListener('transitionend', () => {
+            preloader.style.display = 'none';
+          });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+          indicatorFill.style.width = '100%';
+          if (preloaderAppearance == 'first_time' && isSharkPreloader == null) {
+            window.localStorage.setItem('is_shark_preloader', 'loaded');
+          }
+          console.log('isSharkPreloader', window.localStorage.getItem('is_shark_preloader'));
+        });
+      }
+    </script>
+  {% endif %}
+{% endif %}

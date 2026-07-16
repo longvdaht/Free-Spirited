@@ -1,0 +1,47 @@
+{% if type == 'button' %}
+  <button
+    class="{% if class != blank %}{{class}} {% else %}button btn-block {% endif %}{{ button_size }}-btn"
+    {% if id != blank %}
+      id="{{ id }}"
+    {% endif -%}
+    {% if buttonAttributes != blank %}
+      {{ buttonAttributes -}}
+    {% endif %}
+  >
+    <span>{{ button_text }}</span>
+    {% if settings.button_hover_effect == 'modern' %}
+      <div class="button-arrow">
+        <div class="button-arrow-bg">
+        <svg class="button-arrow-icon1" width="7" height="7" viewBox="0 0 7 7" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.601562 0L6.57917 0.517835L6.06134 6.49545L4.96062 6.40009L5.31567 2.30149L0.879141 6.03062L0.168244 5.18488L4.60478 1.45576L0.50621 1.1007L0.601562 0Z" fill="currentColor"/>
+        </svg>
+        </div>
+      </div>
+    {% endif %}
+  </button>
+{% else %}
+  <a
+    href="{{ button_link }}"
+    {% if id != blank %}
+      id="{{ id }}"
+    {% endif %}
+    class="{% if button_style == 'link' or button_style == true %} text-underline {% elsif  button_style == 'outline' %}outline-button button {% else %}button{% endif %} {{ button_size }}-btn {{ class }}"
+    aria-label="{{ button_text }}"
+    {% if buttonAttributes != blank %}
+      {{ buttonAttributes -}}
+    {% endif %}
+  >
+    <span>{{- button_text -}}</span>
+    {% unless button_style == 'link' or button_style == true %}
+      {% if settings.button_hover_effect == 'modern' %}
+        <div class="button-arrow">
+            <div class="button-arrow-bg">
+                <svg class="button-arrow-icon1" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.601562 0L6.57917 0.517835L6.06134 6.49545L4.96062 6.40009L5.31567 2.30149L0.879141 6.03062L0.168244 5.18488L4.60478 1.45576L0.50621 1.1007L0.601562 0Z" fill="currentColor"/>
+                </svg>
+            </div>
+        </div>
+      {% endif %}
+    {% endunless %}
+  </a>
+{% endif %}

@@ -1,0 +1,379 @@
+<div class="section-container">
+    {% capture heading %}
+        {% if section.settings.collection_title and collection.title != blank %}
+          <{{ section.settings.seo_heading }} class="page-content-title page-content-item {{ section.settings.heading_size }}">{{ collection.title | escape }}</{{ section.settings.seo_heading }}>
+        {% endif %}
+      {% endcapture %}
+    {% capture description %}
+    {% if section.settings.collection_description and collection.description != blank %}
+        <div class="page-content-desc page-content-item rte">
+        {{ 
+        collection.description  
+        | replace: '<table', '<div class="table-main"><table'
+        | replace: '</table>', '</table></div>'
+        }}</div>
+    {% endif %}
+    {% endcapture %}
+    {%- liquid
+        assign collectionImageContain = false
+        assign headingcontent = false
+        assign descriptioncontent = false
+        if section.settings.collection_image_checker == true
+        if collection.image != blank
+            assign collectionImageContain = true
+            assign collectionBannerImage = collection.image
+        elsif section.settings.banner_image != blank
+            assign collectionImageContain = true
+            assign collectionBannerImage = section.settings.banner_image
+        endif
+        endif
+        if section.settings.heading_overly and heading != blank
+        assign headingcontent = true
+        endif
+
+        if section.settings.description_overly and description != blank
+        assign descriptioncontent = true
+        endif
+
+        if section.settings.heading_overly == false and heading != blank
+        assign headingcontentone = true
+        endif
+
+        if section.settings.description_overly == false and description != blank
+        assign descriptioncontentone = true
+        endif
+    -%}
+    {% if heading != blank or description != blank or collectionImageContain != blank %}
+        {% if headingcontent == true or descriptioncontent == true or collectionImageContain == true %}
+        <div class="page-banner {% if section.settings.heading_overly or section.settings.description_overly %} overlay-text{% endif %}"
+            id="pagebanner-{{ section.id }}" >
+            {% if collectionImageContain == true %}
+            <div class="page-banner-img">
+                {% render 'image', image: collectionBannerImage, class: 'banner-image' %}
+            </div>
+            {% endif %}
+            {% if headingcontent or descriptioncontent %}
+            <div class="page-content-box">
+                <div class="{{ settings.container_width }}">
+                <div class="page-content {{ section.settings.content_width }}-width  {{ section.settings.content_alignment }}">
+                    {% if heading != blank and section.settings.heading_overly %}
+                    {{ heading }}
+                    {% endif %}
+                    {% if description != blank and section.settings.description_overly %}
+                    {{ description }}
+                    {% endif %}
+                </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+        {% if section.settings.heading_overly == false or section.settings.description_overly == false %}
+        {% if headingcontentone == true or descriptioncontentone == true %}
+            <div class="page-content-box">
+            <div class="{{ settings.container_width }}">
+                <div class="page-content {{ section.settings.content_width }}-width  {{ section.settings.content_alignment }}">
+                {% if section.settings.heading_overly == false and section.settings.description_overly == false %}
+                    {% if heading != blank %}
+                    {{ heading }}
+                    {% endif %}
+                    {% if description != blank %}
+                    {{ description }}
+                    {% endif %}
+                {% elsif section.settings.heading_overly == false and heading != blank %}
+                    {{ heading }}
+                {% elsif section.settings.description_overly == false and description != blank %}
+                    {{ description }}
+                {% endif %}
+                </div>
+            </div>
+            </div>
+        {% endif %}
+        {% endif %}
+    {% endif %}
+</div>
+<style>
+    #shopify-section-{{ section.id }}.shopify-section {
+      --top-spacer:{{ section.settings.top_space_desktop }}px;
+      --bottom-spacer:{{ section.settings.bottom_space_desktop }}px;
+    }
+    
+    #pagebanner-{{ section.id }}{
+    --banner-height:{{ section.settings.banner_height_desktop }};
+    --banner-background: {{ section.settings.banner_bg_color }};
+    --banner-overlay-background:{{ section.settings.bg_color_opacity }};
+    --banner-overlay-text:{{ section.settings.text_color }};
+    --banner-overlay-opacity:{{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    }
+    @media only screen and (max-width:767px) {
+      #shopify-section-{{ section.id }}.shopify-section{
+        --top-spacer:{{ section.settings.top_space_mobile }}px;
+        --bottom-spacer:{{ section.settings.bottom_space_mobile }}px;
+      }
+        #pagebanner-{{ section.id }}{
+          --banner-height:{{ section.settings.banner_height_mobile }};
+        }
+   
+    }
+  </style>
+
+{% schema %}
+{
+  "name": "t:sections.collection_banner.name",
+  "tag": "section",
+  "class": "main-collection-banner",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "collection_title",
+      "default": true,
+      "label": "t:sections.main-collection.blocks.image.settings.collection_title.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "collection_description",
+      "default": false,
+      "label": "t:sections.main-collection.blocks.image.settings.collection_description.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_overly",
+      "label": "t:sections.main-collection.blocks.image.settings.heading_overly.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "description_overly",
+      "label": "t:sections.main-collection.blocks.image.settings.description_overly.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "collection_image_checker",
+      "default": false,
+      "label": "t:sections.main-collection.blocks.image.settings.collection_image_checker.label",
+      "info": "t:sections.main-collection.blocks.image.settings.collection_image_checker.info"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "t:global.common.general_labels.heading_size",
+      "default": "h3",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "seo_heading",
+      "label": "t:global.common.general_labels.heading_tag",
+      "info": "t:global.common.infos.seo_heading.label",
+      "default": "h3",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "t:sections.main-collection.blocks.image.settings.banner_image.label",
+      "info": "t:sections.main-collection.blocks.image.settings.banner_image.info"
+    },
+    {
+      "type": "select",
+      "id": "banner_height_desktop",
+      "label": "t:sections.main-collection.blocks.image.settings.banner_height_desktop.label",
+      "default": "250px",
+      "options": [
+        {
+          "value": "250px",
+          "label": "t:global.common.height.options.small"
+        },
+        {
+          "value": "350px",
+          "label": "t:global.common.height.options.medium"
+        },
+        {
+          "value": "500px",
+          "label": "t:global.common.height.options.large"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "banner_height_mobile",
+      "label": "t:sections.main-collection.blocks.image.settings.banner_height_mobile.label",
+      "default": "200px",
+      "options": [
+        {
+          "value": "100px",
+          "label": "t:global.common.height.options.small"
+        },
+        {
+          "value": "200px",
+          "label": "t:global.common.height.options.medium"
+        },
+        {
+          "value": "350px",
+          "label": "t:global.common.height.options.large"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "content_width",
+      "label": "t:global.common.content_width.label",
+      "default": "medium",
+      "options": [
+        {
+          "value": "small",
+          "label": "t:global.common.content_width.options.small"
+        },
+        {
+          "value": "medium",
+          "label": "t:global.common.content_width.options.medium"
+        },
+        {
+          "value": "large",
+          "label": "t:global.common.content_width.options.large"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "t:global.header.content_alignment_section.label",
+      "default": "text-center",
+      "options": [
+        {
+          "label": "t:global.common.alignments.left",
+          "value": "text-left"
+        },
+        {
+          "label": "t:global.common.alignments.center",
+          "value": "text-center"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.color_section.label"
+    },
+    {
+      "type": "color",
+      "id": "banner_bg_color",
+      "default": "#F2F2F2",
+      "label": "t:global.common.banner.banner_bg_color.label"
+    },
+    {
+      "type": "color",
+      "id": "bg_color_opacity",
+      "default": "#000000",
+      "label": "t:global.common.banner.bg_color_opacity.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "default": "#000000",
+      "label": "t:global.common.banner.text_color.label",
+      "info": "t:global.common.banner.text_color.info"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "t:global.common.banner.overlay_opacity.label",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.space_section.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:global.top_space_desktop.label",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:global.bottom_space_desktop.label",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:global.top_space_mobile.label",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:global.bottom_space_mobile.label",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    }
+  ]
+}
+{% endschema %}

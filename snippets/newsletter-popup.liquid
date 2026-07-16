@@ -1,0 +1,109 @@
+{% if settings.newsletter_pop_enable %}
+	{% assign formStatus = false %}
+	<div class="popup newsletter-popup position-center background-enabled {{ settings.popup_color_scheme }}-scheme{% if settings.enable_blur_effect %} background-blur{% endif %}{% if settings.newsletter_style == 'rounded' %} popup-rounded{% endif %}"  data-newsletter-popup data-popup-body>
+		<div class="close-fullwidth"  data-popup-close ></div>
+		<div class="popup-dialog">
+			<div class="popup-content">
+				<button class="popup-close" data-newsletter-close aria-label="close">
+					{% render 'theme-icons', theme_icon: 'popup_close' %}
+				</button>
+				<div class="newsletter-popup-content {% if settings.newsletter_image != blank %} img-enabled {% endif %} ">
+					{% if settings.newsletter_image != blank %}
+						<div class="newsletter-popup-img">
+							{% render 'image', image: settings.newsletter_image %}
+						</div>
+					{% endif %}
+					<div class="newsletter-popup-content-text">
+						{% if settings.newsletter_heading != blank %}
+							<h3 class="newsletter-popup-heading">{{ settings.newsletter_heading }}</h3>
+						{% endif %}
+						{% if settings.newsletter_description != blank %}
+							<div class="newsletter-popup-desc">
+								<p>{{ settings.newsletter_description }}</p>
+							</div>
+						{% endif %}
+	
+						{%- form 'customer', id: 'newsletter-popup-form', class: 'newsletter-popup-form' -%}
+							<input type="hidden" name="contact[tags]" value="newsletter">
+							<input type="hidden" name="contact[context]" value="newsletter_popup">
+							{%- if form.posted_successfully? -%}
+								{% assign formStatus = true %}
+								<p id="Newsletter-success--popup" class="success-message no-bg" tabindex="-1">
+								  {{- 'newsletter.success' | t -}}
+								</p>
+							{%- endif -%}
+							{%- if form.errors and form.context == 'newsletter_popup' -%}              
+							  <div id="Newsletter-error--popup" class="error-message no-bg" tabindex="-1">
+								{{- form.errors.translated_fields.email | capitalize }}
+								{{ form.errors.messages.email -}}
+							  </div>
+							{%- endif -%}
+							  <div class="form-group">
+								  <label class="hidden" for="CustomerName-{{ section.id }}">Email</label>
+								  <input type="email" class="form-control" name="contact[email]" 
+										 id="CustomerName-{{ section.id }}" 
+										 autocomplete="email"  
+										 autocapitalize="off" 
+										 placeholder="Email" 
+										 pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)*[a-zA-Z]{2,}))$" 
+										 required
+								  >
+							  </div>
+							  {% liquid
+								assign buttonText = 'newsletter.button_label' | t
+								assign buttonAttributes = 'type="submit" name="commit"'
+								render 'button' type: 'button', button_text: buttonText, buttonAttributes: buttonAttributes,button_size:'medium'
+							  %}
+	
+					  {% endform %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		{% if formStatus %}
+		  let newsletterForm = true;
+		  {% else %}
+		  let newsletterForm = false;
+		{% endif %}
+		let cookiesvalue = {{ settings.popup_cookie }};
+		/* NEWSLETTER POPUP STARTS */
+		document.addEventListener('DOMContentLoaded', function () {
+		  var getNewsletter =   getCookie("newsletter_closed");
+		  let newsletterpopupElement=document.querySelector('[data-newsletter-popup]');
+		  if (getNewsletter != 'true' && window.location.pathname.indexOf('/challenge') < 0) {
+			setTimeout(function () {
+			  document.querySelector('body').classList.add('newsletter_active','no-scroll');
+			  newsletterpopupElement.style.display="block";
+			  setTimeout(function(){
+				newsletterpopupElement.classList.add('show');
+			  },500)
+			  focusElement = window;
+			  if(newsletterForm){
+				setCookie('newsletter_closed','true',cookiesvalue)
+			  }
+			}, 1000);
+		  }
+
+		  let closepopup =document.querySelector('[data-newsletter-close]');
+		  	closepopup.addEventListener("click",function(e){
+			e.preventDefault();
+			setCookie('newsletter_closed','true', cookiesvalue)
+			newsletterpopupElement.classList.remove('show');
+			newsletterpopupElement.style.display="none";
+			document.querySelector('body').classList.remove('newsletter_active','no-scroll');
+			window.focus();
+			focusElement = '';
+		  })
+
+		  document.querySelector('button[name="commit"]').addEventListener("click",function(e){
+			e.preventDefault();
+			var form = this.closest('form');
+			form.submit();
+		  })
+
+		});
+		/* NEWSLETTER POPUP ENDS */
+	  </script>	
+	{% endif %}

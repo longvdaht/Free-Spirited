@@ -1,0 +1,649 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_hhmKBY": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_FYYzaC": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Copy_of_Untitled_13_e2c59723-a9e9-400b-abcd-b5d7be9a73b8.png",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_1_87ca7cac-ba7e-42a8-bfbe-d9bf0e1c1cc5.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 0,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_FYYzaC"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "countdown_RqePz8": {
+      "type": "countdown",
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "full_width": true,
+        "layout_style": "stacked-style",
+        "desktop_height": "500px",
+        "mobile_height": "500px",
+        "heading": "FREE SPIRITED END OF SEASON SALE IS HERE!",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "date": "25/11/2024",
+        "enable_glass_background": true,
+        "content_position": "center",
+        "button_style": "solid",
+        "btn_text": "",
+        "btn_link": "shopify://collections/all",
+        "btn_size": "regular",
+        "color_scheme": "",
+        "section_background": "#adcc0d",
+        "highlighted_color": "#eff341",
+        "overlay_background": "#000000",
+        "overlay_opacity": 0,
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 35
+      }
+    },
+    "featured_collection_d6MBVH": {
+      "type": "featured-collection",
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "collection": "shop-fall-collection-sale",
+        "products_style": "carousel",
+        "enable_swipe_mobile": false,
+        "products_to_show": 4,
+        "grid_image_size": "auto",
+        "image_fit": "cover",
+        "content_alignment": "text-left",
+        "title": "SHOP THE END OF SEASON SALE NOW!",
+        "heading_size": "h5",
+        "seo_heading": "h3",
+        "description": "",
+        "btntext": "",
+        "promotion_card": false,
+        "promotion_border": false,
+        "promotion_in_stacked": 1,
+        "pr_heading": "Promotional card",
+        "pr_seo_heading": "h5",
+        "pr_description": "Add short description for this section",
+        "button_style": "solid",
+        "btn_text": "",
+        "btn_link": "",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#eff341",
+        "heading_color": "#000000",
+        "text_color": "#484848",
+        "btn_bg_color": "#000000",
+        "btn_text_color": "#ffffff",
+        "btn_border_color": "#000000",
+        "btn_hover_color": "#a60c0c",
+        "btn_hover_text_color": "#000000",
+        "btn_hover_border_color": "#a60c0c",
+        "background_color": "#ffffff",
+        "background_opacity": 30,
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "slideshow_yRF3Vf": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_H4Nxtt": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Copy_of_Untitled.jpg",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_6.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 0,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_H4Nxtt"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "image_with_text_dfYzJX": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_3f9KN3": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Get Your Favorites Now!"
+          }
+        },
+        "heading_bLbLRL": {
+          "type": "heading",
+          "settings": {
+            "heading": "SALE ENDS SOON!",
+            "heading_size": "h1",
+            "seo_heading": "h2",
+            "highlighted_color": "#eff341"
+          }
+        },
+        "text_FV6WDJ": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": "medium"
+          }
+        },
+        "button_6JxMND": {
+          "type": "button",
+          "settings": {
+            "button_style_1": "solid",
+            "btn_text": "Shop More End of Season Sales",
+            "btn_url": "shopify://collections/shop-fall-collection-sale",
+            "btn_size": "regular",
+            "button_style_2": "solid",
+            "btn_text_2": "",
+            "btn_url_2": "",
+            "btn_size_2": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_3f9KN3",
+        "heading_bLbLRL",
+        "text_FV6WDJ",
+        "button_6JxMND"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "section_fullwidth": false,
+        "card_background": false,
+        "image": "shopify://shop_images/2.jpg",
+        "image_overlay_enable": true,
+        "image_overlay": "shopify://shop_images/crescent-moon-with-a-face-tee-983460.jpg",
+        "image_width": "medium",
+        "image_position": "left",
+        "content_position": "center",
+        "content_alignment": "flex-start_left",
+        "hide_row_count": false,
+        "color_scheme": "",
+        "section_background": "",
+        "card_color": "",
+        "top_space_desktop": 70,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 50,
+        "bottom_space_mobile": 25
+      }
+    },
+    "slideshow_rQAHre": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_4QxCzm": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/free_spirit_tie_dye_667b3423-e8c4-4ebd-99d4-11d1d4b4d700.png",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_3_52749ac4-406e-465d-985c-96a9a36a8a29.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 0,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_4QxCzm"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "1732037909673c9f45": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_XGrmGE": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_XGrmGE"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "section_visibility": "always",
+        "top_space_desktop": 85,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "featured_collection_43V6hh": {
+      "type": "featured-collection",
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "collection": "shop-new-winter-collection",
+        "products_style": "carousel",
+        "enable_swipe_mobile": false,
+        "products_to_show": 4,
+        "grid_image_size": "auto",
+        "image_fit": "cover",
+        "content_alignment": "text-left",
+        "title": "",
+        "heading_size": "h5",
+        "seo_heading": "h3",
+        "description": "",
+        "btntext": "",
+        "promotion_card": false,
+        "promotion_border": false,
+        "promotion_in_stacked": 1,
+        "pr_heading": "Promotional card",
+        "pr_seo_heading": "h5",
+        "pr_description": "Add short description for this section",
+        "button_style": "solid",
+        "btn_text": "",
+        "btn_link": "",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#eff341",
+        "heading_color": "#000000",
+        "text_color": "#484848",
+        "btn_bg_color": "#000000",
+        "btn_text_color": "#ffffff",
+        "btn_border_color": "#000000",
+        "btn_hover_color": "#a60c0c",
+        "btn_hover_text_color": "#000000",
+        "btn_hover_border_color": "#a60c0c",
+        "background_color": "#ffffff",
+        "background_opacity": 30,
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "rich_text_NyRcVb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gkxBLn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Time Is Running Out!",
+            "heading_size": "h4",
+            "seo_heading": "h2",
+            "highlighted_color": "#eff341"
+          }
+        },
+        "button_6dhzkX": {
+          "type": "button",
+          "settings": {
+            "button_style": "solid",
+            "text": "Shop the End of Season Sale Now!",
+            "link": "shopify://collections/shop-fall-collection-sale",
+            "button_size": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gkxBLn",
+        "button_6dhzkX"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "content_width": "large",
+        "content_alignment": "text-center",
+        "content_postion": "center",
+        "color_scheme": "",
+        "section_background": "",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "logo_list_CnCCtX": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_cCdJgc": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_27_a9df9bbe-8ce3-4c65-b3f1-9d564670746d.jpg",
+            "image_url": "",
+            "image_link": "",
+            "image_width": 100
+          }
+        },
+        "logo_Um77GW": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_30_34f67246-2f02-40f6-b275-ba1fcff351e5.jpg",
+            "image_url": "",
+            "image_link": "",
+            "image_width": 100
+          }
+        },
+        "logo_anpYAg": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_28_2ba7ad55-dba5-46fe-8567-aef45228bce3.jpg",
+            "image_url": "",
+            "image_link": "",
+            "image_width": 100
+          }
+        },
+        "logo_mJJV3J": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_38_0cdbbfaa-7dfd-499c-aa17-d9816442fda2.jpg",
+            "image_url": "",
+            "image_link": "",
+            "image_width": 100
+          }
+        },
+        "logo_8wcFQm": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_35_c17138c1-89e3-47d9-97d3-245457b4c4fb.jpg",
+            "image_url": "",
+            "image_link": "",
+            "image_width": 100
+          }
+        },
+        "logo_UfabN7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_36_fac7196b-ea05-4515-ba5b-552b8d8045d0.jpg",
+            "image_url": "",
+            "image_link": "",
+            "image_width": 100
+          }
+        },
+        "logo_nifRR4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_29_1de72ff7-c5c7-4f4d-89f0-78a76215bd62.jpg",
+            "image_url": "",
+            "image_link": "",
+            "image_width": 100
+          }
+        },
+        "logo_ybnAx6": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_33_1774e2b6-ce62-4ba9-bd7f-abeb3f18c9da.jpg",
+            "image_url": "",
+            "image_link": "",
+            "image_width": 100
+          }
+        },
+        "logo_tWFaCx": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_34_08aa8420-d148-4c17-bb43-08180b128400.jpg",
+            "image_url": "",
+            "image_link": "",
+            "image_width": 100
+          }
+        },
+        "logo_nGqUpJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_32_7ea37462-5560-466a-a94d-70e414f84112.jpg",
+            "image_url": "",
+            "image_link": "",
+            "image_width": 100
+          }
+        },
+        "logo_KHUWym": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_31_8e22b851-3c76-4bc1-a25c-ec17bd4cc7e9.jpg",
+            "image_url": "",
+            "image_link": "",
+            "image_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "logo_cCdJgc",
+        "logo_Um77GW",
+        "logo_anpYAg",
+        "logo_mJJV3J",
+        "logo_8wcFQm",
+        "logo_UfabN7",
+        "logo_nifRR4",
+        "logo_ybnAx6",
+        "logo_tWFaCx",
+        "logo_nGqUpJ",
+        "logo_KHUWym"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "show_borders": false,
+        "images_height": true,
+        "show_card_background": false,
+        "show_card_border": false,
+        "layout_type": "marquee",
+        "enable_swipe_mobile": false,
+        "columns_desktop": 8,
+        "column_spacing": 20,
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "direction": "ltr",
+        "heading": "",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "heading_alignment": "text-center",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#eff341",
+        "card_color": "#f7f7f7",
+        "card_border_color": "#000000",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    }
+  },
+  "order": [
+    "slideshow_hhmKBY",
+    "countdown_RqePz8",
+    "featured_collection_d6MBVH",
+    "slideshow_yRF3Vf",
+    "main",
+    "image_with_text_dfYzJX",
+    "slideshow_rQAHre",
+    "1732037909673c9f45",
+    "featured_collection_43V6hh",
+    "rich_text_NyRcVb",
+    "logo_list_CnCCtX"
+  ]
+}

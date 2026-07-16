@@ -1,0 +1,153 @@
+<link rel="preload" as="style" href="{{ 'main-blog.css' | asset_url }}">
+{{ 'main-blog.css' | asset_url | stylesheet_tag }}
+<div class="section-container {{ section.settings.color_scheme }}-scheme">
+  {% assign limit = section.settings.artical_per_page %}
+  {%- paginate blog.articles by limit -%}
+    <div class="main-blog-content">
+      <div class="{{ settings.container_width }}">
+        {% if blog.articles_count > 0 %}
+        <div class="main-blog-wrapper{% if section.settings.enable_swipe_mobile %} mobile-swipe{% endif %}">
+            {%- for article in blog.articles -%}
+              {% assign placeholder_image_index = forloop.index0 | modulo: 3 | plus: 1 %}
+              {% assign placeholder_image = 'blog-apparel-' | append: placeholder_image_index %}
+              {%  assign aosDelay = forloop.index | times: 100  %}
+              {% render 'card-blog',
+                article: article,
+                section: section,
+                date: section.settings.show_date,
+                author: section.settings.show_author,
+                placeholder_image: placeholder_image,
+                aosDelay:aosDelay
+              %}
+            {% endfor %}
+          </div>
+          {% liquid
+            if paginate.pages > 1
+              render 'pagination', paginate: paginate
+            endif
+          %}
+        {% endif %}
+      </div>
+    </div>
+  {% endpaginate %}
+</div>
+<style>
+  #shopify-section-{{ section.id }}{
+    --top-spacer: {{ section.settings.top_space_desktop }}px;
+    --bottom-spacer: {{ section.settings.bottom_space_desktop }}px;
+  }
+  @media only screen and (max-width:767px) {
+    #shopify-section-{{ section.id }}{
+      --top-spacer: {{ section.settings.top_space_mobile }}px;
+      --bottom-spacer: {{ section.settings.bottom_space_mobile }}px;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "t:sections.main-blog.name",
+  "tag": "section",
+  "class": "main-blog",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.main-blog.settings.blog_post.label"
+    },
+    {
+      "type": "range",
+      "id": "artical_per_page",
+      "min": 3,
+      "max": 24,
+      "step": 3,
+      "default": 12,
+      "label": "t:sections.main-blog.settings.artical_per_page.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_swipe_mobile",
+      "label": "t:global.common.swipe_mobile.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_date.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "label": "t:sections.main-blog.settings.show_author.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tags",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_tags.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_excerpt.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "comments_enabled",
+      "default": true,
+      "label": "t:sections.main-blog.settings.comments_enabled.label"
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.color_section.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "primary",
+      "label": "t:global.header.color_scheme.label"
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.space_section.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:global.top_space_desktop.label",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:global.bottom_space_desktop.label",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:global.top_space_mobile.label",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:global.bottom_space_mobile.label",
+      "default": 35,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    }
+  ]
+}
+{% endschema %}

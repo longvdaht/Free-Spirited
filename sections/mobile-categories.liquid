@@ -1,0 +1,206 @@
+
+<link rel="preload" as="style" href="{{ 'mobile-categories.css' | asset_url }}">
+{{ 'mobile-categories.css' | asset_url | stylesheet_tag }}
+<div class="mobile-categories-wrapper position-{{ section.settings.horizontal_position }}{% if section.settings.enable_on_home_page == true %} enable-on-home{% endif %}">
+    <div class="close-categories-fullwidth" data-mobile-categories-close aria-label="close"></div>
+    {% if section.blocks.size > 0 %}
+        <div class="mobile-categories-content" data-mobile-categories-content>
+            <div class="mobile-categories-content-inner">
+                {% for block in section.blocks %}
+                    {% if block.settings.image != blank or block.settings.heading != blank or block.settings.description != blank %}
+                        <{% if block.settings.link != blank %}a href="{{ block.settings.link }}"{%else %}div{% endif %}  class="mobile-categories-item" id="mobile-categories-{{ block.id }}">
+                            {% if block.settings.image != blank %}
+                                <div class="mobile-categories-item-img">
+                                    <div class="media-box" style="--image-ratio:100%;">
+                                        {%- render 'image', image: block.settings.image , class: 'mobile-categories-image' -%}
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if block.settings.heading != blank  or block.settings.description != blank %}
+                                <div class="mobile-categories-text-content">
+                                    {% if block.settings.heading != blank %}
+                                        <h6 class="mobile-categories-heading text">
+                                            {{- block.settings.heading -}}
+                                        </h6>
+                                    {% endif %}
+                                    {% if block.settings.description != blank %}
+                                        <p class="mobile-categories-description text-xsmall">
+                                            {{- block.settings.description -}}
+                                        </p>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        </{% if block.settings.link != blank %}a{%else %}div{% endif %}>
+                    {% endif  %}
+                {% endfor %} 
+            </div>
+        </div>
+    {% endif %}
+    {% if  section.settings.icon_image != blank  or section.settings.title != blank %}
+        <div class="mobile-categories-icon-text {% if section.settings.icon_image != blank %} image-true{% endif %}" data-mobile-categories-head>
+           
+            {%- if section.settings.icon_image != blank -%}
+                <div class="mobile-categories-icon">
+                    <div class="media-box" style="--image-ratio:100%;">
+                        {%- render 'image', image: section.settings.icon_image -%}
+                    </div>
+                </div>
+            {% endif %}
+            {% if section.settings.title != blank %}
+                <h6 class="mobile-categories-title text-large">{{ section.settings.title }} </h4>
+            {% endif %}
+        </div>
+    {% endif %}
+    <button class="close-categories" aria-label="close" data-mobile-categories-close>
+        <svg x="0px" y="0px" viewBox="0 0 11.8 11.8" style="enable-background:new 0 0 11.8 11.8;" fill="currentColor">
+            <path d="M11.5,10.6L6.7,5.9l4.7-4.7c0.2-0.2,0.2-0.6,0-0.8c-0.1-0.1-0.3-0.2-0.4-0.2c0,0,0,0,0,0c-0.2,0-0.3,0.1-0.4,0.2L5.9,5.1
+               L1.2,0.3c-0.2-0.2-0.6-0.2-0.8,0c-0.2,0.2-0.2,0.6,0,0.8l4.7,4.7l-4.7,4.7c-0.1,0.1-0.2,0.3-0.2,0.4c0,0.3,0.3,0.6,0.6,0.6
+               c0.2,0,0.3-0.1,0.4-0.2l4.7-4.7l4.7,4.7c0.1,0.1,0.3,0.2,0.4,0.2s0.3-0.1,0.4-0.2C11.7,11.3,11.7,10.9,11.5,10.6z"></path>
+           </svg>
+    </button>
+</div>
+
+<style>
+    #shopify-section-{{ section.id }} {
+      display:none;
+    }
+    #shopify-section-{{ section.id }} .mobile-categories-wrapper{
+      bottom:{{ section.settings.vertical_position }}%;
+    }
+    #shopify-section-{{ section.id }} {
+        --categoryBackground:{{ section.settings.background_color }};
+        --categoryText:{{ section.settings.text_color }};
+    }
+    {% for block in section.blocks %}
+        #shopify-section-{{ section.id }} #mobile-categories-{{ block.id }}{
+            --categoryItemBackground:{{ block.settings.background_color }};
+            --categoryItemText:{{ block.settings.text_color }};
+        }
+    {% endfor %}
+    @media only screen and (max-width:767px) {
+          {% if section.settings.enable_on_home_page %}
+                {% if template == 'index' %}
+                #shopify-section-{{ section.id }}{
+                    display:block;
+                }
+                {% endif %}
+            {% else %}
+              #shopify-section-{{ section.id }}{
+                display:block;
+              }
+          {% endif %}
+    }
+</style>
+{% schema %}
+{
+  "name": "t:sections.mobile_categories.name",
+  "tag": "section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_on_home_page",
+      "label": "t:sections.mobile_categories.settings.enable_on_home_page.label",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_image",
+      "label": "t:sections.mobile_categories.settings.icon_image.label",
+      "info": "t:sections.mobile_categories.settings.icon_image.info"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.mobile_categories.settings.title.label",
+      "info": "t:sections.mobile_categories.settings.title.info"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_position",
+      "label": "t:sections.mobile_categories.settings.horizontal_position.label",
+      "default": "left",
+      "options": [
+        {
+          "label": "t:global.common.alignments.left",
+          "value": "left"
+        },
+        {
+          "label": "t:global.common.alignments.right",
+          "value": "right"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "vertical_position",
+      "label": "t:sections.mobile_categories.settings.vertical_position.label",
+      "default": 5,
+      "min": 5,
+      "max": 65,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.color_section.label"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:global.header.background_section.label",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:global.common.general_labels.text",
+      "default": "#FFFFFF"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "t:sections.mobile_categories.blocks.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:global.common.general_labels.image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:global.common.general_labels.heading"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "t:global.common.general_labels.description"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "default": "/collections",
+          "label": "t:global.common.general_labels.link"
+        },
+        {
+          "type": "header",
+          "content": "t:global.header.color_section.label"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "t:global.header.background_section.label",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "t:global.common.general_labels.text",
+          "default": "#FFFFFF"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

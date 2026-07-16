@@ -1,0 +1,53 @@
+<div class="header-searchbar-box" data-header-searchbox>
+    <form action="{{ routes.search_url }}" method="get" role="search" class="search header-searchbar-form" data-search-form data-header-search-form>
+        <div class="header-searchbar-content">
+            <span class="header-searchbar-icon">
+                {% render 'theme-icons', theme_icon: 'search' %}
+            </span>
+            <label for="search-in-header" class="hidden">{{ 'general.search.search' | t }}</label>
+            <input
+                type="text"
+                class="form-control serach-drawer-input header-group-search"
+                id="search-in-header"
+                name="q"
+                value="{{ search.terms | escape }}"
+                placeholder="{{ 'general.search.search' | t }}"
+                data-search-input
+            >
+            <span class="header-searchbar-clear cursor-pointer" data-clear-input> Clear </span>
+        </div>
+    </form>
+    <div class="header-searchbar-body {{ settings.drawer_color_scheme }}-scheme" data-header-seach-body>
+        <div class="header-searchbar-body-inner">
+          {% if settings.enable_recent_search or settings.enable_suggestion %}
+            <div class="predictive-search" data-recent-suggestion data-recent-popover>
+              {% if settings.enable_recent_search %}
+                <div class="predictive-search-popular" data-recent-search-result></div>
+              {% endif %}
+              {% if settings.enable_suggestion %}
+                <div class="predictive-search-suggestions">
+                  {% if settings.suggestion_heading != blank and settings.suggestion_product != blank %}
+                    <h6 class="predictive-search-heading">{{ settings.suggestion_heading }}</h6>
+                  {% endif %}
+                  {% if settings.suggestion_product != blank %}
+                    <div class="predictive-search-suggestions-list product-card-outer small-product">
+                      {%- for item in settings.suggestion_product limit: 6 -%}
+                        <div class="product-card-item">
+                          {%- assign placeholder_image = 'product-apparel-1' -%}
+                          {% render 'card-product'  placeholder_image: placeholder_image, cProduct: item, settings.suggestion_product, optionhide: false, gridImageSize: settings.common_grid_image_size %}
+                        </div>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+          <div class="predictive-search-result" data-search-body></div>
+        </div>
+        {% comment %} <div class="search-bar-no-results">
+        <h3>No suggestions found.</h3>
+        </div> {% endcomment %}
+    </div> 
+</div>
+

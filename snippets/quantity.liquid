@@ -1,0 +1,43 @@
+{% liquid 
+  if visibility
+    assign visibility = visibility
+  else
+    assign visibility = ''
+  endif
+%}
+
+<div class="product-variants-wrapper {{ visibility }}" data-qty-wrapper>
+  <h6 class="product-variants-title text " for="product-quantity-{{ product_form_id }}">Select quantity</h6>
+  <div class="quantity {%  if quickViewcard == true %}quantity-small{% endif %}" data-quantity-wrapper>
+    <div class="quantity-inner">
+      <button type="button" class="quantity-button quantity-down no-js-hidden" data-quantity-decrement aria-label="{{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}">
+        <span class="hidden">{{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}</span>
+        <svg width="10" height="2" viewBox="0 0 10 2" fill="none">
+          <path d="M7.45058e-08 2L0 9.53674e-07L10 0V2L7.45058e-08 2Z" fill="currentColor"/>
+        </svg>
+      </button>
+      <label class="hidden" for="product-quantity-{{ product_form_id }}">{{ 'products.product.quantity.label' | t }}</label>
+      <input
+        id="product-quantity-{{ product_form_id }}"
+        class="quantity-input"
+        type="number"
+        name="quantity"
+        min="1"
+        step="1"
+        value="1"
+        form="{{ product_form_id }}"
+        data-quantity-input
+        aria-label="{{ 'products.product.quantity.label' | t }}"
+      >
+      <button type="button" class="quantity-button quantity-up no-js-hidden" data-quantity-increment aria-label="  {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}">
+        <span class="hidden">
+          {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
+        </span>
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <path d="M7.45058e-08 6L0 4L10 4V6L7.45058e-08 6Z" fill="currentColor"/>
+          <path d="M4 0L6 1.29166e-08L6 10H4L4 0Z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

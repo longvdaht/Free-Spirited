@@ -1,0 +1,238 @@
+.spotlight-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--block-radius);
+}
+
+.spotlight-img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--image-bg);
+}
+
+.spotlight-product-inner-item {
+    position: absolute;
+}
+
+.spotlight-dot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+    background: transparent;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.spotlight-dot-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--spot-color);
+    box-shadow: 0 0 0 6px var(--spot-color-light);
+    color: var(--spot-background-color);
+    border-radius: 100%;
+}
+
+.spotlight-product-inner-item.active .spotlight-dot {
+    animation: pulse 1.5s infinite;
+    transform: rotate(45deg);
+}
+
+.spotlight-dot svg {
+    width: 8px;
+    height: 8px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--spot-color-light);
+    }
+    70% {
+        box-shadow: 0 0 0 15px var(--spot-color-null);
+    }
+    100% {
+        box-shadow: 0 0 0 0 var(--spot-color-null);
+    }
+}
+
+.spotlight-detail {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    transition: transform .4s cubic-bezier(.75, 0, .175, 1);
+    box-shadow: 2px 2px 5px #0000001a;
+    transform: translateY(120%);
+    z-index: 1;
+}
+
+.spotlight-detail.active {
+    transform: unset;
+}
+
+.spotlight-product-detail {
+    display: flex;
+    align-items: flex-start;
+    background: var(--body-background);
+    padding: 14px;
+    border-radius: var(--block-radius);
+    position: relative;
+}
+
+.spotlight-product-img {
+    min-width: 64px;
+    max-width: 64px;
+    margin-right: 10px;
+    position: relative;
+    background-color: var(--image-bg);
+    overflow: hidden;
+    border-radius: var(--block-radius);
+}
+
+.spotlight-product-info {
+    padding-top: 5px;
+}
+
+.spotlight-product-info .product-pricing {
+    padding-bottom: 0;
+}
+
+.spotlight-product-info .product-pricing span {
+    font-size: var(--small-text);
+}
+
+.spotlight-detail-close {
+    position: absolute;
+    top: -15px;
+    left: calc(50% - 15px);
+}
+
+.spotlight-marquee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(var(--background), var(--opacity));
+    backdrop-filter: blur(50px);
+    padding: 2px 0;
+}
+
+.spotlight-marquee-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.spotlight-marquee-item {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: text-marque;
+    animation-duration: var(--marqueeSpeed, 3s);
+    animation-play-state: running;
+    padding-right: 10px;
+    color: var(--marquee-color);
+}
+
+.ltr-direction .spotlight-marquee-item {
+    animation-direction: reverse;
+}
+
+.rtl-direction .spotlight-marquee-item {
+    animation-direction: normal;
+}
+
+@keyframes text-marque {
+    0% {
+        transform: translate(0);
+        visibility: visible;
+    }
+    100% {
+        transform: translate(-100%);
+    }
+}
+
+@media (min-width:768px) {
+    .spotlight-product-inner-item:hover .spotlight-product-detail,
+    .spotlight-product-inner-item:focus-within .spotlight-product-detail {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1) translateY(-10px);
+    }
+}
+
+@media (min-width:1025px) {
+    .spotlight-item.marquee-on-hover .spotlight-marquee {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: .3s ease;
+    }
+    .spotlight-item.marquee-on-hover .spotlight-marquee .spotlight-marquee-item {
+        animation-play-state: paused;
+    }
+    .spotlight-item.marquee-on-hover:hover .spotlight-marquee {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+    .spotlight-item.marquee-on-hover:hover .spotlight-marquee .spotlight-marquee-item {
+        animation-play-state: running;
+    }
+    .spotlight-product-img {
+        min-width: 74px;
+        max-width: 74px;
+        margin-right: 15px;
+    }
+    .spotlight-detail-close {
+        position: absolute;
+        right: 15px;
+        left: unset;
+        top: unset;
+    }
+    .spotlight-product-info {
+        padding-right: 45px;
+    }
+}
+
+@media (min-width:1441px) {
+    .spotlight-dot {
+        width: 34px;
+        height: 34px;
+        padding: 7px;
+    }
+    .spotlight-product-img {
+        min-width: 94px;
+        max-width: 94px;
+    }
+}
+
+@media (max-width:767px) {
+    .spotlight-item {
+        margin-bottom: 15px;
+    }
+    .spotlight-wrapper.mobile-swipe .row {
+        flex-wrap: nowrap;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+    .spotlight-wrapper.mobile-swipe .col-12 {
+        max-width: 70%;
+        flex: 0 0 70%;
+    }
+    .spotlight-wrapper.mobile-swipe .col-12:only-child {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}

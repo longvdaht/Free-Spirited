@@ -1,0 +1,193 @@
+/*  */
+
+.image-with-text-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.image-with-text-wrapper.with-background {
+    background: var(--content-background);
+    border-radius: var(--block-radius);
+    overflow: hidden;
+}
+
+.image-with-text-images {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+    width: 100%;
+    flex: 0 0 100%;
+    overflow: hidden;
+}
+
+.image-with-text-img {
+    width: 100%;
+    position: relative;
+    flex: 0 0 100%;
+    background: var(--image-bg);
+    overflow: hidden;
+    border-radius: var(--block-radius);
+}
+
+.image-overlay .image-with-text-img.main-img {
+    max-width: 80%;
+}
+
+.image-with-text-img.overlay-img {
+    max-width: 42%;
+    margin-left: -22%;
+}
+
+.image-with-text-content {
+    flex: 0 0 100%;
+}
+
+.image-with-text-content-inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: var(--text-position);
+    align-items: var(--text-alignment1);
+    text-align: var(--text-alignment2);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.image-with-text-heading,
+.image-with-text-desc,
+.image-with-text-button,
+.image-with-text-row-item {
+    margin-bottom: 15px;
+}
+
+.image-with-text-subheading {
+    margin-bottom: 10px;
+}
+
+.image-with-text-desc p,
+.image-with-text-desc p *,
+.image-with-text-desc ol *,
+.image-with-text-desc ul *,
+.image-with-text-desc li,
+.image-with-text-desc li *,
+.image-with-text-desc a {
+    font-size: inherit;
+}
+
+.image-with-text-button {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: var(--text-alignment1);
+}
+
+.image-with-text-row-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.image-with-text-row-number {
+    border: 1px solid var(--border-color);
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    font-size: 16px;
+}
+
+.image-with-text-row-heading+.image-with-text-row-desc {
+    padding-top: 8px;
+}
+
+@media (min-width:768px) {
+    .image-with-text-wrapper.image-position-right {
+        flex-direction: row-reverse;
+        margin-left: auto;
+    }
+    .image-with-text-wrapper.image-small .image-with-text-images {
+        flex: 0 0 40%;
+    }
+    .image-with-text-wrapper.image-small .image-with-text-content {
+        flex: 0 0 60%;
+    }
+    .image-with-text-wrapper.image-medium .image-with-text-images {
+        flex: 0 0 50%;
+    }
+    .image-with-text-wrapper.image-medium .image-with-text-content {
+        flex: 0 0 50%;
+    }
+    .image-with-text-wrapper.image-large .image-with-text-images {
+        flex: 0 0 60%;
+    }
+    .image-with-text-wrapper.image-large .image-with-text-content {
+        flex: 0 0 40%;
+    }
+    .image-with-text-wrapper.image-position-right.fullwidth .image-with-text-content-inner {
+        margin-left: auto;
+    }
+    .image-with-text-heading,
+    .image-with-text-desc,
+    .image-with-text-button,
+    .image-with-text-row-item {
+        margin-bottom: 25px;
+    }
+    .image-with-text-subheading {
+        margin-bottom: 20px;
+    }
+    .image-position-right .image-with-text-images.image-overlay {
+        flex-direction: row-reverse;
+    }
+    .image-position-right .image-with-text-images.image-overlay .image-with-text-img.overlay-img {
+        margin-right: -22%;
+        margin-left: 0;
+    }
+    .image-with-text-row-heading+.image-with-text-row-desc {
+        padding-top: 10px;
+    }
+}
+
+@media (min-width:1025px) {
+    .image-with-text-content-inner {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width:1200px) {
+    .image-with-text-content-inner {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+@media (min-width:1441px) {
+    .image-with-text-heading,
+    .image-with-text-desc,
+    .image-with-text-button,
+    .image-with-text-row-item {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:767px) {
+    .image-with-text-wrapper {
+        flex-wrap: wrap;
+    }
+    .image-with-text-content-inner {
+        padding-left: 0;
+    }
+    .fullwidth .image-with-text-content-inner,
+    .image-with-text-wrapper.with-background .image-with-text-content-inner {
+        padding-left: 20px;
+    }
+    .image-with-text-button {
+        gap: 10px;
+    }
+}

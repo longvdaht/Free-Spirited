@@ -1,0 +1,78 @@
+{%- if cProduct.available -%}
+  <div class="product-badges-card">
+    {% assign newBadgeStatus = false %}
+    {% if settings.new_label_text != blank %}
+      {% assign newbadegtext = settings.new_label_text %}
+    {% else %}
+      {% assign newbadegtext = 'general.badges.new' | t %}
+    {% endif %}
+    {% if settings.new_collection_label %}
+      {% for collection in settings.add_new_collection %}
+        {% for collection_product in collection.products %}
+          {% if collection_product.handle == cProduct.handle %}
+            {% assign newBadgeStatus = true %}
+            <span class="product-badge custom heading-font">{{ newbadegtext }}</span>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    {% endif %}
+    {% if settings.new_products_tag and newBadgeStatus == false %}
+      
+      {% for tag in cProduct.tags %}
+        {% if tag == settings.new_text_tag %}
+          {% assign newBadgeStatus = true %}
+          <span class="product-badge custom heading-font">{{ newbadegtext }}</span>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if settings.new_date_tag and newBadgeStatus == false %}
+      {% assign days = settings.days_ago_created %}
+      {% assign period_time = days | times: 24 | times: 60 | times: 60 %}
+      {% assign date_now = 'now' | date: '%s' %}
+      {% assign end_date = cProduct.published_at | date: '%s' | plus: period_time | date: '%s' %}
+      {% if end_date >= date_now %}
+        {% assign newBadgeStatus = true %}
+        <span class="product-badge custom heading-font">{{ newbadegtext }}</span>
+      {% endif %}
+    {% endif %}
+
+    {% if settings.sale_label and cProduct.compare_at_price_max %}
+      {% if cProduct.compare_at_price_max > cProduct.price %}
+        <span class="product-badge sale heading-font">{{ 'general.badges.sale' | t }}</span>
+      {% endif %}
+    {% endif %}
+    {% if settings.preorder_label %}
+      {% if cProduct.selected_or_first_available_variant.inventory_quantity <= 0
+        and cProduct.selected_or_first_available_variant.inventory_policy == 'continue'
+      %}
+        <span class="product-badge custom heading-font">{{ 'general.badges.preorder' | t }}</span>
+      {% endif %}
+    {% endif %}
+    {% if settings.custom_label and settings.custom_tag_label != blank %}
+      {% assign custom_tags = settings.custom_tag | downcase | split: ',' %}
+      {% liquid
+        assign tagStatus = false
+        for tag in custom_tags
+          for productTag in cProduct.tags
+            assign productTagdown = productTag | downcase
+            if productTagdown == tag
+              assign tagStatus = true
+              break
+            endif
+          endfor
+        endfor
+      %}
+      {% if tagStatus %}
+        <span class="product-badge custom heading-font">
+          {{ settings.custom_tag_label }}
+        </span>
+      {% endif %}
+    {% endif %}
+  </div>
+{% else %}
+  <div class="product-badges-card">
+    {% if settings.soldout_label %}
+      <span class="product-badge soldout heading-font">{{ 'general.badges.soldout' | t }}</span>
+    {% endif %}
+  </div>
+{% endif %}

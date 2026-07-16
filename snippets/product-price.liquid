@@ -1,0 +1,34 @@
+{%liquid
+
+assign current_variant = product.selected_or_first_available_variant
+assign price = current_variant.price | default: 1999
+assign money_price = price | money
+%}
+
+{% if settings.show_save_amount %}
+  <div class="product-pricing-inner">
+  {% assign offText = 'products.product.off' | t %}
+    <span class="product-discount-price {% if current_variant.compare_at_price > current_variant.price %}price-saving{% else %}hidden{% endif %}"  data-price-saving> 
+        {%- if current_variant.compare_at_price > current_variant.price -%}
+          {{- current_variant.compare_at_price | minus: current_variant.price | times: 100 | divided_by: current_variant.compare_at_price | append: '% ' | append: offText -}}
+        {% endif %}
+    </span>
+  </div>
+{% endif %}
+<p class="hidden">{%- if current_variant.compare_at_price > current_variant.price -%}{{ 'products.product.price.sale_price' | t }}{%- else -%}{{ 'products.product.price.regular_price' | t }}{% endif %}</p>
+<span class="product-actual-price  {% if sticky != true %}h5{% endif %}" data-actual-price>{{ money_price }}</span>
+<span class="hidden">{{ 'products.product.price.regular_price' | t }}</span>
+<span class="product-compare-price {% if sticky != true %}h6{% endif %} {%- if current_variant.compare_at_price > current_variant.price -%} compare-price-data {% else %} hidden{% endif %}" data-compare-price>
+ {{ current_variant.compare_at_price | money }}
+</span>
+
+<span class="hidden" data-soldout>{{ 'products.product.sold_out' | t }}</span>
+<span data-soldout-text class="text-small hidden">
+  {%- unless current_variant.available -%}{{ 'products.product.sold_out' | t }}{%- endunless -%}
+</span>
+
+<span class="hidden">{{ 'products.product.price.unit_price' | t }}</span>
+<span class="product-unit-price text-small" {%- if current_variant.unit_price_measurement -%}product-unite-price {% else %} hidden {% endif %}" data-unit-price>
+  {{ current_variant.unit_price | money }} / {% if current_variant.unit_price_measurement.reference_value != 1 %}{{ current_variant.unit_price_measurement.reference_value }}{% endif %} {{ current_variant.unit_price_measurement.reference_unit }}
+</span>
+

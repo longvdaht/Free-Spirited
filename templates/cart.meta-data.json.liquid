@@ -1,0 +1,14 @@
+{%- layout none -%}
+{
+  "meta_product_id_array": [
+    {% for item in cart.items %}
+      {% if item.variant.metafields.productId.productId %}
+        {
+          "id": "{{ item.variant.metafields.productId.productId }}",
+          "quantity": {{ item.quantity }}
+        }
+        {% unless forloop.last %},{% endunless %}
+      {% endif %}
+    {% endfor %}
+  ]
+}

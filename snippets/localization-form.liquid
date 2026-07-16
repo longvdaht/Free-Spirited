@@ -1,0 +1,110 @@
+{%- if section.settings.enable_currency_selector or section.settings.enable_language_selector -%}
+  <link rel="preload" as="style" href="{{ 'country-flags.css' | asset_url }}">
+  {{ 'country-flags.css' | asset_url | stylesheet_tag }}
+  <div class="localization-form">
+    {% if section.settings.enable_currency_selector %}
+      {% assign formID = 'localization_form_language_currency-' | append: section.id | append: position %}
+      {% form 'localization', id: formID, class: 'shopify-localization-form', tabindex:'-1' %}
+        <div class="custom-select custom-select-localization custom-select-currency{% if announcement %} hover-event{% endif %}" data-details-head data-viewinscreen-header tabindex="0">
+          <div class="custom-select-button">
+            <span class="custom-select-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+                <path d="M9.81731 4.53334C10.2949 4.31625 10.6912 4.06608 11 3.79072V4.75271C11 5.82083 8.7409 7.01162 5.49929 7.01162C2.25862 7.01162 0 5.82109 0 4.75271V3.79123C0.308601 4.06634 0.705134 4.31676 1.18221 4.53334C2.34203 5.0604 3.87526 5.35053 5.49929 5.35053C7.12403 5.35053 8.65726 5.0604 9.81731 4.53334ZM5.49929 7.84433C3.87478 7.84433 2.34203 7.55421 1.18221 7.02766C0.705373 6.81108 0.308839 6.5604 0 6.28554V7.24805C0 8.31617 2.25838 9.50696 5.49929 9.50696C8.7409 9.50696 11 8.31642 11 7.24805V6.28504C10.6914 6.56066 10.2949 6.81057 9.81731 7.02766C8.65773 7.55421 7.1245 7.84433 5.49929 7.84433ZM5.49929 10.3389C3.87526 10.3389 2.34203 10.0488 1.18221 9.52172C0.705373 9.30514 0.308839 9.05497 0 8.77961V9.74847C0.00595754 10.8125 2.26577 12 5.49929 12C8.73208 12 10.9931 10.812 11 9.74593V8.77986C10.6914 9.05497 10.2949 9.30539 9.81731 9.52197C8.65726 10.049 7.12403 10.3389 5.49929 10.3389ZM5.49929 0C2.26601 0 0.00595754 1.18799 0 2.25407V2.25865C0 3.32728 2.25838 4.51756 5.49929 4.51756C8.7409 4.51756 11 3.32754 11 2.25865V2.25127C10.9933 1.18799 8.73232 0 5.49929 0Z" fill="currentColor"/>
+              </svg>
+              {% comment %} <span class="countryflags countryflag__{{ localization.country.iso_code }}"> </span> {% endcomment %}
+              {{- localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
+            </span>
+            <span class="custom-select-arrow">
+              <svg width="8" height="5" viewBox="0 0 8 5" fill="none">
+                <path d="M7 1L4 4L1 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+          <div
+            class="custom-select-content {{ class }} {{ customClass }}"
+            data-details-select-summary
+            data-viewinscreen-body
+          >
+            <ul class="custom-select-list">
+              {% for country in localization.available_countries %}
+                <li class="custom-select-item">
+                  <button
+                    type="submit"
+                    name="country_code"
+                    id="country-{{ section.id }}-{{ forloop.index }}"
+                    value="{{ country.iso_code }}"
+                    class="custom-select-item-active"
+                  >
+                    {% comment %} <span class="countryflags countryflag__{{ country.iso_code }}"> </span> {% endcomment %}
+                    <span>
+                      {{- country.name }} ({{ country.currency.iso_code }}
+                      {{ country.currency.symbol }})</span
+                    >
+                  </button>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endform %}
+    {% endif %}
+    {% if section.settings.enable_language_selector %}
+      {% assign formID = 'localization_form_language_language-' | append: position %}
+      {% form 'localization', id: formID, class: 'shopify-localization-form' %}
+        <div class="custom-select custom-select-localization custom-select-language{% if announcement %} hover-event{% endif %}" data-details-head data-viewinscreen-header tabindex="0">
+          <div class="custom-select-button">
+            <span class="custom-select-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M5.82843 7.46274C5.90738 10.203 6.66486 11.616 6.9986 11.616C7.33233 11.616 8.08981 10.203 8.16877 7.46274H5.82843Z" fill="currentColor"/>
+              <path d="M6.9986 2.38101C6.66486 2.38101 5.90738 3.79405 5.82843 6.5343H8.16877C8.08981 3.79405 7.33233 2.38101 6.9986 2.38101Z" fill="currentColor"/>
+              <path d="M9.10344 6.53164H11.5958C11.4069 4.65753 10.093 3.11173 8.34195 2.57873C8.8136 3.55937 9.06092 5.04761 9.10344 6.53164Z" fill="currentColor"/>
+              <path d="M4.8965 6.53164C4.93903 5.04761 5.18634 3.55937 5.658 2.57873C3.90691 3.11173 2.59302 4.65753 2.40415 6.53164H4.8965Z" fill="currentColor"/>
+              <path d="M9.10344 7.46274C9.06092 8.94677 8.8136 10.435 8.34195 11.4156C10.093 10.8826 11.4069 9.33684 11.5958 7.46274H9.10344Z" fill="currentColor"/>
+              <path d="M4.8965 7.46274H2.40415C2.59302 9.33684 3.90691 10.8826 5.658 11.4156C5.18634 10.435 4.93903 8.94677 4.8965 7.46274Z" fill="currentColor"/>
+              <path d="M7 0C3.13399 0 0 3.13399 0 7C0 10.866 3.13399 14 7 14C10.866 14 14 10.866 14 7C14 3.13399 10.866 0 7 0ZM7 12.5533C3.93796 12.5533 1.44648 10.062 1.44648 7C1.44648 3.93796 3.93796 1.44671 7 1.44671C10.062 1.44671 12.5535 3.93796 12.5535 7C12.5535 10.062 10.062 12.5533 7 12.5533Z" fill="currentColor"/>
+              </svg>
+              {{- localization.language.endonym_name | capitalize }}
+            </span>
+            <span class="custom-select-arrow">
+              <svg width="8" height="5" viewBox="0 0 8 5" fill="none">
+                <path d="M7 1L4 4L1 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+          <div
+            class="custom-select-content {{ class }} {{ customClass }}"
+            data-details-select-summary
+            data-viewinscreen-body
+          >
+            <ul class="custom-select-list">
+              {% for language in localization.available_languages %}
+                <li class="custom-select-item">
+                  <button
+                    type="submit"
+                    name="language_code"
+                    id="language-{{ section.id }}-{{ forloop.index }}"
+                    value="{{ language.iso_code }}"
+                    class="custom-select-item-active"
+                  >
+                    {{ language.endonym_name | capitalize }}
+                  </button>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endform %}
+    {% endif %}
+  </div>
+{%- endif -%}
+
+<style>
+  .custom-select-content[data-details-select-summary]{
+    opacity:0;
+    transform: translate3d(0, 10%, 0);
+    transition: .4s ;
+  }
+  .hover-event .custom-select-content[data-details-select-summary]{
+    transition: .05s ;
+  }
+</style>

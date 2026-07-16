@@ -1,0 +1,217 @@
+{%- liquid
+  assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+  assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+  assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+  assign header_font_italic = settings.type_heading_font | font_modify: 'style', 'italic'
+%}
+{% style %}
+      {{ settings.type_body_font | font_face: font_display: 'swap' }}
+      {{ body_font_bold | font_face: font_display: 'swap' }}
+      {{ body_font_italic | font_face: font_display: 'swap' }}
+      {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+      {{ settings.type_heading_font | font_face: font_display: 'swap' }}
+      {{ header_font_italic | font_face: font_display: 'swap' }}
+
+
+  :root {
+      --body-font-family: {{ settings.type_body_font.family }},{{ settings.type_body_font.fallback_families }};
+      --body-font-weight: {{ settings.type_body_font.weight }};
+      --body-font-style: {{ settings.type_body_font.style }};
+      --body-font-line-height: {{ settings.type_body_line_height }};
+      --body-letter-spacing: {{ settings.type_body_spacing | default: "0" | divided_by: 1000.00 }}em;
+      --body-font-scale: {{ settings.type_body_scale | divided_by : 100.00 }};;
+      --heading-font-family: {{ settings.type_heading_font.family }},{{ settings.type_heading_font.fallback_families }};
+      --heading-font-style: {{ settings.type_heading_font.style }};
+      --heading-font-weight: {{ settings.type_heading_font.weight }};
+      --heading-font-line-height: {{ settings.type_heading_line_height }};
+      --heading-letter-spacing: {{ settings.type_header_spacing | default: "0" | divided_by: 1000.00 }}em;
+      --heading-font-scale: {{ settings.type_heading_scale | divided_by : 100.00 }};
+      --button-font-family: var({{ settings.button_font }});
+      --button-font-weight:var({{ settings.button_font | replace: 'family', 'style' }});
+      --button-font-style:var({{ settings.button_font | replace: 'family', 'weight' }});
+      --button-text-transform: {{ settings.button_text_transform }};
+      --button-radius: {{ settings.button_radius }}px;
+      --form-radius: {{ settings.input_radius }}px;
+      --card-radius:{{ settings.card_radius }}px;
+      --block-radius:{{ settings.block_radius }}px;
+      --xsmall-text: calc(var(--body-font-scale) * 10px);
+      --small-text: calc(var(--body-font-scale) * 12px);
+      --text: calc(var(--body-font-scale) * 14px);
+      --medium-text: calc(var(--body-font-scale) * 16px);
+      --large-text: calc(var(--body-font-scale) * 18px);
+      --h1: calc(var(--heading-font-scale) * 75px);
+      --h2: calc(var(--heading-font-scale) * 60px);
+      --h3: calc(var(--heading-font-scale) * 40px);
+      --h4: calc(var(--heading-font-scale) * 30px);
+      --h5: calc(var(--heading-font-scale) * 24px);
+      --h6: calc(var(--heading-font-scale) * 20px);
+
+      --header-background: {{ settings.header_bg_color }};
+      --header-text-color:{{ settings.header_text_color }};
+      --header-hover-color: {{ settings.header_hover_color }};
+      --submenu-background:{{ settings.submenu_bg_color }};
+      --submenu-color:{{ settings.submenu_text_color }};
+      --submenu-hover-color:{{ settings.submenu_hover_color }};
+      --submenu-border-color:{{ settings.submenu_border_color }};
+
+
+      --footer-background:{{ settings.footer_bg_color }};
+      --footer-heading-color:{{ settings.footer_heading_color }};
+      --footer-text-color:{{ settings.footer_text_color }};
+      --footer-link-color:{{ settings.footer_link_color }};
+
+      {% assign footerBgBrightness = settings.se_footer_bg_color | color_brightness %}
+      {%- if footerBgBrightness < 130 -%}
+        --footer-background-light:{{ settings.se_footer_bg_color | color_lighten: 5 }};
+      {%- else -%}
+        --footer-background-light:{{ settings.se_footer_bg_color | color_darken: 5 }};
+      {%- endif -%}
+
+      --footer-hover-color: {{ settings.footer_hover_color }};
+      --footer-newsletter-background:{{ settings.newsletter_button }};
+      --footer-newsletter-text:{{ settings.newsletter_text }};
+
+
+      {% assign newsletterPlaceholderText = settings.newsletter_text | color_brightness %}
+      {%- if newsletterPlaceholderText < 130 -%}
+        --footer-newsletter-placeholder-text: {{ settings.newsletter_text | color_lighten: 5 }};
+      {%- else -%}
+        --footer-newsletter-placeholder-text: {{ settings.newsletter_text | color_darken: 5 }};
+      {%- endif -%}
+      /* Secondary footer */
+
+      --footer-secondary-background:{{ settings.se_footer_bg_color }};
+      --footer-secondary-color:{{ settings.se_footer_text_color }};
+      --footer-secondary-link-color:{{ settings.se_footer_link_color }};
+      --footer-policies-background:{{ settings.se_footer_bar_bg_color }};
+      --footer-policies-color:{{ settings.se_footer_bar_text_color }};
+      --footer-policies-link-color:{{ settings.se_footer_bar_link_color }};
+      --footer-policies-link-hover:{{ settings.se_footer_bar_link_hover }};
+
+      --error-text-color: red;
+      --error-text-background: {{ 'red' | color_modify: 'alpha', 0.05 }};
+      --success-text-color: green;
+      --success-text-background: {{ 'green' | color_modify: 'alpha', 0.05 }};
+
+      --top-spacer: 0;
+      --bottom-spacer: 0;
+
+      --sale-badge-bg:{{ settings.sale_badge_background }};
+      --sale-badge-color:{{ settings.sale_badge_text }};
+      --custom-badge-bg:  {{ settings.custom_badge_background }};
+      --custom-badge-color: {{ settings.custom_badge_text }};
+      --soldout-badge-bg: {{ settings.soldout_badge_background }};
+      --soldout-badge-color: {{ settings.soldout_badge_text }};
+      --product-discount-color:{{ settings.product_discount_text }};
+      --product-discount-background:{{ settings.product_discount_background }};
+
+      --border-width:{{ settings.product_border_thickness }}px;
+      --button-border-width:{{ settings.button_border_thickness }}px;
+      --page-overlay-background: {{ settings.page_overlay_background.red }},{{ settings.page_overlay_background.green }},{{ settings.page_overlay_background.blue }};
+      --page-overlay-opacity: {{ settings.page_overlay_opacity }};
+      --article-overlay-background: {{ settings.article_overlay_bg.red }},{{ settings.article_overlay_bg.green }},{{ settings.article_overlay_bg.blue }};
+      --article-overlay-opacity: {{ settings.article_overlay_opacity }};
+
+  }
+  {% if settings.show_content_overlay %}
+    .blog-post-item.content-overlay{
+        --heading-color: {{ settings.article_overlay_heading }};
+        --text-color: {{ settings.article_overlay_text }}
+      }
+  {% endif %}
+  {% for scheme in settings.color_schemes -%}
+    {% if scheme.id == settings.default_color_scheme.id -%}
+      :root,
+    {%- endif %}
+    .{{ scheme.id }}-scheme{
+      {% if scheme.settings.gradient_bg_color != blank %}
+        --body-background:{{ scheme.settings.gradient_bg_color }};
+      {% else %}
+        --body-background:{{ scheme.settings.bg_color }};
+      {% endif %}
+      --body-alternate-background: {{ scheme.settings.alternate_bg_color }};
+      --heading-color: {{ scheme.settings.heading_color }};
+      --text-color: {{ scheme.settings.text_color }};
+      --text-light-color: {{ scheme.settings.text_color | color_modify: 'alpha', 0.5 }};
+      --text-extralight-color: {{ scheme.settings.text_color | color_modify: 'alpha', 0.3 }};
+      --link-color: {{ scheme.settings.link_color }};
+      --button-background:{{ scheme.settings.btn_bg_color }};
+      --button-text-color: {{ scheme.settings.btn_text_color }};
+      --button-border: {{ scheme.settings.btn_border_color }};
+      --button-background-hover: {{ scheme.settings.btn_hover_color }};
+      --button-text-color-hover: {{ scheme.settings.btn_hovertext_color }};
+      --button-border-hover: {{ scheme.settings.btn_hover_border_color }};
+      --image-bg: {{ scheme.settings.img_bg }};
+      --form-border: {{ scheme.settings.input_border }};
+      --form-background: {{ scheme.settings.input_bg }};
+      --form-text-color: {{ scheme.settings.input_text }};
+      --border-color: {{ scheme.settings.divider_color }};
+      --slider-icon-color: {{ scheme.settings.slider_icon_color }};
+      --slider-icon-background: {{ scheme.settings.slider_icon_bg_color }};
+      --slider-icon-border:{{ scheme.settings.slider_border }};
+      --product-border:{{ scheme.settings.product_border }};
+      --product-background:{{ scheme.settings.product_background }};
+      --product-title-color:{{ scheme.settings.product_title }};
+
+        {% assign shippingBarBrightness = scheme.settings.bg_color | color_brightness %}
+        {%- if shippingBarBrightness < 130 -%}
+            --shipping-bar-line:{{ scheme.settings.bg_color | color_lighten: 20 }};
+        {%- else -%}
+            --shipping-bar-line:{{ scheme.settings.bg_color | color_darken: 50 }};
+        {%- endif -%}
+
+
+       
+
+        {% assign headingBrightness = scheme.settings.heading_color | color_brightness %}
+        {%- if headingBrightness < 130 -%}
+            --heading-color-light:{{ scheme.settings.heading_color | color_lighten: 20 }};
+        {%- else -%}
+          --heading-color-light:{{ scheme.settings.heading_color | color_darken: 50 }};
+        {%- endif -%}
+
+    }
+
+{% endfor %}
+
+  @media (max-width:1440px){
+      :root{
+      --h1: calc(var(--heading-font-scale) * 70px);
+      --h2: calc(var(--heading-font-scale) * 55px);
+      }
+  }
+  @media (max-width:1199px){
+      :root{
+      --h1: calc(var(--heading-font-scale) * 60px);
+      --h2: calc(var(--heading-font-scale) * 50px);
+      --h3: calc(var(--heading-font-scale) * 30px);
+      --h4: calc(var(--heading-font-scale) * 26px);
+      --h5: calc(var(--heading-font-scale) * 22px);
+      }
+  }
+  @media (max-width:991px){
+      :root{
+      --h1: calc(var(--heading-font-scale) * 50px);
+      --h2: calc(var(--heading-font-scale) * 40px);
+      --h4: calc(var(--heading-font-scale) * 24px);
+      --h5: calc(var(--heading-font-scale) * 22px);
+      }
+  }
+  @media (max-width:767px){
+      :root{
+        --h1: calc(var(--heading-font-scale) * 40px);
+        --h2: calc(var(--heading-font-scale) * 36px);
+        --parallex-height:{{ settings.parallex_image_height_mobile }};
+        --button-radius: {{ settings.mobile_button_radius }}px;
+        --form-radius: {{ settings.mobile_input_radius }}px;
+        --card-radius:{{ settings.mobile_card_radius }}px;
+        --block-radius:{{ settings.mobile_block_radius }}px;
+      }
+  }
+  @media (max-width:575px){
+      :root{
+        --h2: calc(var(--heading-font-scale) * 30px);
+        --h3: calc(var(--heading-font-scale) * 28px);
+      }
+  }
+{% endstyle %}

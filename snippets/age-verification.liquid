@@ -1,0 +1,39 @@
+{%- if settings.age_verification_pop_enable -%}
+{{ 'age-verification.css' | asset_url | stylesheet_tag }}
+
+<div class="age-verification-popup {{ settings.popup_color_scheme }}-scheme background-enabled" data-popup-body >
+	<div class="age-verification-popup-box">
+		<div class="age-verification-popup-content" >
+			<div data-age-verification-container>
+				{% if settings.age_verification_heading != blank %}
+					<h2 class="age-verification-heading">{{ settings.age_verification_heading }}</h2>
+				{% endif %}
+				{% if settings.age_verification_description != blank %}
+					<div class="age-verification-desc">
+						{{ settings.age_verification_description }}
+					</div>
+				{% endif %}
+				{% if settings.approve_btn_text != blank or settings.decline_btn_text != blank %}
+					<div class="age-verifiction-button button-group" >
+					{% if settings.approve_btn_text != blank %}
+						<button class="button submit-age" data-over-age-button><span>{{ settings.approve_btn_text }}</span></button>
+					{% endif %}
+						{% if settings.decline_btn_text != blank %}
+						<button class="button secondary-button reject-age" data-under-age-button><span>{{ settings.decline_btn_text }}</span></button>
+					{% endif %}
+					</div>
+				{% endif %}
+			</div>
+			<div class="hidden" data-under-age-container>
+				<h2 class="age-verification-heading">{{ settings.decline_heading }}</h2>
+				<div class="age-verification-desc">{{ settings.decline_sub-heading }}</div>
+				<div class="age-verifiction-button">
+					<button class="button" data-age-decline-button><span>{{ settings.age-decline_btn_text }}</span></button>
+				</div> 
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+{% endif %}

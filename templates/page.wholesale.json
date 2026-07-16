@@ -1,0 +1,330 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page_banner_VGVQQM": {
+      "type": "page-banner",
+      "settings": {
+        "enable_fullwidth": true,
+        "banner_image": "shopify://shop_images/pexels-pavel-danilyuk-8111449_8840045c-b3fd-4179-92a7-a49e4e7b907c.jpg",
+        "banner_height_desktop": "250px",
+        "banner_height_mobile": "200px",
+        "heading": "WHOLESALE TIE-DYE",
+        "heading_overly": true,
+        "heading_size": "h2",
+        "seo_heading": "h3",
+        "content_width": "medium",
+        "heading_alignment": "text-center",
+        "banner_bg_color": "#f2f2f2",
+        "bg_color_opacity": "#000000",
+        "text_color": "#ffffff",
+        "overlay_opacity": 23,
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "image_with_text_cJBK76": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_w9gXci": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Tie-Dye Wholesale: A Colorful Opportunity for Retailers"
+          }
+        },
+        "text_xQjdxF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to the dynamic world of tie-dye wholesale, where creativity and fashion blend to create eye-catching apparel. If you’re a retailer looking to diversify your inventory and attract a broad customer base, tie-dye products offer a unique and profitable opportunity. This blog post will explore why tie-dye wholesale is a trend you can't afford to miss and how partnering with Free Spirited can help you stand out in the market.</p>",
+            "text_size": "medium"
+          }
+        },
+        "button_FPNLAP": {
+          "type": "button",
+          "settings": {
+            "button_style_1": "solid",
+            "btn_text": "BECOME A WHOLESALER",
+            "btn_url": "shopify://pages/contact",
+            "btn_size": "regular",
+            "button_style_2": "solid",
+            "btn_text_2": "",
+            "btn_url_2": "",
+            "btn_size_2": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_w9gXci",
+        "text_xQjdxF",
+        "button_FPNLAP"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "section_fullwidth": false,
+        "card_background": false,
+        "image": "shopify://shop_images/mini_branding_brainstorm_pack_4_a84fa3a7-4e8c-4d7b-9098-a730524932e0.png",
+        "image_overlay_enable": false,
+        "image_width": "large",
+        "image_position": "left",
+        "content_position": "center",
+        "content_alignment": "flex-start_left",
+        "hide_row_count": false,
+        "color_scheme": "",
+        "section_background": "",
+        "card_color": "",
+        "top_space_desktop": 70,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 50,
+        "bottom_space_mobile": 50
+      }
+    },
+    "multicolumn_RmzEUe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_66RHAK": {
+          "type": "column",
+          "settings": {
+            "heading": "Turning The Tie-Dyed",
+            "description": "Tie-dye has made a significant comeback in recent years, evolving from a 60s counterculture symbol to a mainstream fashion staple. From high-end runways to everyday streetwear, tie-dye patterns are everywhere. The versatility and individuality of each piece make tie-dye a favorite among fashion enthusiasts of all ages. This resurgence presents a golden opportunity for retailers to capitalize on the trend by offering unique and vibrant tie-dye products.",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        },
+        "column_p8bHbX": {
+          "type": "column",
+          "settings": {
+            "heading": "Benefits of Stocking Tie-Dye Products",
+            "description": "Unique Appeal: No two tie-dye items are exactly alike, giving each piece a unique appeal that attracts customers looking for individuality in their wardrobe.\n\nBroad Demographic: Tie-dye appeals to a wide range of customers, from young trendsetters to nostalgic adults who appreciate the vintage vibe.\n\nVersatile Offerings: From t-shirts and hoodies to accessories and home decor, tie-dye products span various categories, allowing retailers to diversify their inventory.",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        },
+        "column_RFGThi": {
+          "type": "column",
+          "settings": {
+            "heading": "Why Choose Free Spirited for Your Tie-Dye Wholesale Needs?",
+            "description": "At Free Spirited, we specialize in creating high-quality, handcrafted tie-dye apparel that resonates with today’s fashion trends. Here’s why partnering with us can boost your retail business:\n\nPremium Quality: Our tie-dye products are made from high-quality materials, ensuring durability and vibrant colors that last.\n\nUnique Designs: We offer a wide range of patterns and color combinations, allowing you to provide your customers with a diverse selection.\n\nCompetitive Pricing: Our wholesale pricing is designed to offer retailers excellent margins without compromising on quality.\n\nSustainable Practices: We are committed to environmentally friendly practices, using non-toxic dyes and sustainable production methods.",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        },
+        "column_PCYw3y": {
+          "type": "column",
+          "settings": {
+            "heading": "How to Get Started with Tie-Dye Wholesale",
+            "description": "Explore Our Catalog: Visit our store to view our extensive catalog of tie-dye products.\n\nCreate an Account: Register for a wholesale account to access exclusive pricing and order management tools.\n\nPlace Your Order: Choose from our variety of products and place your order online. Our team is here to assist with any questions or custom requests.\n\nPromote Your New Inventory: Utilize our marketing materials and social media content to promote your new tie-dye products to your customers.",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        },
+        "column_iBkJTQ": {
+          "type": "column",
+          "settings": {
+            "heading": "Success Stories from Our Retail Partners",
+            "description": "Many retailers have found success by adding Free Spirited tie-dye products to their stores. For example, Smiles Outlet, a boutique retailer in Delray Beach, Florida saw a 30% increase in sales after introducing our tie-dye apparel. Their customers love the unique designs and high-quality materials, making them a repeat buyer.",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        },
+        "column_aR8z6h": {
+          "type": "column",
+          "settings": {
+            "heading": "Conclusion",
+            "description": "Incorporating tie-dye wholesale products from Free Spirited into your inventory is a surefire way to attract customers and boost sales. With the growing popularity of tie-dye and the unique appeal of each piece, your store can stand out in a crowded market. Explore our catalog today and take the first step towards a more colorful and profitable retail experience.",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        }
+      },
+      "block_order": [
+        "column_66RHAK",
+        "column_p8bHbX",
+        "column_RFGThi",
+        "column_PCYw3y",
+        "column_iBkJTQ",
+        "column_aR8z6h"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "multicolumn_image_size": "square",
+        "layout_type": "stacked",
+        "columns_desktop": 3,
+        "enable_swipe_mobile": false,
+        "heading": "<strong>The Rising Popularity of Tie-Dye</strong>",
+        "heading_size": "h2",
+        "seo_heading": "h3",
+        "heading_alignment": "text-center",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#006f94",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "rich_text_FyAVf8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ARByYW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Need Help Getting Started?</strong>",
+            "heading_size": "h2",
+            "seo_heading": "h2",
+            "highlighted_color": "#006f94"
+          }
+        },
+        "text_nbgMgQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ready to add some vibrant flair to your store? <br/><a href=\"/pages/contact\" title=\"Contact\"><strong>Contact us</strong></a> today to learn more about our tie-dye wholesale options and how we can help your business thrive.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ARByYW",
+        "text_nbgMgQ"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "content_width": "large",
+        "content_alignment": "text-center",
+        "content_postion": "center",
+        "color_scheme": "",
+        "section_background": "",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "slideshow_bNL7HG": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_LwzFAD": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Copy_of_Untitled_14.png",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_2.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "shopify://collections/all",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "quatnary",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 0,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_LwzFAD"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "page_banner_VGVQQM",
+    "main",
+    "image_with_text_cJBK76",
+    "multicolumn_RmzEUe",
+    "rich_text_FyAVf8",
+    "slideshow_bNL7HG"
+  ]
+}

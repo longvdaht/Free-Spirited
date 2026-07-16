@@ -1,0 +1,140 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Footer Group",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "182bb80a-c709-4de9-b7be-ed06ace866d5": {
+          "type": "link_list",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "menu": "main-menu"
+          }
+        },
+        "8c648525-39b2-4d08-a5aa-1af6a1138ba4": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer"
+          }
+        },
+        "text_fMmz4b": {
+          "type": "text",
+          "settings": {
+            "image_url": "",
+            "description": "",
+            "show_social": true
+          }
+        },
+        "text_4V6QGa": {
+          "type": "text",
+          "settings": {
+            "image_url": "",
+            "description": "",
+            "show_social": true
+          }
+        }
+      },
+      "block_order": [
+        "182bb80a-c709-4de9-b7be-ed06ace866d5",
+        "8c648525-39b2-4d08-a5aa-1af6a1138ba4",
+        "text_fMmz4b",
+        "text_4V6QGa"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Free_Spirited_Co_WHITE_STACKED_22511950-d2ee-47b2-a174-0d13beca92f2.png",
+        "image_width": 250,
+        "show_social": true,
+        "enable_follow_on_shop": false,
+        "make_section_rounded": false,
+        "menu_style": "accordion",
+        "open_menu_mobile": true,
+        "enable_language_selector": true,
+        "enable_currency_selector": true,
+        "payment_enable": false,
+        "hide_copyright_content": false,
+        "custom_copyright_content": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0,
+        "section_background": "#006f94",
+        "footer_background_overlay": "#000000",
+        "footer_background_opacity": 66
+      }
+    },
+    "footer-policies": {
+      "type": "footer-policies",
+      "settings": {
+        "show_policies": false,
+        "show_copyright": false,
+        "custom_copyright_content": ""
+      }
+    },
+    "mobile-categories": {
+      "type": "mobile-categories",
+      "blocks": {
+        "4c6aac09-4438-4d00-8560-c90258bdd1f0": {
+          "type": "category",
+          "settings": {
+            "heading": "Category 1",
+            "description": "",
+            "link": "shopify://collections",
+            "background_color": "#000000",
+            "text_color": "#ffffff"
+          }
+        },
+        "841b9c37-f2d2-4dd2-8d56-9f213da539dd": {
+          "type": "category",
+          "settings": {
+            "heading": "Category 2",
+            "description": "",
+            "link": "shopify://collections",
+            "background_color": "#000000",
+            "text_color": "#ffffff"
+          }
+        },
+        "fc926cb9-31dd-48b5-91d5-3508d089b7af": {
+          "type": "category",
+          "settings": {
+            "heading": "",
+            "description": "",
+            "link": "shopify://collections",
+            "background_color": "#000000",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "4c6aac09-4438-4d00-8560-c90258bdd1f0",
+        "841b9c37-f2d2-4dd2-8d56-9f213da539dd",
+        "fc926cb9-31dd-48b5-91d5-3508d089b7af"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_on_home_page": true,
+        "title": "Explore",
+        "horizontal_position": "left",
+        "vertical_position": 5,
+        "background_color": "#000000",
+        "text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "footer-policies",
+    "mobile-categories"
+  ]
+}

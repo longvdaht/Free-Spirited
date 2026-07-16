@@ -1,0 +1,4694 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "global": {
+    "header": {
+      "secondary_footer": {
+        "label": "Δευτερεύον υποσέλιδο"
+      },
+      "column": {
+        "label": "Στήλη"
+      },
+      "back_in_stock": {
+        "label": "Θα λαμβάνετε ένα email κάθε φορά που κάποιος συμπληρώνει αυτήν τη φόρμα. "
+      },
+      "back_in_stock_form": {
+        "label": "Σημείωση: Η φόρμα back-in-stock είναι πάντα ορατή στο πρόγραμμα επεξεργασίας θεμάτων."
+      },
+      "background_section": {
+        "label": "Ιστορικό"
+      },
+      "border_section": {
+        "label": "Σύνορο"
+      },
+      "button_section": {
+        "label": "Κουμπί"
+      },
+      "banner": {
+        "label": "Πανό"
+      },
+      "color_section": {
+        "label": "Χρωματιστά"
+      },
+      "heading_section": {
+        "label": "Επικεφαλίδα"
+      },
+      "color_singular_section": {
+        "label": "Χρώμα"
+      },
+      "content_alignment_section": {
+        "label": "Ευθυγράμμιση περιεχομένου"
+      },
+      "content_section": {
+        "label": "Περιεχόμενο"
+      },
+      "custom_section": {
+        "label": "Προσαρμοσμένο περιεχόμενο"
+      },
+      "focal_section": {
+        "label": "Επίκεντρο"
+      },
+      "font_section": {
+        "label": "Οικογένεια γραμματοσειρών"
+      },
+      "font": {
+        "label": "Γραμματοσειρά"
+      },
+      "gradient": {
+        "label": "Βαθμίδα"
+      },
+      "header_section": {
+        "label": "Επί κεφαλής"
+      },
+      "logo_section": {
+        "label": "Λογότυπο"
+      },
+      "marquee_section": {
+        "label": "Στέγη εισόδου"
+      },
+      "media_section": {
+        "label": "Μεσο ΜΑΖΙΚΗΣ ΕΝΗΜΕΡΩΣΗΣ"
+      },
+      "navigation_section": {
+        "label": "Πλοήγηση"
+      },
+      "color_scheme": {
+        "label": "Χρωματικός συνδυασμός"
+      },
+      "primary": {
+        "label": "Πρωταρχικός"
+      },
+      "quaternary": {
+        "label": "Τετραδικός"
+      },
+      "secondary": {
+        "label": "Δευτερεύων"
+      },
+      "space_section": {
+        "label": "Διάσταση τομών"
+      },
+      "tertiary": {
+        "label": "Τριτογενής"
+      },
+      "other": {
+        "label": "άλλα"
+      },
+      "text_section": {
+        "label": "Κείμενο"
+      },
+      "video": {
+        "label": "βίντεο"
+      },
+      "layout": {
+        "label": "Διάταξη"
+      },
+      "map": {
+        "label": "Χάρτης"
+      },
+      "menu-color": {
+        "label": "Χρώματα μενού"
+      },
+      "card": {
+        "label": "Κάρτα"
+      },
+      "password": {
+        "label": "Κωδικός πρόσβασης"
+      },
+      "carousel": {
+        "label": "Στροβιλοδρόμιο"
+      },
+      "grid": {
+        "label": "Πλέγμα"
+      },
+      "styling": {
+        "label": "Styling"
+      }
+    },
+    "common": {
+      "content_position": {
+        "options": {
+          "top": {
+            "label": "Μπλουζα"
+          },
+          "bottom": {
+            "label": "Κάτω μέρος"
+          },
+          "start": {
+            "label": "Αρχή"
+          },
+          "center": {
+            "label": "Κέντρο"
+          },
+          "end": {
+            "label": "Τέλος"
+          }
+        },
+        "label": "Θέση περιεχομένου"
+      },
+      "swipe_mobile": {
+        "label": "Ενεργοποιήστε το σάρωση στο κινητό",
+        "info": "Λειτουργεί μόνο με το stacked style."
+      },
+      "columns_desktop": {
+        "label": "Στήλες ανά σειρά (επιτραπέζιος υπολογιστής)"
+      },
+      "general_labels": {
+        "icon": "Εικόνισμα",
+        "image_overlay": "Επικάλυψη εικόνας",
+        "show_heading": "Εμφάνιση επικεφαλίδας",
+        "after": "Μετά",
+        "before": "Πριν",
+        "collection_grid": "Πλέγμα συλλογής",
+        "image": "Εικόνα",
+        "video": "βίντεο",
+        "text": "Κείμενο",
+        "link": "Σύνδεσμος",
+        "title": "Τίτλος",
+        "height": "Υψος",
+        "description": "Περιγραφή",
+        "heading": "Επικεφαλίδα",
+        "subheading": "Υπότιτλος",
+        "heading_size": "Μέγεθος επικεφαλίδας",
+        "heading_tag": "Ετικέτα επικεφαλίδας",
+        "opacity": "Αδιαφάνεια",
+        "background": "Ιστορικό",
+        "button_background": "Κουμπί φόντο",
+        "button_text": "Κείμενο κουμπιού",
+        "link_text": "Κείμενο συνδέσμου",
+        "button_hover_text": "Κείμενο με το δείκτη του ποντικιού",
+        "button_border": "Περίγραμμα κουμπιών",
+        "button_hover_border": "Περίγραμμα ποντικιού κουμπιού",
+        "button_hover_background": "Φόντο αιώρησης κουμπιών",
+        "border": "Σύνορο",
+        "hover_background": "Τοποθετήστε το φόντο",
+        "hover_border": "Τοποθετήστε το περίγραμμα",
+        "hover_text": "Τοποθετήστε το κείμενο",
+        "hover": "Φτερουγίζω",
+        "overlay": "Επικάλυμμα",
+        "layout": "Διάταξη",
+        "overlay_opacity": "Αδιαφάνεια επικάλυψης",
+        "highlight_color": "Επικεφαλίδα",
+        "highlight_bg_color": "Επισημάνετε το φόντο",
+        "make_section_rounded": "Κάντε τις επάνω γωνίες στρογγυλεμένες",
+        "button_size": "Μέγεθος κουμπιού",
+        "card_arrow": "Βέλος κάρτας",
+        "arrow": "Βέλος",
+        "content": "Περιεχόμενο"
+      },
+      "desktop_grid_image_size": {
+        "label": "Αναλογία εικόνας πλέγματος επιφάνειας εργασίας"
+      },
+      "mobile_grid_image_size": {
+        "label": "Αναλογία εικόνας δικτύου για κινητά"
+      },
+      "adapt_to_first": {
+        "label": "Προσαρμογή στην πρώτη εικόνα"
+      },
+      "alignments": {
+        "left": "Αριστερά",
+        "center": "Κέντρο",
+        "right": "σωστά",
+        "top": "Μπλουζα",
+        "bottom": "Κάτω μέρος",
+        "middle": "Μέση"
+      },
+      "outline": {
+        "label": "Περίγραμμα"
+      },
+      "section_background": {
+        "label": "Φόντο ενότητας",
+        "info": "Λειτουργεί μόνο με στρογγυλεμένο τμήμα."
+      },
+      "gradient": {
+        "label": "Βαθμίδα"
+      },
+      "paragraph": {
+        "primary": "Πρωταρχικός",
+        "secondary": "Δευτερεύων",
+        "desktop": "Επιφάνεια εργασίας",
+        "mobile": "Κινητό"
+      },
+      "infos": {
+        "heading": {
+          "label": "Για να επισημάνετε το κείμενο με διαφορετικό χρώμα, απλώς τυλίξτε το με έντονη γραφή."
+        },
+        "seo_heading": {
+          "label": "Καθορίστε τύπους κώδικα επικεφαλίδας για SEO και μηχανές αναζήτησης για σκοπούς ανίχνευσης."
+        }
+      },
+      "font_family": {
+        "label": "Οικογένεια γραμματοσειρών",
+        "options": {
+          "heading": "Επικεφαλίδα",
+          "body": "Σώμα"
+        }
+      },
+      "content_width": {
+        "label": "Πλάτος περιεχομένου",
+        "options": {
+          "small": "Μικρό",
+          "medium": "Μεσαίο",
+          "large": "Μεγάλο"
+        }
+      },
+      "height": {
+        "options": {
+          "small": "Μικρό",
+          "medium": "Μεσαίο",
+          "large": "Μεγάλο"
+        }
+      },
+      "alignment": {
+        "label": "Ευθυγραμμία"
+      },
+      "heading_alignment": {
+        "label": "Ευθυγράμμιση επικεφαλίδας",
+        "options": {
+          "left": {
+            "label": "Αριστερά"
+          },
+          "center": {
+            "label": "Κέντρο"
+          }
+        }
+      },
+      "image_ratio": {
+        "label": "Αναλογία εικόνας πλέγματος",
+        "options": {
+          "auto": "Αυτο",
+          "landscape": "Τοπίο",
+          "portrait": "Πορτρέτο",
+          "square": "τετράγωνο"
+        }
+      },
+      "style": {
+        "label": "Στυλ",
+        "value": {
+          "solid": "Στερεός",
+          "outline": "Περίγραμμα",
+          "link": "Σύνδεσμος"
+        }
+      },
+      "size": {
+        "label": "Μέγεθος",
+        "value": {
+          "regular": "Τακτικός",
+          "small": "Μικρό",
+          "medium": "Μεσαίο",
+          "large": "Μεγάλο"
+        }
+      },
+      "section_visibility": {
+        "label": "Ορατότητα τμήματος",
+        "options": {
+          "always": "Πάντα",
+          "small": "Μόνο μικρή συσκευή",
+          "large": "Μόνο μεγάλη συσκευή"
+        }
+      },
+      "marquee_type": {
+        "label": "Τύπος μαρκίζας",
+        "options": {
+          "onscroll": "Σε κύλιση",
+          "always": "Πάντα",
+          "both": "Και τα δυο"
+        }
+      },
+      "marquee_direction": {
+        "label": "Κατεύθυνση",
+        "options": {
+          "rtl": "Δεξιά προς τα αριστερά",
+          "ltr": "Από αριστερά προς τα δεξιά"
+        }
+      },
+      "marquee_text_info": {
+        "info": "Για να εμφανίσετε κείμενο με περίγραμμα σε μαρκίζα, κάντε το με έντονη γραφή."
+      },
+      "marquee_speed": {
+        "desktop": {
+          "label": "Ταχύτητα κύλισης στην επιφάνεια εργασίας"
+        },
+        "mobile": {
+          "label": "Ταχύτητα κύλισης κινητού"
+        }
+      },
+      "marquee_text_size": {
+        "desktop": {
+          "label": "Μέγεθος γραμματοσειράς επιφάνειας εργασίας"
+        },
+        "mobile": {
+          "label": "Μέγεθος γραμματοσειράς για κινητά"
+        }
+      },
+      "marque_text_outline_thickness": {
+        "label": "Πάχος περιγράμματος"
+      },
+      "banner": {
+        "banner_bg_color": {
+          "label": "Φόντο πανό"
+        },
+        "bg_color_opacity": {
+          "label": "Επικάλυψη εικόνας banner"
+        },
+        "text_color": {
+          "label": "Κείμενο",
+          "info": "Ισχύει μόνο για κείμενο επικάλυψης"
+        },
+        "banner_overlay": {
+          "label": "Επικάλυψη banner"
+        },
+        "overlay_opacity": {
+          "label": "Αδιαφάνεια επικάλυψης banner"
+        }
+      },
+      "icon": {
+        "label": "Εικόνισμα",
+        "options": {
+          "chat": "Κουβέντα",
+          "eye": "Μάτι",
+          "gift": "Δώρο",
+          "global": "Παγκόσμια",
+          "heart": "Καρδιά",
+          "phone": "Τηλέφωνο",
+          "refund": "Επιστροφή χρημάτων",
+          "secure": "Ασφαλής",
+          "shipping": "Αποστολή",
+          "support": "Υποστήριξη",
+          "user": "Χρήστης",
+          "date": "Ημερομηνία",
+          "home": "Σπίτι",
+          "notification": "Γνωστοποίηση",
+          "settings": "Ρυθμίσεις",
+          "star": "Αστέρι",
+          "value": "αστέρι"
+        }
+      },
+      "enable_background": {
+        "label": "Ενεργοποίηση φόντου"
+      },
+      "enable_full_width": {
+        "label": "Ενεργοποίηση πλήρους πλάτους"
+      },
+      "layout_type": {
+        "name": "Διάταξη",
+        "horizontal": {
+          "label": "Οριζόντιος"
+        },
+        "vertical": {
+          "label": "Κατακόρυφος"
+        }
+      },
+      "image_fit": {
+        "label": "Ταίριασμα εικόνας",
+        "options": {
+          "cover": {
+            "label": "Κάλυμμα"
+          },
+          "contain": {
+            "label": "Περιέχω"
+          }
+        }
+      },
+      "desktop_height": {
+        "label": "Ύψος επιφάνειας εργασίας"
+      },
+      "mobile_height": {
+        "label": "Ύψος κινητού"
+      }
+    },
+    "top_space_desktop": {
+      "label": "Κορυφαία απόσταση (επιτραπέζιος υπολογιστής)"
+    },
+    "bottom_space_desktop": {
+      "label": "Κάτω διάστιχο (επιτραπέζιος υπολογιστής)"
+    },
+    "top_space_mobile": {
+      "label": "Κορυφαία απόσταση (κινητό)"
+    },
+    "bottom_space_mobile": {
+      "label": "Κάτω διάστιχο (κινητό)"
+    }
+  },
+  "sections": {
+    "collection-list": {
+      "settings": {
+        "columns_desktop": {
+          "label": "Συλλογές ανά σειρά (επιτραπέζιος υπολογιστής)"
+        },
+        "column_mobile": {
+          "label": "Συλλογές ανά σειρά (κινητό)"
+        },
+        "header": {
+          "label": "Περιεχόμενο"
+        },
+        "content_alignment": {
+          "label": "Ευθυγραμμία"
+        },
+        "parallax": {
+          "label": "Παράλλαξη"
+        },
+        "enable_parallax": {
+          "label": "Ενεργοποίηση εφέ"
+        }
+      },
+      "name": "Λίστα συλλογής",
+      "blocks": {
+        "name": "Συλλογή",
+        "settings": {
+          "collection": {
+            "label": "Συλλογή"
+          }
+        }
+      },
+      "presets": {
+        "name": "Λίστα συλλογής"
+      }
+    },
+    "collection-tabs": {
+      "settings": {
+        "layout_type": {
+          "label": "Στυλ Διάταξης",
+          "carousel": {
+            "label": "Στροβιλοδρόμιο"
+          },
+          "stacked": {
+            "label": "Στοιβάζονται"
+          }
+        },
+        "link_text": {
+          "label": "Κείμενο συνδέσμου"
+        },
+        "overlay_color_info": {
+          "label": "Το χρώμα επικάλυψης λειτουργεί με το φόντο της εικόνας της συλλογής."
+        },
+        "product_range": {
+          "label": "Αριθμός προϊόντων"
+        },
+        "image_as_background": {
+          "label": "Ενεργοποίηση εικόνας συλλογής ως φόντο"
+        },
+        "custom_color": {
+          "label": "Χρησιμοποιήστε προσαρμοσμένο χρώμα"
+        }
+      },
+      "blocks": {
+        "settings": {
+          "background_image": {
+            "label": "Εικόνα φόντου"
+          },
+          "paragraph": {
+            "content": "Πρέπει να υπάρχει τουλάχιστον ένα στοιχείο για να εμφανιστεί αυτή η καρτέλα."
+          },
+          "background": {
+            "info": "Ισχύει μόνο όταν δεν υπάρχει εικόνα συλλογής."
+          },
+          "collection": {
+            "label": "Συλλογή"
+          },
+          "heading": {
+            "label": "Επικεφαλίδα καρτέλας"
+          }
+        },
+        "name": "Συλλογή"
+      },
+      "name": "Καρτέλες συλλογής",
+      "presets": {
+        "name": "Καρτέλες συλλογής"
+      }
+    },
+    "featured-blog": {
+      "settings": {
+        "layout_type": {
+          "label": "Στυλ Διάταξης",
+          "carousel": {
+            "label": "Στροβιλοδρόμιο"
+          },
+          "grid": {
+            "label": "Πλέγμα"
+          }
+        },
+        "btntext": {
+          "label": "Κείμενο συνδέσμου"
+        },
+        "blog": {
+          "label": "Ιστολόγιο"
+        },
+        "post_limit": {
+          "label": "Αριθμός άρθρων"
+        },
+        "show_date": {
+          "label": "Εμφάνιση ημερομηνίας"
+        },
+        "show_author": {
+          "label": "Εμφάνιση συγγραφέα"
+        },
+        "show_excerpt": {
+          "label": "Εμφάνιση αποσπασμάτων του άρθρου"
+        },
+        "swipe_mobile": {
+          "label": "Ενεργοποίηση ολίσθησης στο κινητό"
+        }
+      },
+      "name": "Επιλεγμένα ιστολόγια",
+      "blocks": {
+        "name": "Θέση",
+        "settings": {
+          "article": {
+            "label": "Επιλέξτε άρθρο",
+            "info": "Εάν επιλεγεί η ανάρτηση, τότε θα αντικατασταθεί το επιλεγμένο ιστολόγιο."
+          }
+        }
+      },
+      "presets": {
+        "name": "Επιλεγμένα ιστολόγια"
+      }
+    },
+    "header": {
+      "settings": {
+        "header_style": {
+          "options": {
+            "header_6": {
+              "label": "Λογότυπο αριστερά μενού με γραμμή αναζήτησης"
+            },
+            "header_7": {
+              "label": "Αριστερό μενού χάμπουργκερ με λογότυπο με γραμμή αναζήτησης"
+            },
+            "header_1": {
+              "label": "Λογότυπο αριστερό μενού στο κέντρο"
+            },
+            "header_2": {
+              "label": "Αριστερό μενού με το λογότυπο αριστερά"
+            },
+            "header_3": {
+              "label": "Το κεντρικό μενού με το λογότυπο αριστερά"
+            },
+            "header_4": {
+              "label": "Αριστερό μενού χάμπουργκερ με λογότυπο"
+            },
+            "header_5": {
+              "label": "Κεντρικό λογότυπο μενού χάμπουργκερ"
+            }
+          },
+          "label": "Στυλ επιφάνειας εργασίας"
+        },
+        "mobile_transparent_header": {
+          "label": "Ενεργοποίηση διαφάνειας για κινητά"
+        },
+        "enable_sticky_header": {
+          "label": "Ενεργοποίηση κολλητικής κεφαλίδας"
+        },
+        "sticky_header_type": {
+          "label": "Κολλώδης τύπος κεφαλίδας",
+          "options": {
+            "on_scroll": {
+              "label": "Σε κύλιση προς τα πάνω"
+            },
+            "always": {
+              "label": "Πάντα"
+            }
+          }
+        },
+        "logo": {
+          "label": "Λογότυπο"
+        },
+        "logo_width": {
+          "label": "Πλάτος λογότυπου επιφάνειας εργασίας"
+        },
+        "logo_width_mobile": {
+          "label": "Πλάτος λογότυπου κινητού"
+        },
+        "logo_position": {
+          "label": "Ευθυγράμμιση λογότυπου"
+        },
+        "transparent_header": {
+          "content": "Διαφανής κεφαλίδα"
+        },
+        "desktop_transparent_header": {
+          "label": "Ενεργοποίηση διαφάνειας επιφάνειας εργασίας",
+          "info": "Λειτουργεί μόνο στην αρχική σελίδα."
+        },
+        "transparent_logo": {
+          "label": "Εναλλακτικό λογότυπο"
+        },
+        "transparent_color": {
+          "label": "Χρώμα κειμένου/εικονιδίου"
+        },
+        "navigation": {
+          "content": "Πλοήγηση"
+        },
+        "menu": {
+          "label": "Μενού"
+        },
+        "desktop_menu": {
+          "content": "Μενού επιφάνειας εργασίας"
+        },
+        "menu_type": {
+          "label": "Τύπος μενού",
+          "options": {
+            "dropdown": {
+              "label": "Αναπτυσσόμενο"
+            },
+            "mega_menu": {
+              "label": "Μέγα μενού"
+            }
+          }
+        },
+        "menu_font": {
+          "label": "Γραμματοσειρά μενού",
+          "options": {
+            "heading": {
+              "label": "Επικεφαλίδα"
+            },
+            "body": {
+              "label": "Σώμα"
+            }
+          }
+        },
+        "menu_font_size": {
+          "label": "Μέγεθος γραμματοσειράς μενού"
+        },
+        "sub_menu_font": {
+          "label": "Γραμματοσειρά μενού δεύτερου επιπέδου"
+        },
+        "submenu_font_size": {
+          "label": "Μέγεθος γραμματοσειράς μενού δεύτερου επιπέδου"
+        },
+        "mobile_menu": {
+          "content": "Μενού για κινητά"
+        },
+        "mobile_menu_font_size": {
+          "label": "Μέγεθος γραμματοσειράς μενού για κινητά"
+        },
+        "enable_social_media": {
+          "label": "Ενεργοποίηση εικονιδίων μέσων κοινωνικής δικτύωσης"
+        },
+        "icons": {
+          "content": "εικονίδια"
+        },
+        "enable_search": {
+          "label": "Ενεργοποίηση αναζήτησης"
+        },
+        "enable_account": {
+          "label": "Ενεργοποίηση λογαριασμού"
+        },
+        "enable_cart": {
+          "label": "Ενεργοποίηση καλαθιού"
+        },
+        "language_selector": {
+          "content": "Επιλογέας γλώσσας"
+        },
+        "enable_language_selector": {
+          "paragraph": "Για να προσθέσετε μια γλώσσα, μεταβείτε στις [ρυθμίσεις γλώσσας.](/admin/settings/languages)",
+          "label": "Ενεργοποίηση επιλογέα γλώσσας"
+        },
+        "currency_selector": {
+          "content": "Επιλογέας νομίσματος"
+        },
+        "show_currency": {
+          "paragraph": "Για να προσθέσετε μια χώρα/περιοχή, μεταβείτε στις [ρυθμίσεις πληρωμής.](/admin/settings/payments)",
+          "label": "Ενεργοποίηση επιλογέα νομίσματος"
+        },
+        "hamburger_menu": {
+          "content": "Μενού χάμπουργκερ"
+        },
+        "font_family": {
+          "label": "Οικογένεια γραμματοσειρών",
+          "options": {
+            "heading": {
+              "label": "Επικεφαλίδα"
+            },
+            "body": {
+              "label": "Σώμα"
+            }
+          }
+        },
+        "font_size": {
+          "label": "Μέγεθος γραμματοσειράς"
+        }
+      },
+      "name": "Επί κεφαλής",
+      "blocks": {
+        "name": "Μέγα μενού",
+        "settings": {
+          "menu_label": {
+            "label": "Ετικέτα μενού",
+            "info": "Εισαγάγετε ένα στοιχείο μενού για να εφαρμόσετε ένα μέγα μενού. [Μάθετε περισσότερα] (https://shinedezign.gitbook.io/shark-documentation/overview/header#mega-menu-settings)"
+          },
+          "content_1": {
+            "content": "Περιεχόμενο 1"
+          },
+          "content_2": {
+            "content": "Περιεχόμενο 2"
+          },
+          "content_3": {
+            "content": "Περιεχόμενο 3"
+          },
+          "content_4": {
+            "content": "Περιεχόμενο 4"
+          },
+          "content_5": {
+            "content": "Περιεχόμενο 5"
+          }
+        },
+        "hamburger_mega_menu": {
+          "name": "Μέγα μενού για χάμπουργκερ",
+          "settings": {
+            "paragraph_info": "Δεν ισχύει για το μενού του κινητού."
+          }
+        }
+      }
+    },
+    "image-with-text": {
+      "settings": {
+        "hide_rows_count": {
+          "label": "Απόκρυψη μέτρησης σειρών"
+        },
+        "section_fullwidth": {
+          "label": "Κάντε την ενότητα σε πλήρες πλάτος"
+        },
+        "image_overlay_enable": {
+          "label": "Ενεργοποίηση εικόνας επικάλυψης"
+        },
+        "image_overlay": {
+          "label": "Εικόνα επικάλυψης"
+        },
+        "image_width": {
+          "label": "Μέγεθος εικόνας επιφάνειας εργασίας"
+        },
+        "image_position": {
+          "label": "Θέση εικόνας στην επιφάνεια εργασίας"
+        },
+        "content_position": {
+          "label": "Θέση περιεχομένου στην επιφάνεια εργασίας"
+        },
+        "image_background": {
+          "label": "Ενεργοποίηση φόντου κάρτας"
+        },
+        "content_background": {
+          "label": "Κάρτα φόντο"
+        }
+      },
+      "blocks": {
+        "subheading": {
+          "name": "Υπότιτλος"
+        },
+        "row": {
+          "name": "Σειρά",
+          "settings": {
+            "text": {
+              "label": "Περιγραφή"
+            },
+            "text_size": {
+              "label": "Μέγεθος κειμένου"
+            }
+          }
+        },
+        "heading": {
+          "name": "Επικεφαλίδα"
+        },
+        "text": {
+          "name": "Κείμενο",
+          "settings": {
+            "text": {
+              "label": "Περιεχόμενο"
+            },
+            "text_size": {
+              "label": "Μέγεθος γραμματοσειράς"
+            }
+          }
+        },
+        "button": {
+          "name": "Κουμπί",
+          "settings": {
+            "button_1": {
+              "content": "Κουμπί 1"
+            },
+            "btn_as_link": {
+              "label": "Εμφάνιση ως σύνδεσμος"
+            },
+            "btn_as_outline": {
+              "label": "Εμφάνιση ως περίγραμμα"
+            },
+            "button_2": {
+              "content": "Κουμπί 2"
+            }
+          }
+        }
+      },
+      "name": "Εικόνα με κείμενο",
+      "presets": {
+        "name": "Εικόνα με κείμενο"
+      }
+    },
+    "main-collection": {
+      "settings": {
+        "columns_desktop": {
+          "label": "Προϊόντα ανά σειρά (επιτραπέζιος υπολογιστής)"
+        }
+      },
+      "name": "Κύρια συλλογή",
+      "blocks": {
+        "image": {
+          "name": "Πανό εικόνας",
+          "settings": {
+            "collection_title": {
+              "label": "Εμφάνιση τίτλου συλλογής"
+            },
+            "collection_description": {
+              "label": "Εμφάνιση περιγραφής συλλογής"
+            },
+            "heading_overly": {
+              "label": "Ενεργοποίηση επικάλυψης επικεφαλίδας"
+            },
+            "description_overly": {
+              "label": "Ενεργοποίηση επικάλυψης περιγραφής"
+            },
+            "collection_image_checker": {
+              "label": "Ενεργοποίηση εικόνας banner",
+              "info": "Θα εμφανίσει από προεπιλογή την επιλεγμένη εικόνα της συλλογής ως banner. Εάν η συλλογή δεν έχει επιλεγμένες εικόνες, θα εμφανίσει την προσαρμοσμένη εικόνα banner."
+            },
+            "banner_image": {
+              "label": "Εικόνα πανό",
+              "info": "Συνιστάται 1920 x 200 pixel."
+            },
+            "banner_height_desktop": {
+              "label": "Ύψος επιφάνειας εργασίας"
+            },
+            "banner_height_mobile": {
+              "label": "Ύψος κινητού"
+            }
+          }
+        },
+        "menu": {
+          "name": "Μενού",
+          "settings": {
+            "menu_selection": {
+              "label": "Εμφάνιση όλων των συλλογών"
+            },
+            "menu_type": {
+              "label": "Ενεργοποίηση μαρκίζας"
+            },
+            "menu": {
+              "label": "Μενού",
+              "info": "Θα εμφανιστούν μόνο τα μενού πρώτου επιπέδου."
+            },
+            "background_color": {
+              "label": "Ιστορικό"
+            },
+            "text_color": {
+              "label": "Κείμενο"
+            },
+            "hover_background_color": {
+              "label": "Κείμενο αιώρησης φόντου"
+            },
+            "hover_text_color": {
+              "label": "Κείμενο αιώρησης"
+            }
+          }
+        },
+        "products": {
+          "name": "Συλλεκτικά προϊόντα",
+          "settings": {
+            "products_per_page": {
+              "label": "Προϊόντα ανά σελίδα"
+            },
+            "infinite_scroll": {
+              "label": "Άπειρη κύλιση"
+            },
+            "enable_infinte_scroll": {
+              "label": "Ενεργοποίηση άπειρης κύλισης"
+            },
+            "infinte_scroll_type": {
+              "label": "Άπειρος τύπος κύλισης",
+              "options": {
+                "onscroll": {
+                  "label": "Σε κύλιση"
+                },
+                "onbutton": {
+                  "label": "Κάντε κλικ στο κουμπί στο κουμπί"
+                }
+              }
+            },
+            "filerandsorting": {
+              "label": "Φιλτράρισμα και ταξινόμηση"
+            },
+            "enable_filtering": {
+              "label": "Ενεργοποίηση φίλτρου"
+            },
+            "filter_type": {
+              "label": "Στυλ φίλτρου επιφάνειας εργασίας",
+              "options": {
+                "dropdown": {
+                  "label": "Αναπτυσσόμενο"
+                },
+                "sidebar": {
+                  "label": "Πλαϊνή γραμμή"
+                }
+              }
+            },
+            "enable_sorting": {
+              "label": "Ενεργοποίηση ταξινόμησης"
+            }
+          }
+        }
+      }
+    },
+    "main-collection-list": {
+      "settings": {
+        "columns_desktop": {
+          "label": "Συλλογές ανά σειρά (επιτραπέζιος υπολογιστής)"
+        },
+        "column_mobile": {
+          "label": "Συλλογές ανά σειρά (κινητό)"
+        },
+        "banner_image": {
+          "label": "Εικόνα",
+          "info": "Συνιστάται 1920 x 200 pixel."
+        },
+        "banner_height_desktop": {
+          "label": "Ύψος επιφάνειας εργασίας"
+        },
+        "banner_height_mobile": {
+          "label": "Ύψος κινητού"
+        },
+        "heading_overlay": {
+          "label": "Ενεργοποίηση επικάλυψης επικεφαλίδας"
+        },
+        "grid": {
+          "label": "Πλέγμα"
+        },
+        "collections_per_page": {
+          "label": "Συλλογές ανά σελίδα"
+        },
+        "sort": {
+          "label": "Είδος",
+          "options": {
+            "alphabetical": {
+              "label": "Αλφαβητικά, α-ω"
+            },
+            "alphabetical_reversed": {
+              "label": "Αλφαβητικά, ζ-α"
+            },
+            "date_reversed": {
+              "label": "Ραντεβού, νέο προς παλιό"
+            },
+            "date": {
+              "label": "Ημερομηνία, παλιό σε νέο"
+            },
+            "products_high": {
+              "label": "Αριθμός προϊόντων, από υψηλό έως χαμηλό"
+            },
+            "products_low": {
+              "label": "Αριθμός προϊόντων, από χαμηλό έως υψηλό"
+            }
+          }
+        },
+        "title_overlay": {
+          "label": "Εμφάνιση τίτλου ως επικάλυψη"
+        },
+        "title_postion": {
+          "label": "Θέση τίτλου"
+        },
+        "heading_overlay_color": {
+          "label": "Χρώμα επικάλυψης επικεφαλίδας"
+        },
+        "heading_overlay_opacity": {
+          "label": "Αδιαφάνεια επικάλυψης επικεφαλίδας"
+        }
+      },
+      "name": "Λίστα συλλογής"
+    },
+    "main-product": {
+      "settings": {
+        "sticky_add_to_cart": {
+          "header": {
+            "label": "Κολλητική προσθήκη στο καλάθι"
+          },
+          "enable_sticky_cart": {
+            "label": "Ενεργοποιήστε τη σταθερή προσθήκη στο καλάθι"
+          }
+        },
+        "overlapped_thumbnails": {
+          "label": "Επικαλυπτόμενες μικρογραφίες",
+          "info": "Θα λειτουργεί μόνο όταν η θέση της μικρογραφίας έχει οριστεί στο κάτω μέρος."
+        },
+        "enable_sticky": {
+          "label": "Ενεργοποίηση κολλώδους περιεχομένου στην επιφάνεια εργασίας"
+        },
+        "desktop_media_width": {
+          "label": "Πλάτος πολυμέσων επιφάνειας εργασίας"
+        },
+        "image_zoom": {
+          "label": "Ζουμ εικόνας",
+          "info": "Το κλικ και το δείκτη του ποντικιού δεν λειτουργεί σε κινητά.",
+          "options": {
+            "click_hover": {
+              "label": "Κάντε κλικ και τοποθετήστε τον δείκτη του ποντικιού"
+            },
+            "lightbox": {
+              "label": "Ανοίξτε το Lightbox"
+            },
+            "none": {
+              "label": "Κανένας"
+            }
+          }
+        },
+        "thumbnial_on_mobile": {
+          "label": "Εμφάνιση μικρογραφιών σε προβολή κινητού",
+          "info": "Αυτή η ρύθμιση θα λειτουργεί με ενεργοποιημένες μικρογραφίες προϊόντων."
+        },
+        "gallery_style": {
+          "label": "Στυλ γκαλερί",
+          "options": {
+            "slider": {
+              "label": "Στροβιλοδρόμιο"
+            },
+            "stacked": {
+              "label": "Στοιβάζονται"
+            }
+          }
+        },
+        "thumbnail_position": {
+          "label": "Θέση μικρογραφιών επιφάνειας εργασίας"
+        }
+      },
+      "blocks": {
+        "back_in_stock": {
+          "name": "Επιστροφή σε απόθεμα",
+          "settings": {
+            "heading": {
+              "label": "Επικεφαλίδα"
+            },
+            "placeholder": {
+              "label": "Placeholder"
+            },
+            "btn_text": {
+              "label": "Κείμενο κουμπιού"
+            },
+            "success_message": {
+              "label": "Μήνυμα επιτυχίας"
+            }
+          }
+        },
+        "title": {
+          "name": "Τίτλος"
+        },
+        "sku": {
+          "name": "SKU"
+        },
+        "text": {
+          "name": "Κείμενο",
+          "settings": {
+            "text": {
+              "label": "Κείμενο"
+            }
+          }
+        },
+        "price": {
+          "name": "Τιμή",
+          "settings": {
+            "hide_shipping_content": {
+              "label": "Απόκρυψη περιεχομένου αποστολής"
+            }
+          }
+        },
+        "rating": {
+          "name": "Αξιολόγηση αξιολόγησης",
+          "settings": {
+            "paragraph": {
+              "content": "Για να εμφανίσετε αξιολογήσεις, προσθέστε οποιαδήποτε εφαρμογή κριτικών προϊόντων."
+            }
+          }
+        },
+        "variant": {
+          "name": "Επιλογέας παραλλαγής"
+        },
+        "sizeChart": {
+          "name": "Διάγραμμα μεγέθους",
+          "settings": {
+            "size_chart": {
+              "label": "Επιλέξτε διάγραμμα μεγεθών"
+            }
+          }
+        },
+        "buy_buttons": {
+          "name": "Αγορά κουμπιών",
+          "settings": {
+            "show_dynamic_checkout": {
+              "label": "Εμφάνιση δυναμικών κουμπιών ολοκλήρωσης αγοράς",
+              "info": "Χρησιμοποιώντας τους διαθέσιμους τρόπους πληρωμής στο κατάστημά σας, οι πελάτες βλέπουν την προτιμώμενη επιλογή τους, όπως το PayPal ή το Apple Pay. [Μάθετε περισσότερα] (https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+            },
+            "show_recipient_form": {
+              "label": "Εμφάνιση φόρμας πληροφοριών παραλήπτη για προϊόντα δωροκάρτας",
+              "info": "Τα προϊόντα δωροκάρτας μπορούν προαιρετικά να σταλούν απευθείας σε έναν παραλήπτη μαζί με ένα προσωπικό μήνυμα."
+            }
+          }
+        },
+        "quantity_selector": {
+          "name": "Επιλογέας ποσότητας"
+        },
+        "social-icons": {
+          "name": "Κοινωνική κοινή χρήση",
+          "settings": {
+            "show_social_share_overlay": {
+              "label": "Εμφάνιση εικονιδίου μπροστά από το πρώτο μπλοκ (επιφάνεια εργασίας)"
+            }
+          }
+        },
+        "description": {
+          "name": "Περιγραφή"
+        },
+        "collapsible_tab": {
+          "name": "Πτυσσόμενο περιεχόμενο",
+          "settings": {
+            "show_description": {
+              "label": "Εμφάνιση περιγραφής προϊόντος"
+            },
+            "description_heading": {
+              "label": "Επικεφαλίδα περιγραφής"
+            },
+            "paragraph_1": {
+              "label": "Περιεχόμενο 1"
+            },
+            "heading": {
+              "label": "Επικεφαλίδα"
+            },
+            "description": {
+              "label": "Περιγραφή"
+            },
+            "paragraph_2": {
+              "label": "Περιεχόμενο 2"
+            },
+            "paragraph_3": {
+              "label": "Περιεχόμενο 3"
+            }
+          }
+        },
+        "custom_liquid": {
+          "name": "Προσαρμοσμένο υγρό",
+          "settings": {
+            "custom_liquid": {
+              "label": "Προσαρμοσμένο υγρό",
+              "info": "Προσθέστε αποσπάσματα εφαρμογής ή άλλο υγρό κώδικα για να δημιουργήσετε προηγμένες προσαρμογές."
+            }
+          }
+        },
+        "inventory_status": {
+          "name": "Κατάσταση αποθέματος",
+          "settings": {
+            "minimun_inventory": {
+              "label": "Ελάχιστο απόθεμα"
+            },
+            "inventory_available_status": {
+              "label": "Διαθέσιμο μήνυμα"
+            },
+            "inventory_less_status": {
+              "label": "Μήνυμα χαμηλού αποθέματος",
+              "info": "Χρήση ||απογραφή|| Για να εμφανίσετε τον αριθμό αποθέματος στο μήνυμα"
+            }
+          }
+        },
+        "pickup_availability": {
+          "name": "Μαζεύω"
+        },
+        "complementary_products": {
+          "name": "Συμπληρωματικά προϊόντα",
+          "settings": {
+            "paragraph": {
+              "label": "Για να επιλέξετε συμπληρωματικά προϊόντα, προσθέστε την εφαρμογή Search & Discovery. [Μάθετε περισσότερα](https://help.shopify.com/manual/online-store/search-and-discovery/product-recommendations)"
+            },
+            "heading": {
+              "label": "Επικεφαλίδα"
+            },
+            "products_count": {
+              "label": "Τα προϊόντα μετράνε"
+            }
+          }
+        },
+        "icon_with_text": {
+          "name": "Εικονίδιο και κείμενο",
+          "settings": {
+            "icon_1": {
+              "label": "Εικονίδιο 1"
+            },
+            "icon_list": {
+              "label": "Εικόνισμα"
+            },
+            "icon": {
+              "label": "Κωδικός SVG"
+            },
+            "text": {
+              "label": "Επικεφαλίδα"
+            },
+            "icon_2": {
+              "label": "Εικονίδιο 2"
+            },
+            "icon_3": {
+              "label": "Εικονίδιο 3"
+            }
+          }
+        },
+        "coupon": {
+          "name": "Κωδικός κουπονιού",
+          "settings": {
+            "coupon_heading": {
+              "label": "Επικεφαλίδα"
+            },
+            "coupon_description": {
+              "label": "Περιγραφή"
+            },
+            "coupon_code": {
+              "label": "Κωδικός κουπονιού"
+            }
+          }
+        }
+      },
+      "name": "Κυριο προιον"
+    },
+    "media-grid": {
+      "settings": {
+        "grid_column_gap": {
+          "label": "Κενό στήλης πλέγματος"
+        },
+        "make_content_sticky": {
+          "label": "Κάντε το περιεχόμενο κολλώδες"
+        },
+        "desktop_row_height": {
+          "label": "Ύψος σειράς επιφάνειας εργασίας"
+        },
+        "mobile_row_height": {
+          "label": "Ύψος σειράς κινητού"
+        }
+      },
+      "name": "Πλέγμα πολυμέσων",
+      "blocks": {
+        "name": "Πλέγμα",
+        "settings": {
+          "image_on_hover": {
+            "label": "Εμφάνιση εικόνας/βίντεο στο δείκτη του ποντικιού"
+          },
+          "media_image": {
+            "label": "Εικόνα",
+            "info": "Συνιστάται 1250 x 1250 .jpg."
+          },
+          "video": {
+            "label": "βίντεο"
+          },
+          "column": {
+            "label": "Στήλη"
+          },
+          "row": {
+            "label": "Σειρά"
+          },
+          "content_position": {
+            "label": "Θέση περιεχομένου",
+            "options__1": {
+              "label": "Πάνω αριστερά"
+            },
+            "options__2": {
+              "label": "Κορυφαίο Κέντρο"
+            },
+            "options__3": {
+              "label": "Επάνω δεξιά"
+            },
+            "options__4": {
+              "label": "Μέση Αριστερά"
+            },
+            "options__5": {
+              "label": "Μέσο Κέντρο"
+            },
+            "options__6": {
+              "label": "Μέση Δεξιά"
+            },
+            "options__7": {
+              "label": "Κάτω αριστερά"
+            },
+            "options__8": {
+              "label": "Κάτω κέντρο"
+            },
+            "options__9": {
+              "label": "Κάτω δεξιά"
+            }
+          },
+          "content_alignment": {
+            "label": "Ευθυγράμμιση περιεχομένου"
+          },
+          "content_width": {
+            "label": "Πλάτος περιεχομένου επιφάνειας εργασίας"
+          },
+          "btn_link": {
+            "label": "Σύνδεσμος",
+            "info": "Εάν το κείμενο του κουμπιού είναι κενό, τότε ο σύνδεσμος θα εφαρμοστεί σε ολόκληρη την εικόνα."
+          },
+          "button_as_link": {
+            "label": "Εμφάνιση κουμπιού ως συνδέσμου"
+          },
+          "column_background": {
+            "label": "Φόντο στήλης"
+          },
+          "heading_color": {
+            "label": "Επικεφαλίδα"
+          },
+          "text_color": {
+            "label": "Περιγραφή"
+          },
+          "heading_color_hover": {
+            "label": "Τοποθετήστε το δείκτη του ποντικιού"
+          },
+          "text_color_hover": {
+            "label": "Περιγραφή αιώρηση"
+          },
+          "btn_bg_color": {
+            "label": "Κουμπί φόντο"
+          },
+          "btn_text_color": {
+            "label": "Κείμενο κουμπιού"
+          },
+          "btn_border_color": {
+            "label": "Περίγραμμα κουμπιών"
+          },
+          "btn_hover_color": {
+            "label": "Φόντο αιώρησης κουμπιών"
+          },
+          "btn_hover_text_color": {
+            "label": "Κείμενο με το δείκτη του ποντικιού"
+          },
+          "btn_hover_border_color": {
+            "label": "Περίγραμμα ποντικιού κουμπιού"
+          },
+          "background_color": {
+            "label": "Χρώμα επικάλυψης"
+          },
+          "background_opacity": {
+            "label": "Αδιαφάνεια επικάλυψης"
+          }
+        }
+      },
+      "presets": {
+        "name": "Πλέγμα πολυμέσων"
+      }
+    },
+    "rich_text": {
+      "settings": {
+        "image_size": {
+          "label": "Μέγεθος εικόνας"
+        },
+        "divider": {
+          "label": "Διαιρών"
+        },
+        "content": {
+          "content": "Περιεχόμενο"
+        },
+        "alignment": {
+          "label": "Ευθυγραμμία"
+        },
+        "content_width": {
+          "label": "Πλάτος επιφάνειας εργασίας"
+        },
+        "content_postion": {
+          "label": "Θέση"
+        },
+        "button_size": {
+          "label": "Μέγεθος κουμπιού"
+        },
+        "show_link": {
+          "label": "Εμφάνιση κουμπιού ως συνδέσμου"
+        }
+      },
+      "name": "Πλούσιο κείμενο",
+      "presets": {
+        "name": "Πλούσιο κείμενο"
+      }
+    },
+    "collections-details": {
+      "name": "Λεπτομέρειες συλλογών",
+      "settings": {
+        "show_description": {
+          "label": "Δείξε περιγραφή"
+        },
+        "autoslide": {
+          "label": "Ενεργοποίηση αυτόματης διαφάνειας"
+        },
+        "interval": {
+          "label": "Αλλάξτε τις διαφάνειες κάθε"
+        }
+      },
+      "blocks": {
+        "name": "Συλλογή",
+        "settings": {
+          "collection": {
+            "label": "Συλλογή"
+          },
+          "image": {
+            "label": "Προσαρμοσμένη εικόνα"
+          },
+          "heading": {
+            "label": "Προσαρμοσμένος τίτλος"
+          },
+          "heading_size": {
+            "label": "Μέγεθος τίτλου"
+          },
+          "seo_heading": {
+            "label": "Ετικέτα τίτλου",
+            "info": "Καθορίστε τύπους κωδικών τίτλου για SEO και μηχανές αναζήτησης για σκοπούς ανίχνευσης."
+          },
+          "description": {
+            "label": "Προσαρμοσμένη περιγραφή"
+          }
+        }
+      },
+      "presets": {
+        "name": "Λεπτομέρειες συλλογών"
+      }
+    },
+    "collection-banner-list": {
+      "name": "Λίστα banner συλλογών",
+      "settings": {
+        "banner_height_desktop": {
+          "label": "Ύψος επιφάνειας εργασίας",
+          "full_screen": {
+            "label": "ΠΛΗΡΗΣ ΟΘΟΝΗ"
+          }
+        },
+        "banner_height_mobile": {
+          "label": "Ύψος κινητού"
+        }
+      },
+      "blocks": {
+        "name": "Συλλογή",
+        "settings": {
+          "collection": {
+            "label": "Συλλογή"
+          },
+          "image": {
+            "label": "Προσαρμοσμένη εικόνα"
+          },
+          "btn_text": {
+            "label": "Κείμενο κουμπιού"
+          }
+        }
+      },
+      "presets": {
+        "name": "Λίστα banner συλλογών"
+      }
+    },
+    "contact-form": {
+      "settings": {
+        "enable_phone_number": {
+          "label": "Εμφάνιση αριθμού επικοινωνίας"
+        },
+        "header": {
+          "label": "Περιεχόμενο"
+        },
+        "content_width": {
+          "label": "Πλάτος επιφάνειας εργασίας"
+        }
+      },
+      "name": "Φόρμα Επικοινωνίας",
+      "presets": {
+        "name": "Φόρμα Επικοινωνίας"
+      }
+    },
+    "footer": {
+      "settings": {
+        "footer_info": {
+          "label": "Το διάστημα δεν θα λειτουργήσει όταν η εικόνα φόντου είναι κενή"
+        },
+        "image": {
+          "info": "Συνιστάται 235 x 74 εικονοστοιχεία.",
+          "label": "Λογότυπο"
+        },
+        "image_width": {
+          "label": "Πλάτος λογότυπου"
+        },
+        "show_social": {
+          "label": "Εμφάνιση εικονιδίων μέσων κοινωνικής δικτύωσης"
+        },
+        "enable_follow_on_shop": {
+          "label": "Ενεργοποίηση παρακολούθησης στο κατάστημα"
+        },
+        "header": {
+          "label": "Μενού για κινητά"
+        },
+        "menu_style": {
+          "label": "Στυλ",
+          "options": {
+            "stacked": {
+              "label": "Στοιβάζονται"
+            },
+            "accordion": {
+              "label": "Ακορντεόν"
+            }
+          }
+        },
+        "open_menu_mobile": {
+          "label": "Ανοίξτε το μενού από προεπιλογή σε προβολή ακορντεόν"
+        },
+        "enable_language_selector": {
+          "heading": "Επιλογέας γλώσσας",
+          "info": "Για να προσθέσετε μια γλώσσα, μεταβείτε στις [ρυθμίσεις γλώσσας.](/admin/settings/languages)",
+          "label": "Ενεργοποίηση επιλογέα γλώσσας"
+        },
+        "copyright_content": {
+          "label": "Περιεχόμενο πνευματικών δικαιωμάτων"
+        },
+        "hide_copyright_content": {
+          "label": "Απόκρυψη περιεχομένου πνευματικών δικαιωμάτων"
+        },
+        "custom_copyright_content": {
+          "label": "Προσαρμοσμένο περιεχόμενο"
+        },
+        "payment_enable": {
+          "heading": "Μέθοδοι πληρωμής",
+          "label": "Εμφάνιση εικονιδίων πληρωμής"
+        },
+        "show_currency": {
+          "heading": "Επιλογέας νομίσματος",
+          "info": "Για να προσθέσετε μια χώρα/περιοχή, μεταβείτε στις [ρυθμίσεις πληρωμής.](/admin/settings/payments)",
+          "label": "Ενεργοποίηση μετατροπέα νομισμάτων"
+        },
+        "margin_top": {
+          "label": "Κορυφαίο περιθώριο"
+        }
+      },
+      "name": "Υποσέλιδο",
+      "blocks": {
+        "link_list": {
+          "name": "Μενού",
+          "settings": {
+            "heading": {
+              "label": "Επικεφαλίδα",
+              "info": "Απαιτείται επικεφαλίδα για να εμφανιστεί το μενού."
+            },
+            "menu": {
+              "label": "Μενού",
+              "info": "Εμφανίζει μόνο τα στοιχεία μενού ανώτατου επιπέδου."
+            }
+          }
+        },
+        "newsletter": {
+          "name": "Ενημερωτικό δελτίο",
+          "settings": {
+            "heading": {
+              "label": "Επικεφαλίδα"
+            },
+            "description": {
+              "label": "Περιγραφή"
+            },
+            "placeholder": {
+              "label": "Κείμενο κράτησης θέσης"
+            }
+          }
+        },
+        "text": {
+          "name": "Κείμενο",
+          "settings": {
+            "image": {
+              "label": "Εικόνα"
+            },
+            "image_url": {
+              "label": "Σύνδεσμος εικόνας"
+            },
+            "description": {
+              "label": "Περιγραφή"
+            },
+            "show_social": {
+              "label": "Εμφάνιση εικονιδίων μέσων κοινωνικής δικτύωσης"
+            }
+          }
+        }
+      }
+    },
+    "main-cart": {
+      "settings": {
+        "show_cart_heading": {
+          "label": "Εμφάνιση επικεφαλίδας καλαθιού"
+        },
+        "show_cart_note": {
+          "label": "Εμφάνιση σημείωσης καλαθιού"
+        },
+        "payment_enable": {
+          "label": "Εμφάνιση εικονιδίων πληρωμής"
+        },
+        "shipping_estimates": {
+          "label": "Εμφάνιση εκτιμήσεων αποστολής"
+        }
+      },
+      "name": "Κύριο καλάθι"
+    },
+    "media-banner": {
+      "settings": {
+        "desktop_height": {
+          "options": {
+            "fullscreen": {
+              "label": "ΠΛΗΡΗΣ ΟΘΟΝΗ"
+            }
+          }
+        },
+        "enable_content_parallax": {
+          "label": "Ενεργοποίηση παράλλαξης περιεχομένου",
+          "info": "Θα ισχύει μόνο όταν το parallax είναι ενεργοποιημένο."
+        },
+        "enable_parallax": {
+          "label": "Ενεργοποίηση παράλλαξης"
+        },
+        "content_position": {
+          "desktop": {
+            "label": "Θέση στην επιφάνεια εργασίας"
+          },
+          "mobile": {
+            "label": "Θέση κινητού"
+          }
+        },
+        "paragraph_info": "Οι θέσεις για επιτραπέζιους υπολογιστές και κινητά δεν ισχύουν με την παράλλαξη περιεχομένου."
+      },
+      "name": "Πανό πολυμέσων"
+    },
+    "slideshow": {
+      "settings": {
+        "navigation_type": {
+          "options": {
+            "none": "Κανένας",
+            "arrow": "Βέλος",
+            "dots": "Αποσιωπητικά"
+          },
+          "label": "Τύπος πλοήγησης"
+        },
+        "enable_compact_width": {
+          "label": "Ενεργοποίηση συμπαγούς πλάτους (επιτραπέζιος υπολογιστής)",
+          "info": "Δεν θα λειτουργήσει όταν είναι επιλεγμένο το «Ενεργοποίηση πλήρους πλάτους»."
+        },
+        "enable_block_color": {
+          "label": "Χρησιμοποιήστε χρώμα μπλοκ"
+        },
+        "desktop_height": {
+          "label": "Ύψος επιφάνειας εργασίας",
+          "options": {
+            "fullscreen": "ΠΛΗΡΗΣ ΟΘΟΝΗ",
+            "adapt_to_slide": "Αυτόματη προσαρμογή στην πρώτη διαφάνεια"
+          }
+        },
+        "mobile_height": {
+          "label": "Ύψος κινητού",
+          "options": {
+            "fullscreen": "ΠΛΗΡΗΣ ΟΘΟΝΗ",
+            "adapt_to_slide": "Αυτόματη προσαρμογή στην πρώτη διαφάνεια"
+          }
+        },
+        "auto_rotate": {
+          "label": "Αυτόματη περιστροφή διαφανειών"
+        },
+        "change_slides_speed": {
+          "label": "Αλλάξτε τις διαφάνειες κάθε"
+        },
+        "slider_transition": {
+          "label": "Κινούμενα σχέδια διαφανειών",
+          "options": {
+            "slide": "Ολίσθηση",
+            "fade": "Ξεθωριάζει"
+          }
+        },
+        "arrow_header": {
+          "content": "Βέλος"
+        },
+        "arrow_foreground": {
+          "label": "Εικόνισμα"
+        },
+        "arrow_background": {
+          "label": "Ιστορικό"
+        },
+        "arrow_border": {
+          "label": "Σύνορο"
+        },
+        "banner_marquee": {
+          "label": "Ενεργοποίηση μαρκίζας κειμένου"
+        },
+        "banner_marquee_color": {
+          "label": "Χρώμα κειμένου"
+        },
+        "mobile": {
+          "content": "Διάταξη κινητού"
+        },
+        "show_text_below": {
+          "label": "Εμφάνιση περιεχομένου κάτω από εικόνες σε κινητό"
+        },
+        "item_gap": {
+          "desktop": {
+            "label": "Κενό στοιχείων επιφάνειας εργασίας"
+          },
+          "mobile": {
+            "label": "Κενό κινητών αντικειμένων"
+          }
+        }
+      },
+      "name": "Παρουσίαση",
+      "blocks": {
+        "name": {
+          "label": "Ολίσθηση"
+        },
+        "settings": {
+          "slide_image": {
+            "desktop": {
+              "label": "Εικόνα επιφάνειας εργασίας"
+            },
+            "mobile": {
+              "label": "Εικόνα για κινητό"
+            }
+          },
+          "enable_highlight_background": {
+            "label": "Ενεργοποίηση επισήμανσης φόντου"
+          },
+          "slide_video": {
+            "label": "Βίντεο φόντου",
+            "info": "Υποστηρίζει μόνο βίντεο .mp4."
+          },
+          "slide_button_info": "Εάν το κείμενο και των δύο κουμπιών (πρωτεύον και δευτερεύον) είναι κενό, ο σύνδεσμος θα εφαρμοστεί σε ολόκληρη την εικόνα, με προτεραιότητα στον σύνδεσμο του κύριου κουμπιού.",
+          "content_width": {
+            "desktop": {
+              "label": "Πλάτος επιφάνειας εργασίας"
+            }
+          },
+          "content_position": {
+            "desktop": {
+              "label": "Θέση στην επιφάνεια εργασίας"
+            },
+            "mobile": {
+              "label": "Θέση κινητού"
+            }
+          },
+          "content_alignment": {
+            "desktop": {
+              "label": "Ευθυγράμμιση επιφάνειας εργασίας"
+            },
+            "mobile": {
+              "label": "Κινητή ευθυγράμμιση"
+            }
+          },
+          "overlay_color": {
+            "content": {
+              "label": "φόντο περιεχομένου"
+            },
+            "image": {
+              "label": "Υπόβαθρο επικάλυψης"
+            }
+          },
+          "slide_button": {
+            "primary": {
+              "label": "Κύριο κουμπί"
+            },
+            "secondary": {
+              "label": "Δευτερεύον κουμπί"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Παρουσίαση"
+      }
+    },
+    "testimonials": {
+      "settings": {
+        "mobile_layout": {
+          "options": {
+            "1-column": {
+              "label": "1 στήλη"
+            },
+            "2-column": {
+              "label": "2 στήλη"
+            }
+          },
+          "label": "Διάταξη κινητού"
+        },
+        "background_image": {
+          "label": "Εικόνα φόντου"
+        },
+        "background_blur": {
+          "label": "Ενεργοποίηση θαμπώματος φόντου"
+        },
+        "column_header": {
+          "content": "Στήλη"
+        },
+        "column_count": {
+          "label": "Πλήθος στηλών επιφάνειας εργασίας"
+        },
+        "layout_type": {
+          "label": "Στυλ",
+          "carousel": {
+            "label": "Στροβιλοδρόμιο"
+          },
+          "grid": {
+            "label": "Πλέγμα"
+          }
+        },
+        "load_more": {
+          "label": "Ενεργοποίηση φόρτωσης περισσότερων",
+          "info": "Θα λειτουργήσει με περισσότερα από 8 μπλοκ"
+        },
+        "swipe_mobile": {
+          "label": "Ενεργοποίηση ολίσθησης στο κινητό"
+        }
+      },
+      "blocks": {
+        "quote": {
+          "name": "Παραθέτω, αναφορά",
+          "settings": {
+            "rating": {
+              "label": "Αξιολόγηση με αστέρια"
+            },
+            "heading": {
+              "label": "Επικεφαλίδα"
+            },
+            "message": {
+              "label": "Περιγραφή"
+            },
+            "author": {
+              "label": "Όνομα συγγραφέα"
+            }
+          }
+        }
+      },
+      "name": "Μαρτυρίες",
+      "presets": {
+        "name": "Μαρτυρίες"
+      }
+    },
+    "product-details": {
+      "name": "Λεπτομέρειες προιόντος"
+    },
+    "categories": {
+      "name": "Κατηγορίες",
+      "settings": {
+        "column_style": {
+          "label": "Στυλ",
+          "options": {
+            "square": {
+              "label": "τετράγωνο"
+            },
+            "rounded": {
+              "label": "Στρογγυλεμένο"
+            }
+          }
+        },
+        "desktop_layout": {
+          "label": "Επιφάνεια εργασίας"
+        },
+        "desktop_column_count": {
+          "label": "Στήλη στη σειρά"
+        },
+        "desktop_column_gap": {
+          "label": "Χώρος στήλης"
+        },
+        "desktop_column_width": {
+          "label": "Πλάτος στήλης",
+          "options": {
+            "small": {
+              "label": "Μικρό"
+            },
+            "medium": {
+              "label": "Μεσαίο"
+            },
+            "large": {
+              "label": "Μεγάλο"
+            }
+          }
+        },
+        "mobile_layout": {
+          "label": "Κινητό"
+        },
+        "card_hover_style": {
+          "label": "Στυλ αιώρησης κάρτας",
+          "options": {
+            "inside_shadow": {
+              "label": "Εσωτερική σκιά"
+            },
+            "outside_shadow": {
+              "label": "Εξωτερική σκιά"
+            },
+            "rotate_border": {
+              "label": "Περιστρεφόμενο περίγραμμα"
+            }
+          }
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Συλλογή",
+          "settings": {
+            "collection": {
+              "label": "Συλλογή"
+            },
+            "heading": {
+              "label": "Επικεφαλίδα"
+            },
+            "image": {
+              "label": "Εικόνα"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Κατηγορίες"
+      }
+    },
+    "footer_policies": {
+      "name": "Κάτω μπάρα",
+      "settings": {
+        "show_policies": {
+          "label": "Εμφάνιση πολιτικών"
+        },
+        "show_copyright": {
+          "label": "Εμφάνιση πνευματικών δικαιωμάτων"
+        }
+      }
+    },
+    "collection_banner": {
+      "name": "Πανό συλλογής"
+    },
+    "page-banner": {
+      "name": "Κύριο πανό"
+    },
+    "product_details": {
+      "name": "Λεπτομέρειες προιόντος",
+      "settings": {
+        "spec_header": {
+          "label": "Προσδιορισμός"
+        },
+        "box_position": {
+          "label": "Θέση",
+          "option": {
+            "right": {
+              "label": "σωστά"
+            },
+            "left": {
+              "label": "Αριστερά"
+            }
+          }
+        },
+        "spec_color": {
+          "label": "Χρώμα προδιαγραφών"
+        },
+        "spec_grad_color": {
+          "label": "Χρώμα επισήμανσης ντεγκραντέ",
+          "info": "Το χρώμα επισήμανσης διαβάθμισης αντικαθιστά το χρώμα που τονίζεται στην επικεφαλίδα."
+        }
+      },
+      "blocks": {
+        "specification": {
+          "name": "Προσδιορισμός"
+        },
+        "description": {
+          "name": "Περιγραφή",
+          "settings": {
+            "desc_heading": {
+              "label": "Επικεφαλίδα περιγραφής"
+            }
+          }
+        },
+        "collapsible": {
+          "name": "Πτυσσόμενο περιεχόμενο",
+          "settings": {
+            "collapsible_heading": {
+              "label": "Επικεφαλίδα"
+            },
+            "collapsible_content": {
+              "label": "Περιγραφή"
+            }
+          }
+        }
+      }
+    },
+    "video_text_overlay": {
+      "name": "Βίντεο με επικάλυψη κειμένου",
+      "settings": {
+        "cover_image": {
+          "label": "Εικόνα εξωφύλλου",
+          "info": "Συνιστάται 1920 x 720 pixel. "
+        },
+        "video_url": {
+          "label": "URL",
+          "placeholder": "Χρησιμοποιήστε μια διεύθυνση URL YouTube ή Vimeo"
+        },
+        "video": {
+          "label": "Βίντεο που φιλοξενείται στο Shopify"
+        },
+        "blocks_content_position": {
+          "label": "Αποκλείει τη θέση περιεχομένου",
+          "options": {
+            "left": {
+              "label": "Αριστερά"
+            },
+            "center": {
+              "label": "Κέντρο"
+            },
+            "right": {
+              "label": "σωστά"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Βίντεο με επικάλυψη κειμένου"
+      }
+    },
+    "event-calender": {
+      "name": "Ημερολόγιο εκδηλώσεων",
+      "settings": {
+        "event_image_size": {
+          "label": "Αναλογία εικόνων"
+        }
+      },
+      "blocks": {
+        "name": "Εκδήλωση",
+        "settings": {
+          "date": {
+            "label": "Ημερομηνία"
+          },
+          "time": {
+            "label": "χρόνος"
+          },
+          "location": {
+            "label": "Τοποθεσία"
+          },
+          "location_url": {
+            "label": "Σύνδεσμος τοποθεσίας"
+          },
+          "link_text": {
+            "label": "Περισσότερες πληροφορίες"
+          },
+          "link_url": {
+            "label": "Σύνδεσμος για περισσότερες πληροφορίες"
+          }
+        }
+      },
+      "presets": {
+        "name": "Ημερολόγιο εκδηλώσεων"
+      }
+    },
+    "collection-carousel": {
+      "name": "Συλλεκτικό καρουζέλ",
+      "settings": {
+        "autoslide": {
+          "label": "Ενεργοποίηση αυτόματης διαφάνειας"
+        },
+        "interval": {
+          "label": "Αλλάξτε τις διαφάνειες κάθε"
+        },
+        "content_alignment": {
+          "label": "Ευθυγραμμία"
+        },
+        "heading_overlay": {
+          "label": "Εμφάνιση τίτλου στην επικάλυψη"
+        },
+        "title_postion": {
+          "label": "Θέση",
+          "info": "Δεν ισχύει για το περιεχόμενο επικάλυψης."
+        },
+        "heading_overlay_color": {
+          "label": "Επικεφαλίδα επικάλυψης"
+        },
+        "overlay_color": {
+          "label": "Υπόβαθρο επικάλυψης"
+        },
+        "overlay_opacity": {
+          "label": "Αδιαφάνεια"
+        },
+        "parallax": {
+          "label": "Παράλλαξη"
+        },
+        "enable_parallax": {
+          "label": "Ενεργοποίηση εφέ"
+        }
+      }
+    },
+    "collapsible-content": {
+      "name": "Πτυσσόμενο περιεχόμενο",
+      "settings": {
+        "show_first_default": {
+          "label": "Ανοίξτε το πρώτο πτυσσόμενο από προεπιλογή"
+        },
+        "inline_richtext": {
+          "label": "Κατευθυνθείτε εδώ"
+        }
+      },
+      "blocks": {
+        "name": "Πτυσσόμενη σειρά"
+      },
+      "presets": {
+        "name": "Πτυσσόμενο περιεχόμενο"
+      }
+    },
+    "breadcrumb": {
+      "name": "Τριμμένη φρυγανιά",
+      "presets": {
+        "name": "Τριμμένη φρυγανιά"
+      }
+    },
+    "before-after-image": {
+      "name": "Σύγκριση εικόνων",
+      "settings": {
+        "after_text_alignment": {
+          "label": "Στοίχιση κειμένου"
+        },
+        "after": {
+          "label": "Μετά"
+        },
+        "drag": {
+          "label": "Σέρνω"
+        },
+        "drag_position": {
+          "label": "Θέση"
+        }
+      },
+      "presets": {
+        "name": "Σύγκριση εικόνων"
+      }
+    },
+    "apps": {
+      "name": "App"
+    },
+    "announcement-bar": {
+      "name": "Μπάρα ανακοινώσεων",
+      "settings": {
+        "show_on_homepage_only": {
+          "label": "Εμφάνιση μόνο στην αρχική σελίδα"
+        },
+        "enable_announcement": {
+          "label": "Ενεργοποίηση γραμμής ανακοινώσεων"
+        },
+        "layout_type": {
+          "label": "Διάταξη",
+          "marquee": {
+            "label": "Στέγη εισόδου"
+          },
+          "carousel": {
+            "label": "Στροβιλοδρόμιο"
+          }
+        },
+        "block_color": {
+          "label": "Χρησιμοποιήστε χρώματα μπλοκ"
+        },
+        "autorotate": {
+          "label": "Αυτόματη περιστροφή διαφανειών"
+        },
+        "interval": {
+          "label": "Αλλάξτε τις διαφάνειες κάθε"
+        },
+        "move_placement": {
+          "label": "Αντιστροφή εικονιδίων και επιλογέων"
+        }
+      },
+      "blocks": {
+        "name": "Ανακοίνωση",
+        "settings": {
+          "type": {
+            "label": "Χρησιμοποιείται σε διάταξη καρουζέλ"
+          }
+        }
+      }
+    },
+    "collage": {
+      "name": "Κολάζ",
+      "settings": {
+        "heading": {
+          "label": "Επικεφαλίδα"
+        },
+        "desktop_layout": {
+          "label": "Διάταξη επιφάνειας εργασίας",
+          "options__1": {
+            "label": "Αριστερό μεγάλο μπλοκ"
+          },
+          "options__2": {
+            "label": "Δεξί μεγάλο μπλοκ"
+          }
+        },
+        "mobile_layout": {
+          "label": "Διάταξη κινητού",
+          "options__1": {
+            "label": "Κολάζ"
+          },
+          "options__2": {
+            "label": "Στήλη"
+          }
+        },
+        "card_styles": {
+          "label": "Στυλ κάρτας",
+          "info": "Τα στυλ καρτών προϊόντων, συλλογής και ιστολογίου μπορούν να ενημερωθούν στις ρυθμίσεις θέματος.",
+          "options__1": {
+            "label": "Χρησιμοποιήστε μεμονωμένα στυλ καρτών"
+          },
+          "options__2": {
+            "label": "Στυλ όλα ως κάρτες προϊόντων"
+          }
+        }
+      },
+      "blocks": {
+        "image": {
+          "name": "Εικόνα",
+          "settings": {
+            "image": {
+              "label": "Εικόνα"
+            },
+            "image_padding": {
+              "label": "Χρησιμοποιήστε την αρχική αναλογία εικόνας",
+              "info": "Επιλέξτε εάν δεν θέλετε να περικοπεί η εικόνα σας."
+            }
+          }
+        },
+        "product": {
+          "name": "Προϊόν",
+          "settings": {
+            "product": {
+              "label": "Προϊόν"
+            },
+            "secondary_background": {
+              "label": "Εμφάνιση δευτερεύοντος φόντου"
+            },
+            "second_image": {
+              "label": "Εμφάνιση δεύτερης εικόνας στο δείκτη του ποντικιού"
+            }
+          }
+        },
+        "collection": {
+          "name": "Συλλογή",
+          "settings": {
+            "collection": {
+              "label": "Συλλογή"
+            }
+          }
+        },
+        "video": {
+          "name": "βίντεο",
+          "settings": {
+            "cover_image": {
+              "label": "Εικόνα εξωφύλλου"
+            },
+            "video_url": {
+              "label": "URL",
+              "info": "Το βίντεο αναπαράγεται σε ένα αναδυόμενο παράθυρο εάν η ενότητα περιέχει άλλα μπλοκ.",
+              "placeholder": "Χρησιμοποιήστε μια διεύθυνση URL YouTube ή Vimeo"
+            },
+            "image_padding": {
+              "label": "Χρησιμοποιήστε την αρχική αναλογία εικόνας",
+              "info": "Επιλέξτε εάν δεν θέλετε να περικοπεί η εικόνα σας."
+            },
+            "description": {
+              "label": "Εναλλακτικό κείμενο βίντεο",
+              "info": "Περιγράψτε το βίντεο για πελάτες που χρησιμοποιούν προγράμματα ανάγνωσης οθόνης. [Μάθετε περισσότερα] (https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Κολάζ"
+      }
+    },
+    "countdown": {
+      "name": "Αντίστροφη μέτρηση",
+      "presets": {
+        "name": "Αντίστροφη μέτρηση"
+      },
+      "settings": {
+        "layout_style": {
+          "label": "Διάταξη επιφάνειας εργασίας",
+          "stacked": "Στοιβάζονται",
+          "split": "Διαίρεση"
+        },
+        "content_position": {
+          "label": "Θέση",
+          "info": "Ισχύει μόνο για στοιβαγμένο στυλ."
+        },
+        "enable_glass_background": {
+          "label": "Ενεργοποίηση γυάλινου φόντου"
+        },
+        "image_picker": {
+          "label": "Εικόνα φόντου"
+        },
+        "content": {
+          "label": "Περιεχόμενο"
+        },
+        "btn_as_link": {
+          "label": "Εμφάνιση ως σύνδεσμος"
+        },
+        "btn_as_outline": {
+          "label": "Εμφάνιση ως περίγραμμα"
+        },
+        "btn_link": {
+          "label": "Σύνδεσμος"
+        },
+        "btn_text": {
+          "label": "Κείμενο"
+        },
+        "button_bg_color": {
+          "label": "Κουμπί φόντο"
+        },
+        "button_hover_color": {
+          "label": "Το κουμπί αιωρείται"
+        },
+        "button_text_color": {
+          "label": "Κείμενο κουμπιού"
+        },
+        "date": {
+          "info": "Η ημερομηνία λήξης πρέπει να οριστεί σε μελλοντική ημερομηνία και να περιλαμβάνει την ακόλουθη μορφή: ΗΗ/ΜΜ/ΕΕΕΕ Παράδειγμα: 01/01/2025.",
+          "label": "Ημερομηνία λήξης"
+        },
+        "heading": {
+          "label": "Επικεφαλίδα"
+        },
+        "text_color": {
+          "label": "Κείμενο"
+        },
+        "timer_bg_color": {
+          "label": "Φόντο χρονοδιακόπτη"
+        },
+        "timer_text_color": {
+          "label": "Κείμενο χρονοδιακόπτη"
+        }
+      }
+    },
+    "custom-liquid": {
+      "name": "Προσαρμοσμένο Υγρό",
+      "settings": {
+        "custom_liquid": {
+          "label": "Υγρό",
+          "info": "Προσθέστε αποσπάσματα εφαρμογής ή άλλο υγρό κώδικα για να δημιουργήσετε προηγμένες προσαρμογές."
+        },
+        "content_width": {
+          "label": "Πλάτος περιεχομένου"
+        },
+        "text_alignment": {
+          "label": "Στοίχιση κειμένου"
+        }
+      },
+      "presets": {
+        "name": "Προσαρμοσμένο Υγρό"
+      }
+    },
+    "featured-collections-list": {
+      "blocks": {
+        "collection": {
+          "name": "Συλλογή",
+          "settings": {
+            "collection": {
+              "label": "Συλλογή"
+            },
+            "heading": {
+              "label": "Επικεφαλίδα",
+              "info": "10 λέξεις μέγ."
+            },
+            "image": {
+              "label": "Προσαρμοσμένη εικόνα"
+            }
+          }
+        }
+      },
+      "name": "Συλλεκτικό καρουζέλ",
+      "presets": {
+        "name": "Συλλεκτικό καρουζέλ"
+      },
+      "settings": {
+        "heading": {
+          "label": "Επικεφαλίδα"
+        },
+        "btntext": {
+          "label": "Κείμενο κουμπιού"
+        },
+        "btnlink": {
+          "label": "Σύνδεσμος"
+        }
+      }
+    },
+    "faq-section": {
+      "blocks": {
+        "faq": {
+          "name": "Πτυσσόμενη σειρά",
+          "settings": {
+            "answer": {
+              "label": "Περιγραφή"
+            },
+            "heading": {
+              "label": "Επικεφαλίδα"
+            }
+          }
+        }
+      },
+      "name": "Πτυσσόμενο περιεχόμενο",
+      "presets": {
+        "name": "Πτυσσόμενο περιεχόμενο"
+      },
+      "settings": {
+        "heading_title": {
+          "label": "Επικεφαλίδα"
+        }
+      }
+    },
+    "featured-collection": {
+      "name": "Επιλεγμένη συλλογή",
+      "settings": {
+        "title": {
+          "label": "Επικεφαλίδα"
+        },
+        "header": {
+          "label": "Περιεχόμενο"
+        },
+        "parallax": {
+          "label": "Παράλλαξη"
+        },
+        "enable_parallax": {
+          "label": "Ενεργοποίηση εφέ"
+        },
+        "promotional_card": {
+          "label": "Διαφημιστική κάρτα"
+        },
+        "enable_promotion_card": {
+          "label": "Ενεργοποίηση προωθητικής κάρτας"
+        },
+        "promotion_border": {
+          "label": "Ενεργοποίηση περιγράμματος"
+        },
+        "collection": {
+          "label": "Συλλογή"
+        },
+        "products_style": {
+          "label": "Στυλ",
+          "options": {
+            "carousel": {
+              "label": "Στροβιλοδρόμιο"
+            },
+            "stacked": {
+              "label": "Στοιβάζονται"
+            }
+          }
+        },
+        "background_style": {
+          "label": "Στυλ φόντου",
+          "options": {
+            "none": {
+              "label": "Διαφανές"
+            },
+            "solid": {
+              "label": "Στερεός"
+            },
+            "animated": {
+              "label": "Κινούμενα σχέδια"
+            }
+          }
+        },
+        "promotion_in_stacked": {
+          "label": "Τοποθέτηση σε στοιβαγμένη προβολή"
+        },
+        "btn_as_outline": {
+          "label": "Εμφάνιση ως περίγραμμα"
+        },
+        "animated_color_1": {
+          "label": "Χρώμα κινουμένων σχεδίων 1"
+        },
+        "animated_color_2": {
+          "label": "Χρώμα κινουμένων σχεδίων 2"
+        },
+        "animated_color_3": {
+          "label": "Χρώμα κινουμένων σχεδίων 3"
+        },
+        "animated_color_4": {
+          "label": "Χρώμα κινουμένων σχεδίων 4"
+        },
+        "products_to_show": {
+          "label": "Μέγιστα προϊόντα προς εμφάνιση"
+        },
+        "show_collection_title": {
+          "label": "Εμφάνιση τίτλου συλλογής"
+        },
+        "columns_desktop": {
+          "label": "Αριθμός στηλών στην επιφάνεια εργασίας"
+        },
+        "show_view_all": {
+          "label": "Ενεργοποιήστε την \"Προβολή όλων\" εάν η συλλογή έχει περισσότερα προϊόντα από αυτά που εμφανίζονται"
+        },
+        "view_all_style": {
+          "label": "Στυλ \"Προβολή όλων\".",
+          "options__1": {
+            "label": "Σύνδεσμος"
+          },
+          "options__2": {
+            "label": "Κουμπί περίγραμμα"
+          },
+          "options__3": {
+            "label": "Συμπαγές κουμπί"
+          }
+        },
+        "enable_desktop_slider": {
+          "label": "Ενεργοποίηση καρουζέλ στην επιφάνεια εργασίας"
+        },
+        "full_width": {
+          "label": "Φτιάξτε προϊόντα σε όλο το πλάτος"
+        },
+        "image_ratio": {
+          "label": "Αναλογία εικόνας",
+          "options__1": {
+            "label": "Προσαρμογή στην εικόνα"
+          },
+          "options__2": {
+            "label": "Πορτρέτο"
+          },
+          "options__3": {
+            "label": "τετράγωνο"
+          }
+        },
+        "show_vendor": {
+          "label": "Εμφάνιση πωλητή"
+        },
+        "show_rating": {
+          "label": "Εμφάνιση βαθμολογίας προϊόντος",
+          "info": "Για να εμφανίσετε μια αξιολόγηση, προσθέστε μια εφαρμογή αξιολόγησης προϊόντος. [Μάθετε περισσότερα](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#featured-collection-show-product-rating)"
+        },
+        "show_price": {
+          "label": "Εμφάνιση τιμής"
+        },
+        "enable_quick_buy": {
+          "label": "Κουμπί ενεργοποίησης γρήγορης προσθήκης",
+          "info": "Βέλτιστο με αναδυόμενο ή συρταρωτό τύπο καροτσιού."
+        },
+        "header_mobile": {
+          "content": "Διάταξη κινητού"
+        },
+        "columns_mobile": {
+          "label": "Αριθμός στηλών στο κινητό",
+          "options__1": {
+            "label": "1 στήλη"
+          },
+          "options__2": {
+            "label": "2 στήλες"
+          }
+        },
+        "swipe_on_mobile": {
+          "label": "Ενεργοποίηση ολίσθησης στο κινητό"
+        }
+      },
+      "presets": {
+        "name": "Επιλεγμένη συλλογή"
+      }
+    },
+    "featured-product": {
+      "name": "Προτεινόμενο προϊόν",
+      "blocks": {
+        "text": {
+          "name": "Κείμενο",
+          "settings": {
+            "text": {
+              "label": "Κείμενο"
+            },
+            "text_style": {
+              "label": "Στυλ κειμένου",
+              "options__1": {
+                "label": "Σώμα"
+              },
+              "options__2": {
+                "label": "Υπότιτλος"
+              },
+              "options__3": {
+                "label": "Κεφάλαια"
+              }
+            }
+          }
+        },
+        "title": {
+          "name": "Τίτλος"
+        },
+        "price": {
+          "name": "Τιμή"
+        },
+        "quantity_selector": {
+          "name": "Επιλογέας ποσότητας"
+        },
+        "variant_picker": {
+          "name": "Επιλογέας παραλλαγής",
+          "settings": {
+            "picker_type": {
+              "label": "Τύπος",
+              "options__1": {
+                "label": "Αναπτυσσόμενο"
+              },
+              "options__2": {
+                "label": "Χάπια"
+              }
+            }
+          }
+        },
+        "buy_buttons": {
+          "name": "Αγορά κουμπιών",
+          "settings": {
+            "show_dynamic_checkout": {
+              "label": "Εμφάνιση δυναμικών κουμπιών ολοκλήρωσης αγοράς",
+              "info": "Χρησιμοποιώντας τους διαθέσιμους τρόπους πληρωμής στο κατάστημά σας, οι πελάτες βλέπουν την προτιμώμενη επιλογή τους, όπως το PayPal ή το Apple Pay. [Μάθετε περισσότερα] (https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+            }
+          }
+        },
+        "sku": {
+          "name": "SKU",
+          "settings": {
+            "text_style": {
+              "label": "Στυλ κειμένου",
+              "options__1": {
+                "label": "Σώμα"
+              },
+              "options__2": {
+                "label": "Υπότιτλος"
+              },
+              "options__3": {
+                "label": "Κεφάλαια"
+              }
+            }
+          }
+        },
+        "description": {
+          "name": "Περιγραφή"
+        },
+        "share": {
+          "name": "Μερίδιο",
+          "settings": {
+            "text": {
+              "label": "Κείμενο"
+            },
+            "featured_image_info": {
+              "content": "Εάν συμπεριλάβετε έναν σύνδεσμο σε αναρτήσεις κοινωνικών μέσων, η επιλεγμένη εικόνα της σελίδας θα εμφανίζεται ως εικόνα προεπισκόπησης. [Μάθετε περισσότερα] (https://help.shopify.com/manual/online-store/images/showing-social-media-thumbnail-images)"
+            },
+            "title_info": {
+              "content": "Ο τίτλος και η περιγραφή του καταστήματος περιλαμβάνονται στην εικόνα προεπισκόπησης. [Μάθετε περισσότερα] (https://help.shopify.com/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)"
+            }
+          }
+        },
+        "custom_liquid": {
+          "name": "Προσαρμοσμένο υγρό",
+          "settings": {
+            "custom_liquid": {
+              "label": "Προσαρμοσμένο υγρό"
+            }
+          }
+        },
+        "rating": {
+          "name": "Αξιολόγηση προϊόντος",
+          "settings": {
+            "paragraph": {
+              "content": "Για να εμφανίσετε μια αξιολόγηση, προσθέστε μια εφαρμογή αξιολόγησης προϊόντος. "
+            }
+          }
+        }
+      },
+      "settings": {
+        "enable_marquee": {
+          "label": "Ενεργοποίηση μαρκίζας"
+        },
+        "product": {
+          "label": "Προϊόν"
+        },
+        "product_thumbnail": {
+          "label": "Ενεργοποίηση μικρογραφιών προϊόντων"
+        }
+      },
+      "presets": {
+        "name": "Προτεινόμενο προϊόν"
+      }
+    },
+    "logo-list": {
+      "name": "Λίστα λογότυπων",
+      "settings": {
+        "general": {
+          "content": "Γενικός"
+        },
+        "images_height": {
+          "label": "Εξισώστε τα ύψη των καρτών"
+        },
+        "show_borders": {
+          "label": "Εμφάνιση περιγραμμάτων ενότητας"
+        },
+        "show_card_background": {
+          "label": "Εμφάνιση φόντου κάρτας"
+        },
+        "show_card_border": {
+          "label": "Εμφάνιση περιγράμματος κάρτας"
+        },
+        "border_radius": {
+          "label": "Ακτίνα συνόρων"
+        },
+        "layout_type": {
+          "label": "Στυλ",
+          "marquee": {
+            "label": "Στέγη εισόδου"
+          },
+          "grid": {
+            "label": "Πλέγμα"
+          }
+        },
+        "grid": {
+          "content": "Πλέγμα"
+        },
+        "columns_desktop": {
+          "label": "Στήλες ανά σειρά (επιτραπέζιος υπολογιστής)"
+        },
+        "column_spacing": {
+          "label": "Κενό στηλών"
+        },
+        "marquee": {
+          "content": "Στέγη εισόδου"
+        },
+        "content": {
+          "content": "Περιεχόμενο"
+        },
+        "card_color": {
+          "label": "Λογότυπο κάρτα φόντο"
+        },
+        "card_border_color": {
+          "label": "Περίγραμμα κάρτας λογότυπου"
+        }
+      },
+      "blocks": {
+        "name": "Λογότυπο",
+        "settings": {
+          "image_url": {
+            "label": "Εικόνα από τη διεύθυνση URL",
+            "info": "Εισαγάγετε τη διεύθυνση URL μιας εικόνας"
+          },
+          "image_link": {
+            "label": "Σύνδεσμος εικόνας",
+            "info": "Προαιρετικός"
+          },
+          "image_width": {
+            "label": "Πλάτος εικόνας"
+          }
+        }
+      },
+      "presets": {
+        "name": "Λίστα λογότυπων"
+      }
+    },
+    "images-carousel": {
+      "name": "Καρουσέλ εικόνων",
+      "settings": {
+        "desktop_height": {
+          "label": "Ύψος επιφάνειας εργασίας"
+        },
+        "mobile_height": {
+          "label": "Ύψος κινητού"
+        }
+      },
+      "blocks": {
+        "name": "Εικόνα",
+        "settings": {
+          "video": {
+            "label": "Αυτόματη αναπαραγωγή βίντεο"
+          },
+          "Heading": {
+            "label": "Επικεφαλίδα",
+            "info": "Το κείμενο επικεφαλίδας είναι υποχρεωτικό για τη σύνδεσή του με την εικόνα ή το βίντεο."
+          },
+          "description": {
+            "label": "Περιγραφή"
+          }
+        }
+      },
+      "presets": {
+        "name": "Καρουσέλ εικόνων"
+      }
+    },
+    "image-banner": {
+      "name": "Πανό εικόνας",
+      "settings": {
+        "image": {
+          "label": "Πρώτη εικόνα"
+        },
+        "image_2": {
+          "label": "Δεύτερη εικόνα"
+        },
+        "image_overlay_opacity": {
+          "label": "Αδιαφάνεια επικάλυψης εικόνας"
+        },
+        "image_height": {
+          "label": "Ύψος πανό",
+          "options__1": {
+            "label": "Μικρό"
+          },
+          "options__2": {
+            "label": "Μεσαίο"
+          },
+          "options__3": {
+            "label": "Μεγάλο"
+          },
+          "info": "Για καλύτερα αποτελέσματα, χρησιμοποιήστε μια εικόνα με αναλογία διαστάσεων 3:2. [Μάθετε περισσότερα] (https://help.shopify.com/manual/shopify-admin/productivity-tools/image-editor#understanding-image-aspect-ratio)"
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "Πάνω αριστερά"
+          },
+          "options__2": {
+            "label": "Κορυφαίο Κέντρο"
+          },
+          "options__3": {
+            "label": "Επάνω δεξιά"
+          },
+          "options__4": {
+            "label": "Μέση Αριστερά"
+          },
+          "options__5": {
+            "label": "Μέσο Κέντρο"
+          },
+          "options__6": {
+            "label": "Μέση Δεξιά"
+          },
+          "options__7": {
+            "label": "Κάτω αριστερά"
+          },
+          "options__8": {
+            "label": "Κάτω κέντρο"
+          },
+          "options__9": {
+            "label": "Κάτω δεξιά"
+          },
+          "label": "Θέση περιεχομένου στην επιφάνεια εργασίας"
+        },
+        "show_text_box": {
+          "label": "Εμφάνιση κοντέινερ στην επιφάνεια εργασίας"
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "Αριστερά"
+          },
+          "options__2": {
+            "label": "Κέντρο"
+          },
+          "options__3": {
+            "label": "σωστά"
+          },
+          "label": "Ευθυγράμμιση περιεχομένου επιφάνειας εργασίας"
+        },
+        "color_scheme": {
+          "info": "Ορατό όταν εμφανίζεται το κοντέινερ."
+        },
+        "header": {
+          "content": "Διάταξη κινητού"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "Αριστερά"
+          },
+          "options__2": {
+            "label": "Κέντρο"
+          },
+          "options__3": {
+            "label": "σωστά"
+          },
+          "label": "Ευθυγράμμιση περιεχομένου για κινητά"
+        },
+        "stack_images_on_mobile": {
+          "label": "Στοίβαξη εικόνων στο κινητό"
+        },
+        "show_text_below": {
+          "label": "Εμφάνιση κοντέινερ στο κινητό"
+        },
+        "adapt_height_first_image": {
+          "label": "Προσαρμόστε το ύψος του τμήματος στο πρώτο μέγεθος εικόνας",
+          "info": "Αντικαθιστά τη ρύθμιση ύψους banner εικόνας όταν είναι επιλεγμένο."
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Επικεφαλίδα",
+          "settings": {
+            "heading": {
+              "label": "Επικεφαλίδα"
+            }
+          }
+        },
+        "text": {
+          "name": "Κείμενο",
+          "settings": {
+            "text": {
+              "label": "Περιγραφή"
+            },
+            "text_style": {
+              "options__1": {
+                "label": "Σώμα"
+              },
+              "options__2": {
+                "label": "Υπότιτλος"
+              },
+              "options__3": {
+                "label": "Κεφάλαια"
+              },
+              "label": "Στυλ κειμένου"
+            }
+          }
+        },
+        "buttons": {
+          "name": "Κουμπιά",
+          "settings": {
+            "button_label_1": {
+              "label": "Ετικέτα πρώτου κουμπιού",
+              "info": "Αφήστε την ετικέτα κενή για να κρύψετε το κουμπί."
+            },
+            "button_link_1": {
+              "label": "Σύνδεσμος πρώτου κουμπιού"
+            },
+            "button_style_secondary_1": {
+              "label": "Χρησιμοποιήστε το στυλ κουμπιού περίγραμμα"
+            },
+            "button_label_2": {
+              "label": "Δεύτερη ετικέτα κουμπιού",
+              "info": "Αφήστε την ετικέτα κενή για να κρύψετε το κουμπί."
+            },
+            "button_link_2": {
+              "label": "Δεύτερος σύνδεσμος κουμπιού"
+            },
+            "button_style_secondary_2": {
+              "label": "Χρησιμοποιήστε το στυλ κουμπιού περίγραμμα"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Πανό εικόνας"
+      }
+    },
+    "main-account": {
+      "name": "λογαριασμός"
+    },
+    "main-activate-account": {
+      "name": "Ενεργοποίηση Λογαριασμού"
+    },
+    "main-addresses": {
+      "name": "Διευθύνσεις"
+    },
+    "main-article": {
+      "name": "Αρθρο",
+      "settings": {
+        "image_size": {
+          "label": "Μέγεθος εικόνας άρθρου"
+        },
+        "content_overlay": {
+          "label": "Εμφάνιση επικάλυψης περιεχομένου"
+        },
+        "show_image": {
+          "label": "Εμφάνιση εικόνας άρθρου"
+        },
+        "show_date": {
+          "label": "Εμφάνιση ημερομηνίας δημοσίευσης"
+        },
+        "show_author": {
+          "label": "Εμφάνιση του συντάκτη της ανάρτησης"
+        },
+        "show_social": {
+          "label": "Εμφάνιση εικονιδίων κοινής χρήσης κοινωνικών δικτύων"
+        },
+        "show_tags": {
+          "label": "Εμφάνιση ετικετών"
+        },
+        "comments_enabled": {
+          "label": "Εμφάνιση αριθμού σχολίων"
+        },
+        "show_related": {
+          "label": "Εμφάνιση σχετικών άρθρων"
+        },
+        "related_post_heading": {
+          "label": "Σχετική επικεφαλίδα ανάρτησης"
+        },
+        "text_alignment": {
+          "info": "Ισχύει για σχετική επικεφαλίδα ανάρτησης"
+        }
+      }
+    },
+    "main-blog": {
+      "name": "Αναρτήσεις ιστολογίου",
+      "settings": {
+        "banner_image": {
+          "label": "Εικόνα",
+          "info": "Συνιστάται 1920 x 200 pixel."
+        },
+        "banner_height_desktop": {
+          "label": "Ύψος επιφάνειας εργασίας"
+        },
+        "banner_height_mobile": {
+          "label": "Ύψος κινητού"
+        },
+        "heading_overlay": {
+          "label": "Ενεργοποίηση επικάλυψης επικεφαλίδας"
+        },
+        "blog_post": {
+          "label": "Ανάρτηση"
+        },
+        "artical_per_page": {
+          "label": "Δημοσίευση ανά σελίδα"
+        },
+        "show_date": {
+          "label": "Εμφάνιση ημερομηνίας δημοσίευσης του άρθρου"
+        },
+        "show_author": {
+          "label": "Εμφάνιση συγγραφέα"
+        },
+        "show_tags": {
+          "label": "Εμφάνιση ετικετών"
+        },
+        "show_excerpt": {
+          "label": "Εμφάνιση αποσπασμάτων"
+        },
+        "comments_enabled": {
+          "label": "Εμφάνιση αριθμού σχολίων"
+        }
+      }
+    },
+    "main-login": {
+      "name": "Σύνδεση",
+      "settings": {
+        "image": {
+          "label": "Εικόνα φόντου"
+        }
+      }
+    },
+    "main-order": {
+      "name": "Κύρια παραγγελία"
+    },
+    "main-page": {
+      "name": "Σελίδα",
+      "settings": {
+        "banner_image": {
+          "label": "Εικόνα πανό",
+          "info": "Συνιστάται 1920 x 200 pixel."
+        },
+        "banner_height_desktop": {
+          "label": "Ύψος επιφάνειας εργασίας"
+        },
+        "banner_height_mobile": {
+          "label": "Ύψος κινητού"
+        },
+        "heading_overly": {
+          "label": "Ενεργοποίηση επικάλυψης επικεφαλίδας"
+        },
+        "enable_fullwidth": {
+          "label": "Ενεργοποίηση πλήρους πλάτους"
+        }
+      }
+    },
+    "main-password": {
+      "name": "Σελίδα κωδικού πρόσβασης",
+      "settings": {
+        "logo": {
+          "label": "Λογότυπο",
+          "info": "Συνιστάται 110 x 36 εικονοστοιχεία."
+        },
+        "logo_max_width": {
+          "label": "Μέγεθος λογότυπου"
+        },
+        "password_heading": {
+          "label": "Τίτλος κωδικού πρόσβασης"
+        },
+        "show_newsletter": {
+          "label": "Εμφάνιση ενημερωτικού δελτίου"
+        }
+      }
+    },
+    "main-register": {
+      "name": "Κανω ΕΓΓΡΑΦΗ",
+      "settings": {
+        "image": {
+          "label": "Εικόνα φόντου"
+        }
+      }
+    },
+    "main-reset-password": {
+      "name": "ΕΠΑΝΑΦΟΡΑ ΚΩΔΙΚΟΥ",
+      "settings": {
+        "image": {
+          "label": "Εικόνα φόντου"
+        }
+      }
+    },
+    "main-search": {
+      "name": "Αναζήτηση",
+      "settings": {
+        "enable_filtering": {
+          "label": "Ενεργοποίηση φίλτρου"
+        },
+        "filter_type": {
+          "label": "Στυλ φίλτρου",
+          "options": {
+            "dropdown": {
+              "label": "Αναπτυσσόμενο"
+            },
+            "sidebar": {
+              "label": "Πλαϊνή γραμμή"
+            }
+          }
+        },
+        "enable_sorting": {
+          "label": "Ενεργοποίηση ταξινόμησης"
+        }
+      }
+    },
+    "marquee-text": {
+      "name": "Κείμενο μαρκίζας",
+      "settings": {
+        "rotation_style": {
+          "label": "Τύπος μαρκίζας",
+          "options": {
+            "onscroll": {
+              "label": "Σε κύλιση"
+            },
+            "always": {
+              "label": "Πάντα"
+            },
+            "both": {
+              "label": "Και τα δυο"
+            }
+          }
+        },
+        "text_angle": {
+          "label": "Γωνία περιστροφής"
+        },
+        "bgcolor": {
+          "label": "Ιστορικό"
+        }
+      },
+      "blocks": {
+        "name": "Κείμενο",
+        "settings": {
+          "text_gap": {
+            "label": "Διάστημα μεταξύ κειμένου"
+          },
+          "color": {
+            "label": "Χρώμα κειμένου"
+          },
+          "custom_icon": {
+            "label": "Προσαρμοσμένος κωδικός SVG"
+          },
+          "small_icon": {
+            "label": "Κάντε το εικονίδιο μικρό"
+          },
+          "icon_color": {
+            "label": "Προσαρμοσμένο χρώμα"
+          },
+          "text_icon_gap": {
+            "label": "Διάστημα μεταξύ κειμένου και εικονιδίου"
+          },
+          "default_color": {
+            "label": "Χρησιμοποιήστε προεπιλεγμένο χρώμα"
+          },
+          "text_style": {
+            "label": "Στυλ",
+            "solid": {
+              "label": "Στερεός"
+            },
+            "outlined": {
+              "label": "Περιγράφονται"
+            },
+            "gradient": {
+              "label": "Βαθμίδα"
+            },
+            "outline-filled": {
+              "label": "Περίγραμμα με γεμάτο"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Κείμενο μαρκίζας"
+      }
+    },
+    "mulicolumn": {
+      "name": "Πολύστηλη",
+      "settings": {
+        "layout_type": {
+          "label": "Διάταξη περιεχομένου στήλης",
+          "options": {
+            "inline": {
+              "label": "Στη γραμμή"
+            },
+            "inline-reverse": {
+              "label": "Ενσωματωμένη (αντίστροφη)"
+            },
+            "stacked": {
+              "label": "Στοιβάζονται"
+            },
+            "stacked-reverse": {
+              "label": "Στοιβάζονται (αντίστροφα)"
+            }
+          }
+        }
+      },
+      "blocks": {
+        "name": "Στήλη",
+        "settings": {
+          "link_label": {
+            "label": "Κείμενο συνδέσμου"
+          },
+          "link_url": {
+            "label": "Σύνδεσμος",
+            "info": "Εάν το κείμενο του συνδέσμου είναι κενό, τότε ο σύνδεσμος θα εφαρμοστεί σε ολόκληρη την εικόνα."
+          },
+          "column_background": {
+            "label": "Εμφάνιση φόντου"
+          },
+          "column_background_color": {
+            "label": "Φόντο στήλης"
+          },
+          "column_text_color": {
+            "label": "Χρώμα κειμένου στήλης"
+          },
+          "column_link_color": {
+            "label": "Χρώμα συνδέσμου στήλης"
+          }
+        }
+      },
+      "presets": {
+        "name": "Πολύστηλη"
+      }
+    },
+    "map": {
+      "name": "Χάρτης",
+      "settings": {
+        "map_address": {
+          "label": "Διεύθυνση",
+          "info": "Βεβαιωθείτε ότι έχετε προσθέσει το API χαρτών Google στις ρυθμίσεις θέματος>Χάρτες Google."
+        },
+        "map_style": {
+          "label": "Στυλ",
+          "options": {
+            "roadmap": {
+              "label": "Οδικός Χάρτης"
+            },
+            "satellite": {
+              "label": "Δορυφόρος"
+            },
+            "hybrid": {
+              "label": "Υβρίδιο"
+            },
+            "terrain": {
+              "label": "Εδαφος"
+            }
+          }
+        },
+        "position": {
+          "label": "Θέση"
+        },
+        "header": {
+          "label": "Περιεχόμενο"
+        }
+      },
+      "presets": {
+        "name": "Χάρτης"
+      }
+    },
+    "media-with-text-list": {
+      "name": "Μέσα με λίστα κειμένου",
+      "settings": {
+        "active_color": {
+          "label": "Ενεργό κείμενο/βέλος"
+        },
+        "active_background": {
+          "label": "Ενεργό φόντο"
+        }
+      },
+      "blocks": {
+        "name": "Λίστα κειμένου"
+      },
+      "presets": {
+        "name": "Μέσα με λίστα κειμένου"
+      }
+    },
+    "split-banner": {
+      "name": "Διαίρεση πανό",
+      "blocks": {
+        "name": "Διαίρεση πανό",
+        "settings": {
+          "overlay_color": {
+            "label": "Υπόβαθρο επικάλυψης"
+          },
+          "overlay_opacity": {
+            "label": "Αδιαφάνεια επικάλυψης"
+          }
+        }
+      },
+      "presets": {
+        "name": "Διαίρεση πανό"
+      }
+    },
+    "newsletter": {
+      "name": "Ενημερωτικό δελτίο",
+      "settings": {
+        "image_overlay_color": {
+          "label": "Επικάλυψη εικόνας"
+        },
+        "newsletter_background": {
+          "label": "Ενεργοποίηση εικόνας φόντου"
+        },
+        "background_image": {
+          "label": "Εικόνα φόντου"
+        },
+        "placeholder": {
+          "label": "Κράτηση θέσης ηλεκτρονικού ταχυδρομείου"
+        },
+        "btn-text": {
+          "label": "Κείμενο κουμπιού"
+        },
+        "content_alignment": {
+          "label": "Ευθυγραμμία"
+        },
+        "content_postion": {
+          "label": "Θέση"
+        }
+      },
+      "presets": {
+        "name": "Ενημερωτικό δελτίο"
+      }
+    },
+    "recently-viewed-product": {
+      "name": "Προϊόντα που προβλήθηκαν πρόσφατα",
+      "settings": {
+        "paragraph": {
+          "content": "Η ενότητα είναι κρυφή εάν δεν έχει γίνει επίσκεψη σε προϊόντα."
+        },
+        "products_count": {
+          "label": "Προϊόντα προς εμφάνιση"
+        }
+      },
+      "presets": {
+        "name": "Προϊόντα που προβλήθηκαν πρόσφατα"
+      }
+    },
+    "related-products": {
+      "name": "Σχετικά προϊόντα",
+      "settings": {
+        "products_count": {
+          "label": "Προϊόντα προς εμφάνιση"
+        }
+      }
+    },
+    "rotating-text": {
+      "name": "Ειδήσεις",
+      "presets": {
+        "name": "Ειδήσεις"
+      },
+      "settings": {
+        "bgcolor": {
+          "label": "Ιστορικό"
+        },
+        "direction": {
+          "options": {
+            "left": {
+              "label": "Από αριστερά προς τα δεξιά"
+            },
+            "right": {
+              "label": "Δεξιά προς τα αριστερά"
+            }
+          }
+        },
+        "direction_header": {
+          "content": "Κατεύθυνση"
+        },
+        "tiled_layout": {
+          "label": "Ενεργοποίηση διάταξης με πλακάκια"
+        },
+        "font_size": {
+          "content": "Μέγεθος γραμματοσειράς"
+        },
+        "section_border": {
+          "label": "Εμφάνιση άνω και κάτω περιγράμματος"
+        },
+        "text1": {
+          "label": "Επικεφαλίδα"
+        }
+      }
+    },
+    "spotlight": {
+      "blocks": {
+        "spot": {
+          "name": "Κοίτα",
+          "settings": {
+            "image": {
+              "label": "Εικόνα"
+            },
+            "horizontal": {
+              "label": "Οριζόντια θέση"
+            },
+            "hotspot_header": {
+              "content": "Hotspot 1"
+            },
+            "hotspot_header2": {
+              "content": "Hotspot 2"
+            },
+            "hotspot_header3": {
+              "content": "Hotspot 3"
+            },
+            "hotspot_checkbox": {
+              "label": "Ενεργοποίηση hotspot"
+            },
+            "product": {
+              "label": "Προϊόν"
+            },
+            "vertical": {
+              "label": "Κάθετη θέση"
+            },
+            "spot_color": {
+              "label": "Χρώμα σποτ"
+            },
+            "spot_color_background": {
+              "label": "Σημείο χρώμα εικονιδίου"
+            },
+            "marquee_text": {
+              "label": "Ενεργοποίηση μαρκίζας κειμένου"
+            },
+            "marquee_on_hover": {
+              "label": "Εμφάνιση μαρκίζας κατά την αιώρηση"
+            },
+            "marquee_disable_mobile": {
+              "label": "Απενεργοποιήστε το στίγμα στο κινητό"
+            },
+            "marquee_text_color": {
+              "label": "Μαρκίζ χρώμα"
+            },
+            "marquee_background": {
+              "label": "Μαρκίζα φόντο"
+            }
+          }
+        }
+      },
+      "name": "Αγοράστε την εμφάνιση",
+      "presets": {
+        "name": "Αγοράστε την εμφάνιση"
+      },
+      "settings": {
+        "section_fullwidth": {
+          "label": "Κάντε την ενότητα σε πλήρες πλάτος"
+        }
+      }
+    },
+    "store_locator": {
+      "blocks": {
+        "store": {
+          "name": "Κατάστημα",
+          "settings": {
+            "store_name": {
+              "label": "Όνομα καταστήματος"
+            },
+            "store_detail": {
+              "label": "Στοιχεία καταστήματος"
+            },
+            "store_image": {
+              "label": "Εικόνα"
+            },
+            "location": {
+              "label": "Τοποθεσία",
+              "info": "Βεβαιωθείτε ότι έχετε προσθέσει το API χαρτών Google στις ρυθμίσεις θέματος>Χάρτες Google."
+            },
+            "loaction_image": {
+              "label": "Αποθήκευση εικόνας"
+            }
+          }
+        }
+      },
+      "settings": {
+        "map": {
+          "content": "Χάρτης"
+        },
+        "image_height": {
+          "label": "Ύψος επιφάνειας εργασίας"
+        },
+        "mobile_image_height": {
+          "label": "Ύψος κινητού"
+        }
+      },
+      "name": "Εντοπιστής καταστήματος",
+      "presets": {
+        "name": "Εντοπιστής καταστήματος"
+      }
+    },
+    "text_with_icon": {
+      "blocks": {
+        "icon-with-text": {
+          "name": "Κείμενο με εικονίδιο",
+          "settings": {
+            "icon": {
+              "label": "Εικόνισμα"
+            },
+            "svg_code": {
+              "label": "Κωδικός SVG"
+            },
+            "icon_background_color": {
+              "label": "Εικονίδιο φόντου"
+            }
+          }
+        }
+      },
+      "settings": {
+        "column_header": {
+          "content": "Στήλη"
+        },
+        "column_count": {
+          "label": "Πλήθος στηλών επιφάνειας εργασίας"
+        },
+        "column_count_mobile": {
+          "label": "Πλήθος στηλών για κινητά"
+        },
+        "mobile_swipe": {
+          "label": "Ενεργοποίηση ολίσθησης στο κινητό"
+        },
+        "icon_header": {
+          "content": "Εικόνισμα"
+        },
+        "icon_position": {
+          "label": "Θέση"
+        },
+        "icon_background": {
+          "label": "Εμφάνιση φόντου"
+        }
+      },
+      "name": "Κείμενο με εικονίδιο",
+      "presets": {
+        "name": "Κείμενο με εικονίδιο"
+      }
+    },
+    "video": {
+      "name": "βίντεο",
+      "settings": {
+        "general": {
+          "content": "Γενικός"
+        },
+        "video_full_width": {
+          "label": "Κάντε το τμήμα σε όλο το πλάτος"
+        },
+        "autoplay": {
+          "label": "Ενεργοποίηση αυτόματης αναπαραγωγής",
+          "info": "Εάν είναι ενεργοποιημένη η αυτόματη αναπαραγωγή, το βίντεο θα τεθεί σε σίγαση."
+        },
+        "slanted_background": {
+          "label": "Ενεργοποίηση κεκλιμένου φόντου"
+        },
+        "video_height": {
+          "desktop": "Ύψος επιφάνειας εργασίας",
+          "mobile": "Ύψος κινητού",
+          "fullscreen": "ΠΛΗΡΗΣ ΟΘΟΝΗ",
+          "auto": "Αυτο"
+        },
+        "video_header": {
+          "content": "βίντεο"
+        },
+        "cover_image": {
+          "label": "Εικόνα εξωφύλλου",
+          "info": "1920 x 720px συνιστάται. Η εικόνα εξωφύλλου δεν θα είναι ορατή εάν είναι ενεργοποιημένη η αυτόματη αναπαραγωγή."
+        },
+        "video_url": {
+          "label": "URL",
+          "placeholder": "Χρησιμοποιήστε μια διεύθυνση URL YouTube ή Vimeo"
+        },
+        "video": {
+          "label": "Βίντεο που φιλοξενείται στο Shopify"
+        },
+        "content": {
+          "content": "Περιεχόμενο"
+        },
+        "heading": {
+          "label": "Επικεφαλίδα"
+        },
+        "description": {
+          "label": "Περιγραφή"
+        },
+        "content_width": {
+          "label": "Πλάτος"
+        },
+        "content_position": {
+          "label": "Θέση"
+        },
+        "button": {
+          "label": "Κουμπί φόντο"
+        },
+        "button_text": {
+          "label": "Κείμενο κουμπιού"
+        },
+        "overlay_color": {
+          "label": "Υπόβαθρο επικάλυψης"
+        },
+        "overlay_opacity": {
+          "label": "Αδιαφάνεια επικάλυψης"
+        }
+      },
+      "presets": {
+        "name": "βίντεο"
+      }
+    },
+    "content-tabs": {
+      "name": "καρτέλες περιεχομένου",
+      "settings": {
+        "tab_highlight": {
+          "label": "Επισήμανση καρτέλας"
+        }
+      },
+      "blocks": {
+        "collection_list": {
+          "name": "Λίστα συλλογής"
+        },
+        "product_list": {
+          "name": "Λίστα προϊόντων"
+        },
+        "media": {
+          "name": "Μέσα με κείμενο"
+        },
+        "tab_settings": {
+          "tab_heading": {
+            "label": "Επικεφαλίδα καρτέλας"
+          },
+          "description": {
+            "label": "Περιγραφή καρτέλας"
+          },
+          "collection_list": {
+            "label": "Λίστα συλλογής"
+          },
+          "product_list": {
+            "label": "Προϊόντα"
+          },
+          "image_position": {
+            "label": "Θέση στα ΜΜΕ"
+          }
+        }
+      }
+    },
+    "mobile_dock": {
+      "name": "Κινητή βάση",
+      "settings": {
+        "enable_dock": {
+          "label": "Ενεργοποίηση βάσης σύνδεσης"
+        }
+      },
+      "blocks": {
+        "link": {
+          "name": "Σύνδεσμος",
+          "settings": {
+            "custom_icon": {
+              "label": "Προσαρμοσμένο εικονίδιο SVG"
+            },
+            "link": {
+              "label": "Σύνδεσμος"
+            },
+            "title": {
+              "label": "Τίτλος"
+            }
+          }
+        },
+        "custom_code": {
+          "label": "Προσαρμοσμένος κωδικός SVG"
+        },
+        "home": {
+          "name": "Σπίτι"
+        },
+        "search": {
+          "name": "Αναζήτηση"
+        },
+        "menu": {
+          "name": "Μενού"
+        },
+        "cart": {
+          "name": "Καροτσάκι"
+        },
+        "account": {
+          "name": "λογαριασμός"
+        }
+      }
+    },
+    "mobile_categories": {
+      "name": "Κατηγορίες κινητών",
+      "settings": {
+        "enable_on_home_page": {
+          "label": "Εμφάνιση μόνο στην αρχική σελίδα"
+        },
+        "icon_image": {
+          "label": "Εικόνισμα",
+          "info": "Συνιστάται 30 x 30 εικονοστοιχεία."
+        },
+        "title": {
+          "label": "Κείμενο",
+          "info": "6 χαρακτήρες μέγ."
+        },
+        "horizontal_position": {
+          "label": "Οριζόντια θέση"
+        },
+        "vertical_position": {
+          "label": "Κάθετη θέση"
+        }
+      },
+      "blocks": {
+        "name": "Κατηγορία"
+      }
+    },
+    "social_media_gallery": {
+      "name": "Γκαλερί μέσων κοινωνικής δικτύωσης",
+      "settings": {
+        "social_media_icon": {
+          "label": "εικονίδιο πολυμέσων",
+          "options": {
+            "none": {
+              "label": "Κανένας"
+            }
+          }
+        }
+      },
+      "blocks": {
+        "name": "Μεσο ΜΑΖΙΚΗΣ ΕΝΗΜΕΡΩΣΗΣ"
+      },
+      "presets": {
+        "name": "Γκαλερί μέσων κοινωνικής δικτύωσης"
+      }
+    }
+  },
+  "settings_schema": {
+    "preloader": {
+      "settings": {
+        "enable_preloader_on": {
+          "label": "Ενεργοποίηση προγράμματος προφόρτωσης",
+          "options": {
+            "homepage_only": {
+              "label": "Μόνο αρχική σελίδα"
+            },
+            "all_pages": {
+              "label": "Ολες οι σελίδες"
+            }
+          }
+        },
+        "preloader_visibility": {
+          "label": "Θα εμφανιστεί το πρόγραμμα προφόρτωσης",
+          "options": {
+            "first_time": {
+              "label": "Μόνο για πρώτη φορά φορτώνει ο ιστότοπος"
+            },
+            "all_time": {
+              "label": "Ολόκληρη η ιστοσελίδα φορτώνει"
+            }
+          }
+        },
+        "enable_preloader": {
+          "label": "Ενεργοποίηση προφόρτωσης"
+        },
+        "preloader_logo": {
+          "label": "Λογότυπο"
+        }
+      },
+      "name": "Προφόρτωση"
+    },
+    "product_card": {
+      "settings": {
+        "show_price": {
+          "label": "Εμφάνιση τιμής"
+        },
+        "font_type": {
+          "label": "Τύπος γραμματοσειράς",
+          "options": {
+            "heading": {
+              "label": "Επικεφαλίδα"
+            },
+            "body": {
+              "label": "Σώμα"
+            }
+          }
+        },
+        "grid_image_size": {
+          "label": "Αναλογία εικόνας πλέγματος",
+          "options": {
+            "auto": {
+              "label": "Αυτο"
+            },
+            "landscape": {
+              "label": "Τοπίο"
+            },
+            "portrait": {
+              "label": "Πορτρέτο"
+            },
+            "square": {
+              "label": "τετράγωνο"
+            }
+          }
+        },
+        "quickview": {
+          "label": "Ενεργοποίηση γρήγορης προβολής"
+        },
+        "quick_view_button_mobile": {
+          "label": "Εμφάνιση γρήγορης προβολής στο κινητό"
+        },
+        "image_border": {
+          "label": "Ενεργοποίηση περιγράμματος"
+        },
+        "image_background": {
+          "label": "Ενεργοποίηση φόντου κάρτας"
+        },
+        "product_second_image": {
+          "label": "Εμφάνιση δεύτερης εικόνας στο δείκτη του ποντικιού"
+        },
+        "product_vendor": {
+          "label": "Εμφάνιση προμηθευτή προϊόντος"
+        },
+        "product_rating": {
+          "label": "Εμφάνιση βαθμολογίας προϊόντος",
+          "info": "Για να εμφανίσετε μια αξιολόγηση, προσθέστε μια εφαρμογή αξιολόγησης προϊόντος."
+        },
+        "product_price_saving": {
+          "label": "Εμφάνιση εξοικονόμησης τιμών"
+        },
+        "show_inventory": {
+          "label": "Εμφάνιση αποθέματος προϊόντων"
+        },
+        "inventory_threshold": {
+          "label": "Χαμηλό όριο αποθέματος",
+          "info": "Εμφάνιση ποσότητας αποθέματος με κίτρινο χρώμα όταν η ποσότητα είναι κάτω από το όριο. Επιλέξτε 0 για να εμφανίζεται πάντα σε απόθεμα, εάν είναι διαθέσιμο."
+        },
+        "show_shipping": {
+          "label": "Εμφάνιση στοιχείων αποστολής"
+        },
+        "shipping_days": {
+          "label": "Προεπιλεγμένες ημέρες αποστολής",
+          "info": "Για δυναμικές ημέρες για κάθε προϊόν δημιουργήστε ένα όνομα μεταπεδίου \"shipping_days\". [Μάθετε περισσότερα] (https://shinedezign.gitbook.io/shark-documentation/overview/theme-settings#steps-to-set-up-the-default-shipping-days-using-a-meta-field)"
+        },
+        "shipping_text": {
+          "label": "Κείμενο αποστολής",
+          "info": "Χρήση ||ημέρα|| για να εμφανίσετε την ημερομηνία μέσα στο μήνυμα."
+        },
+        "show_swatches": {
+          "label": "Ενεργοποίηση δειγμάτων"
+        },
+        "content_swatches": {
+          "label": "Εμφάνιση δειγμάτων, αποθέματος και λεπτομερειών αποστολής μόνο στο δείκτη του ποντικιού (επιτραπέζιος υπολογιστής)"
+        },
+        "product_card_style": {
+          "label": "Στυλ",
+          "options": {
+            "standard": {
+              "label": "Πρότυπο"
+            },
+            "card": {
+              "label": "Κάρτα"
+            }
+          }
+        },
+        "quickview_style": {
+          "label": "Στυλ γρήγορης προβολής",
+          "options": {
+            "grid": {
+              "label": "Πλέγμα"
+            },
+            "popup": {
+              "label": "Αναδυόμενο παράθυρο"
+            },
+            "drawer": {
+              "label": "Συρτάρι"
+            }
+          }
+        },
+        "product_border_thickness": {
+          "label": "Πάχος περιγράμματος"
+        },
+        "show_video_in_grid": {
+          "label": "Εμφάνιση βίντεο στο πλέγμα",
+          "info": "Ισχύει μόνο για τα βίντεο που φιλοξενούνται στο Shopify."
+        }
+      },
+      "name": "Κάρτα προϊόντος"
+    },
+    "blog_posts": {
+      "settings": {
+        "show_content_overlay": {
+          "label": "Εμφάνιση περιεχομένου ως επικάλυψη"
+        },
+        "content_colors": {
+          "content": "Χρώματα επικάλυψης περιεχομένου"
+        },
+        "grid_image_size": {
+          "label": "Αναλογία εικόνας πλέγματος",
+          "options": {
+            "auto": {
+              "label": "Αυτο"
+            },
+            "landscape": {
+              "label": "Τοπίο"
+            },
+            "portrait": {
+              "label": "Πορτρέτο"
+            },
+            "square": {
+              "label": "τετράγωνο"
+            },
+            "adapt-to-content": {
+              "label": "Προσαρμόστε στο περιεχόμενο"
+            }
+          }
+        }
+      },
+      "name": "Αναρτήσεις ιστολογίου"
+    },
+    "cart": {
+      "settings": {
+        "cart_notification_header": {
+          "label": "Γραμμή ειδοποιήσεων καλαθιού",
+          "cart_notification_bar": {
+            "label": "Κείμενο"
+          }
+        },
+        "cart_recommendation_header": {
+          "label": "Σύσταση καλαθιού"
+        },
+        "enable_recommendation": {
+          "label": "Ενεργοποίηση πρότασης"
+        },
+        "empty_cart": {
+          "label": "Αδειο καλάθι"
+        },
+        "recomded_products": {
+          "label": "Προϊόντα"
+        },
+        "hide_continue_shopping": {
+          "label": "Εμφάνιση συνέχισης αγορών"
+        },
+        "cs_link": {
+          "label": "Συνεχίστε τις αγορές σας με προσαρμοσμένο σύνδεσμο"
+        },
+        "empty_menu_select": {
+          "label": "Μενού",
+          "info": "Αυτό το μενού δεν θα εμφανίζει αναπτυσσόμενα στοιχεία"
+        },
+        "enable_cartdrawer": {
+          "label": "Ενεργοποίηση συρταριού καλαθιού"
+        },
+        "cart_note": {
+          "label": "Ενεργοποίηση σημειώσεων καλαθιού"
+        },
+        "custom_colors": {
+          "label": "Προσαρμοσμένοι χρωματικοί κωδικοί/εικόνες"
+        },
+        "gift_wrap": {
+          "content": "Χαρτί περιτυλίγματος",
+          "info": "Η συσκευασία δώρου πρέπει να στηθεί ως προϊόν."
+        },
+        "enable_gift_wrap": {
+          "label": "Ενεργοποίηση συσκευασίας δώρου"
+        },
+        "gift_wrap_product": {
+          "label": "Προϊόν"
+        },
+        "gift_wrap_text": {
+          "label": "Κείμενο"
+        },
+        "shipping_bar": {
+          "content": "Μπάρα αποστολής",
+          "info": "Αυτή η δυνατότητα λειτουργεί μόνο με μια μέθοδο αποστολής. Εάν χρησιμοποιείτε πολλές μεθόδους αποστολής, ενδέχεται να εμφανίζει ψευδείς τιμές στον πελάτη."
+        },
+        "enable_shipping": {
+          "label": "Ενεργοποίηση γραμμής αποστολής",
+          "info": "Σημείωση: Αυτή η δυνατότητα λειτουργεί μόνο με μέθοδο αποστολής. Εάν χρησιμοποιείτε πολλές μεθόδους αποστολής, ενδέχεται να εμφανίζει ψευδείς τιμές στον πελάτη."
+        },
+        "shipping_rate": {
+          "label": "Ελάχιστη τιμή αποστολής",
+          "info": "Γράψτε έναν αριθμό, χωρίς γράμματα ή ειδικούς χαρακτήρες."
+        },
+        "shipping_message": {
+          "label": "Μήνυμα",
+          "info": "Χρήση ||ποσό|| για να εμφανίσετε το ποσό μέσα στο μήνυμα."
+        },
+        "shipping_success": {
+          "label": "Μήνυμα επιτυχίας"
+        }
+      },
+      "name": "Καροτσάκι"
+    },
+    "social_media": {
+      "settings": {
+        "social_twitter_link": {
+          "label": "Κελάδημα",
+          "info": "https://twitter.com/shopify"
+        },
+        "social_accounts": {
+          "content": "Κοινωνικοί λογαριασμοί"
+        },
+        "social_facebook_link": {
+          "label": "Facebook",
+          "info": "https://facebook.com/shopify"
+        },
+        "social_instagram_link": {
+          "label": "Ίνσταγκραμ",
+          "info": "http://instagram.com/shopify"
+        },
+        "social_pinterest_link": {
+          "label": "Pinterest",
+          "info": "https://pinterest.com/shopify"
+        },
+        "social_snapchat_link": {
+          "label": "Snapchat",
+          "info": "http://snapchat.com/shopify"
+        },
+        "social_linkedin_link": {
+          "label": "Linkedin",
+          "info": "http://linkedin.com/shopify"
+        },
+        "social_tiktok_link": {
+          "label": "Τικ Τοκ",
+          "info": "https://tiktok.com/@shopify"
+        },
+        "social_youtube_link": {
+          "label": "YouTube",
+          "info": "https://www.youtube.com/shopify"
+        },
+        "social_tumblr_link": {
+          "label": "Tumblr",
+          "info": "https://www.tumblr.com/shopify"
+        },
+        "social_vimeo_link": {
+          "label": "Vimeo",
+          "info": "https://www.vimeo.com/shopify"
+        }
+      },
+      "name": "Μεσα ΚΟΙΝΩΝΙΚΗΣ ΔΙΚΤΥΩΣΗΣ"
+    },
+    "seo": {
+      "name": "SEO",
+      "settings": {
+        "seo_microdata": {
+          "info": "Αυτό θα αφαιρέσει τη σήμανση schema.org από τη σελίδα. ",
+          "label": "Απενεργοποιήστε το σχήμα μικροδεδομένων"
+        },
+        "remove_collection_url": {
+          "label": "Αφαιρέστε το τμήμα συλλογής από τις διευθύνσεις URL προϊόντων για καλύτερο SEO."
+        }
+      }
+    },
+    "social_sharing": {
+      "name": "Κοινωνική κοινή χρήση",
+      "facebook_link": {
+        "label": "Facebook"
+      },
+      "twitter_link": {
+        "label": "X (Twitter)"
+      },
+      "pinterest_link": {
+        "label": "Pinterest"
+      }
+    },
+    "header_footer_color": {
+      "settings": {
+        "secondary_footer_bar": {
+          "label": "Κάτω μπάρα"
+        },
+        "header": {
+          "content": "Επί κεφαλής"
+        },
+        "mobile_menu": {
+          "content": "Υπομενού / μενού για κινητά"
+        },
+        "footer": {
+          "content": "Υποσέλιδο"
+        },
+        "link_hover": {
+          "label": "Τοποθέτηση συνδέσμου"
+        },
+        "newsletter": {
+          "content": "Ενημερωτικό δελτίο"
+        },
+        "input_background": {
+          "label": "Εισαγωγή φόντου"
+        }
+      },
+      "name": "Χρώμα κεφαλίδας και υποσέλιδου"
+    },
+    "color_scheme": {
+      "settings": {
+        "gradient_background": {
+          "label": "Κλίση φόντο",
+          "info": "Το χρώμα ντεγκραντέ θα αντικαταστήσει το χρώμα φόντου."
+        },
+        "slider": {
+          "label": "Ολισθητής"
+        },
+        "default_color_scheme": {
+          "label": "Προεπιλεγμένος συνδυασμός χρωμάτων"
+        },
+        "background": {
+          "label": "Ιστορικό"
+        },
+        "alternate_background": {
+          "label": "Εναλλακτικό φόντο"
+        },
+        "heading": {
+          "label": "Επικεφαλίδα"
+        },
+        "text": {
+          "label": "Κείμενο"
+        },
+        "button_background": {
+          "label": "Κουμπί φόντο"
+        },
+        "button_border": {
+          "label": "Περίγραμμα κουμπιών"
+        },
+        "button_text": {
+          "label": "Κείμενο κουμπιού"
+        },
+        "button_hover_background": {
+          "label": "Φόντο αιώρησης κουμπιών"
+        },
+        "button_hover_border": {
+          "label": "Περιθώριο αιώρησης κουμπιού"
+        },
+        "button_hover_text": {
+          "label": "Κείμενο με το δείκτη του ποντικιού"
+        },
+        "link": {
+          "label": "Σύνδεσμος"
+        },
+        "image_background": {
+          "label": "Φόντο εικόνας"
+        },
+        "input_background": {
+          "label": "Εισαγωγή φόντου"
+        },
+        "input_border": {
+          "label": "Σύνορα εισαγωγής"
+        },
+        "input_text": {
+          "label": "Εισαγωγή κειμένου"
+        },
+        "divider": {
+          "label": "Διαιρών"
+        },
+        "slider_icon": {
+          "label": "Εικονίδιο βέλους"
+        },
+        "slider_icon_background": {
+          "label": "Φόντο εικονίδιο βέλους"
+        },
+        "slider_border": {
+          "label": "Περιγραφή βέλους"
+        },
+        "product_card": {
+          "content": "Κάρτα προϊόντος"
+        },
+        "product_border": {
+          "label": "Περίγραμμα προϊόντος"
+        },
+        "product_background": {
+          "label": "Φόντο προϊόντος"
+        },
+        "product_title": {
+          "label": "Τίτλος προϊόντος"
+        }
+      }
+    },
+    "swatches": {
+      "settings": {
+        "color_swatch_type": {
+          "label": "Έγχρωμα δείγματα στυλ",
+          "options": {
+            "circle": {
+              "label": "Κύκλος"
+            },
+            "square": {
+              "label": "τετράγωνο"
+            }
+          }
+        },
+        "show_variant_image": {
+          "label": "Εμφάνιση εικόνας παραλλαγής ως έγχρωμη"
+        },
+        "color_name": {
+          "label": "Όνομα επιλογών χρώματος",
+          "info": "Το όνομα της επιλογής που περιέχει τα χρώματα. Π.χ.: Χρώμα, Χρώμα, Υλικό κ.λπ."
+        },
+        "custom_colors": {
+          "label": "Προσαρμοσμένοι χρωματικοί κωδικοί/εικόνες"
+        },
+        "size_name": {
+          "label": "Όνομα επιλογών μεγέθους",
+          "info": "Το όνομα της επιλογής που διατηρεί το μέγεθος. Π.χ.: Μέγεθος, Taille, κ.λπ."
+        }
+      },
+      "name": "Δείγματα"
+    },
+    "quick_view": {
+      "name": "Γρήγορη ματιά",
+      "settings": {
+        "heading_size": {
+          "label": "Μέγεθος τίτλου"
+        }
+      }
+    },
+    "global_color": {
+      "name": "Παγκόσμιο χρώμα",
+      "settings": {
+        "sale_badge_text": {
+          "label": "Κείμενο σήματος πώλησης"
+        },
+        "sale_badge_background": {
+          "label": "Πώληση φόντο σήμα"
+        },
+        "custom_badge_text": {
+          "label": "Κείμενο προσαρμοσμένου σήματος"
+        },
+        "custom_badge_background": {
+          "label": "Φόντο προσαρμοσμένου σήματος"
+        },
+        "soldout_badge_text": {
+          "label": "Κείμενο σήματος Soldout"
+        },
+        "soldout_badge_background": {
+          "label": "Soldout σήμα φόντο"
+        },
+        "product_discount_text": {
+          "label": "Κείμενο έκπτωσης προϊόντος"
+        },
+        "product_discount_background": {
+          "label": "Φόντο έκπτωσης προϊόντων"
+        },
+        "star_rating_color": {
+          "label": "Χρώμα βαθμολογίας με αστέρια"
+        }
+      }
+    },
+    "advance_settings": {
+      "name": "Προηγμένες ρυθμίσεις",
+      "settings": {
+        "page_overlay_background": {
+          "label": "Φόντο επικάλυψης σελίδας"
+        },
+        "page_overlay_opacity": {
+          "label": "Αδιαφάνεια"
+        },
+        "enable_blur_effect": {
+          "label": "Ενεργοποίηση εφέ θαμπώματος"
+        }
+      }
+    },
+    "typography": {
+      "name": "Τυπογραφία",
+      "settings": {
+        "heading": {
+          "content": "Επικεφαλίδα"
+        },
+        "font": {
+          "label": "Γραμματοσειρά"
+        },
+        "font_scale": {
+          "label": "Κλίμακα γραμματοσειράς"
+        },
+        "line_height": {
+          "label": "Υψος γραμμής"
+        },
+        "line_spacing": {
+          "label": "Διάστιχο γραμμάτων"
+        },
+        "body": {
+          "content": "Σώμα"
+        }
+      }
+    },
+    "animation": {
+      "name": "Κινουμένων σχεδίων",
+      "setting": {
+        "enable_animation": {
+          "label": "Ενεργοποίηση κινούμενης εικόνας"
+        }
+      }
+    },
+    "layout": {
+      "name": "Διάταξη",
+      "settings": {
+        "container_width": {
+          "label": "Πλάτος σελίδας",
+          "options": {
+            "small": {
+              "label": "Μικρό"
+            },
+            "medium": {
+              "label": "Μεσαίο"
+            },
+            "large": {
+              "label": "Μεγάλο"
+            }
+          }
+        },
+        "button_radius": {
+          "label": "Ακτίνα κουμπιού"
+        },
+        "input_radius": {
+          "label": "Ακτίνα εισόδου"
+        },
+        "card_radius": {
+          "label": "Κάρτες προϊόντων"
+        },
+        "block_radius": {
+          "label": "Μπλοκ"
+        },
+        "icon_rows": {
+          "label": "Άλλα (εικονίδιο, σήματα, βέλη)"
+        },
+        "other_layout": {
+          "label": "Διάταξη",
+          "settings": {
+            "rounded": {
+              "label": "Στρογγυλεμένο"
+            },
+            "sharp": {
+              "label": "Αιχμηρός"
+            }
+          }
+        }
+      }
+    },
+    "button": {
+      "name": "Κουμπί",
+      "settings": {
+        "button_font": {
+          "label": "Οικογένεια γραμματοσειρών",
+          "options": {
+            "heading": {
+              "label": "Επικεφαλίδα"
+            },
+            "body": {
+              "label": "Σώμα"
+            }
+          }
+        },
+        "button_text_transform": {
+          "label": "Μετασχηματισμός κειμένου",
+          "options": {
+            "uppercase": {
+              "label": "Κεφάλαια"
+            },
+            "unset": {
+              "label": "Προκαθορισμένο"
+            }
+          }
+        },
+        "button_hover_effect": {
+          "label": "Εφέ αιώρησης",
+          "options": {
+            "modern": {
+              "label": "Μοντέρνο"
+            },
+            "standard": {
+              "label": "Πρότυπο"
+            },
+            "none": {
+              "label": "Κανένας"
+            }
+          }
+        },
+        "button_border_thickness": {
+          "label": "Πάχος περιγράμματος"
+        }
+      }
+    },
+    "radius": {
+      "name": "Ακτίνα κύκλου",
+      "settings": {
+        "button_radius": {
+          "label": "Κουμπί"
+        },
+        "input_radius": {
+          "label": "Εισαγωγή"
+        }
+      }
+    },
+    "parallax_image": {
+      "name": "Εικόνα παράλλαξης",
+      "settings": {
+        "parallex_image_height_desktop": {
+          "label": "Ύψος επιφάνειας εργασίας"
+        },
+        "parallex_image_height_mobile": {
+          "label": "Ύψος κινητού"
+        }
+      }
+    },
+    "product": {
+      "name": "Προϊόν",
+      "settings": {
+        "enable_preorder": {
+          "label": "Ενεργοποίηση προπαραγγελίας",
+          "info": "Η προπαραγγελία θα λειτουργήσει όταν είναι ενεργοποιημένη η επιλογή \"Συνέχεια πώλησης όταν είναι εκτός αποθέματος\"."
+        },
+        "show_save_amount": {
+          "label": "Εμφάνιση αποθηκευμένου ποσού"
+        },
+        "option_style": {
+          "label": "Στυλ επιλογής",
+          "options": {
+            "dropdown": {
+              "label": "Αναπτυσσόμενο"
+            },
+            "swatch": {
+              "label": "Δείγμα υφάσματος"
+            }
+          }
+        }
+      }
+    },
+    "product_badges": {
+      "name": "Σήματα προϊόντων",
+      "settings": {
+        "sale_badge": {
+          "content": "Σήμα πώλησης"
+        },
+        "sale_label": {
+          "label": "Εμφάνιση σήματος πώλησης",
+          "info": "Σε προϊόντα για τα οποία ορίζεται η τιμή σύγκρισης."
+        },
+        "soldout_badge": {
+          "content": "Σήμα Soldout"
+        },
+        "soldout_label": {
+          "label": "Εμφάνιση του σήματος \"Sold out\"."
+        },
+        "new_label_badge": {
+          "content": "Νέο σήμα ετικέτας"
+        },
+        "new_label_text": {
+          "label": "Νέο κείμενο σήματος"
+        },
+        "new_collection_label": {
+          "label": "Εμφάνιση του σήματος \"Νέο\" για προϊόντα στις ακόλουθες συλλογές"
+        },
+        "add_new_collection": {
+          "label": "«Νέες» συλλογές"
+        },
+        "new_products_tag": {
+          "label": "Εμφάνιση του σήματος \"Νέο\" για προϊόντα με την παρακάτω ετικέτα"
+        },
+        "new_text_tag": {
+          "label": "\"Νέα\" ετικέτα"
+        },
+        "new_date_tag": {
+          "label": "Εμφάνιση ετικέτας \"Νέο\" για προϊόντα που δημιουργήθηκαν μέσα σε αυτές τις πολλές ημέρες"
+        },
+        "days_ago_created": {
+          "label": "Δημιουργήθηκε πριν από μέρες"
+        },
+        "preorder_badge": {
+          "content": "Σήμα προπαραγγελίας"
+        },
+        "preorder_label": {
+          "label": "Εμφάνιση του σήματος \"Προπαραγγελία\"."
+        },
+        "custom_badge": {
+          "content": "Προσαρμοσμένο σήμα"
+        },
+        "custom_label": {
+          "label": "Εμφάνιση προσαρμοσμένου σήματος"
+        },
+        "custom_tag": {
+          "label": "Ετικέτα προϊόντος",
+          "info": "Εμφάνιση του σήματος \"Προσαρμοσμένο\" για προϊόντα με την ακόλουθη ετικέτα"
+        },
+        "custom_tag_label": {
+          "label": "Κείμενο σήματος"
+        }
+      }
+    },
+    "search_drawer": {
+      "name": "Αναζήτηση στο συρτάρι",
+      "settings": {
+        "enable_search_drawer": {
+          "label": "Ενεργοποίηση συρταριού αναζήτησης"
+        },
+        "enable_recent_search": {
+          "label": "Ενεργοποίηση πρόσφατης αναζήτησης"
+        },
+        "enable_queries": {
+          "label": "Ενεργοποίηση σχετικών ερωτημάτων"
+        },
+        "enable_collections": {
+          "label": "Ενεργοποίηση συλλογών"
+        },
+        "enable_article": {
+          "label": "Ενεργοποίηση άρθρων"
+        },
+        "enable_pages": {
+          "label": "Ενεργοποίηση σελίδων"
+        },
+        "common_grid_image_size": {
+          "label": "Αναλογία εικόνας πλέγματος",
+          "options": {
+            "auto": {
+              "label": "Αυτο"
+            },
+            "landscape": {
+              "label": "Τοπίο"
+            },
+            "portrait": {
+              "label": "Πορτρέτο"
+            },
+            "square": {
+              "label": "τετράγωνο"
+            }
+          }
+        },
+        "suggestions": {
+          "content": "Προτάσεις"
+        },
+        "enable_suggestion": {
+          "label": "Ενεργοποίηση προτάσεων"
+        },
+        "suggestion_heading": {
+          "label": "Επικεφαλίδα"
+        },
+        "suggestion_product": {
+          "label": "Προϊόντα"
+        }
+      }
+    },
+    "drawer_popup": {
+      "name": "Συρτάρι / αναδυόμενο παράθυρο",
+      "settings": {
+        "drawer": {
+          "content": "Συρτάρι"
+        },
+        "popup": {
+          "content": "Αναδυόμενο παράθυρο"
+        }
+      }
+    },
+    "newletter_popup": {
+      "name": "Αναδυόμενο παράθυρο Newletter",
+      "settings": {
+        "newsletter_pop_enable": {
+          "label": "Ενεργοποίηση αναδυόμενου ενημερωτικού δελτίου"
+        },
+        "newsletter_image": {
+          "label": "Εικόνα"
+        },
+        "newsletter_heading": {
+          "label": "Επικεφαλίδα"
+        },
+        "newsletter_description": {
+          "label": "Περιγραφή"
+        },
+        "popup_cookie": {
+          "label": "Ορισμός cookie για αναδυόμενο ενημερωτικό δελτίο (ημέρες)"
+        },
+        "newsletter_style": {
+          "label": "Στυλ",
+          "options": {
+            "default": {
+              "label": "Προκαθορισμένο"
+            },
+            "rounded": {
+              "label": "Στρογγυλεμένο"
+            }
+          }
+        }
+      }
+    },
+    "age_verification_popup": {
+      "name": "Αναδυόμενο παράθυρο επαλήθευσης ηλικίας",
+      "settings": {
+        "age_verification_pop_enable": {
+          "label": "Ενεργοποίηση αναδυόμενου παραθύρου επαλήθευσης ηλικίας"
+        },
+        "age_verification_heading": {
+          "label": "Επικεφαλίδα"
+        },
+        "age_verification_description": {
+          "label": "Περιγραφή"
+        },
+        "approve_btn_text": {
+          "label": "Κείμενο κουμπιού Έγκριση"
+        },
+        "decline_btn_text": {
+          "label": "Κείμενο κουμπιού απόρριψης"
+        },
+        "decline_heading": {
+          "label": "Τίτλος κάτω των 18 ετών"
+        },
+        "decline_sub-heading": {
+          "label": "Περιγραφή κάτω από 18"
+        },
+        "age-decline_btn_text": {
+          "label": "Κείμενο κουμπιού απόρριψης"
+        }
+      }
+    },
+    "privacy_policy_popup": {
+      "name": "Αναδυόμενο παράθυρο πολιτικής απορρήτου",
+      "settings": {
+        "enable_cookie_banner": {
+          "label": "Ενεργοποίηση πολιτικής απορρήτου",
+          "info": "Για να λειτουργήσει η πολιτική απορρήτου, πρέπει πρώτα να ενεργοποιήσετε το απόρρητο των πελατών μέσω Shopify admin [Ηλεκτρονικό κατάστημα > Προτιμήσεις > Απόρρητο πελατών] ( admin  / online_store  / preferences)"
+        },
+        "heading": {
+          "label": "Επικεφαλίδα"
+        },
+        "description": {
+          "label": "Περιγραφή"
+        },
+        "accept_cookie_btn_text": {
+          "label": "Αποδοχή κειμένου κουμπιού"
+        },
+        "decline_cookie_btn_text": {
+          "label": "Κείμενο κουμπιού απόρριψης"
+        }
+      }
+    },
+    "scroll_to_top": {
+      "name": "Κάντε κύλιση στην κορυφή",
+      "settings": {
+        "enable_scroll_to_top": {
+          "label": "Ενεργοποίηση κύλισης στην κορυφή"
+        },
+        "scroll_btn_position": {
+          "label": "Θέση"
+        },
+        "bottom_position": {
+          "label": "Τοποθετήστε το κάτω μέρος"
+        },
+        "stp_background_color": {
+          "label": "Ιστορικό"
+        },
+        "stp_icon_color": {
+          "label": "εικονίδια"
+        }
+      }
+    },
+    "google_map": {
+      "name": "Google Map",
+      "settings": {
+        "googlemapapi": {
+          "label": "Κλειδί API χαρτών Google",
+          "info": "Θα χρειαστεί να καταχωρίσετε ένα [Κλειδί API Χαρτών Google] (https://shinedezign.gitbook.io/shark-documentation/overview/theme-settings#google-map) για να εμφανίσετε τον χάρτη."
+        }
+      }
+    },
+    "favicon": {
+      "name": "Favicon",
+      "settings": {
+        "favicon": {
+          "label": "Εικόνισμα",
+          "info": "Συνιστάται 16 x 16 εικονοστοιχεία."
+        }
+      }
+    }
+  }
+}

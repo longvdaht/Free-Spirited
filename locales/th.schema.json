@@ -1,0 +1,4694 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "global": {
+    "bottom_space_desktop": {
+      "label": "ระยะห่างด้านล่าง (เดสก์ท็อป)"
+    },
+    "bottom_space_mobile": {
+      "label": "ระยะห่างด้านล่าง (มือถือ)"
+    },
+    "common": {
+      "adapt_to_first": {
+        "label": "ปรับให้เข้ากับภาพแรก"
+      },
+      "alignment": {
+        "label": "การจัดตำแหน่ง"
+      },
+      "alignments": {
+        "bottom": "ด้านล่าง",
+        "center": "ศูนย์",
+        "left": "ซ้าย",
+        "middle": "กลาง",
+        "right": "ขวา",
+        "top": "สูงสุด"
+      },
+      "banner": {
+        "banner_bg_color": {
+          "label": "พื้นหลังแบนเนอร์"
+        },
+        "banner_overlay": {
+          "label": "การซ้อนทับแบนเนอร์"
+        },
+        "bg_color_opacity": {
+          "label": "การซ้อนทับรูปภาพแบนเนอร์"
+        },
+        "overlay_opacity": {
+          "label": "ความทึบของแบนเนอร์ซ้อนทับ"
+        },
+        "text_color": {
+          "info": "ใช้ได้กับข้อความซ้อนทับเท่านั้น",
+          "label": "ข้อความ"
+        }
+      },
+      "columns_desktop": {
+        "label": "คอลัมน์ต่อแถว (เดสก์ท็อป)"
+      },
+      "content_position": {
+        "label": "ตำแหน่งเนื้อหา",
+        "options": {
+          "bottom": {
+            "label": "ด้านล่าง"
+          },
+          "center": {
+            "label": "ศูนย์"
+          },
+          "end": {
+            "label": "จบ"
+          },
+          "start": {
+            "label": "เริ่ม"
+          },
+          "top": {
+            "label": "สูงสุด"
+          }
+        }
+      },
+      "content_width": {
+        "label": "ความกว้างของเนื้อหา",
+        "options": {
+          "large": "ใหญ่",
+          "medium": "ปานกลาง",
+          "small": "เล็ก"
+        }
+      },
+      "desktop_grid_image_size": {
+        "label": "อัตราส่วนรูปภาพกริดของเดสก์ท็อป"
+      },
+      "desktop_height": {
+        "label": "ความสูงของเดสก์ท็อป"
+      },
+      "enable_background": {
+        "label": "เปิดใช้งานพื้นหลัง"
+      },
+      "enable_full_width": {
+        "label": "เปิดใช้งานความกว้างเต็ม"
+      },
+      "font_family": {
+        "label": "ครอบครัวแบบอักษร",
+        "options": {
+          "body": "ร่างกาย",
+          "heading": "หัวเรื่อง"
+        }
+      },
+      "general_labels": {
+        "after": "หลังจาก",
+        "arrow": "ลูกศร",
+        "background": "พื้นหลัง",
+        "before": "ก่อน",
+        "border": "ชายแดน",
+        "button_background": "พื้นหลังของปุ่ม",
+        "button_border": "ขอบปุ่ม",
+        "button_hover_background": "พื้นหลังของปุ่มโฮเวอร์",
+        "button_hover_border": "เส้นขอบของปุ่มโฮเวอร์",
+        "button_hover_text": "ข้อความโฮเวอร์ปุ่ม",
+        "button_size": "ขนาดปุ่ม",
+        "button_text": "ข้อความของปุ่ม",
+        "card_arrow": "ลูกศรการ์ด",
+        "collection_grid": "ตารางการรวบรวม",
+        "content": "เนื้อหา",
+        "description": "คำอธิบาย",
+        "heading": "หัวเรื่อง",
+        "heading_size": "ขนาดหัวเรื่อง",
+        "heading_tag": "แท็กหัวเรื่อง",
+        "height": "ความสูง",
+        "highlight_bg_color": "ไฮไลท์พื้นหลัง",
+        "highlight_color": "ไฮไลท์หัวเรื่อง",
+        "hover": "โฮเวอร์",
+        "hover_background": "โฮเวอร์พื้นหลัง",
+        "hover_border": "โฮเวอร์เส้นขอบ",
+        "hover_text": "โฮเวอร์ข้อความ",
+        "icon": "ไอคอน",
+        "image": "ภาพ",
+        "image_overlay": "ภาพซ้อนทับ",
+        "layout": "เค้าโครง",
+        "link": "ลิงค์",
+        "link_text": "ข้อความลิงก์",
+        "make_section_rounded": "ทำให้มุมด้านบนโค้งมน",
+        "opacity": "ความทึบ",
+        "overlay": "โอเวอร์เลย์",
+        "overlay_opacity": "ความทึบของการวางซ้อน",
+        "show_heading": "แสดงหัวเรื่อง",
+        "subheading": "หัวเรื่องย่อย",
+        "text": "ข้อความ",
+        "title": "ชื่อ",
+        "video": "วีดีโอ"
+      },
+      "gradient": {
+        "label": "การไล่ระดับสี"
+      },
+      "heading_alignment": {
+        "label": "การจัดตำแหน่งหัวเรื่อง",
+        "options": {
+          "center": {
+            "label": "ศูนย์"
+          },
+          "left": {
+            "label": "ซ้าย"
+          }
+        }
+      },
+      "height": {
+        "options": {
+          "large": "ใหญ่",
+          "medium": "ปานกลาง",
+          "small": "เล็ก"
+        }
+      },
+      "icon": {
+        "label": "ไอคอน",
+        "options": {
+          "chat": "แชท",
+          "date": "วันที่",
+          "eye": "ดวงตา",
+          "gift": "ของขวัญ",
+          "global": "ทั่วโลก",
+          "heart": "หัวใจ",
+          "home": "บ้าน",
+          "notification": "การแจ้งเตือน",
+          "phone": "โทรศัพท์",
+          "refund": "คืนเงิน",
+          "secure": "ปลอดภัย",
+          "settings": "การตั้งค่า",
+          "shipping": "การส่งสินค้า",
+          "star": "ดาว",
+          "support": "สนับสนุน",
+          "user": "ผู้ใช้",
+          "value": "ดาว"
+        }
+      },
+      "image_fit": {
+        "label": "พอดีภาพ",
+        "options": {
+          "contain": {
+            "label": "บรรจุ"
+          },
+          "cover": {
+            "label": "ปิดบัง"
+          }
+        }
+      },
+      "image_ratio": {
+        "label": "อัตราส่วนภาพตาราง",
+        "options": {
+          "auto": "อัตโนมัติ",
+          "landscape": "ภูมิประเทศ",
+          "portrait": "ภาพเหมือน",
+          "square": "สี่เหลี่ยม"
+        }
+      },
+      "infos": {
+        "heading": {
+          "label": "หากต้องการเน้นข้อความด้วยสีอื่น เพียงล้อมด้วยตัวหนา"
+        },
+        "seo_heading": {
+          "label": "ระบุประเภทโค้ดส่วนหัวสำหรับ SEO และเครื่องมือค้นหาเพื่อวัตถุประสงค์ในการรวบรวมข้อมูล"
+        }
+      },
+      "layout_type": {
+        "horizontal": {
+          "label": "แนวนอน"
+        },
+        "name": "เค้าโครง",
+        "vertical": {
+          "label": "แนวตั้ง"
+        }
+      },
+      "marque_text_outline_thickness": {
+        "label": "ความหนาของโครงร่าง"
+      },
+      "marquee_direction": {
+        "label": "ทิศทาง",
+        "options": {
+          "ltr": "จากซ้ายไปขวา",
+          "rtl": "จากขวาไปซ้าย"
+        }
+      },
+      "marquee_speed": {
+        "desktop": {
+          "label": "ความเร็วในการเลื่อนเดสก์ท็อป"
+        },
+        "mobile": {
+          "label": "ความเร็วในการเลื่อนบนมือถือ"
+        }
+      },
+      "marquee_text_info": {
+        "info": "หากต้องการแสดงข้อความเค้าร่างในเส้นปะรำ ให้ทำให้เป็นตัวหนา"
+      },
+      "marquee_text_size": {
+        "desktop": {
+          "label": "ขนาดตัวอักษรบนเดสก์ท็อป"
+        },
+        "mobile": {
+          "label": "ขนาดตัวอักษรบนมือถือ"
+        }
+      },
+      "marquee_type": {
+        "label": "ประเภทกระโจม",
+        "options": {
+          "always": "เสมอ",
+          "both": "ทั้งคู่",
+          "onscroll": "เมื่อเลื่อน"
+        }
+      },
+      "mobile_grid_image_size": {
+        "label": "อัตราส่วนภาพตารางมือถือ"
+      },
+      "mobile_height": {
+        "label": "ความสูงของมือถือ"
+      },
+      "outline": {
+        "label": "โครงร่าง"
+      },
+      "paragraph": {
+        "desktop": "เดสก์ทอป",
+        "mobile": "มือถือ",
+        "primary": "หลัก",
+        "secondary": "รอง"
+      },
+      "section_background": {
+        "info": "ใช้งานได้กับส่วนโค้งมนเท่านั้น",
+        "label": "พื้นหลังส่วน"
+      },
+      "section_visibility": {
+        "label": "การมองเห็นส่วน",
+        "options": {
+          "always": "เสมอ",
+          "large": "อุปกรณ์ขนาดใหญ่เท่านั้น",
+          "small": "อุปกรณ์ขนาดเล็กเท่านั้น"
+        }
+      },
+      "size": {
+        "label": "ขนาด",
+        "value": {
+          "large": "ใหญ่",
+          "medium": "ปานกลาง",
+          "regular": "ปกติ",
+          "small": "เล็ก"
+        }
+      },
+      "style": {
+        "label": "สไตล์",
+        "value": {
+          "link": "ลิงค์",
+          "outline": "โครงร่าง",
+          "solid": "แข็ง"
+        }
+      },
+      "swipe_mobile": {
+        "info": "ใช้งานได้กับสไตล์ซ้อนเท่านั้น",
+        "label": "เปิดใช้งานการปัดบนมือถือ"
+      }
+    },
+    "header": {
+      "back_in_stock": {
+        "label": "คุณจะได้รับอีเมลทุกครั้งที่มีคนกรอกแบบฟอร์มนี้ "
+      },
+      "back_in_stock_form": {
+        "label": "หมายเหตุ: แบบฟอร์มสินค้าคงเหลือจะปรากฏในตัวแก้ไขธีมเสมอ"
+      },
+      "background_section": {
+        "label": "พื้นหลัง"
+      },
+      "banner": {
+        "label": "แบนเนอร์"
+      },
+      "border_section": {
+        "label": "ชายแดน"
+      },
+      "button_section": {
+        "label": "ปุ่ม"
+      },
+      "card": {
+        "label": "การ์ด"
+      },
+      "carousel": {
+        "label": "ม้าหมุน"
+      },
+      "color_scheme": {
+        "label": "โทนสี"
+      },
+      "color_section": {
+        "label": "สี"
+      },
+      "color_singular_section": {
+        "label": "สี"
+      },
+      "column": {
+        "label": "คอลัมน์"
+      },
+      "content_alignment_section": {
+        "label": "การจัดตำแหน่งเนื้อหา"
+      },
+      "content_section": {
+        "label": "เนื้อหา"
+      },
+      "custom_section": {
+        "label": "เนื้อหาที่กำหนดเอง"
+      },
+      "focal_section": {
+        "label": "จุดโฟกัส"
+      },
+      "font": {
+        "label": "แบบอักษร"
+      },
+      "font_section": {
+        "label": "ครอบครัวแบบอักษร"
+      },
+      "gradient": {
+        "label": "การไล่ระดับสี"
+      },
+      "grid": {
+        "label": "กริด"
+      },
+      "header_section": {
+        "label": "หัวข้อ"
+      },
+      "heading_section": {
+        "label": "หัวเรื่อง"
+      },
+      "layout": {
+        "label": "เค้าโครง"
+      },
+      "logo_section": {
+        "label": "โลโก้"
+      },
+      "map": {
+        "label": "แผนที่"
+      },
+      "marquee_section": {
+        "label": "กระโจม"
+      },
+      "media_section": {
+        "label": "สื่อ"
+      },
+      "menu-color": {
+        "label": "เมนูสี"
+      },
+      "navigation_section": {
+        "label": "การนำทาง"
+      },
+      "other": {
+        "label": "อื่น"
+      },
+      "password": {
+        "label": "รหัสผ่าน"
+      },
+      "primary": {
+        "label": "หลัก"
+      },
+      "quaternary": {
+        "label": "ควอเตอร์นารี"
+      },
+      "secondary": {
+        "label": "รอง"
+      },
+      "secondary_footer": {
+        "label": "ส่วนท้ายรอง"
+      },
+      "space_section": {
+        "label": "ระยะห่างของส่วน"
+      },
+      "styling": {
+        "label": "จัดแต่งทรงผม"
+      },
+      "tertiary": {
+        "label": "ระดับอุดมศึกษา"
+      },
+      "text_section": {
+        "label": "ข้อความ"
+      },
+      "video": {
+        "label": "วีดีโอ"
+      }
+    },
+    "top_space_desktop": {
+      "label": "ระยะห่างด้านบน (เดสก์ท็อป)"
+    },
+    "top_space_mobile": {
+      "label": "ระยะห่างด้านบน (มือถือ)"
+    }
+  },
+  "sections": {
+    "announcement-bar": {
+      "blocks": {
+        "name": "ประกาศ",
+        "settings": {
+          "type": {
+            "label": "ใช้กับเค้าโครงแบบหมุน"
+          }
+        }
+      },
+      "name": "แถบประกาศ",
+      "settings": {
+        "autorotate": {
+          "label": "หมุนสไลด์อัตโนมัติ"
+        },
+        "block_color": {
+          "label": "ใช้สีบล็อก"
+        },
+        "enable_announcement": {
+          "label": "เปิดใช้งานแถบประกาศ"
+        },
+        "interval": {
+          "label": "เปลี่ยนสไลด์ทุกครั้ง"
+        },
+        "layout_type": {
+          "carousel": {
+            "label": "ม้าหมุน"
+          },
+          "label": "เค้าโครง",
+          "marquee": {
+            "label": "กระโจม"
+          }
+        },
+        "move_placement": {
+          "label": "สลับไอคอนและตัวเลือก"
+        },
+        "show_on_homepage_only": {
+          "label": "แสดงในหน้าแรกเท่านั้น"
+        }
+      }
+    },
+    "apps": {
+      "name": "แอป"
+    },
+    "before-after-image": {
+      "name": "การเปรียบเทียบภาพ",
+      "presets": {
+        "name": "การเปรียบเทียบภาพ"
+      },
+      "settings": {
+        "after": {
+          "label": "หลังจาก"
+        },
+        "after_text_alignment": {
+          "label": "การจัดตำแหน่งข้อความ"
+        },
+        "drag": {
+          "label": "ลาก"
+        },
+        "drag_position": {
+          "label": "ตำแหน่ง"
+        }
+      }
+    },
+    "breadcrumb": {
+      "name": "เกล็ดขนมปัง",
+      "presets": {
+        "name": "เกล็ดขนมปัง"
+      }
+    },
+    "categories": {
+      "blocks": {
+        "collection": {
+          "name": "ของสะสม",
+          "settings": {
+            "collection": {
+              "label": "ของสะสม"
+            },
+            "heading": {
+              "label": "หัวเรื่อง"
+            },
+            "image": {
+              "label": "ภาพ"
+            }
+          }
+        }
+      },
+      "name": "หมวดหมู่",
+      "presets": {
+        "name": "หมวดหมู่"
+      },
+      "settings": {
+        "card_hover_style": {
+          "label": "สไตล์โฮเวอร์การ์ด",
+          "options": {
+            "inside_shadow": {
+              "label": "เงาภายใน"
+            },
+            "outside_shadow": {
+              "label": "เงาภายนอก"
+            },
+            "rotate_border": {
+              "label": "เส้นขอบหมุนได้"
+            }
+          }
+        },
+        "column_style": {
+          "label": "สไตล์",
+          "options": {
+            "rounded": {
+              "label": "โค้งมน"
+            },
+            "square": {
+              "label": "สี่เหลี่ยม"
+            }
+          }
+        },
+        "desktop_column_count": {
+          "label": "คอลัมน์เป็นแถว"
+        },
+        "desktop_column_gap": {
+          "label": "พื้นที่คอลัมน์"
+        },
+        "desktop_column_width": {
+          "label": "ความกว้างของคอลัมน์",
+          "options": {
+            "large": {
+              "label": "ใหญ่"
+            },
+            "medium": {
+              "label": "ปานกลาง"
+            },
+            "small": {
+              "label": "เล็ก"
+            }
+          }
+        },
+        "desktop_layout": {
+          "label": "เดสก์ทอป"
+        },
+        "mobile_layout": {
+          "label": "มือถือ"
+        }
+      }
+    },
+    "collage": {
+      "blocks": {
+        "collection": {
+          "name": "ของสะสม",
+          "settings": {
+            "collection": {
+              "label": "ของสะสม"
+            }
+          }
+        },
+        "image": {
+          "name": "ภาพ",
+          "settings": {
+            "image": {
+              "label": "ภาพ"
+            },
+            "image_padding": {
+              "info": "เลือกหากคุณไม่ต้องการให้ครอบตัดรูปภาพ",
+              "label": "ใช้อัตราส่วนภาพต้นฉบับ"
+            }
+          }
+        },
+        "product": {
+          "name": "ผลิตภัณฑ์",
+          "settings": {
+            "product": {
+              "label": "ผลิตภัณฑ์"
+            },
+            "second_image": {
+              "label": "แสดงภาพที่สองเมื่อโฮเวอร์"
+            },
+            "secondary_background": {
+              "label": "แสดงพื้นหลังรอง"
+            }
+          }
+        },
+        "video": {
+          "name": "วีดีโอ",
+          "settings": {
+            "cover_image": {
+              "label": "ภาพปก"
+            },
+            "description": {
+              "info": "อธิบายวิดีโอสำหรับลูกค้าที่ใช้โปรแกรมอ่านหน้าจอ. [เรียนรู้เพิ่มเติม](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#video-block)",
+              "label": "ข้อความแสดงแทนของวิดีโอ"
+            },
+            "image_padding": {
+              "info": "เลือกหากคุณไม่ต้องการให้ครอบตัดรูปภาพ",
+              "label": "ใช้อัตราส่วนภาพต้นฉบับ"
+            },
+            "video_url": {
+              "info": "วิดีโอจะเล่นในป๊อปอัปหากส่วนนั้นมีบล็อกอื่นๆ",
+              "label": "URL",
+              "placeholder": "ใช้ URL ของ YouTube หรือ Vimeo"
+            }
+          }
+        }
+      },
+      "name": "ภาพปะติด",
+      "presets": {
+        "name": "ภาพปะติด"
+      },
+      "settings": {
+        "card_styles": {
+          "info": "สไตล์การ์ดผลิตภัณฑ์ คอลเลกชัน และบล็อกสามารถอัปเดตได้ในการตั้งค่าธีม",
+          "label": "สไตล์การ์ด",
+          "options__1": {
+            "label": "ใช้สไตล์การ์ดส่วนบุคคล"
+          },
+          "options__2": {
+            "label": "จัดรูปแบบทั้งหมดเป็นการ์ดผลิตภัณฑ์"
+          }
+        },
+        "desktop_layout": {
+          "label": "เค้าโครงเดสก์ท็อป",
+          "options__1": {
+            "label": "ออกจากบล็อกขนาดใหญ่"
+          },
+          "options__2": {
+            "label": "บล็อกใหญ่ขวา"
+          }
+        },
+        "heading": {
+          "label": "หัวเรื่อง"
+        },
+        "mobile_layout": {
+          "label": "เค้าโครงมือถือ",
+          "options__1": {
+            "label": "ภาพปะติด"
+          },
+          "options__2": {
+            "label": "คอลัมน์"
+          }
+        }
+      }
+    },
+    "collapsible-content": {
+      "blocks": {
+        "name": "แถวพับได้"
+      },
+      "name": "เนื้อหาที่ยุบได้",
+      "presets": {
+        "name": "เนื้อหาที่ยุบได้"
+      },
+      "settings": {
+        "inline_richtext": {
+          "label": "มุ่งหน้ามาที่นี่"
+        },
+        "show_first_default": {
+          "label": "เปิดพับครั้งแรกตามค่าเริ่มต้น"
+        }
+      }
+    },
+    "collection-banner-list": {
+      "blocks": {
+        "name": "ของสะสม",
+        "settings": {
+          "btn_text": {
+            "label": "ข้อความของปุ่ม"
+          },
+          "collection": {
+            "label": "ของสะสม"
+          },
+          "image": {
+            "label": "รูปภาพที่กำหนดเอง"
+          }
+        }
+      },
+      "name": "รายการแบนเนอร์คอลเลกชัน",
+      "presets": {
+        "name": "รายการแบนเนอร์คอลเลกชัน"
+      },
+      "settings": {
+        "banner_height_desktop": {
+          "full_screen": {
+            "label": "เต็มจอ"
+          },
+          "label": "ความสูงของเดสก์ท็อป"
+        },
+        "banner_height_mobile": {
+          "label": "ความสูงของมือถือ"
+        }
+      }
+    },
+    "collection-carousel": {
+      "name": "ม้าหมุนของสะสม",
+      "settings": {
+        "autoslide": {
+          "label": "เปิดใช้งานสไลด์อัตโนมัติ"
+        },
+        "content_alignment": {
+          "label": "การจัดตำแหน่ง"
+        },
+        "enable_parallax": {
+          "label": "เปิดใช้งานเอฟเฟ็กต์"
+        },
+        "heading_overlay": {
+          "label": "แสดงชื่อบนภาพซ้อนทับ"
+        },
+        "heading_overlay_color": {
+          "label": "ส่วนหัวซ้อนทับ"
+        },
+        "interval": {
+          "label": "เปลี่ยนสไลด์ทุกครั้ง"
+        },
+        "overlay_color": {
+          "label": "พื้นหลังซ้อนทับ"
+        },
+        "overlay_opacity": {
+          "label": "ความทึบ"
+        },
+        "parallax": {
+          "label": "พารัลแลกซ์"
+        },
+        "title_postion": {
+          "info": "ไม่สามารถใช้ได้กับเนื้อหาซ้อนทับ",
+          "label": "ตำแหน่ง"
+        }
+      }
+    },
+    "collection-list": {
+      "blocks": {
+        "name": "ของสะสม",
+        "settings": {
+          "collection": {
+            "label": "ของสะสม"
+          }
+        }
+      },
+      "name": "รายการคอลเลกชัน",
+      "presets": {
+        "name": "รายการคอลเลกชัน"
+      },
+      "settings": {
+        "column_mobile": {
+          "label": "คอลเลกชันต่อแถว (มือถือ)"
+        },
+        "columns_desktop": {
+          "label": "คอลเลกชันต่อแถว (เดสก์ท็อป)"
+        },
+        "content_alignment": {
+          "label": "การจัดตำแหน่ง"
+        },
+        "enable_parallax": {
+          "label": "เปิดใช้งานเอฟเฟ็กต์"
+        },
+        "header": {
+          "label": "เนื้อหา"
+        },
+        "parallax": {
+          "label": "พารัลแลกซ์"
+        }
+      }
+    },
+    "collection-tabs": {
+      "blocks": {
+        "name": "ของสะสม",
+        "settings": {
+          "background": {
+            "info": "ใช้ได้เฉพาะเมื่อไม่มีรูปภาพคอลเลกชัน"
+          },
+          "background_image": {
+            "label": "ภาพพื้นหลัง"
+          },
+          "collection": {
+            "label": "ของสะสม"
+          },
+          "heading": {
+            "label": "ส่วนหัวของแท็บ"
+          },
+          "paragraph": {
+            "content": "ต้องมีอย่างน้อยหนึ่งรายการจึงจะแสดงแท็บนี้ได้"
+          }
+        }
+      },
+      "name": "แท็บคอลเลกชัน",
+      "presets": {
+        "name": "แท็บคอลเลกชัน"
+      },
+      "settings": {
+        "custom_color": {
+          "label": "ใช้สีที่กำหนดเอง"
+        },
+        "image_as_background": {
+          "label": "เปิดใช้งานรูปภาพคอลเลกชันเป็นพื้นหลัง"
+        },
+        "layout_type": {
+          "carousel": {
+            "label": "ม้าหมุน"
+          },
+          "label": "สไตล์เค้าโครง",
+          "stacked": {
+            "label": "ซ้อนกัน"
+          }
+        },
+        "link_text": {
+          "label": "ข้อความลิงก์"
+        },
+        "overlay_color_info": {
+          "label": "สีซ้อนทับใช้ได้กับพื้นหลังรูปภาพคอลเลกชัน"
+        },
+        "product_range": {
+          "label": "จำนวนสินค้า"
+        }
+      }
+    },
+    "collection_banner": {
+      "name": "แบนเนอร์ของสะสม"
+    },
+    "collections-details": {
+      "blocks": {
+        "name": "ของสะสม",
+        "settings": {
+          "collection": {
+            "label": "ของสะสม"
+          },
+          "description": {
+            "label": "คำอธิบายที่กำหนดเอง"
+          },
+          "heading": {
+            "label": "ชื่อที่กำหนดเอง"
+          },
+          "heading_size": {
+            "label": "ขนาดชื่อเรื่อง"
+          },
+          "image": {
+            "label": "รูปภาพที่กำหนดเอง"
+          },
+          "seo_heading": {
+            "info": "ระบุประเภทโค้ดชื่อสำหรับ SEO และเครื่องมือค้นหาเพื่อวัตถุประสงค์ในการรวบรวมข้อมูล",
+            "label": "แท็กชื่อ"
+          }
+        }
+      },
+      "name": "รายละเอียดคอลเลกชัน",
+      "presets": {
+        "name": "รายละเอียดคอลเลกชัน"
+      },
+      "settings": {
+        "autoslide": {
+          "label": "เปิดใช้งานสไลด์อัตโนมัติ"
+        },
+        "interval": {
+          "label": "เปลี่ยนสไลด์ทุกครั้ง"
+        },
+        "show_description": {
+          "label": "แสดงคำอธิบาย"
+        }
+      }
+    },
+    "contact-form": {
+      "name": "แบบฟอร์มการติดต่อ",
+      "presets": {
+        "name": "แบบฟอร์มการติดต่อ"
+      },
+      "settings": {
+        "content_width": {
+          "label": "ความกว้างของเดสก์ท็อป"
+        },
+        "enable_phone_number": {
+          "label": "แสดงหมายเลขติดต่อ"
+        },
+        "header": {
+          "label": "เนื้อหา"
+        }
+      }
+    },
+    "content-tabs": {
+      "blocks": {
+        "collection_list": {
+          "name": "รายการคอลเลกชัน"
+        },
+        "media": {
+          "name": "สื่อพร้อมข้อความ"
+        },
+        "product_list": {
+          "name": "รายการสินค้า"
+        },
+        "tab_settings": {
+          "collection_list": {
+            "label": "รายการคอลเลกชัน"
+          },
+          "description": {
+            "label": "คำอธิบายแท็บ"
+          },
+          "image_position": {
+            "label": "ตำแหน่งสื่อ"
+          },
+          "product_list": {
+            "label": "สินค้า"
+          },
+          "tab_heading": {
+            "label": "ส่วนหัวของแท็บ"
+          }
+        }
+      },
+      "name": "แท็บเนื้อหา",
+      "settings": {
+        "tab_highlight": {
+          "label": "ไฮไลต์แท็บ"
+        }
+      }
+    },
+    "countdown": {
+      "name": "นับถอยหลัง",
+      "presets": {
+        "name": "นับถอยหลัง"
+      },
+      "settings": {
+        "btn_as_link": {
+          "label": "แสดงเป็นลิงค์"
+        },
+        "btn_as_outline": {
+          "label": "แสดงเป็นโครงร่าง"
+        },
+        "btn_link": {
+          "label": "ลิงค์"
+        },
+        "btn_text": {
+          "label": "ข้อความ"
+        },
+        "button_bg_color": {
+          "label": "พื้นหลังของปุ่ม"
+        },
+        "button_hover_color": {
+          "label": "เลื่อนปุ่ม"
+        },
+        "button_text_color": {
+          "label": "ข้อความของปุ่ม"
+        },
+        "content": {
+          "label": "เนื้อหา"
+        },
+        "content_position": {
+          "info": "ใช้ได้กับสไตล์ซ้อนเท่านั้น",
+          "label": "ตำแหน่ง"
+        },
+        "date": {
+          "info": "วันที่สิ้นสุดจะต้องตั้งค่าเป็นวันที่ในอนาคตและรวมรูปแบบต่อไปนี้: วว/ดด/ปปปป ตัวอย่าง: 01/01/2025",
+          "label": "วันที่สิ้นสุด"
+        },
+        "enable_glass_background": {
+          "label": "เปิดใช้งานพื้นหลังแก้ว"
+        },
+        "heading": {
+          "label": "หัวเรื่อง"
+        },
+        "image_picker": {
+          "label": "ภาพพื้นหลัง"
+        },
+        "layout_style": {
+          "label": "เค้าโครงเดสก์ท็อป",
+          "split": "แยก",
+          "stacked": "ซ้อนกัน"
+        },
+        "text_color": {
+          "label": "ข้อความ"
+        },
+        "timer_bg_color": {
+          "label": "พื้นหลังตัวจับเวลา"
+        },
+        "timer_text_color": {
+          "label": "ข้อความจับเวลา"
+        }
+      }
+    },
+    "custom-liquid": {
+      "name": "ของเหลวแบบกำหนดเอง",
+      "presets": {
+        "name": "ของเหลวแบบกำหนดเอง"
+      },
+      "settings": {
+        "content_width": {
+          "label": "ความกว้างของเนื้อหา"
+        },
+        "custom_liquid": {
+          "info": "เพิ่มตัวอย่างแอปหรือโค้ด Liquid อื่นๆ เพื่อสร้างการปรับแต่งขั้นสูง",
+          "label": "ของเหลว"
+        },
+        "text_alignment": {
+          "label": "การจัดตำแหน่งข้อความ"
+        }
+      }
+    },
+    "event-calender": {
+      "blocks": {
+        "name": "เหตุการณ์",
+        "settings": {
+          "date": {
+            "label": "วันที่"
+          },
+          "link_text": {
+            "label": "ข้อมูลเพิ่มเติม"
+          },
+          "link_url": {
+            "label": "ลิงค์ข้อมูลเพิ่มเติม"
+          },
+          "location": {
+            "label": "ที่ตั้ง"
+          },
+          "location_url": {
+            "label": "ลิงค์สถานที่"
+          },
+          "time": {
+            "label": "เวลา"
+          }
+        }
+      },
+      "name": "ปฏิทินกิจกรรม",
+      "presets": {
+        "name": "ปฏิทินกิจกรรม"
+      },
+      "settings": {
+        "event_image_size": {
+          "label": "อัตราส่วนภาพ"
+        }
+      }
+    },
+    "faq-section": {
+      "blocks": {
+        "faq": {
+          "name": "แถวพับได้",
+          "settings": {
+            "answer": {
+              "label": "คำอธิบาย"
+            },
+            "heading": {
+              "label": "หัวเรื่อง"
+            }
+          }
+        }
+      },
+      "name": "เนื้อหาที่ยุบได้",
+      "presets": {
+        "name": "เนื้อหาที่ยุบได้"
+      },
+      "settings": {
+        "heading_title": {
+          "label": "หัวเรื่อง"
+        }
+      }
+    },
+    "featured-blog": {
+      "blocks": {
+        "name": "โพสต์",
+        "settings": {
+          "article": {
+            "info": "หากเลือกโพสต์ ระบบจะเขียนทับบล็อกที่เลือก",
+            "label": "เลือกบทความ"
+          }
+        }
+      },
+      "name": "บล็อกเด่น",
+      "presets": {
+        "name": "บล็อกเด่น"
+      },
+      "settings": {
+        "blog": {
+          "label": "บล็อก"
+        },
+        "btntext": {
+          "label": "ข้อความลิงก์"
+        },
+        "layout_type": {
+          "carousel": {
+            "label": "ม้าหมุน"
+          },
+          "grid": {
+            "label": "กริด"
+          },
+          "label": "สไตล์เค้าโครง"
+        },
+        "post_limit": {
+          "label": "จำนวนบทความ"
+        },
+        "show_author": {
+          "label": "แสดงผู้เขียน"
+        },
+        "show_date": {
+          "label": "แสดงวันที่"
+        },
+        "show_excerpt": {
+          "label": "แสดงข้อความที่ตัดตอนมาจากบทความ"
+        },
+        "swipe_mobile": {
+          "label": "เปิดใช้งานการปัดบนมือถือ"
+        }
+      }
+    },
+    "featured-collection": {
+      "name": "คอลเลกชันที่โดดเด่น",
+      "presets": {
+        "name": "คอลเลกชันที่โดดเด่น"
+      },
+      "settings": {
+        "animated_color_1": {
+          "label": "สีเคลื่อนไหว 1"
+        },
+        "animated_color_2": {
+          "label": "สีเคลื่อนไหว 2"
+        },
+        "animated_color_3": {
+          "label": "สีเคลื่อนไหว 3"
+        },
+        "animated_color_4": {
+          "label": "สีเคลื่อนไหว 4"
+        },
+        "background_style": {
+          "label": "สไตล์พื้นหลัง",
+          "options": {
+            "animated": {
+              "label": "ภาพเคลื่อนไหว"
+            },
+            "none": {
+              "label": "โปร่งใส"
+            },
+            "solid": {
+              "label": "แข็ง"
+            }
+          }
+        },
+        "btn_as_outline": {
+          "label": "แสดงเป็นโครงร่าง"
+        },
+        "collection": {
+          "label": "ของสะสม"
+        },
+        "columns_desktop": {
+          "label": "จำนวนคอลัมน์บนเดสก์ท็อป"
+        },
+        "columns_mobile": {
+          "label": "จำนวนคอลัมน์บนมือถือ",
+          "options__1": {
+            "label": "1 คอลัมน์"
+          },
+          "options__2": {
+            "label": "2 คอลัมน์"
+          }
+        },
+        "enable_desktop_slider": {
+          "label": "เปิดใช้งานภาพหมุนบนเดสก์ท็อป"
+        },
+        "enable_parallax": {
+          "label": "เปิดใช้งานเอฟเฟ็กต์"
+        },
+        "enable_promotion_card": {
+          "label": "เปิดใช้งานการ์ดส่งเสริมการขาย"
+        },
+        "enable_quick_buy": {
+          "info": "เหมาะสมที่สุดกับประเภทรถเข็นป๊อปอัพหรือลิ้นชัก",
+          "label": "เปิดใช้งานปุ่มเพิ่มด่วน"
+        },
+        "full_width": {
+          "label": "ทำให้สินค้าเต็มความกว้าง"
+        },
+        "header": {
+          "label": "เนื้อหา"
+        },
+        "header_mobile": {
+          "content": "เค้าโครงมือถือ"
+        },
+        "image_ratio": {
+          "label": "อัตราส่วนภาพ",
+          "options__1": {
+            "label": "ปรับให้เข้ากับภาพ"
+          },
+          "options__2": {
+            "label": "ภาพเหมือน"
+          },
+          "options__3": {
+            "label": "สี่เหลี่ยม"
+          }
+        },
+        "parallax": {
+          "label": "พารัลแลกซ์"
+        },
+        "products_style": {
+          "label": "สไตล์",
+          "options": {
+            "carousel": {
+              "label": "ม้าหมุน"
+            },
+            "stacked": {
+              "label": "ซ้อนกัน"
+            }
+          }
+        },
+        "products_to_show": {
+          "label": "สินค้าสูงสุดที่จะแสดง"
+        },
+        "promotion_border": {
+          "label": "เปิดใช้งานเส้นขอบ"
+        },
+        "promotion_in_stacked": {
+          "label": "ตำแหน่งในมุมมองแบบเรียงซ้อน"
+        },
+        "promotional_card": {
+          "label": "บัตรส่งเสริมการขาย"
+        },
+        "show_collection_title": {
+          "label": "แสดงชื่อคอลเลกชัน"
+        },
+        "show_price": {
+          "label": "แสดงราคา"
+        },
+        "show_rating": {
+          "info": "หากต้องการแสดงการให้คะแนน ให้เพิ่มแอปการให้คะแนนผลิตภัณฑ์ [เรียนรู้เพิ่มเติม](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#featured-collection-show-product-rating)",
+          "label": "แสดงการให้คะแนนผลิตภัณฑ์"
+        },
+        "show_vendor": {
+          "label": "แสดงผู้ขาย"
+        },
+        "show_view_all": {
+          "label": "เปิดใช้งาน \"ดูทั้งหมด\" หากคอลเลกชันมีสินค้ามากกว่าที่แสดง"
+        },
+        "swipe_on_mobile": {
+          "label": "เปิดใช้งานการปัดบนมือถือ"
+        },
+        "title": {
+          "label": "หัวเรื่อง"
+        },
+        "view_all_style": {
+          "label": "สไตล์ \"ดูทั้งหมด\"",
+          "options__1": {
+            "label": "ลิงค์"
+          },
+          "options__2": {
+            "label": "ปุ่มเค้าร่าง"
+          },
+          "options__3": {
+            "label": "ปุ่มทึบ"
+          }
+        }
+      }
+    },
+    "featured-collections-list": {
+      "blocks": {
+        "collection": {
+          "name": "ของสะสม",
+          "settings": {
+            "collection": {
+              "label": "ของสะสม"
+            },
+            "heading": {
+              "info": "สูงสุด 10 คำ",
+              "label": "หัวเรื่อง"
+            },
+            "image": {
+              "label": "รูปภาพที่กำหนดเอง"
+            }
+          }
+        }
+      },
+      "name": "ม้าหมุนของสะสม",
+      "presets": {
+        "name": "ม้าหมุนของสะสม"
+      },
+      "settings": {
+        "btnlink": {
+          "label": "ลิงค์"
+        },
+        "btntext": {
+          "label": "ข้อความของปุ่ม"
+        },
+        "heading": {
+          "label": "หัวเรื่อง"
+        }
+      }
+    },
+    "featured-product": {
+      "blocks": {
+        "buy_buttons": {
+          "name": "ปุ่มซื้อ",
+          "settings": {
+            "show_dynamic_checkout": {
+              "info": "เมื่อใช้วิธีการชำระเงินที่มีในร้านค้าของคุณ ลูกค้าจะเห็นตัวเลือกที่ต้องการ เช่น PayPal หรือ Apple Pay [เรียนรู้เพิ่มเติม](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+              "label": "แสดงปุ่มชำระเงินแบบไดนามิก"
+            }
+          }
+        },
+        "custom_liquid": {
+          "name": "ของเหลวแบบกำหนดเอง",
+          "settings": {
+            "custom_liquid": {
+              "label": "ของเหลวแบบกำหนดเอง"
+            }
+          }
+        },
+        "description": {
+          "name": "คำอธิบาย"
+        },
+        "price": {
+          "name": "ราคา"
+        },
+        "quantity_selector": {
+          "name": "ตัวเลือกปริมาณ"
+        },
+        "rating": {
+          "name": "การให้คะแนนผลิตภัณฑ์",
+          "settings": {
+            "paragraph": {
+              "content": "หากต้องการแสดงการให้คะแนน ให้เพิ่มแอปการให้คะแนนผลิตภัณฑ์ [เรียนรู้เพิ่มเติม](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#featured-product-rating)"
+            }
+          }
+        },
+        "share": {
+          "name": "แบ่งปัน",
+          "settings": {
+            "featured_image_info": {
+              "content": "หากคุณใส่ลิงก์ในโพสต์บนโซเชียลมีเดีย รูปภาพเด่นของเพจจะแสดงเป็นรูปภาพตัวอย่าง [เรียนรู้เพิ่มเติม](https://help.shopify.com/manual/online-store/images/showing-social-media-thumbnail-images)"
+            },
+            "text": {
+              "label": "ข้อความ"
+            },
+            "title_info": {
+              "content": "ชื่อร้านค้าและคำอธิบายจะรวมอยู่ในภาพตัวอย่าง [เรียนรู้เพิ่มเติม](https://help.shopify.com/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)"
+            }
+          }
+        },
+        "sku": {
+          "name": "SKU",
+          "settings": {
+            "text_style": {
+              "label": "รูปแบบข้อความ",
+              "options__1": {
+                "label": "ร่างกาย"
+              },
+              "options__2": {
+                "label": "คำบรรยาย"
+              },
+              "options__3": {
+                "label": "ตัวพิมพ์ใหญ่"
+              }
+            }
+          }
+        },
+        "text": {
+          "name": "ข้อความ",
+          "settings": {
+            "text": {
+              "label": "ข้อความ"
+            },
+            "text_style": {
+              "label": "รูปแบบข้อความ",
+              "options__1": {
+                "label": "ร่างกาย"
+              },
+              "options__2": {
+                "label": "คำบรรยาย"
+              },
+              "options__3": {
+                "label": "ตัวพิมพ์ใหญ่"
+              }
+            }
+          }
+        },
+        "title": {
+          "name": "ชื่อ"
+        },
+        "variant_picker": {
+          "name": "ตัวเลือกตัวแปร",
+          "settings": {
+            "picker_type": {
+              "label": "พิมพ์",
+              "options__1": {
+                "label": "หล่นลง"
+              },
+              "options__2": {
+                "label": "ยาเม็ด"
+              }
+            }
+          }
+        }
+      },
+      "name": "ผลิตภัณฑ์พิเศษ",
+      "presets": {
+        "name": "ผลิตภัณฑ์พิเศษ"
+      },
+      "settings": {
+        "enable_marquee": {
+          "label": "เปิดใช้งานปะรำ"
+        },
+        "product": {
+          "label": "ผลิตภัณฑ์"
+        },
+        "product_thumbnail": {
+          "label": "เปิดใช้งานภาพขนาดย่อของผลิตภัณฑ์"
+        }
+      }
+    },
+    "footer": {
+      "blocks": {
+        "link_list": {
+          "name": "เมนู",
+          "settings": {
+            "heading": {
+              "info": "จำเป็นต้องมีส่วนหัวเพื่อแสดงเมนู",
+              "label": "หัวเรื่อง"
+            },
+            "menu": {
+              "info": "แสดงเฉพาะรายการเมนูระดับบนสุด",
+              "label": "เมนู"
+            }
+          }
+        },
+        "newsletter": {
+          "name": "จดหมายข่าว",
+          "settings": {
+            "description": {
+              "label": "คำอธิบาย"
+            },
+            "heading": {
+              "label": "หัวเรื่อง"
+            },
+            "placeholder": {
+              "label": "ข้อความตัวยึดตำแหน่ง"
+            }
+          }
+        },
+        "text": {
+          "name": "ข้อความ",
+          "settings": {
+            "description": {
+              "label": "คำอธิบาย"
+            },
+            "image": {
+              "label": "ภาพ"
+            },
+            "image_url": {
+              "label": "ลิงค์รูปภาพ"
+            },
+            "show_social": {
+              "label": "แสดงไอคอนโซเชียลมีเดีย"
+            }
+          }
+        }
+      },
+      "name": "ส่วนท้าย",
+      "settings": {
+        "copyright_content": {
+          "label": "เนื้อหาลิขสิทธิ์"
+        },
+        "custom_copyright_content": {
+          "label": "เนื้อหาที่กำหนดเอง"
+        },
+        "enable_follow_on_shop": {
+          "label": "เปิดใช้งานการติดตามร้านค้า"
+        },
+        "enable_language_selector": {
+          "heading": "ตัวเลือกภาษา",
+          "info": "หากต้องการเพิ่มภาษา ให้ไปที่ [การตั้งค่าภาษา](/admin/settings/ languages)",
+          "label": "เปิดใช้งานตัวเลือกภาษา"
+        },
+        "footer_info": {
+          "label": "การเว้นวรรคจะไม่ทำงานเมื่อภาพพื้นหลังว่างเปล่า"
+        },
+        "header": {
+          "label": "เมนูมือถือ"
+        },
+        "hide_copyright_content": {
+          "label": "ซ่อนเนื้อหาที่มีลิขสิทธิ์"
+        },
+        "image": {
+          "info": "แนะนำขนาด 235 x 74px",
+          "label": "โลโก้"
+        },
+        "image_width": {
+          "label": "ความกว้างของโลโก้"
+        },
+        "margin_top": {
+          "label": "ขอบบน"
+        },
+        "menu_style": {
+          "label": "สไตล์",
+          "options": {
+            "accordion": {
+              "label": "หีบเพลง"
+            },
+            "stacked": {
+              "label": "ซ้อนกัน"
+            }
+          }
+        },
+        "open_menu_mobile": {
+          "label": "เปิดเมนูตามค่าเริ่มต้นในมุมมองหีบเพลง"
+        },
+        "payment_enable": {
+          "heading": "วิธีการชำระเงิน",
+          "label": "แสดงไอคอนการชำระเงิน"
+        },
+        "show_currency": {
+          "heading": "ตัวเลือกสกุลเงิน",
+          "info": "หากต้องการเพิ่มประเทศ/ภูมิภาค ให้ไปที่ [การตั้งค่าการชำระเงิน](/admin/settings/Payments)",
+          "label": "เปิดใช้งานการแปลงสกุลเงิน"
+        },
+        "show_social": {
+          "label": "แสดงไอคอนโซเชียลมีเดีย"
+        }
+      }
+    },
+    "footer_policies": {
+      "name": "แถบด้านล่าง",
+      "settings": {
+        "show_copyright": {
+          "label": "แสดงลิขสิทธิ์"
+        },
+        "show_policies": {
+          "label": "แสดงนโยบาย"
+        }
+      }
+    },
+    "header": {
+      "blocks": {
+        "hamburger_mega_menu": {
+          "name": "เมนูเด่นแฮมเบอร์เกอร์",
+          "settings": {
+            "paragraph_info": "ไม่สามารถใช้ได้กับเมนูบนมือถือ"
+          }
+        },
+        "name": "เมนูเมก้า",
+        "settings": {
+          "content_1": {
+            "content": "เนื้อหา 1"
+          },
+          "content_2": {
+            "content": "เนื้อหา 2"
+          },
+          "content_3": {
+            "content": "เนื้อหา 3"
+          },
+          "content_4": {
+            "content": "เนื้อหา 4"
+          },
+          "content_5": {
+            "content": "เนื้อหา 5"
+          },
+          "menu_label": {
+            "info": "ป้อนรายการเมนูเพื่อใช้เมนูเด่น[เรียนรู้เพิ่มเติม](https://shinedezign.gitbook.io/shark-documentation/overview/header#mega-menu-settings)",
+            "label": "ป้ายเมนู"
+          }
+        }
+      },
+      "name": "หัวข้อ",
+      "settings": {
+        "currency_selector": {
+          "content": "ตัวเลือกสกุลเงิน"
+        },
+        "desktop_menu": {
+          "content": "เมนูเดสก์ท็อป"
+        },
+        "desktop_transparent_header": {
+          "info": "มันใช้งานได้บนหน้าแรกเท่านั้น",
+          "label": "เปิดใช้งานความโปร่งใสของเดสก์ท็อป"
+        },
+        "enable_account": {
+          "label": "เปิดใช้งานบัญชี"
+        },
+        "enable_cart": {
+          "label": "เปิดใช้งานรถเข็น"
+        },
+        "enable_language_selector": {
+          "label": "เปิดใช้งานตัวเลือกภาษา",
+          "paragraph": "หากต้องการเพิ่มภาษา ให้ไปที่ [การตั้งค่าภาษา](/admin/settings/ languages)"
+        },
+        "enable_search": {
+          "label": "เปิดใช้งานการค้นหา"
+        },
+        "enable_social_media": {
+          "label": "เปิดใช้งานไอคอนโซเชียลมีเดีย"
+        },
+        "enable_sticky_header": {
+          "label": "เปิดใช้งานส่วนหัวติดหนึบ"
+        },
+        "font_family": {
+          "label": "ครอบครัวแบบอักษร",
+          "options": {
+            "body": {
+              "label": "ร่างกาย"
+            },
+            "heading": {
+              "label": "หัวเรื่อง"
+            }
+          }
+        },
+        "font_size": {
+          "label": "ขนาดตัวอักษร"
+        },
+        "hamburger_menu": {
+          "content": "เมนูแฮมเบอร์เกอร์"
+        },
+        "header_style": {
+          "label": "สไตล์เดสก์ท็อป",
+          "options": {
+            "header_1": {
+              "label": "โลโก้ตรงกลางเมนูด้านซ้าย"
+            },
+            "header_2": {
+              "label": "โลโก้ด้านซ้ายเมนูด้านซ้าย"
+            },
+            "header_3": {
+              "label": "เมนูตรงกลางโลโก้ด้านซ้าย"
+            },
+            "header_4": {
+              "label": "โลโก้เมนูแฮมเบอร์เกอร์ด้านซ้าย"
+            },
+            "header_5": {
+              "label": "โลโก้เมนูแฮมเบอร์เกอร์กลาง"
+            },
+            "header_6": {
+              "label": "โลโก้เมนูด้านซ้ายเหลือพร้อมแถบค้นหา"
+            },
+            "header_7": {
+              "label": "โลโก้เมนูแฮมเบอร์เกอร์ด้านซ้ายพร้อมแถบค้นหา"
+            }
+          }
+        },
+        "icons": {
+          "content": "ไอคอน"
+        },
+        "language_selector": {
+          "content": "ตัวเลือกภาษา"
+        },
+        "logo": {
+          "label": "โลโก้"
+        },
+        "logo_position": {
+          "label": "การจัดตำแหน่งโลโก้"
+        },
+        "logo_width": {
+          "label": "ความกว้างของโลโก้เดสก์ท็อป"
+        },
+        "logo_width_mobile": {
+          "label": "ความกว้างของโลโก้มือถือ"
+        },
+        "menu": {
+          "label": "เมนู"
+        },
+        "menu_font": {
+          "label": "แบบอักษรของเมนู",
+          "options": {
+            "body": {
+              "label": "ร่างกาย"
+            },
+            "heading": {
+              "label": "หัวเรื่อง"
+            }
+          }
+        },
+        "menu_font_size": {
+          "label": "ขนาดตัวอักษรของเมนู"
+        },
+        "menu_type": {
+          "label": "ประเภทเมนู",
+          "options": {
+            "dropdown": {
+              "label": "หล่นลง"
+            },
+            "mega_menu": {
+              "label": "เมนูเมก้า"
+            }
+          }
+        },
+        "mobile_menu": {
+          "content": "เมนูมือถือ"
+        },
+        "mobile_menu_font_size": {
+          "label": "ขนาดตัวอักษรเมนูมือถือ"
+        },
+        "mobile_transparent_header": {
+          "label": "เปิดใช้งานความโปร่งใสบนมือถือ"
+        },
+        "navigation": {
+          "content": "การนำทาง"
+        },
+        "show_currency": {
+          "label": "เปิดใช้งานตัวเลือกสกุลเงิน",
+          "paragraph": "หากต้องการเพิ่มประเทศ/ภูมิภาค ให้ไปที่ [การตั้งค่าการชำระเงิน](/admin/settings/Payments)"
+        },
+        "sticky_header_type": {
+          "label": "ประเภทส่วนหัวที่เหนียว",
+          "options": {
+            "always": {
+              "label": "เสมอ"
+            },
+            "on_scroll": {
+              "label": "เมื่อเลื่อนขึ้น"
+            }
+          }
+        },
+        "sub_menu_font": {
+          "label": "แบบอักษรเมนูระดับที่สอง"
+        },
+        "submenu_font_size": {
+          "label": "ขนาดตัวอักษรเมนูระดับที่สอง"
+        },
+        "transparent_color": {
+          "label": "สีข้อความ/ไอคอน"
+        },
+        "transparent_header": {
+          "content": "ส่วนหัวโปร่งใส"
+        },
+        "transparent_logo": {
+          "label": "โลโก้สำรอง"
+        }
+      }
+    },
+    "image-banner": {
+      "blocks": {
+        "buttons": {
+          "name": "ปุ่ม",
+          "settings": {
+            "button_label_1": {
+              "info": "ปล่อยป้ายกำกับว่างไว้เพื่อซ่อนปุ่ม",
+              "label": "ป้ายปุ่มแรก"
+            },
+            "button_label_2": {
+              "info": "ปล่อยป้ายกำกับว่างไว้เพื่อซ่อนปุ่ม",
+              "label": "ป้ายปุ่มที่สอง"
+            },
+            "button_link_1": {
+              "label": "ลิงค์ปุ่มแรก"
+            },
+            "button_link_2": {
+              "label": "ลิงค์ปุ่มที่สอง"
+            },
+            "button_style_secondary_1": {
+              "label": "ใช้สไตล์ปุ่มเค้าร่าง"
+            },
+            "button_style_secondary_2": {
+              "label": "ใช้สไตล์ปุ่มเค้าร่าง"
+            }
+          }
+        },
+        "heading": {
+          "name": "หัวเรื่อง",
+          "settings": {
+            "heading": {
+              "label": "หัวเรื่อง"
+            }
+          }
+        },
+        "text": {
+          "name": "ข้อความ",
+          "settings": {
+            "text": {
+              "label": "คำอธิบาย"
+            },
+            "text_style": {
+              "label": "รูปแบบข้อความ",
+              "options__1": {
+                "label": "ร่างกาย"
+              },
+              "options__2": {
+                "label": "คำบรรยาย"
+              },
+              "options__3": {
+                "label": "ตัวพิมพ์ใหญ่"
+              }
+            }
+          }
+        }
+      },
+      "name": "แบนเนอร์รูปภาพ",
+      "presets": {
+        "name": "แบนเนอร์รูปภาพ"
+      },
+      "settings": {
+        "adapt_height_first_image": {
+          "info": "เขียนทับการตั้งค่าความสูงของแบนเนอร์รูปภาพเมื่อเลือก",
+          "label": "ปรับความสูงของส่วนให้เข้ากับขนาดภาพแรก"
+        },
+        "color_scheme": {
+          "info": "มองเห็นได้เมื่อแสดงคอนเทนเนอร์"
+        },
+        "desktop_content_alignment": {
+          "label": "การจัดตำแหน่งเนื้อหาบนเดสก์ท็อป",
+          "options__1": {
+            "label": "ซ้าย"
+          },
+          "options__2": {
+            "label": "ศูนย์"
+          },
+          "options__3": {
+            "label": "ขวา"
+          }
+        },
+        "desktop_content_position": {
+          "label": "ตำแหน่งเนื้อหาบนเดสก์ท็อป",
+          "options__1": {
+            "label": "บนซ้าย"
+          },
+          "options__2": {
+            "label": "ท็อปเซ็นเตอร์"
+          },
+          "options__3": {
+            "label": "ขวาบน"
+          },
+          "options__4": {
+            "label": "กลางซ้าย"
+          },
+          "options__5": {
+            "label": "ศูนย์กลาง"
+          },
+          "options__6": {
+            "label": "กลางขวา"
+          },
+          "options__7": {
+            "label": "ล่างซ้าย"
+          },
+          "options__8": {
+            "label": "กลางล่าง"
+          },
+          "options__9": {
+            "label": "ล่างขวา"
+          }
+        },
+        "header": {
+          "content": "เค้าโครงมือถือ"
+        },
+        "image": {
+          "label": "ภาพแรก"
+        },
+        "image_2": {
+          "label": "ภาพที่สอง"
+        },
+        "image_height": {
+          "info": "เพื่อผลลัพธ์ที่ดีที่สุด ให้ใช้รูปภาพที่มีอัตราส่วน 3:2 [เรียนรู้เพิ่มเติม](https://help.shopify.com/manual/shopify-admin/productivity-tools/image-editor#understanding-image-aspect-ratio)",
+          "label": "ความสูงของแบนเนอร์",
+          "options__1": {
+            "label": "เล็ก"
+          },
+          "options__2": {
+            "label": "ปานกลาง"
+          },
+          "options__3": {
+            "label": "ใหญ่"
+          }
+        },
+        "image_overlay_opacity": {
+          "label": "ความทึบของภาพซ้อนทับ"
+        },
+        "mobile_content_alignment": {
+          "label": "การจัดตำแหน่งเนื้อหาบนมือถือ",
+          "options__1": {
+            "label": "ซ้าย"
+          },
+          "options__2": {
+            "label": "ศูนย์"
+          },
+          "options__3": {
+            "label": "ขวา"
+          }
+        },
+        "show_text_below": {
+          "label": "แสดงคอนเทนเนอร์บนมือถือ"
+        },
+        "show_text_box": {
+          "label": "แสดงคอนเทนเนอร์บนเดสก์ท็อป"
+        },
+        "stack_images_on_mobile": {
+          "label": "ซ้อนภาพบนมือถือ"
+        }
+      }
+    },
+    "image-with-text": {
+      "blocks": {
+        "button": {
+          "name": "ปุ่ม",
+          "settings": {
+            "btn_as_link": {
+              "label": "แสดงเป็นลิงค์"
+            },
+            "btn_as_outline": {
+              "label": "แสดงเป็นโครงร่าง"
+            },
+            "button_1": {
+              "content": "ปุ่ม 1"
+            },
+            "button_2": {
+              "content": "ปุ่ม 2"
+            }
+          }
+        },
+        "heading": {
+          "name": "หัวเรื่อง"
+        },
+        "row": {
+          "name": "แถว",
+          "settings": {
+            "text": {
+              "label": "คำอธิบาย"
+            },
+            "text_size": {
+              "label": "ขนาดข้อความ"
+            }
+          }
+        },
+        "subheading": {
+          "name": "หัวเรื่องย่อย"
+        },
+        "text": {
+          "name": "ข้อความ",
+          "settings": {
+            "text": {
+              "label": "เนื้อหา"
+            },
+            "text_size": {
+              "label": "ขนาดตัวอักษร"
+            }
+          }
+        }
+      },
+      "name": "รูปภาพพร้อมข้อความ",
+      "presets": {
+        "name": "รูปภาพพร้อมข้อความ"
+      },
+      "settings": {
+        "content_background": {
+          "label": "พื้นหลังการ์ด"
+        },
+        "content_position": {
+          "label": "ตำแหน่งเนื้อหาบนเดสก์ท็อป"
+        },
+        "hide_rows_count": {
+          "label": "ซ่อนจำนวนแถว"
+        },
+        "image_background": {
+          "label": "เปิดใช้งานพื้นหลังการ์ด"
+        },
+        "image_overlay": {
+          "label": "ภาพซ้อนทับ"
+        },
+        "image_overlay_enable": {
+          "label": "เปิดใช้งานภาพซ้อนทับ"
+        },
+        "image_position": {
+          "label": "ตำแหน่งรูปภาพเดสก์ท็อป"
+        },
+        "image_width": {
+          "label": "ขนาดภาพเดสก์ท็อป"
+        },
+        "section_fullwidth": {
+          "label": "ทำให้ส่วนเต็มความกว้าง"
+        }
+      }
+    },
+    "images-carousel": {
+      "blocks": {
+        "name": "ภาพ",
+        "settings": {
+          "Heading": {
+            "info": "ข้อความส่วนหัวเป็นสิ่งจำเป็นในการเชื่อมโยงกับรูปภาพหรือวิดีโอ",
+            "label": "หัวเรื่อง"
+          },
+          "description": {
+            "label": "คำอธิบาย"
+          },
+          "video": {
+            "label": "เล่นวิดีโออัตโนมัติ"
+          }
+        }
+      },
+      "name": "ภาพหมุน",
+      "presets": {
+        "name": "ภาพหมุน"
+      },
+      "settings": {
+        "desktop_height": {
+          "label": "ความสูงของเดสก์ท็อป"
+        },
+        "mobile_height": {
+          "label": "ความสูงของมือถือ"
+        }
+      }
+    },
+    "logo-list": {
+      "blocks": {
+        "name": "โลโก้",
+        "settings": {
+          "image_link": {
+            "info": "ไม่จำเป็น",
+            "label": "ลิงค์รูปภาพ"
+          },
+          "image_url": {
+            "info": "ป้อน URL ของรูปภาพ",
+            "label": "รูปภาพจาก URL"
+          },
+          "image_width": {
+            "label": "ความกว้างของภาพ"
+          }
+        }
+      },
+      "name": "รายการโลโก้",
+      "presets": {
+        "name": "รายการโลโก้"
+      },
+      "settings": {
+        "border_radius": {
+          "label": "รัศมีชายแดน"
+        },
+        "card_border_color": {
+          "label": "ขอบการ์ดโลโก้"
+        },
+        "card_color": {
+          "label": "พื้นหลังการ์ดโลโก้"
+        },
+        "column_spacing": {
+          "label": "ช่องว่างของคอลัมน์"
+        },
+        "columns_desktop": {
+          "label": "คอลัมน์ต่อแถว (เดสก์ท็อป)"
+        },
+        "content": {
+          "content": "เนื้อหา"
+        },
+        "general": {
+          "content": "ทั่วไป"
+        },
+        "grid": {
+          "content": "กริด"
+        },
+        "images_height": {
+          "label": "ปรับความสูงของการ์ดให้เท่ากัน"
+        },
+        "layout_type": {
+          "grid": {
+            "label": "กริด"
+          },
+          "label": "สไตล์",
+          "marquee": {
+            "label": "กระโจม"
+          }
+        },
+        "marquee": {
+          "content": "กระโจม"
+        },
+        "show_borders": {
+          "label": "แสดงเส้นขอบของส่วน"
+        },
+        "show_card_background": {
+          "label": "แสดงพื้นหลังการ์ด"
+        },
+        "show_card_border": {
+          "label": "แสดงขอบการ์ด"
+        }
+      }
+    },
+    "main-account": {
+      "name": "บัญชี"
+    },
+    "main-activate-account": {
+      "name": "การเปิดใช้งานบัญชี"
+    },
+    "main-addresses": {
+      "name": "ที่อยู่"
+    },
+    "main-article": {
+      "name": "บทความ",
+      "settings": {
+        "comments_enabled": {
+          "label": "แสดงจำนวนความคิดเห็น"
+        },
+        "content_overlay": {
+          "label": "แสดงการซ้อนทับเนื้อหา"
+        },
+        "image_size": {
+          "label": "ขนาดรูปภาพบทความ"
+        },
+        "related_post_heading": {
+          "label": "หัวกระทู้ที่เกี่ยวข้อง"
+        },
+        "show_author": {
+          "label": "แสดงผู้เขียนโพสต์"
+        },
+        "show_date": {
+          "label": "แสดงวันที่เผยแพร่"
+        },
+        "show_image": {
+          "label": "แสดงรูปภาพบทความ"
+        },
+        "show_related": {
+          "label": "แสดงบทความที่เกี่ยวข้อง"
+        },
+        "show_social": {
+          "label": "แสดงไอคอนแบ่งปันทางสังคม"
+        },
+        "show_tags": {
+          "label": "แสดงแท็ก"
+        },
+        "text_alignment": {
+          "info": "ใช้ได้กับหัวข้อโพสต์ที่เกี่ยวข้อง"
+        }
+      }
+    },
+    "main-blog": {
+      "name": "โพสต์ในบล็อก",
+      "settings": {
+        "artical_per_page": {
+          "label": "โพสต์ต่อหน้า"
+        },
+        "banner_height_desktop": {
+          "label": "ความสูงของเดสก์ท็อป"
+        },
+        "banner_height_mobile": {
+          "label": "ความสูงของมือถือ"
+        },
+        "banner_image": {
+          "info": "แนะนำขนาด 1920 x 200px",
+          "label": "ภาพ"
+        },
+        "blog_post": {
+          "label": "โพสต์บล็อก"
+        },
+        "comments_enabled": {
+          "label": "แสดงจำนวนความคิดเห็น"
+        },
+        "heading_overlay": {
+          "label": "เปิดใช้งานการซ้อนทับส่วนหัว"
+        },
+        "show_author": {
+          "label": "แสดงผู้เขียน"
+        },
+        "show_date": {
+          "label": "แสดงวันที่เผยแพร่บทความ"
+        },
+        "show_excerpt": {
+          "label": "แสดงข้อความที่ตัดตอนมา"
+        },
+        "show_tags": {
+          "label": "แสดงแท็ก"
+        }
+      }
+    },
+    "main-cart": {
+      "name": "รถเข็นหลัก",
+      "settings": {
+        "payment_enable": {
+          "label": "แสดงไอคอนการชำระเงิน"
+        },
+        "shipping_estimates": {
+          "label": "แสดงประมาณการการจัดส่ง"
+        },
+        "show_cart_heading": {
+          "label": "แสดงส่วนหัวของรถเข็น"
+        },
+        "show_cart_note": {
+          "label": "แสดงบันทึกรถเข็น"
+        }
+      }
+    },
+    "main-collection-list": {
+      "name": "รายการคอลเลกชัน",
+      "settings": {
+        "banner_height_desktop": {
+          "label": "ความสูงของเดสก์ท็อป"
+        },
+        "banner_height_mobile": {
+          "label": "ความสูงของมือถือ"
+        },
+        "banner_image": {
+          "info": "แนะนำขนาด 1920 x 200px",
+          "label": "ภาพ"
+        },
+        "collections_per_page": {
+          "label": "คอลเลกชันต่อหน้า"
+        },
+        "column_mobile": {
+          "label": "คอลเลกชันต่อแถว (มือถือ)"
+        },
+        "columns_desktop": {
+          "label": "คอลเลกชันต่อแถว (เดสก์ท็อป)"
+        },
+        "grid": {
+          "label": "กริด"
+        },
+        "heading_overlay": {
+          "label": "เปิดใช้งานการซ้อนทับส่วนหัว"
+        },
+        "heading_overlay_color": {
+          "label": "สีการซ้อนทับส่วนหัว"
+        },
+        "heading_overlay_opacity": {
+          "label": "ความทึบของการซ้อนทับส่วนหัว"
+        },
+        "sort": {
+          "label": "เรียงลำดับ",
+          "options": {
+            "alphabetical": {
+              "label": "ตามลำดับตัวอักษร a-z"
+            },
+            "alphabetical_reversed": {
+              "label": "ตามลำดับตัวอักษร z-a"
+            },
+            "date": {
+              "label": "วันที่เก่าไปใหม่"
+            },
+            "date_reversed": {
+              "label": "วันที่ใหม่ไปเก่า"
+            },
+            "products_high": {
+              "label": "จำนวนผลิตภัณฑ์จากสูงไปต่ำ"
+            },
+            "products_low": {
+              "label": "จำนวนผลิตภัณฑ์จากต่ำไปสูง"
+            }
+          }
+        },
+        "title_overlay": {
+          "label": "แสดงชื่อเป็นภาพซ้อนทับ"
+        },
+        "title_postion": {
+          "label": "ตำแหน่งชื่อเรื่อง"
+        }
+      }
+    },
+    "main-collection": {
+      "blocks": {
+        "image": {
+          "name": "แบนเนอร์รูปภาพ",
+          "settings": {
+            "banner_height_desktop": {
+              "label": "ความสูงของเดสก์ท็อป"
+            },
+            "banner_height_mobile": {
+              "label": "ความสูงของมือถือ"
+            },
+            "banner_image": {
+              "info": "แนะนำขนาด 1920 x 200px",
+              "label": "รูปภาพแบนเนอร์"
+            },
+            "collection_description": {
+              "label": "แสดงคำอธิบายคอลเลกชัน"
+            },
+            "collection_image_checker": {
+              "info": "ค่าเริ่มต้นจะแสดงภาพเด่นของคอลเลกชันเป็นแบนเนอร์ หากคอลเลกชันไม่มีรูปภาพเด่น จะแสดงภาพแบนเนอร์ที่กําหนดเอง",
+              "label": "เปิดใช้งานภาพแบนเนอร์"
+            },
+            "collection_title": {
+              "label": "แสดงชื่อคอลเลกชัน"
+            },
+            "description_overly": {
+              "label": "เปิดใช้งานการซ้อนทับคำอธิบาย"
+            },
+            "heading_overly": {
+              "label": "เปิดใช้งานการซ้อนทับส่วนหัว"
+            }
+          }
+        },
+        "menu": {
+          "name": "เมนู",
+          "settings": {
+            "background_color": {
+              "label": "พื้นหลัง"
+            },
+            "hover_background_color": {
+              "label": "พื้นหลังโฮเวอร์ข้อความ"
+            },
+            "hover_text_color": {
+              "label": "โฮเวอร์ข้อความ"
+            },
+            "menu": {
+              "info": "เฉพาะเมนูระดับแรกเท่านั้นที่จะแสดง",
+              "label": "เมนู"
+            },
+            "menu_selection": {
+              "label": "แสดงคอลเลกชันทั้งหมด"
+            },
+            "menu_type": {
+              "label": "เปิดใช้งานปะรำ"
+            },
+            "text_color": {
+              "label": "ข้อความ"
+            }
+          }
+        },
+        "products": {
+          "name": "สินค้าคอลเลคชั่น",
+          "settings": {
+            "enable_filtering": {
+              "label": "เปิดใช้งานตัวกรอง"
+            },
+            "enable_infinte_scroll": {
+              "label": "เปิดใช้งานการเลื่อนแบบไม่มีที่สิ้นสุด"
+            },
+            "enable_sorting": {
+              "label": "เปิดใช้งานการเรียงลำดับ"
+            },
+            "filerandsorting": {
+              "label": "กรองและเรียงลำดับ"
+            },
+            "filter_type": {
+              "label": "สไตล์ตัวกรองเดสก์ท็อป",
+              "options": {
+                "dropdown": {
+                  "label": "หล่นลง"
+                },
+                "sidebar": {
+                  "label": "แถบด้านข้าง"
+                }
+              }
+            },
+            "infinite_scroll": {
+              "label": "เลื่อนไม่มีที่สิ้นสุด"
+            },
+            "infinte_scroll_type": {
+              "label": "ประเภทการเลื่อนแบบไม่มีที่สิ้นสุด",
+              "options": {
+                "onbutton": {
+                  "label": "เมื่อคลิกปุ่ม"
+                },
+                "onscroll": {
+                  "label": "เมื่อเลื่อน"
+                }
+              }
+            },
+            "products_per_page": {
+              "label": "สินค้าต่อหน้า"
+            }
+          }
+        }
+      },
+      "name": "คอลเลกชันหลัก",
+      "settings": {
+        "columns_desktop": {
+          "label": "ผลิตภัณฑ์ต่อแถว (เดสก์ท็อป)"
+        }
+      }
+    },
+    "main-login": {
+      "name": "เข้าสู่ระบบ",
+      "settings": {
+        "image": {
+          "label": "ภาพพื้นหลัง"
+        }
+      }
+    },
+    "main-order": {
+      "name": "ออเดอร์หลัก"
+    },
+    "main-page": {
+      "name": "หน้าหนังสือ",
+      "settings": {
+        "banner_height_desktop": {
+          "label": "ความสูงของเดสก์ท็อป"
+        },
+        "banner_height_mobile": {
+          "label": "ความสูงของมือถือ"
+        },
+        "banner_image": {
+          "info": "แนะนำขนาด 1920 x 200px",
+          "label": "รูปภาพแบนเนอร์"
+        },
+        "enable_fullwidth": {
+          "label": "เปิดใช้งานความกว้างเต็ม"
+        },
+        "heading_overly": {
+          "label": "เปิดใช้งานการซ้อนทับส่วนหัว"
+        }
+      }
+    },
+    "main-password": {
+      "name": "หน้ารหัสผ่าน",
+      "settings": {
+        "logo": {
+          "info": "แนะนำขนาด 110 x 36px",
+          "label": "โลโก้"
+        },
+        "logo_max_width": {
+          "label": "ขนาดโลโก้"
+        },
+        "password_heading": {
+          "label": "ชื่อรหัสผ่าน"
+        },
+        "show_newsletter": {
+          "label": "แสดงจดหมายข่าว"
+        }
+      }
+    },
+    "main-product": {
+      "blocks": {
+        "back_in_stock": {
+          "name": "กลับมาในสต็อก",
+          "settings": {
+            "btn_text": {
+              "label": "ข้อความของปุ่ม"
+            },
+            "heading": {
+              "label": "หัวเรื่อง"
+            },
+            "placeholder": {
+              "label": "ตัวยึดตำแหน่ง"
+            },
+            "success_message": {
+              "label": "ข้อความความสำเร็จ"
+            }
+          }
+        },
+        "buy_buttons": {
+          "name": "ปุ่มซื้อ",
+          "settings": {
+            "show_dynamic_checkout": {
+              "info": "เมื่อใช้วิธีการชำระเงินที่มีในร้านค้าของคุณ ลูกค้าจะเห็นตัวเลือกที่ต้องการ เช่น PayPal หรือ Apple Pay [เรียนรู้เพิ่มเติม](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+              "label": "แสดงปุ่มชำระเงินแบบไดนามิก"
+            },
+            "show_recipient_form": {
+              "info": "สามารถเลือกส่งผลิตภัณฑ์บัตรของขวัญไปยังผู้รับโดยตรงพร้อมกับข้อความส่วนตัวได้",
+              "label": "แสดงแบบฟอร์มข้อมูลผู้รับสำหรับผลิตภัณฑ์บัตรของขวัญ"
+            }
+          }
+        },
+        "collapsible_tab": {
+          "name": "เนื้อหาที่ยุบได้",
+          "settings": {
+            "description": {
+              "label": "คำอธิบาย"
+            },
+            "description_heading": {
+              "label": "หัวเรื่องคำอธิบาย"
+            },
+            "heading": {
+              "label": "หัวเรื่อง"
+            },
+            "paragraph_1": {
+              "label": "เนื้อหา 1"
+            },
+            "paragraph_2": {
+              "label": "เนื้อหา 2"
+            },
+            "paragraph_3": {
+              "label": "เนื้อหา 3"
+            },
+            "show_description": {
+              "label": "แสดงรายละเอียดสินค้า"
+            }
+          }
+        },
+        "complementary_products": {
+          "name": "ผลิตภัณฑ์เสริม",
+          "settings": {
+            "heading": {
+              "label": "หัวเรื่อง"
+            },
+            "paragraph": {
+              "label": "หากต้องการเลือกผลิตภัณฑ์เสริม ให้เพิ่มการค้นหา [เรียนรู้เพิ่มเติม](https://help.shopify.com/manual/online-store/search-and-discovery/product-recommendations)"
+            },
+            "products_count": {
+              "label": "สินค้านับ"
+            }
+          }
+        },
+        "coupon": {
+          "name": "รหัสคูปอง",
+          "settings": {
+            "coupon_code": {
+              "label": "รหัสคูปอง"
+            },
+            "coupon_description": {
+              "label": "คำอธิบาย"
+            },
+            "coupon_heading": {
+              "label": "หัวเรื่อง"
+            }
+          }
+        },
+        "custom_liquid": {
+          "name": "ของเหลวแบบกำหนดเอง",
+          "settings": {
+            "custom_liquid": {
+              "info": "เพิ่มตัวอย่างแอปหรือโค้ด Liquid อื่นๆ เพื่อสร้างการปรับแต่งขั้นสูง",
+              "label": "ของเหลวแบบกำหนดเอง"
+            }
+          }
+        },
+        "description": {
+          "name": "คำอธิบาย"
+        },
+        "icon_with_text": {
+          "name": "ไอคอนและข้อความ",
+          "settings": {
+            "icon": {
+              "label": "รหัส SVG"
+            },
+            "icon_1": {
+              "label": "ไอคอน 1"
+            },
+            "icon_2": {
+              "label": "ไอคอน 2"
+            },
+            "icon_3": {
+              "label": "ไอคอน 3"
+            },
+            "icon_list": {
+              "label": "ไอคอน"
+            },
+            "text": {
+              "label": "หัวเรื่อง"
+            }
+          }
+        },
+        "inventory_status": {
+          "name": "สถานะสินค้าคงคลัง",
+          "settings": {
+            "inventory_available_status": {
+              "label": "ข้อความที่มีอยู่"
+            },
+            "inventory_less_status": {
+              "info": "ใช้ ||สินค้าคงคลัง|| ",
+              "label": "ข้อความสินค้าคงคลังเหลือน้อย"
+            },
+            "minimun_inventory": {
+              "label": "สินค้าคงคลังขั้นต่ำ"
+            }
+          }
+        },
+        "pickup_availability": {
+          "name": "หยิบ"
+        },
+        "price": {
+          "name": "ราคา",
+          "settings": {
+            "hide_shipping_content": {
+              "label": "ซ่อนเนื้อหาการจัดส่ง"
+            }
+          }
+        },
+        "quantity_selector": {
+          "name": "เครื่องมือเลือกปริมาณ"
+        },
+        "rating": {
+          "name": "คะแนนรีวิว",
+          "settings": {
+            "paragraph": {
+              "content": "หากต้องการแสดงการให้คะแนน ให้เพิ่มแอปรีวิวสินค้า"
+            }
+          }
+        },
+        "sizeChart": {
+          "name": "ตารางขนาด",
+          "settings": {
+            "size_chart": {
+              "label": "เลือกแผนภูมิขนาด"
+            }
+          }
+        },
+        "sku": {
+          "name": "SKU"
+        },
+        "social-icons": {
+          "name": "การแบ่งปันทางสังคม",
+          "settings": {
+            "show_social_share_overlay": {
+              "label": "แสดงไอคอนด้านหน้าบล็อกแรก (เดสก์ท็อป)"
+            }
+          }
+        },
+        "text": {
+          "name": "ข้อความ",
+          "settings": {
+            "text": {
+              "label": "ข้อความ"
+            }
+          }
+        },
+        "title": {
+          "name": "ชื่อ"
+        },
+        "variant": {
+          "name": "ตัวเลือกตัวแปร"
+        }
+      },
+      "name": "สินค้าหลัก",
+      "settings": {
+        "desktop_media_width": {
+          "label": "ความกว้างของสื่อเดสก์ท็อป"
+        },
+        "enable_sticky": {
+          "label": "เปิดใช้งานเนื้อหาติดหนึบบนเดสก์ท็อป"
+        },
+        "gallery_style": {
+          "label": "สไตล์แกลเลอรี่",
+          "options": {
+            "slider": {
+              "label": "ม้าหมุน"
+            },
+            "stacked": {
+              "label": "ซ้อนกัน"
+            }
+          }
+        },
+        "image_zoom": {
+          "info": "การคลิกและโฮเวอร์ไม่ทำงานบนมือถือ",
+          "label": "ซูมภาพ",
+          "options": {
+            "click_hover": {
+              "label": "คลิกและโฮเวอร์"
+            },
+            "lightbox": {
+              "label": "เปิดไลท์บ็อกซ์"
+            },
+            "none": {
+              "label": "ไม่มี"
+            }
+          }
+        },
+        "overlapped_thumbnails": {
+          "info": "มันจะทำงานเฉพาะเมื่อตำแหน่งภาพขนาดย่อถูกตั้งค่าไว้ที่ด้านล่าง",
+          "label": "ภาพขนาดย่อที่ทับซ้อนกัน"
+        },
+        "sticky_add_to_cart": {
+          "enable_sticky_cart": {
+            "label": "เปิดใช้งานการเพิ่มสินค้าลงในรถเข็นแบบติดหนึบ"
+          },
+          "header": {
+            "label": "หยิบลงตะกร้าแบบเหนียวๆ"
+          }
+        },
+        "thumbnail_position": {
+          "label": "ตำแหน่งภาพขนาดย่อของเดสก์ท็อป"
+        },
+        "thumbnial_on_mobile": {
+          "info": "การตั้งค่านี้จะใช้ได้กับภาพขนาดย่อของผลิตภัณฑ์ที่เปิดใช้งาน",
+          "label": "แสดงภาพขนาดย่อในมุมมองมือถือ"
+        }
+      }
+    },
+    "main-register": {
+      "name": "ลงทะเบียน",
+      "settings": {
+        "image": {
+          "label": "ภาพพื้นหลัง"
+        }
+      }
+    },
+    "main-reset-password": {
+      "name": "รีเซ็ตรหัสผ่าน",
+      "settings": {
+        "image": {
+          "label": "ภาพพื้นหลัง"
+        }
+      }
+    },
+    "main-search": {
+      "name": "ค้นหา",
+      "settings": {
+        "enable_filtering": {
+          "label": "เปิดใช้งานตัวกรอง"
+        },
+        "enable_sorting": {
+          "label": "เปิดใช้งานการเรียงลำดับ"
+        },
+        "filter_type": {
+          "label": "สไตล์ตัวกรอง",
+          "options": {
+            "dropdown": {
+              "label": "หล่นลง"
+            },
+            "sidebar": {
+              "label": "แถบด้านข้าง"
+            }
+          }
+        }
+      }
+    },
+    "map": {
+      "name": "แผนที่",
+      "presets": {
+        "name": "แผนที่"
+      },
+      "settings": {
+        "header": {
+          "label": "เนื้อหา"
+        },
+        "map_address": {
+          "info": "ตรวจสอบให้แน่ใจว่าคุณได้เพิ่ม Google Maps API ในการตั้งค่าธีม> Google Maps",
+          "label": "ที่อยู่"
+        },
+        "map_style": {
+          "label": "สไตล์",
+          "options": {
+            "hybrid": {
+              "label": "ไฮบริด"
+            },
+            "roadmap": {
+              "label": "แผนการทำงาน"
+            },
+            "satellite": {
+              "label": "ดาวเทียม"
+            },
+            "terrain": {
+              "label": "ภูมิประเทศ"
+            }
+          }
+        },
+        "position": {
+          "label": "ตำแหน่ง"
+        }
+      }
+    },
+    "marquee-text": {
+      "blocks": {
+        "name": "ข้อความ",
+        "settings": {
+          "color": {
+            "label": "สีข้อความ"
+          },
+          "custom_icon": {
+            "label": "รหัส SVG ที่กำหนดเอง"
+          },
+          "default_color": {
+            "label": "ใช้สีเริ่มต้น"
+          },
+          "icon_color": {
+            "label": "สีที่กำหนดเอง"
+          },
+          "small_icon": {
+            "label": "ทำให้ไอคอนเล็กลง"
+          },
+          "text_gap": {
+            "label": "ช่องว่างระหว่างข้อความ"
+          },
+          "text_icon_gap": {
+            "label": "ช่องว่างระหว่างข้อความและไอคอน"
+          },
+          "text_style": {
+            "gradient": {
+              "label": "การไล่ระดับสี"
+            },
+            "label": "สไตล์",
+            "outline-filled": {
+              "label": "ร่างด้วยการเติม"
+            },
+            "outlined": {
+              "label": "ร่างไว้"
+            },
+            "solid": {
+              "label": "แข็ง"
+            }
+          }
+        }
+      },
+      "name": "ข้อความปะรำ",
+      "presets": {
+        "name": "ข้อความปะรำ"
+      },
+      "settings": {
+        "bgcolor": {
+          "label": "พื้นหลัง"
+        },
+        "rotation_style": {
+          "label": "ประเภทกระโจม",
+          "options": {
+            "always": {
+              "label": "เสมอ"
+            },
+            "both": {
+              "label": "ทั้งคู่"
+            },
+            "onscroll": {
+              "label": "เมื่อเลื่อน"
+            }
+          }
+        },
+        "text_angle": {
+          "label": "มุมการหมุน"
+        }
+      }
+    },
+    "media-banner": {
+      "name": "แบนเนอร์มีเดีย",
+      "settings": {
+        "content_position": {
+          "desktop": {
+            "label": "ตำแหน่งเดสก์ท็อป"
+          },
+          "mobile": {
+            "label": "ตำแหน่งมือถือ"
+          }
+        },
+        "desktop_height": {
+          "options": {
+            "fullscreen": {
+              "label": "เต็มจอ"
+            }
+          }
+        },
+        "enable_content_parallax": {
+          "info": "มันจะใช้ได้เฉพาะเมื่อเปิดใช้งานพารัลแลกซ์เท่านั้น",
+          "label": "เปิดใช้งานพารัลแลกซ์เนื้อหา"
+        },
+        "enable_parallax": {
+          "label": "เปิดใช้งานพารัลแลกซ์"
+        },
+        "paragraph_info": "ตำแหน่งเดสก์ท็อปและมือถือไม่สามารถใช้ได้กับพารัลแลกซ์ของเนื้อหา"
+      }
+    },
+    "media-grid": {
+      "blocks": {
+        "name": "กริด",
+        "settings": {
+          "background_color": {
+            "label": "สีซ้อนทับ"
+          },
+          "background_opacity": {
+            "label": "ความทึบของการวางซ้อน"
+          },
+          "btn_bg_color": {
+            "label": "พื้นหลังของปุ่ม"
+          },
+          "btn_border_color": {
+            "label": "ขอบปุ่ม"
+          },
+          "btn_hover_border_color": {
+            "label": "เส้นขอบของปุ่มโฮเวอร์"
+          },
+          "btn_hover_color": {
+            "label": "พื้นหลังของปุ่มโฮเวอร์"
+          },
+          "btn_hover_text_color": {
+            "label": "ข้อความโฮเวอร์ปุ่ม"
+          },
+          "btn_link": {
+            "info": "หากข้อความบนปุ่มว่างเปล่า ลิงก์จะถูกนำไปใช้กับรูปภาพทั้งหมด",
+            "label": "ลิงค์"
+          },
+          "btn_text_color": {
+            "label": "ข้อความของปุ่ม"
+          },
+          "button_as_link": {
+            "label": "แสดงปุ่มเป็นลิงค์"
+          },
+          "column": {
+            "label": "คอลัมน์"
+          },
+          "column_background": {
+            "label": "พื้นหลังคอลัมน์"
+          },
+          "content_alignment": {
+            "label": "การจัดตำแหน่งเนื้อหา"
+          },
+          "content_position": {
+            "label": "ตำแหน่งเนื้อหา",
+            "options__1": {
+              "label": "บนซ้าย"
+            },
+            "options__2": {
+              "label": "ท็อปเซ็นเตอร์"
+            },
+            "options__3": {
+              "label": "ขวาบน"
+            },
+            "options__4": {
+              "label": "กลางซ้าย"
+            },
+            "options__5": {
+              "label": "ศูนย์กลาง"
+            },
+            "options__6": {
+              "label": "กลางขวา"
+            },
+            "options__7": {
+              "label": "ล่างซ้าย"
+            },
+            "options__8": {
+              "label": "กลางล่าง"
+            },
+            "options__9": {
+              "label": "ล่างขวา"
+            }
+          },
+          "content_width": {
+            "label": "ความกว้างของเนื้อหาเดสก์ท็อป"
+          },
+          "heading_color": {
+            "label": "หัวเรื่อง"
+          },
+          "heading_color_hover": {
+            "label": "เลื่อนหัวเรื่อง"
+          },
+          "image_on_hover": {
+            "label": "แสดงรูปภาพ / วิดีโอเมื่อวางเมาส์เหนือ"
+          },
+          "media_image": {
+            "info": "แนะนำขนาด 1250 x 1250 .jpg",
+            "label": "ภาพ"
+          },
+          "row": {
+            "label": "แถว"
+          },
+          "text_color": {
+            "label": "คำอธิบาย"
+          },
+          "text_color_hover": {
+            "label": "โฮเวอร์คำอธิบาย"
+          },
+          "video": {
+            "label": "วีดีโอ"
+          }
+        }
+      },
+      "name": "ตารางสื่อ",
+      "presets": {
+        "name": "ตารางสื่อ"
+      },
+      "settings": {
+        "desktop_row_height": {
+          "label": "ความสูงของแถวเดสก์ท็อป"
+        },
+        "grid_column_gap": {
+          "label": "ช่องว่างของคอลัมน์กริด"
+        },
+        "make_content_sticky": {
+          "label": "ทำให้เนื้อหามีความเหนียว"
+        },
+        "mobile_row_height": {
+          "label": "ความสูงของแถวมือถือ"
+        }
+      }
+    },
+    "media-with-text-list": {
+      "blocks": {
+        "name": "รายการข้อความ"
+      },
+      "name": "สื่อพร้อมรายการข้อความ",
+      "presets": {
+        "name": "สื่อพร้อมรายการข้อความ"
+      },
+      "settings": {
+        "active_background": {
+          "label": "พื้นหลังที่ใช้งานอยู่"
+        },
+        "active_color": {
+          "label": "ข้อความ/ลูกศรที่ใช้งานอยู่"
+        }
+      }
+    },
+    "mobile_categories": {
+      "blocks": {
+        "name": "หมวดหมู่"
+      },
+      "name": "หมวดหมู่มือถือ",
+      "settings": {
+        "enable_on_home_page": {
+          "label": "แสดงในหน้าแรกเท่านั้น"
+        },
+        "horizontal_position": {
+          "label": "ตำแหน่งแนวนอน"
+        },
+        "icon_image": {
+          "info": "แนะนำขนาด 30 X 30px",
+          "label": "ไอคอน"
+        },
+        "title": {
+          "info": "สูงสุด 6 ตัวอักษร",
+          "label": "ข้อความ"
+        },
+        "vertical_position": {
+          "label": "ตำแหน่งแนวตั้ง"
+        }
+      }
+    },
+    "mobile_dock": {
+      "blocks": {
+        "account": {
+          "name": "บัญชี"
+        },
+        "cart": {
+          "name": "รถเข็น"
+        },
+        "custom_code": {
+          "label": "รหัส SVG ที่กำหนดเอง"
+        },
+        "home": {
+          "name": "บ้าน"
+        },
+        "link": {
+          "name": "ลิงค์",
+          "settings": {
+            "custom_icon": {
+              "label": "ไอคอน SVG แบบกำหนดเอง"
+            },
+            "link": {
+              "label": "ลิงค์"
+            },
+            "title": {
+              "label": "ชื่อ"
+            }
+          }
+        },
+        "menu": {
+          "name": "เมนู"
+        },
+        "search": {
+          "name": "ค้นหา"
+        }
+      },
+      "name": "แท่นชาร์จมือถือ",
+      "settings": {
+        "enable_dock": {
+          "label": "เปิดใช้งานท่าเรือ"
+        }
+      }
+    },
+    "mulicolumn": {
+      "blocks": {
+        "name": "คอลัมน์",
+        "settings": {
+          "column_background": {
+            "label": "แสดงพื้นหลัง"
+          },
+          "column_background_color": {
+            "label": "พื้นหลังคอลัมน์"
+          },
+          "column_link_color": {
+            "label": "สีของลิงก์คอลัมน์"
+          },
+          "column_text_color": {
+            "label": "สีข้อความของคอลัมน์"
+          },
+          "link_label": {
+            "label": "ข้อความลิงก์"
+          },
+          "link_url": {
+            "info": "หากข้อความลิงก์ว่างเปล่า ลิงก์นั้นจะถูกนำไปใช้กับรูปภาพทั้งหมด",
+            "label": "ลิงค์"
+          }
+        }
+      },
+      "name": "หลายคอลัมน์",
+      "presets": {
+        "name": "หลายคอลัมน์"
+      },
+      "settings": {
+        "layout_type": {
+          "label": "การจัดเรียงเนื้อหาคอลัมน์",
+          "options": {
+            "inline-reverse": {
+              "label": "อินไลน์ (ย้อนกลับ)"
+            },
+            "inline": {
+              "label": "แบบอินไลน์"
+            },
+            "stacked-reverse": {
+              "label": "ซ้อนกัน (ย้อนกลับ)"
+            },
+            "stacked": {
+              "label": "ซ้อนกัน"
+            }
+          }
+        }
+      }
+    },
+    "newsletter": {
+      "name": "จดหมายข่าว",
+      "presets": {
+        "name": "จดหมายข่าว"
+      },
+      "settings": {
+        "background_image": {
+          "label": "ภาพพื้นหลัง"
+        },
+        "btn-text": {
+          "label": "ข้อความของปุ่ม"
+        },
+        "content_alignment": {
+          "label": "การจัดตำแหน่ง"
+        },
+        "content_postion": {
+          "label": "ตำแหน่ง"
+        },
+        "image_overlay_color": {
+          "label": "ภาพซ้อนทับ"
+        },
+        "newsletter_background": {
+          "label": "เปิดใช้งานภาพพื้นหลัง"
+        },
+        "placeholder": {
+          "label": "ตัวยึดตำแหน่งอีเมล"
+        }
+      }
+    },
+    "page-banner": {
+      "name": "แบนเนอร์หลัก"
+    },
+    "product-details": {
+      "name": "รายละเอียดสินค้า"
+    },
+    "product_details": {
+      "blocks": {
+        "collapsible": {
+          "name": "เนื้อหาที่ยุบได้",
+          "settings": {
+            "collapsible_content": {
+              "label": "คำอธิบาย"
+            },
+            "collapsible_heading": {
+              "label": "หัวเรื่อง"
+            }
+          }
+        },
+        "description": {
+          "name": "คำอธิบาย",
+          "settings": {
+            "desc_heading": {
+              "label": "หัวเรื่องคำอธิบาย"
+            }
+          }
+        },
+        "specification": {
+          "name": "ข้อมูลจำเพาะ"
+        }
+      },
+      "name": "รายละเอียดสินค้า",
+      "settings": {
+        "box_position": {
+          "label": "ตำแหน่ง",
+          "option": {
+            "left": {
+              "label": "ซ้าย"
+            },
+            "right": {
+              "label": "ขวา"
+            }
+          }
+        },
+        "spec_color": {
+          "label": "ข้อมูลจำเพาะสี"
+        },
+        "spec_grad_color": {
+          "info": "สีไฮไลต์แบบไล่ระดับสีจะเขียนทับสีที่เน้นส่วนหัว",
+          "label": "สีไฮไลท์แบบไล่ระดับ"
+        },
+        "spec_header": {
+          "label": "ข้อมูลจำเพาะ"
+        }
+      }
+    },
+    "recently-viewed-product": {
+      "name": "สินค้าที่เพิ่งเข้าชม",
+      "presets": {
+        "name": "สินค้าที่เพิ่งเข้าชม"
+      },
+      "settings": {
+        "paragraph": {
+          "content": "ส่วนจะถูกซ่อนไว้หากไม่มีการเยี่ยมชมผลิตภัณฑ์"
+        },
+        "products_count": {
+          "label": "สินค้ามาโชว์"
+        }
+      }
+    },
+    "related-products": {
+      "name": "สินค้าที่เกี่ยวข้อง",
+      "settings": {
+        "products_count": {
+          "label": "สินค้ามาโชว์"
+        }
+      }
+    },
+    "rich_text": {
+      "name": "ข้อความที่หลากหลาย",
+      "presets": {
+        "name": "ข้อความที่หลากหลาย"
+      },
+      "settings": {
+        "alignment": {
+          "label": "การจัดตำแหน่ง"
+        },
+        "button_size": {
+          "label": "ขนาดปุ่ม"
+        },
+        "content": {
+          "content": "เนื้อหา"
+        },
+        "content_postion": {
+          "label": "ตำแหน่ง"
+        },
+        "content_width": {
+          "label": "ความกว้างของเดสก์ท็อป"
+        },
+        "divider": {
+          "label": "ตัวแบ่ง"
+        },
+        "image_size": {
+          "label": "ขนาดรูปภาพ"
+        },
+        "show_link": {
+          "label": "แสดงปุ่มเป็นลิงค์"
+        }
+      }
+    },
+    "rotating-text": {
+      "name": "ทิกเกอร์ข่าว",
+      "presets": {
+        "name": "ทิกเกอร์ข่าว"
+      },
+      "settings": {
+        "bgcolor": {
+          "label": "พื้นหลัง"
+        },
+        "direction": {
+          "options": {
+            "left": {
+              "label": "จากซ้ายไปขวา"
+            },
+            "right": {
+              "label": "จากขวาไปซ้าย"
+            }
+          }
+        },
+        "direction_header": {
+          "content": "ทิศทาง"
+        },
+        "font_size": {
+          "content": "ขนาดตัวอักษร"
+        },
+        "section_border": {
+          "label": "แสดงเส้นขอบด้านบนและด้านล่าง"
+        },
+        "text1": {
+          "label": "หัวเรื่อง"
+        },
+        "tiled_layout": {
+          "label": "เปิดใช้งานเค้าโครงแบบเรียงต่อกัน"
+        }
+      }
+    },
+    "slideshow": {
+      "blocks": {
+        "name": {
+          "label": "สไลด์"
+        },
+        "settings": {
+          "content_alignment": {
+            "desktop": {
+              "label": "การจัดตำแหน่งเดสก์ท็อป"
+            },
+            "mobile": {
+              "label": "การจัดตำแหน่งมือถือ"
+            }
+          },
+          "content_position": {
+            "desktop": {
+              "label": "ตำแหน่งเดสก์ท็อป"
+            },
+            "mobile": {
+              "label": "ตำแหน่งมือถือ"
+            }
+          },
+          "content_width": {
+            "desktop": {
+              "label": "ความกว้างของเดสก์ท็อป"
+            }
+          },
+          "enable_highlight_background": {
+            "label": "เปิดใช้งานพื้นหลังไฮไลต์"
+          },
+          "overlay_color": {
+            "content": {
+              "label": "พื้นหลังของเนื้อหา"
+            },
+            "image": {
+              "label": "พื้นหลังซ้อนทับ"
+            }
+          },
+          "slide_button": {
+            "primary": {
+              "label": "ปุ่มหลัก"
+            },
+            "secondary": {
+              "label": "ปุ่มรอง"
+            }
+          },
+          "slide_button_info": "หากข้อความของปุ่มทั้งสอง (หลักและรอง) ว่างเปล่า ลิงก์จะถูกนำไปใช้กับรูปภาพทั้งหมด โดยจะให้ความสำคัญกับลิงก์ของปุ่มหลัก",
+          "slide_image": {
+            "desktop": {
+              "label": "รูปภาพเดสก์ท็อป"
+            },
+            "mobile": {
+              "label": "รูปภาพบนมือถือ"
+            }
+          },
+          "slide_video": {
+            "info": "รองรับเฉพาะวิดีโอ .mp4",
+            "label": "วิดีโอพื้นหลัง"
+          }
+        }
+      },
+      "name": "สไลด์โชว์",
+      "presets": {
+        "name": "สไลด์โชว์"
+      },
+      "settings": {
+        "arrow_background": {
+          "label": "พื้นหลัง"
+        },
+        "arrow_border": {
+          "label": "ชายแดน"
+        },
+        "arrow_foreground": {
+          "label": "ไอคอน"
+        },
+        "arrow_header": {
+          "content": "ลูกศร"
+        },
+        "auto_rotate": {
+          "label": "หมุนสไลด์อัตโนมัติ"
+        },
+        "banner_marquee": {
+          "label": "เปิดใช้งานข้อความปะรำ"
+        },
+        "banner_marquee_color": {
+          "label": "สีข้อความ"
+        },
+        "change_slides_speed": {
+          "label": "เปลี่ยนสไลด์ทุกครั้ง"
+        },
+        "desktop_height": {
+          "label": "ความสูงของเดสก์ท็อป",
+          "options": {
+            "adapt_to_slide": "ปรับให้เข้ากับสไลด์แรกโดยอัตโนมัติ",
+            "fullscreen": "เต็มจอ"
+          }
+        },
+        "enable_block_color": {
+          "label": "ใช้สีบล็อก"
+        },
+        "enable_compact_width": {
+          "info": "มันจะไม่ทำงานเมื่อเลือก 'เปิดใช้งานความกว้างเต็ม'",
+          "label": "เปิดใช้งานความกว้างแบบกะทัดรัด (เดสก์ท็อป)"
+        },
+        "item_gap": {
+          "desktop": {
+            "label": "ช่องว่างรายการเดสก์ท็อป"
+          },
+          "mobile": {
+            "label": "ช่องว่างรายการมือถือ"
+          }
+        },
+        "mobile": {
+          "content": "เค้าโครงมือถือ"
+        },
+        "mobile_height": {
+          "label": "ความสูงของมือถือ",
+          "options": {
+            "adapt_to_slide": "ปรับให้เข้ากับสไลด์แรกโดยอัตโนมัติ",
+            "fullscreen": "เต็มจอ"
+          }
+        },
+        "navigation_type": {
+          "label": "ประเภทการนำทาง",
+          "options": {
+            "arrow": "ลูกศร",
+            "dots": "จุด",
+            "none": "ไม่มี"
+          }
+        },
+        "show_text_below": {
+          "label": "แสดงเนื้อหาด้านล่างภาพบนมือถือ"
+        },
+        "slider_transition": {
+          "label": "ภาพเคลื่อนไหวแบบสไลด์",
+          "options": {
+            "fade": "เลือนหายไป",
+            "slide": "สไลด์"
+          }
+        }
+      }
+    },
+    "split-banner": {
+      "blocks": {
+        "name": "แยกแบนเนอร์",
+        "settings": {
+          "overlay_color": {
+            "label": "พื้นหลังซ้อนทับ"
+          },
+          "overlay_opacity": {
+            "label": "ความทึบของการวางซ้อน"
+          }
+        }
+      },
+      "name": "แยกแบนเนอร์",
+      "presets": {
+        "name": "แยกแบนเนอร์"
+      }
+    },
+    "spotlight": {
+      "blocks": {
+        "spot": {
+          "name": "ดู",
+          "settings": {
+            "horizontal": {
+              "label": "ตำแหน่งแนวนอน"
+            },
+            "hotspot_checkbox": {
+              "label": "เปิดใช้งานฮอตสปอต"
+            },
+            "hotspot_header": {
+              "content": "ฮอตสปอต 1"
+            },
+            "hotspot_header2": {
+              "content": "ฮอตสปอต 2"
+            },
+            "hotspot_header3": {
+              "content": "ฮอตสปอต 3"
+            },
+            "image": {
+              "label": "ภาพ"
+            },
+            "marquee_background": {
+              "label": "พื้นหลังกระโจม"
+            },
+            "marquee_disable_mobile": {
+              "label": "ปิดการใช้งานปะรำบนมือถือ"
+            },
+            "marquee_on_hover": {
+              "label": "แสดงปะรำเมื่อโฮเวอร์"
+            },
+            "marquee_text": {
+              "label": "เปิดใช้งานข้อความปะรำ"
+            },
+            "marquee_text_color": {
+              "label": "สีกระโจม"
+            },
+            "product": {
+              "label": "ผลิตภัณฑ์"
+            },
+            "spot_color": {
+              "label": "สีเฉพาะจุด"
+            },
+            "spot_color_background": {
+              "label": "สีไอคอนจุด"
+            },
+            "vertical": {
+              "label": "ตำแหน่งแนวตั้ง"
+            }
+          }
+        }
+      },
+      "name": "เลือกซื้อรูปลักษณ์",
+      "presets": {
+        "name": "เลือกซื้อรูปลักษณ์"
+      },
+      "settings": {
+        "section_fullwidth": {
+          "label": "ทำให้ส่วนเต็มความกว้าง"
+        }
+      }
+    },
+    "store_locator": {
+      "blocks": {
+        "store": {
+          "name": "เก็บ",
+          "settings": {
+            "loaction_image": {
+              "label": "เก็บภาพ"
+            },
+            "location": {
+              "info": "ตรวจสอบให้แน่ใจว่าคุณได้เพิ่ม Google Maps API ในการตั้งค่าธีม> Google Maps",
+              "label": "ที่ตั้ง"
+            },
+            "store_detail": {
+              "label": "รายละเอียดร้านค้า"
+            },
+            "store_image": {
+              "label": "ภาพ"
+            },
+            "store_name": {
+              "label": "ชื่อร้าน"
+            }
+          }
+        }
+      },
+      "name": "ที่ตั้งร้านค้า",
+      "presets": {
+        "name": "ที่ตั้งร้านค้า"
+      },
+      "settings": {
+        "image_height": {
+          "label": "ความสูงของเดสก์ท็อป"
+        },
+        "map": {
+          "content": "แผนที่"
+        },
+        "mobile_image_height": {
+          "label": "ความสูงของมือถือ"
+        }
+      }
+    },
+    "testimonials": {
+      "blocks": {
+        "quote": {
+          "name": "อ้าง",
+          "settings": {
+            "author": {
+              "label": "ชื่อผู้แต่ง"
+            },
+            "heading": {
+              "label": "หัวเรื่อง"
+            },
+            "message": {
+              "label": "คำอธิบาย"
+            },
+            "rating": {
+              "label": "ระดับดาว"
+            }
+          }
+        }
+      },
+      "name": "ข้อความรับรอง",
+      "presets": {
+        "name": "ข้อความรับรอง"
+      },
+      "settings": {
+        "background_blur": {
+          "label": "เปิดใช้งานการเบลอพื้นหลัง"
+        },
+        "background_image": {
+          "label": "ภาพพื้นหลัง"
+        },
+        "column_count": {
+          "label": "จำนวนคอลัมน์บนเดสก์ท็อป"
+        },
+        "column_header": {
+          "content": "คอลัมน์"
+        },
+        "layout_type": {
+          "carousel": {
+            "label": "ม้าหมุน"
+          },
+          "grid": {
+            "label": "กริด"
+          },
+          "label": "สไตล์"
+        },
+        "load_more": {
+          "info": "มันจะใช้งานได้มากกว่า 8 บล็อก",
+          "label": "เปิดใช้งานการโหลดเพิ่มเติม"
+        },
+        "mobile_layout": {
+          "label": "เค้าโครงมือถือ",
+          "options": {
+            "1-column": {
+              "label": "1 คอลัมน์"
+            },
+            "2-column": {
+              "label": "2 คอลัมน์"
+            }
+          }
+        },
+        "swipe_mobile": {
+          "label": "เปิดใช้งานการปัดบนมือถือ"
+        }
+      }
+    },
+    "text_with_icon": {
+      "blocks": {
+        "icon-with-text": {
+          "name": "ข้อความที่มีไอคอน",
+          "settings": {
+            "icon": {
+              "label": "ไอคอน"
+            },
+            "icon_background_color": {
+              "label": "พื้นหลังไอคอน"
+            },
+            "svg_code": {
+              "label": "รหัส SVG"
+            }
+          }
+        }
+      },
+      "name": "ข้อความที่มีไอคอน",
+      "presets": {
+        "name": "ข้อความที่มีไอคอน"
+      },
+      "settings": {
+        "column_count": {
+          "label": "จำนวนคอลัมน์บนเดสก์ท็อป"
+        },
+        "column_count_mobile": {
+          "label": "จำนวนคอลัมน์มือถือ"
+        },
+        "column_header": {
+          "content": "คอลัมน์"
+        },
+        "icon_background": {
+          "label": "แสดงพื้นหลัง"
+        },
+        "icon_header": {
+          "content": "ไอคอน"
+        },
+        "icon_position": {
+          "label": "ตำแหน่ง"
+        },
+        "mobile_swipe": {
+          "label": "เปิดใช้งานการปัดบนมือถือ"
+        }
+      }
+    },
+    "video": {
+      "name": "วีดีโอ",
+      "presets": {
+        "name": "วีดีโอ"
+      },
+      "settings": {
+        "autoplay": {
+          "info": "หากเปิดใช้งานการเล่นอัตโนมัติ วิดีโอจะถูกปิดเสียง",
+          "label": "เปิดใช้งานการเล่นอัตโนมัติ"
+        },
+        "button": {
+          "label": "พื้นหลังของปุ่ม"
+        },
+        "button_text": {
+          "label": "ข้อความของปุ่ม"
+        },
+        "content": {
+          "content": "เนื้อหา"
+        },
+        "content_position": {
+          "label": "ตำแหน่ง"
+        },
+        "content_width": {
+          "label": "ความกว้าง"
+        },
+        "cover_image": {
+          "info": "แนะนํา 1920 x 720px รูปภาพหน้าปกจะไม่ปรากฏให้เห็นหากเปิดใช้งานการเล่นอัตโนมัติ",
+          "label": "ภาพปก"
+        },
+        "description": {
+          "label": "คำอธิบาย"
+        },
+        "general": {
+          "content": "ทั่วไป"
+        },
+        "heading": {
+          "label": "หัวเรื่อง"
+        },
+        "overlay_color": {
+          "label": "พื้นหลังซ้อนทับ"
+        },
+        "overlay_opacity": {
+          "label": "ความทึบของการวางซ้อน"
+        },
+        "slanted_background": {
+          "label": "เปิดใช้งานพื้นหลังเอียง"
+        },
+        "video": {
+          "label": "Shopify โฮสต์วิดีโอ"
+        },
+        "video_full_width": {
+          "label": "ทำให้ส่วนเต็มความกว้าง"
+        },
+        "video_header": {
+          "content": "วีดีโอ"
+        },
+        "video_height": {
+          "auto": "อัตโนมัติ",
+          "desktop": "ความสูงของเดสก์ท็อป",
+          "fullscreen": "เต็มจอ",
+          "mobile": "ความสูงของมือถือ"
+        },
+        "video_url": {
+          "label": "URL",
+          "placeholder": "ใช้ URL ของ YouTube หรือ Vimeo"
+        }
+      }
+    },
+    "video_text_overlay": {
+      "name": "วิดีโอที่มีการซ้อนทับข้อความ",
+      "presets": {
+        "name": "วิดีโอที่มีการซ้อนทับข้อความ"
+      },
+      "settings": {
+        "blocks_content_position": {
+          "label": "บล็อกตำแหน่งเนื้อหา",
+          "options": {
+            "center": {
+              "label": "ศูนย์"
+            },
+            "left": {
+              "label": "ซ้าย"
+            },
+            "right": {
+              "label": "ขวา"
+            }
+          }
+        },
+        "cover_image": {
+          "info": "แนะนำขนาด 1920 x 720px ",
+          "label": "ภาพปก"
+        },
+        "video": {
+          "label": "Shopify โฮสต์วิดีโอ"
+        },
+        "video_url": {
+          "label": "URL",
+          "placeholder": "ใช้ URL ของ YouTube หรือ Vimeo"
+        }
+      }
+    },
+    "social_media_gallery": {
+      "name": "แกลเลอรี่โซเชียลมีเดีย",
+      "settings": {
+        "social_media_icon": {
+          "label": "ไอคอนมีเดีย",
+          "options": {
+            "none": {
+              "label": "ไม่มี"
+            }
+          }
+        }
+      },
+      "blocks": {
+        "name": "สื่อ"
+      },
+      "presets": {
+        "name": "แกลเลอรี่โซเชียลมีเดีย"
+      }
+    }
+  },
+  "settings_schema": {
+    "advance_settings": {
+      "name": "ตั้งค่าขั้นสูง",
+      "settings": {
+        "enable_blur_effect": {
+          "label": "เปิดใช้งานเอฟเฟกต์เบลอ"
+        },
+        "page_overlay_background": {
+          "label": "พื้นหลังการซ้อนทับหน้า"
+        },
+        "page_overlay_opacity": {
+          "label": "ความทึบ"
+        }
+      }
+    },
+    "age_verification_popup": {
+      "name": "ป๊อปอัปการยืนยันอายุ",
+      "settings": {
+        "age-decline_btn_text": {
+          "label": "ข้อความปุ่มปฏิเสธ"
+        },
+        "age_verification_description": {
+          "label": "คำอธิบาย"
+        },
+        "age_verification_heading": {
+          "label": "หัวเรื่อง"
+        },
+        "age_verification_pop_enable": {
+          "label": "เปิดใช้งานป๊อปอัปการยืนยันอายุ"
+        },
+        "approve_btn_text": {
+          "label": "ข้อความปุ่มอนุมัติ"
+        },
+        "decline_btn_text": {
+          "label": "ข้อความปุ่มปฏิเสธ"
+        },
+        "decline_heading": {
+          "label": "รุ่นอายุต่ำกว่า 18 ปี"
+        },
+        "decline_sub-heading": {
+          "label": "คำอธิบายอายุต่ำกว่า 18 ปี"
+        }
+      }
+    },
+    "animation": {
+      "name": "แอนิเมชั่น",
+      "setting": {
+        "enable_animation": {
+          "label": "เปิดใช้งานภาพเคลื่อนไหว"
+        }
+      }
+    },
+    "blog_posts": {
+      "name": "โพสต์ในบล็อก",
+      "settings": {
+        "content_colors": {
+          "content": "สีซ้อนทับของเนื้อหา"
+        },
+        "grid_image_size": {
+          "label": "อัตราส่วนภาพตาราง",
+          "options": {
+            "adapt-to-content": {
+              "label": "ปรับให้เข้ากับเนื้อหา"
+            },
+            "auto": {
+              "label": "อัตโนมัติ"
+            },
+            "landscape": {
+              "label": "ภูมิประเทศ"
+            },
+            "portrait": {
+              "label": "ภาพเหมือน"
+            },
+            "square": {
+              "label": "สี่เหลี่ยม"
+            }
+          }
+        },
+        "show_content_overlay": {
+          "label": "แสดงเนื้อหาเป็นการซ้อนทับ"
+        }
+      }
+    },
+    "button": {
+      "name": "ปุ่ม",
+      "settings": {
+        "button_border_thickness": {
+          "label": "ความหนาของเส้นขอบ"
+        },
+        "button_font": {
+          "label": "ครอบครัวแบบอักษร",
+          "options": {
+            "body": {
+              "label": "ร่างกาย"
+            },
+            "heading": {
+              "label": "หัวเรื่อง"
+            }
+          }
+        },
+        "button_hover_effect": {
+          "label": "เอฟเฟกต์โฮเวอร์",
+          "options": {
+            "modern": {
+              "label": "ทันสมัย"
+            },
+            "none": {
+              "label": "ไม่มี"
+            },
+            "standard": {
+              "label": "มาตรฐาน"
+            }
+          }
+        },
+        "button_text_transform": {
+          "label": "การแปลงข้อความ",
+          "options": {
+            "unset": {
+              "label": "ค่าเริ่มต้น"
+            },
+            "uppercase": {
+              "label": "ตัวพิมพ์ใหญ่"
+            }
+          }
+        }
+      }
+    },
+    "cart": {
+      "name": "รถเข็น",
+      "settings": {
+        "cart_note": {
+          "label": "เปิดใช้งานบันทึกรถเข็น"
+        },
+        "cart_notification_header": {
+          "cart_notification_bar": {
+            "label": "ข้อความ"
+          },
+          "label": "แถบแจ้งเตือนรถเข็น"
+        },
+        "cart_recommendation_header": {
+          "label": "แนะนำรถเข็น"
+        },
+        "cs_link": {
+          "label": "ช้อปปิ้งลิงก์ที่กำหนดเองต่อไป"
+        },
+        "custom_colors": {
+          "label": "รหัสสี/รูปภาพที่กำหนดเอง"
+        },
+        "empty_cart": {
+          "label": "รถเข็นเปล่า"
+        },
+        "empty_menu_select": {
+          "info": "เมนูนี้จะไม่แสดงรายการแบบเลื่อนลง",
+          "label": "เมนู"
+        },
+        "enable_cartdrawer": {
+          "label": "เปิดใช้งานลิ้นชักรถเข็น"
+        },
+        "enable_gift_wrap": {
+          "label": "เปิดใช้งานการห่อของขวัญ"
+        },
+        "enable_recommendation": {
+          "label": "เปิดใช้งานคำแนะนำ"
+        },
+        "enable_shipping": {
+          "info": "หมายเหตุ: ฟีเจอร์นี้ใช้ได้กับวิธีการจัดส่งเท่านั้น หากคุณใช้วิธีการจัดส่งหลายวิธี ระบบอาจแสดงค่าเท็จให้ลูกค้าเห็น",
+          "label": "เปิดใช้งานแถบการจัดส่ง"
+        },
+        "gift_wrap": {
+          "content": "กระดาษห่อของขวัญ",
+          "info": "ต้องตั้งค่ากระดาษห่อของขวัญเป็นสินค้า"
+        },
+        "gift_wrap_product": {
+          "label": "ผลิตภัณฑ์"
+        },
+        "gift_wrap_text": {
+          "label": "ข้อความ"
+        },
+        "hide_continue_shopping": {
+          "label": "โชว์ชอปปิ้งต่อ"
+        },
+        "recomded_products": {
+          "label": "สินค้า"
+        },
+        "shipping_bar": {
+          "content": "บาร์จัดส่ง",
+          "info": "ฟีเจอร์นี้ใช้ได้กับวิธีการจัดส่งเท่านั้น หากคุณใช้วิธีการจัดส่งหลายวิธี ระบบอาจแสดงค่าเท็จให้ลูกค้าเห็น"
+        },
+        "shipping_message": {
+          "info": "ใช้ ||จํานวนเงิน|| เพื่อแสดงจํานวนเงินภายในข้อความ",
+          "label": "ข้อความ"
+        },
+        "shipping_rate": {
+          "info": "เขียนตัวเลข ห้ามใช้ตัวอักษรหรืออักขระพิเศษ",
+          "label": "ราคาส่งขั้นต่ำ"
+        },
+        "shipping_success": {
+          "label": "ข้อความความสำเร็จ"
+        }
+      }
+    },
+    "color_scheme": {
+      "settings": {
+        "alternate_background": {
+          "label": "พื้นหลังสำรอง"
+        },
+        "background": {
+          "label": "พื้นหลัง"
+        },
+        "button_background": {
+          "label": "พื้นหลังของปุ่ม"
+        },
+        "button_border": {
+          "label": "ขอบปุ่ม"
+        },
+        "button_hover_background": {
+          "label": "พื้นหลังของปุ่มโฮเวอร์"
+        },
+        "button_hover_border": {
+          "label": "เส้นขอบของปุ่มโฮเวอร์"
+        },
+        "button_hover_text": {
+          "label": "ข้อความโฮเวอร์ปุ่ม"
+        },
+        "button_text": {
+          "label": "ข้อความของปุ่ม"
+        },
+        "default_color_scheme": {
+          "label": "โทนสีเริ่มต้น"
+        },
+        "divider": {
+          "label": "ตัวแบ่ง"
+        },
+        "gradient_background": {
+          "info": "สีไล่ระดับสีจะแทนที่สีพื้นหลัง",
+          "label": "พื้นหลังไล่ระดับสี"
+        },
+        "heading": {
+          "label": "หัวเรื่อง"
+        },
+        "image_background": {
+          "label": "ภาพพื้นหลัง"
+        },
+        "input_background": {
+          "label": "พื้นหลังอินพุต"
+        },
+        "input_border": {
+          "label": "เส้นขอบอินพุต"
+        },
+        "input_text": {
+          "label": "ป้อนข้อความ"
+        },
+        "link": {
+          "label": "ลิงค์"
+        },
+        "product_background": {
+          "label": "พื้นหลังผลิตภัณฑ์"
+        },
+        "product_border": {
+          "label": "ขอบสินค้า"
+        },
+        "product_card": {
+          "content": "บัตรผลิตภัณฑ์"
+        },
+        "product_title": {
+          "label": "ชื่อผลิตภัณฑ์"
+        },
+        "slider": {
+          "label": "สไลเดอร์"
+        },
+        "slider_border": {
+          "label": "เส้นขอบลูกศร"
+        },
+        "slider_icon": {
+          "label": "ไอคอนแอร์โรว์"
+        },
+        "slider_icon_background": {
+          "label": "พื้นหลังไอคอนลูกศร"
+        },
+        "text": {
+          "label": "ข้อความ"
+        }
+      }
+    },
+    "drawer_popup": {
+      "name": "ลิ้นชัก / ป๊อปอัพ",
+      "settings": {
+        "drawer": {
+          "content": "ลิ้นชัก"
+        },
+        "popup": {
+          "content": "ป๊อปอัพ"
+        }
+      }
+    },
+    "favicon": {
+      "name": "ฟาวิคอน",
+      "settings": {
+        "favicon": {
+          "info": "แนะนำขนาด 16 x 16px",
+          "label": "ไอคอน"
+        }
+      }
+    },
+    "global_color": {
+      "name": "สีสากล",
+      "settings": {
+        "custom_badge_background": {
+          "label": "พื้นหลังป้ายที่กำหนดเอง"
+        },
+        "custom_badge_text": {
+          "label": "ข้อความป้ายสถานะที่กำหนดเอง"
+        },
+        "product_discount_background": {
+          "label": "พื้นหลังส่วนลดสินค้า"
+        },
+        "product_discount_text": {
+          "label": "ข้อความส่วนลดสินค้า"
+        },
+        "sale_badge_background": {
+          "label": "ภูมิหลังของป้ายขาย"
+        },
+        "sale_badge_text": {
+          "label": "ข้อความตราขาย"
+        },
+        "soldout_badge_background": {
+          "label": "พื้นหลังป้ายขายหมด"
+        },
+        "soldout_badge_text": {
+          "label": "ข้อความป้ายขายหมด"
+        },
+        "star_rating_color": {
+          "label": "สีระดับดาว"
+        }
+      }
+    },
+    "google_map": {
+      "name": "แผนที่ของกูเกิล",
+      "settings": {
+        "googlemapapi": {
+          "info": "คุณจะต้องลงทะเบียน [คีย์ Google Maps API](https://shinedezign.gitbook.io/shark-documentation/overview/theme-settings#google-map) เพื่อแสดงแผนที่.",
+          "label": "คีย์ Google Maps API"
+        }
+      }
+    },
+    "header_footer_color": {
+      "name": "สีส่วนหัวและส่วนท้าย",
+      "settings": {
+        "footer": {
+          "content": "ส่วนท้าย"
+        },
+        "header": {
+          "content": "หัวข้อ"
+        },
+        "input_background": {
+          "label": "พื้นหลังอินพุต"
+        },
+        "link_hover": {
+          "label": "ลิงก์โฮเวอร์"
+        },
+        "mobile_menu": {
+          "content": "เมนูย่อย/เมนูมือถือ"
+        },
+        "newsletter": {
+          "content": "จดหมายข่าว"
+        },
+        "secondary_footer_bar": {
+          "label": "แถบด้านล่าง"
+        }
+      }
+    },
+    "layout": {
+      "name": "เค้าโครง",
+      "settings": {
+        "block_radius": {
+          "label": "บล็อก"
+        },
+        "button_radius": {
+          "label": "รัศมีของปุ่ม"
+        },
+        "card_radius": {
+          "label": "บัตรผลิตภัณฑ์"
+        },
+        "container_width": {
+          "label": "ความกว้างของหน้า",
+          "options": {
+            "large": {
+              "label": "ใหญ่"
+            },
+            "medium": {
+              "label": "ปานกลาง"
+            },
+            "small": {
+              "label": "เล็ก"
+            }
+          }
+        },
+        "icon_rows": {
+          "label": "อื่นๆ(ไอคอน ป้าย ลูกศร)"
+        },
+        "input_radius": {
+          "label": "รัศมีอินพุต"
+        },
+        "other_layout": {
+          "label": "เค้าโครง",
+          "settings": {
+            "rounded": {
+              "label": "โค้งมน"
+            },
+            "sharp": {
+              "label": "คม"
+            }
+          }
+        }
+      }
+    },
+    "newletter_popup": {
+      "name": "ป๊อปอัปจดหมายใหม่",
+      "settings": {
+        "newsletter_description": {
+          "label": "คำอธิบาย"
+        },
+        "newsletter_heading": {
+          "label": "หัวเรื่อง"
+        },
+        "newsletter_image": {
+          "label": "ภาพ"
+        },
+        "newsletter_pop_enable": {
+          "label": "เปิดใช้งานป๊อปอัปจดหมายข่าว"
+        },
+        "newsletter_style": {
+          "label": "สไตล์",
+          "options": {
+            "default": {
+              "label": "ค่าเริ่มต้น"
+            },
+            "rounded": {
+              "label": "โค้งมน"
+            }
+          }
+        },
+        "popup_cookie": {
+          "label": "ตั้งค่าคุกกี้สำหรับป๊อปอัปจดหมายข่าว (วัน)"
+        }
+      }
+    },
+    "parallax_image": {
+      "name": "ภาพพารัลแลกซ์",
+      "settings": {
+        "parallex_image_height_desktop": {
+          "label": "ความสูงของเดสก์ท็อป"
+        },
+        "parallex_image_height_mobile": {
+          "label": "ความสูงของมือถือ"
+        }
+      }
+    },
+    "preloader": {
+      "name": "ตัวโหลดล่วงหน้า",
+      "settings": {
+        "enable_preloader": {
+          "label": "เปิดใช้งานตัวโหลดล่วงหน้า"
+        },
+        "enable_preloader_on": {
+          "label": "เปิดใช้งานตัวโหลดล่วงหน้า",
+          "options": {
+            "all_pages": {
+              "label": "ทุกหน้า"
+            },
+            "homepage_only": {
+              "label": "หน้าแรกเท่านั้น"
+            }
+          }
+        },
+        "preloader_logo": {
+          "label": "โลโก้"
+        },
+        "preloader_visibility": {
+          "label": "ตัวโหลดล่วงหน้าจะปรากฏขึ้น",
+          "options": {
+            "all_time": {
+              "label": "เว็บไซต์โหลดตลอดเวลา"
+            },
+            "first_time": {
+              "label": "เฉพาะการโหลดเว็บไซต์ครั้งแรกเท่านั้น"
+            }
+          }
+        }
+      }
+    },
+    "privacy_policy_popup": {
+      "name": "ป๊อปอัปนโยบายความเป็นส่วนตัว",
+      "settings": {
+        "accept_cookie_btn_text": {
+          "label": "ยอมรับข้อความปุ่ม"
+        },
+        "decline_cookie_btn_text": {
+          "label": "ข้อความปุ่มปฏิเสธ"
+        },
+        "description": {
+          "label": "คำอธิบาย"
+        },
+        "enable_cookie_banner": {
+          "info": "เพื่อให้นโยบายความเป็นส่วนตัวใช้งานได้ คุณต้องเปิดใช้งานความเป็นส่วนตัวของลูกค้าผ่าน Shopify admin ก่อน [ร้านค้าออนไลน์ > การตั้งค่า > ความเป็นส่วนตัวของลูกค้า](/admin/online_store/preferences)",
+          "label": "เปิดใช้งานนโยบายความเป็นส่วนตัว"
+        },
+        "heading": {
+          "label": "หัวเรื่อง"
+        }
+      }
+    },
+    "product": {
+      "name": "ผลิตภัณฑ์",
+      "settings": {
+        "enable_preorder": {
+          "info": "การสั่งซื้อล่วงหน้าจะทำงานเมื่อเปิดใช้งานตัวเลือก 'ขายต่อเมื่อสินค้าหมด'",
+          "label": "เปิดใช้งานการสั่งซื้อล่วงหน้า"
+        },
+        "option_style": {
+          "label": "สไตล์ตัวเลือก",
+          "options": {
+            "dropdown": {
+              "label": "หล่นลง"
+            },
+            "swatch": {
+              "label": "สวอตช์"
+            }
+          }
+        },
+        "show_save_amount": {
+          "label": "แสดงจำนวนเงินที่บันทึกไว้"
+        }
+      }
+    },
+    "product_badges": {
+      "name": "ป้ายสินค้า",
+      "settings": {
+        "add_new_collection": {
+          "label": "คอลเลกชัน 'ใหม่'"
+        },
+        "custom_badge": {
+          "content": "ป้ายที่กำหนดเอง"
+        },
+        "custom_label": {
+          "label": "แสดงตราสัญลักษณ์ที่กำหนดเอง"
+        },
+        "custom_tag": {
+          "info": "แสดงป้าย 'กำหนดเอง' สำหรับผลิตภัณฑ์ที่มีแท็กต่อไปนี้",
+          "label": "ป้ายสินค้า"
+        },
+        "custom_tag_label": {
+          "label": "ข้อความป้าย"
+        },
+        "days_ago_created": {
+          "label": "วันที่สร้างแล้ว"
+        },
+        "new_collection_label": {
+          "label": "แสดงป้าย 'ใหม่' สำหรับผลิตภัณฑ์ในคอลเลกชันต่อไปนี้"
+        },
+        "new_date_tag": {
+          "label": "แสดงป้ายกำกับ 'ใหม่' สำหรับผลิตภัณฑ์ที่สร้างขึ้นภายในหลายวันนี้"
+        },
+        "new_label_badge": {
+          "content": "ป้ายชื่อใหม่"
+        },
+        "new_label_text": {
+          "label": "ข้อความป้ายใหม่"
+        },
+        "new_products_tag": {
+          "label": "แสดงป้าย 'ใหม่' สำหรับผลิตภัณฑ์ที่มีแท็กต่อไปนี้"
+        },
+        "new_text_tag": {
+          "label": "แท็ก 'ใหม่'"
+        },
+        "preorder_badge": {
+          "content": "ป้ายพรีออเดอร์"
+        },
+        "preorder_label": {
+          "label": "แสดงป้าย \"สั่งซื้อล่วงหน้า\""
+        },
+        "sale_badge": {
+          "content": "ป้ายขาย"
+        },
+        "sale_label": {
+          "info": "เกี่ยวกับผลิตภัณฑ์ที่มีการกำหนดราคาเปรียบเทียบไว้",
+          "label": "แสดงป้ายขาย"
+        },
+        "soldout_badge": {
+          "content": "ป้ายขายหมดแล้ว"
+        },
+        "soldout_label": {
+          "label": "แสดงป้าย \"ขายหมดแล้ว\""
+        }
+      }
+    },
+    "product_card": {
+      "name": "บัตรผลิตภัณฑ์",
+      "settings": {
+        "content_swatches": {
+          "label": "แสดงตัวอย่าง สินค้าคงคลัง และรายละเอียดการจัดส่งบนโฮเวอร์เท่านั้น (เดสก์ท็อป)"
+        },
+        "font_type": {
+          "label": "ประเภทแบบอักษร",
+          "options": {
+            "body": {
+              "label": "ร่างกาย"
+            },
+            "heading": {
+              "label": "หัวเรื่อง"
+            }
+          }
+        },
+        "grid_image_size": {
+          "label": "อัตราส่วนภาพตาราง",
+          "options": {
+            "auto": {
+              "label": "อัตโนมัติ"
+            },
+            "landscape": {
+              "label": "ภูมิประเทศ"
+            },
+            "portrait": {
+              "label": "ภาพเหมือน"
+            },
+            "square": {
+              "label": "สี่เหลี่ยม"
+            }
+          }
+        },
+        "image_background": {
+          "label": "เปิดใช้งานพื้นหลังการ์ด"
+        },
+        "image_border": {
+          "label": "เปิดใช้งานเส้นขอบ"
+        },
+        "inventory_threshold": {
+          "info": "แสดงปริมาณสินค้าคงคลังเป็นสีเหลืองเมื่อปริมาณต่ำกว่าเกณฑ์ ",
+          "label": "เกณฑ์สินค้าคงคลังต่ำ"
+        },
+        "product_border_thickness": {
+          "label": "ความหนาของเส้นขอบ"
+        },
+        "product_card_style": {
+          "label": "สไตล์",
+          "options": {
+            "card": {
+              "label": "การ์ด"
+            },
+            "standard": {
+              "label": "มาตรฐาน"
+            }
+          }
+        },
+        "product_price_saving": {
+          "label": "แสดงราคาที่ประหยัด"
+        },
+        "product_rating": {
+          "info": "หากต้องการแสดงการให้คะแนน ให้เพิ่มแอปการให้คะแนนผลิตภัณฑ์",
+          "label": "แสดงการให้คะแนนผลิตภัณฑ์"
+        },
+        "product_second_image": {
+          "label": "แสดงภาพที่สองเมื่อโฮเวอร์"
+        },
+        "product_vendor": {
+          "label": "แสดงผู้จำหน่ายผลิตภัณฑ์"
+        },
+        "quick_view_button_mobile": {
+          "label": "แสดงมุมมองด่วนบนมือถือ"
+        },
+        "quickview": {
+          "label": "เปิดใช้งานการดูด่วน"
+        },
+        "quickview_style": {
+          "label": "สไตล์ Quickview",
+          "options": {
+            "drawer": {
+              "label": "ลิ้นชัก"
+            },
+            "grid": {
+              "label": "กริด"
+            },
+            "popup": {
+              "label": "ป๊อปอัพ"
+            }
+          }
+        },
+        "shipping_days": {
+          "info": "สำหรับวันแบบไดนามิกสำหรับแต่ละผลิตภัณฑ์ ให้สร้างชื่อเมตาฟิลด์ \"shipping_days\" [เรียนรู้เพิ่มเติม](https://shinedezign.gitbook.io/shark-documentation/overview/theme-settings#steps-to-set-up-the-default-shipping-days-using-a-meta-field)",
+          "label": "วันจัดส่งเริ่มต้น"
+        },
+        "shipping_text": {
+          "info": "ใช้ ||วัน|| ",
+          "label": "ข้อความจัดส่ง"
+        },
+        "show_inventory": {
+          "label": "แสดงสินค้าคงคลังของผลิตภัณฑ์"
+        },
+        "show_price": {
+          "label": "แสดงราคา"
+        },
+        "show_shipping": {
+          "label": "แสดงรายละเอียดการจัดส่ง"
+        },
+        "show_swatches": {
+          "label": "เปิดใช้งานตัวอย่าง"
+        },
+        "show_video_in_grid": {
+          "info": "ใช้ได้กับวิดีโอที่โฮสต์โดย Shopify เท่านั้น",
+          "label": "แสดงวิดีโอบนตาราง"
+        }
+      }
+    },
+    "quick_view": {
+      "name": "ดูด่วน",
+      "settings": {
+        "heading_size": {
+          "label": "ขนาดชื่อเรื่อง"
+        }
+      }
+    },
+    "radius": {
+      "name": "รัศมี",
+      "settings": {
+        "button_radius": {
+          "label": "ปุ่ม"
+        },
+        "input_radius": {
+          "label": "ป้อนข้อมูล"
+        }
+      }
+    },
+    "scroll_to_top": {
+      "name": "เลื่อนไปด้านบน",
+      "settings": {
+        "bottom_position": {
+          "label": "ตำแหน่งด้านล่าง"
+        },
+        "enable_scroll_to_top": {
+          "label": "เปิดใช้งานการเลื่อนไปด้านบน"
+        },
+        "scroll_btn_position": {
+          "label": "ตำแหน่ง"
+        },
+        "stp_background_color": {
+          "label": "พื้นหลัง"
+        },
+        "stp_icon_color": {
+          "label": "ไอคอน"
+        }
+      }
+    },
+    "search_drawer": {
+      "name": "ลิ้นชักการค้นหา",
+      "settings": {
+        "common_grid_image_size": {
+          "label": "อัตราส่วนภาพตาราง",
+          "options": {
+            "auto": {
+              "label": "อัตโนมัติ"
+            },
+            "landscape": {
+              "label": "ภูมิประเทศ"
+            },
+            "portrait": {
+              "label": "ภาพเหมือน"
+            },
+            "square": {
+              "label": "สี่เหลี่ยม"
+            }
+          }
+        },
+        "enable_article": {
+          "label": "เปิดใช้งานบทความ"
+        },
+        "enable_collections": {
+          "label": "เปิดใช้งานคอลเลกชัน"
+        },
+        "enable_pages": {
+          "label": "เปิดใช้งานเพจ"
+        },
+        "enable_queries": {
+          "label": "เปิดใช้งานแบบสอบถามที่เกี่ยวข้อง"
+        },
+        "enable_recent_search": {
+          "label": "เปิดใช้งานการค้นหาล่าสุด"
+        },
+        "enable_search_drawer": {
+          "label": "เปิดใช้งานลิ้นชักการค้นหา"
+        },
+        "enable_suggestion": {
+          "label": "เปิดใช้งานข้อเสนอแนะ"
+        },
+        "suggestion_heading": {
+          "label": "หัวเรื่อง"
+        },
+        "suggestion_product": {
+          "label": "สินค้า"
+        },
+        "suggestions": {
+          "content": "ข้อเสนอแนะ"
+        }
+      }
+    },
+    "seo": {
+      "name": "การทำ SEO",
+      "settings": {
+        "remove_collection_url": {
+          "label": "ลบส่วนคอลเลกชันออกจาก URL ผลิตภัณฑ์เพื่อ SEO ที่ดีขึ้น"
+        },
+        "seo_microdata": {
+          "info": "การดำเนินการนี้จะลบมาร์กอัป schema.org ออกจากหน้า ",
+          "label": "ปิดใช้สคีมา Microdata"
+        }
+      }
+    },
+    "social_media": {
+      "name": "สื่อสังคม",
+      "settings": {
+        "social_accounts": {
+          "content": "บัญชีโซเชียล"
+        },
+        "social_facebook_link": {
+          "info": "https://facebook.com/shopify",
+          "label": "เฟสบุ๊ค"
+        },
+        "social_instagram_link": {
+          "info": "http://instagram.com/shopify",
+          "label": "อินสตาแกรม"
+        },
+        "social_linkedin_link": {
+          "info": "http://linkedin.com/shopify",
+          "label": "ลิงค์ดิน"
+        },
+        "social_pinterest_link": {
+          "info": "https://pinterest.com/shopify",
+          "label": "พินเทอเรสต์"
+        },
+        "social_snapchat_link": {
+          "info": "http://snapchat.com/shopify",
+          "label": "สแน็ปแชท"
+        },
+        "social_tiktok_link": {
+          "info": "https://tiktok.com/@shopify",
+          "label": "ติ๊กต๊อก"
+        },
+        "social_tumblr_link": {
+          "info": "https://www.tumblr.com/shopify",
+          "label": "ทัมเบลอร์"
+        },
+        "social_twitter_link": {
+          "info": "https://twitter.com/shopify",
+          "label": "ทวิตเตอร์"
+        },
+        "social_vimeo_link": {
+          "info": "https://www.vimeo.com/shopify",
+          "label": "วิมีโอ"
+        },
+        "social_youtube_link": {
+          "info": "https://www.youtube.com/shopify",
+          "label": "ยูทูบ"
+        }
+      }
+    },
+    "social_sharing": {
+      "facebook_link": {
+        "label": "เฟสบุ๊ค"
+      },
+      "name": "การแบ่งปันทางสังคม",
+      "pinterest_link": {
+        "label": "พินเทอเรสต์"
+      },
+      "twitter_link": {
+        "label": "เอ็กซ์(ทวิตเตอร์)"
+      }
+    },
+    "swatches": {
+      "name": "สวอตช์",
+      "settings": {
+        "color_name": {
+          "info": "ชื่อตัวเลือกที่เก็บสี ",
+          "label": "ชื่อตัวเลือกสี"
+        },
+        "color_swatch_type": {
+          "label": "สไตล์ตัวอย่างสี",
+          "options": {
+            "circle": {
+              "label": "วงกลม"
+            },
+            "square": {
+              "label": "สี่เหลี่ยม"
+            }
+          }
+        },
+        "custom_colors": {
+          "label": "รหัสสี/รูปภาพที่กำหนดเอง"
+        },
+        "show_variant_image": {
+          "label": "แสดงภาพรูปแบบเป็นสี"
+        },
+        "size_name": {
+          "info": "ชื่อตัวเลือกที่เก็บขนาด ",
+          "label": "ชื่อตัวเลือกขนาด"
+        }
+      }
+    },
+    "typography": {
+      "name": "วิชาการพิมพ์",
+      "settings": {
+        "body": {
+          "content": "ร่างกาย"
+        },
+        "font": {
+          "label": "แบบอักษร"
+        },
+        "font_scale": {
+          "label": "ขนาดตัวอักษร"
+        },
+        "heading": {
+          "content": "หัวเรื่อง"
+        },
+        "line_height": {
+          "label": "ความสูงของเส้น"
+        },
+        "line_spacing": {
+          "label": "ระยะห่างระหว่างตัวอักษร"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{% if variant.featured_media != blank %}
+  {% capture selectedColorImage %}
+    <div class="media-content">
+    {%- render 'image' image: variant.featured_media, class: 'product-first-img' -%}
+    {%- if  second_image != blank -%}     
+    {%- render 'image' image: second_image , class: 'product-second-img' -%}
+   {%- endif -%}
+    </div>
+  {% endcapture %}
+ <script>
+    {{- selectedColorImage | json -}}
+  </script>
+{% endif %}

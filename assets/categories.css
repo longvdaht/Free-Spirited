@@ -1,0 +1,98 @@
+.categories-box-list {
+    display: grid;
+    grid-template-columns: repeat(var(--columnCount, 4), minmax(0, 1fr));
+    gap: var(--columnGap);
+}
+
+.categories-box-item {
+    position: relative;
+    transition: .3s ease;
+}
+
+.categories-box-image {
+    position: relative;
+    width: 100%;
+    background: var(--image-bg);
+}
+
+.categories-box-image {
+    max-width: var(--columnWidth);
+    margin: 0 auto;
+}
+
+.categories-box-item.rounded .categories-box-image {
+    border-radius: 100%;
+}
+
+.categories-box-item.rounded .categories-box-image .media-box {
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.categories-box-content {
+    padding-top: 10px;
+}
+
+.categories-box-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+@media (min-width:1025px) {
+    .categories-box-item:hover {
+        transform: translateY(-10px);
+    }
+    .categories-box-image:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        pointer-events: none;
+        transition: all 0.25s ease-in-out;
+    }
+    .categories-box-item.rounded .categories-box-image:after,
+    .categories-box-item.rounded .categories-box-image:before {
+        border-radius: 100%;
+    }
+    .inside-shadow-hover .categories-box-item:hover .categories-box-image:after {
+        box-shadow: inset 0 0 0 5px #ffffff78, inset 0 0 0 225px #0000003b;
+    }
+    .outside-shadow-hover .categories-box-item:hover .categories-box-image:after {
+        box-shadow: 0px 4px 10px 0px #0000003d;
+    }
+    .rotate-border-hover .categories-box-item .categories-box-image:after {
+        background: var(--body-background);
+        transform: scale(1.1);
+        z-index: 0;
+    }
+    .rotating-border {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+    }
+    .rotating-border::before {}
+    .rotating-border::after {}
+    .categories-box-item .categories-box-image .media-box {
+        z-index: 1;
+    }
+}
+
+@media (max-width:767px) {
+    .categories-box-list.mobile-swipe {
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(calc(33vw - 40px), 1fr);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        grid-template-columns: unset;
+        padding-bottom: 10pX;
+    }
+}

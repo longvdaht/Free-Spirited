@@ -1,0 +1,445 @@
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% capture quickvidewproduct %}
+  <div class="" data-product-wrapper data-product-content>
+    <div class="row no-gutters">
+      <div class="col-12 col-md-5">
+       
+          {%- if product.media.size > 0 -%}
+            {% render 'product-media', product: product, section: section, current_variant: current_variant, quickviewclass:'quickview-product-item', innerclass:'quickview-product-img', quickView: true %}
+          {% else %}
+          <div id="productMedia-placeholder-quickview" class="quickview-product-item"  data-product-media >
+            <div class="media-box" style="--image-ratio:100%">
+            {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          </div>
+          {% endif %}
+      
+      </div>
+      <div class="col-12 col-md-7">
+        <div class="quickview-drawer-content-inner">
+          {% render 'product-details', quickView: true, product, section, current_variant : current_variant %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="application/json" id="product3DModel-{{ product.id }}">
+    {{ product.media | where: 'media_type', 'model' | json }}
+  </script>  
+{% endcapture %}
+{% liquid 
+  if settings.desktop_grid_image_size == 'landscape'
+  assign imageRatioClass = 75
+  elsif settings.desktop_grid_image_size == 'square'
+  assign imageRatioClass = 100
+  elsif settings.desktop_grid_image_size == 'portrait'
+  assign imageRatioClass = 125
+  endif
+
+  if settings.mobile_grid_image_size == 'landscape'
+  assign mobileImageRatioClass = 75
+  elsif settings.mobile_grid_image_size == 'square'
+  assign mobileImageRatioClass = 100
+  elsif settings.mobile_grid_image_size == 'portrait'
+  assign mobileImageRatioClass = 125
+  endif
+  %}
+
+
+{% if settings.quickview_style == 'drawer' %}
+  <div class="side-drawer quickview-side-drawer shopify-section {{ settings.drawer_color_scheme }}-scheme{% if settings.enable_blur_effect %} background-blur{% endif %}"
+    id="quickview-side-drawer"
+    data-sidedrawer-wrapper
+    data-quickview-content-wrapper
+    side-drawer-body>
+    <div class="close-fullwidth" data-sidedrawer-close aria-label="close"></div>
+    <div class="side-drawer-panel large">
+      <div class="side-drawer-inner">
+        <button class="drawer-close" data-sidedrawer-close aria-label="close" >
+          {% render 'theme-icons', theme_icon: 'drawer_close' %}
+        </button>
+        <div class="quickview-drawer-content" data-quickview-content>
+        {{ quickvidewproduct }}
+        </div>
+      </div>
+    </div>
+    <style>
+      @media (min-width: 768px){
+        {% for media in product.media %}
+          
+          {% if settings.desktop_grid_image_size == 'auto'  %}
+            .quickview-product-image-slider #productMedia-{{ media.id }} .media-box{
+                --image-ratio:{{ 1 | divided_by : media.preview_image.aspect_ratio | times: 100 }}%;
+            }
+        {% else %}
+          .quickview-product-image-slider #productMedia-{{ media.id }} .media-box{
+            --image-ratio:{{ imageRatioClass }}%;
+          }
+        {% endif %}
+      {% endfor %}
+    
+        {% if settings.desktop_grid_image_size == 'auto'  %}
+          .quickview-side-drawer #productMedia-placeholder-main .media-box{
+            --image-ratio:100%;
+          }
+        {% else %}
+          .quickview-side-drawer #productMedia-placeholder-main .media-box{
+            --image-ratio:{{ imageRatioClass }}%;
+          }
+        {% endif %}
+      }
+    
+      @media (max-width: 767px){
+        {% for media in product.media %}
+          {% if settings.mobile_grid_image_size == 'auto'  %}
+            .quickview-product-image-slider #productMedia-{{ media.id }} .media-box{
+                  --image-ratio:{{ 1 | divided_by : media.preview_image.aspect_ratio | times: 100 }}%;
+              }
+          {% else %}
+            .quickview-product-image-slider #productMedia-{{ media.id }} .media-box{
+              --image-ratio:{{ mobileImageRatioClass }}%;
+            }
+          {% endif %}
+        {% endfor %}
+        {% if settings.mobile_grid_image_size == 'auto'  %}
+          .quickview-side-drawer #productMedia-placeholder-main .media-box{
+            --image-ratio:100%;
+          }
+        {% else %}
+        quickview-side-drawer #productMedia-placeholder-main .media-box{
+            --image-ratio:{{ mobileImageRatioClass }}%;
+          }
+        {% endif %}
+      }
+    </style> 
+  </div>
+ 
+{% elsif settings.quickview_style == 'popup' %}
+  <div class="popup quick-popup position-center {{ settings.popup_color_scheme }}-scheme shopify-section background-enabled{% if settings.enable_blur_effect %} background-blur{% endif %}" data-popup-body   data-quickview-content-wrapper>
+    <div class="close-fullwidth"  data-popup-close aria-label="close"></div>
+    <div class="popup-dialog large">
+      <div class="popup-content">
+        <button class="popup-close" data-popup-close aria-label="close">
+          {% render 'theme-icons', theme_icon: 'popup_close' %}
+        </button>
+          <div class="quickview-popup-content" data-quickview-content>
+            {{ quickvidewproduct }}
+          </div>
+        </div>
+    </div>
+    <style>
+      @media (min-width: 768px){
+        {% for media in product.media %}
+          {% if settings.desktop_grid_image_size == 'auto'  %}
+            .quickview-product-image-slider #productMedia-{{ media.id }} .media-box{
+                --image-ratio:{{ 1 | divided_by : media.preview_image.aspect_ratio | times: 100 }}%;
+            }
+        {% else %}
+          .quickview-product-image-slider #productMedia-{{ media.id }} .media-box{
+            --image-ratio:{{ imageRatioClass }}%;
+          }
+        {% endif %}
+        {% endfor %}
+    
+        {% if settings.desktop_grid_image_size == 'auto'  %}
+          .quickview-popup-content #productMedia-placeholder-main .media-box{
+            --image-ratio:100%;
+          }
+        {% else %}
+         .quickview-popup-content #productMedia-placeholder-main .media-box{
+            --image-ratio:{{ imageRatioClass }}%;
+          }
+        {% endif %}
+      }
+    
+      @media (max-width: 767px){
+        {% for media in product.media %}
+          {% if settings.mobile_grid_image_size == 'auto'  %}
+            .quickview-product-image-slider #productMedia-{{ media.id }} .media-box{
+                  --image-ratio:{{ 1 | divided_by : media.preview_image.aspect_ratio | times: 100 }}%;
+              }
+          {% else %}
+            .quickview-product-image-slider #productMedia-{{ media.id }} .media-box{
+              --image-ratio:{{ mobileImageRatioClass }}%;
+            }
+          {% endif %}
+        {% endfor %}
+        {% if settings.mobile_grid_image_size == 'auto'  %}
+          .quickview-popup-content #productMedia-placeholder-main .media-box{
+            --image-ratio:100%;
+          }
+        {% else %}
+          .quickview-popup-content #productMedia-placeholder-main .media-box{
+            --image-ratio:{{ mobileImageRatioClass }}%;
+          }
+        {% endif %}
+      }
+    </style> 
+  </div>
+
+
+  
+{% else  %}
+{% capture random %}{{ 'now' | date: "%09N" }}{% endcapture %}
+{% assign product_form_id = 'product-form-' | append: product.id | append: '-stamp-' | append: random %}
+    {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'price' %}
+        <div
+          class="product-pricing no-js-hidden {% if current_variant.compare_at_price > current_variant.price %} discount-price {% endif %}"
+          id="price-{{ section_id }}"
+          role="status"
+          data-price-wrapper
+          {{ block.shopify_attributes }}
+        >
+          {% render 'product-price', quickView: quickView, product: product %}
+
+          {% unless block.settings.hide_shipping_content %}
+            {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+              <p class="text-xsmall product-tax-shipping">
+                {%- if cart.taxes_included -%}
+                  {{ 'products.product.tax_included' | t }}
+                {%- endif -%}
+                {%- if shop.shipping_policy.body != blank -%}
+                  {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}
+          {% endunless %}
+          <div {{ block.shopify_attributes }}>
+            {%- assign product_form_installment_id = 'product-form-installment-' | append: section_id -%}
+            {%- form 'product', product, id: product_form_installment_id, class: 'text-small' -%}
+              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+              {{ form | payment_terms }}
+            {%- endform -%}
+          </div>
+        </div>
+    
+      {% when 'variant' %}
+        {%- unless product.has_only_default_variant -%}
+          <div class="product-variants-options" {{ block.shopify_attributes }} data-product-variants>
+            {%- for option in product.options_with_values -%}
+              {%- liquid
+                assign variantOption = 'option' | append: option.position
+                assign colorOptions = settings.color_name | downcase
+                assign downOption = option.name | downcase
+                assign optionIndex = forloop.index
+              -%}
+              <div class="product-variants-wrapper no-js-hidden">
+                <h6 class="product-variants-title text">{{ option.name }}</h6>
+                {% if settings.option_style == 'swatch' %}
+                  <div class="product-variants-box {% if colorOptions contains downOption %}color-option {{ settings.color_swatch_type }}{% endif %} ">
+                    <ul class="product-variants-list product-loop-variants variants-small">
+                      {%- for value in option.values -%}
+                        {% assign variantValue = product.variants
+                          | where: variantOption, value
+                          | compact: 'featured_media'
+                          | first
+                        %}
+                        {% liquid
+                          if value.swatch.image
+                          assign image_url = value.swatch.image | image_url: width: 50
+                          assign swatch_value = '--swatch-img: url(' | append: image_url | append: ')'
+                          assign swatch_focal_point = value.swatch.image.presentation.focal_point
+                          elsif value.swatch.color
+                            assign swatch_value = '--swatch-color: rgb(' | append: value.swatch.color.rgb | append: ')'
+                          else
+                            assign swatch_value = null
+                          endif
+                        
+                        %}
+                        <li class="variant-item {% if option.selected_value == value %}active{% endif %}">
+                          <label class="hidden" for="option-{{ optionIndex }}-{{ forloop.index }}">{{- value -}}</label>
+                          <input
+                            class="productOption"
+                            id="option-{{ optionIndex }}-{{ forloop.index }}"
+                            form="{{ product_form_id }}"
+                            type="radio"
+                            name="option-{{ optionIndex }}"
+                            value="{{ value | escape }}"
+                            title="{{ value }}"
+                            {% if option.selected_value == value %}
+                              checked
+                            {% endif %}
+                          >
+                          <span
+                            class="variant-item-name{% if variantValue and settings.show_variant_image %} variant-img {% elsif value.swatch.image %} variant-img{% endif %}"
+                            {% if colorOptions contains downOption %}
+                              data-tooltip="{{ value }}"
+                              {% if variantValue and settings.show_variant_image %}
+                                style="--swatch-img:url({{ variantValue.featured_media.preview_image | image_url: width: '22' }});"
+                              {% else %}
+                              {% if swatch_value != null %}style="{{ swatch_value }}; {% if swatch_focal_point %} --swatch-focal-point: {{ swatch_focal_point }};{% endif %}" {% else %} data-color="{{ value }}" style="--swatch-color:{{ value }};"{% endif %}
+                              {% endif %}
+                            {% endif %}
+                          >
+                            {% unless colorOptions contains downOption -%}
+                              {{- value -}}
+                            {%- endunless -%}
+                          </span>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% else %}
+                  <div class="custom-select fullwidth" data-custom-select>
+                    <div class="custom-select-button form-control" data-type="{{ option.selected_value }}" custom>
+                      <span class="custom-select-text">
+                        <strong> {{ option.selected_value }}</strong>
+                      </span>
+                      <span class="custom-select-arrow">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none">
+                          <path d="M7 1L4 4L1 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="custom-select-content" data-custom-select-summary>
+                      <ul class="custom-select-list product-loop-variants">
+                        {%- for value in option.values -%}
+                          {% liquid
+                            assign variantOption = 'option' | append: option.position
+                            assign variantValue = product.variants | where: variantOption, value | compact: 'featured_media' | first
+                          -%}
+                          <li class="custom-select-item">
+                            <input
+                              class="productOption hidden"
+                              id="option-{{ optionIndex }}-{{ forloop.index }}-{{ section.id }}"
+                              form="{{ product_form_id }}"
+                              type="radio"
+                              name="option-{{ optionIndex }}"
+                              value="{{ value | escape }}"
+                              title="{{ value }}"
+                              {% if option.selected_value == value %}
+                                checked
+                              {% endif %}
+                              custom-dropdown
+                            >
+                            <label
+                              class="option"
+                              for="option-{{ optionIndex }}-{{ forloop.index }}-{{ section.id }}"
+                              data-type="{{- value -}}"
+                            >
+                              {{- value -}}
+                            </label>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            {% endfor -%}
+
+            <noscript>
+              <div class="product-option-selector">
+                <p class="variant-title">{{ 'products.product.product_variants' | t }}</p>
+                <div class="select-box">
+                  <select class="form-control" name="id" form="{{ product_form_id }}">
+                    {%- for variant in product.variants -%}
+                      <option
+                        {% if variant == product.selected_or_first_available_variant %}
+                          selected="selected"
+                        {% endif %}
+                        {% if variant.available == false %}
+                          disabled
+                        {% endif %}
+                        value="{{ variant.id }}"
+                      >
+                        {{ variant.title }}
+                        {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                        - {{ variant.price | money | strip_html }}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                </div>
+              </div>
+            </noscript>
+          </div>
+        {% endunless %}
+      {% endcase %}
+    {% endfor %}
+    <div class="quantity-atc-button-wrapper">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {%- when 'quantity_selector' -%}
+          {% render 'quantity' product, product_form_id: product_form_id,quickViewcard:true %}
+        {% when 'button' %}
+          <div {{ block.shopify_attributes }} data-atc-form>
+            {% render 'product-form', product_form_id: product_form_id, current_variant: current_variant, block: block,quickViewcard:true %}
+          </div>
+        {% endcase %}
+      {% endfor %}
+
+    </div>
+    <div class="error-message no-bg " data-quick-card-error data-error-text style="display:none" role="status"></div>
+    <div class="mobile-drawer-content">
+      <div class="side-drawer quickview-side-drawer shopify-section {{ settings.drawer_color_scheme }}-scheme{% if settings.enable_blur_effect %} background-blur{% endif %}"
+        id="quickview-side-drawer"
+        data-sidedrawer-wrapper
+        data-quickview-content-mobile 
+        side-drawer-body>
+        <div class="close-fullwidth" data-sidedrawer-close aria-label="close"></div>
+        <div class="side-drawer-panel large">
+          <div class="side-drawer-inner">
+            <button class="drawer-close" data-sidedrawer-close aria-label="close" >
+              {% render 'theme-icons', theme_icon: 'drawer_close' %}
+            </button>
+            <div class="quickview-drawer-content" data-quickview-content>
+                {{ quickvidewproduct }}
+               
+            </div>
+          </div>
+        </div>
+        <style>
+          @media (min-width: 768px){
+            {% for media in product.media %}
+              
+              {% if settings.desktop_grid_image_size == 'auto'  %}
+                .quickview-product-image-slider #productMedia-{{ media.id }} .media-box{
+                    --image-ratio:{{ 1 | divided_by : media.preview_image.aspect_ratio | times: 100 }}%;
+                }
+            {% else %}
+              .quickview-product-image-slider #productMedia-{{ media.id }} .media-box{
+                --image-ratio:{{ imageRatioClass }}%;
+              }
+            {% endif %}
+          {% endfor %}
+        
+            {% if settings.desktop_grid_image_size == 'auto'  %}
+              .quickview-side-drawer #productMedia-placeholder-main .media-box{
+                --image-ratio:100%;
+              }
+            {% else %}
+              .quickview-side-drawer #productMedia-placeholder-main .media-box{
+                --image-ratio:{{ imageRatioClass }}%;
+              }
+            {% endif %}
+          }
+        
+          @media (max-width: 767px){
+            {% for media in product.media %}
+              {% if settings.mobile_grid_image_size == 'auto'  %}
+                .quickview-product-image-slider #productMedia-{{ media.id }} .media-box{
+                      --image-ratio:{{ 1 | divided_by : media.preview_image.aspect_ratio | times: 100 }}%;
+                  }
+              {% else %}
+                .quickview-product-image-slider #productMedia-{{ media.id }} .media-box{
+                  --image-ratio:{{ mobileImageRatioClass }}%;
+                }
+              {% endif %}
+            {% endfor %}
+            {% if settings.mobile_grid_image_size == 'auto'  %}
+              .quickview-side-drawer #productMedia-placeholder-main .media-box{
+                --image-ratio:100%;
+              }
+            {% else %}
+            quickview-side-drawer #productMedia-placeholder-main .media-box{
+                --image-ratio:{{ mobileImageRatioClass }}%;
+              }
+            {% endif %}
+          }
+        </style> 
+      </div>
+    </div>
+   
+  {% endif %}

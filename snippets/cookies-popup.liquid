@@ -1,0 +1,30 @@
+{% if settings.enable_cookie_banner %}
+<div class="popup cookies-popup position-bottom-right {{ settings.popup_color_scheme }}-scheme" data-popup-body>
+	<div class="close-fullwidth"  data-popup-close aria-label="close"></div>
+	<div class="popup-dialog small">
+		<div class="popup-content">
+			<button class="popup-close" data-popup-close aria-label="close">
+				{% render 'theme-icons', theme_icon: 'popup_close' %}
+			</button>
+			<div class="cookies-popup-content">
+				{% if settings.heading %}
+					<h4 class="cookies-popup-heading">{{ settings.heading }}</h4>
+				{% endif %}
+				{% if settings.description != blank %}
+				<div class="cookies-popup-desc">
+					{{ settings.description }}
+				</div>
+			   {% endif %}
+				<div>
+				{% if settings.accept_cookie_btn_text != blank %}
+					<button class="button btn-block"  onclick="handleAccept()"><span>{{ settings.accept_cookie_btn_text }}</span></button>
+				{% endif %}
+				{% if settings.decline_cookie_btn_text != blank %}
+					<a href="#" class="cookies-popup-link text-small text-underline" onclick="handleDecline()">{{ settings.decline_cookie_btn_text }}</a>	
+				{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endif %}

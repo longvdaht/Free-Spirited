@@ -1,0 +1,38 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-register",
+      "settings": {
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "btn_size": "regular",
+        "heading": "",
+        "content_heading_size": "h3",
+        "content_seo_heading": "h3",
+        "description": "",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "overlay_heading_color": "#000000",
+        "overlay_description_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 15,
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

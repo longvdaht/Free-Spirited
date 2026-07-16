@@ -1,0 +1,62 @@
+{{ 'collection-list.css' | asset_url | stylesheet_tag }}
+{{ 'search.css' | asset_url | stylesheet_tag }}
+<div class="{% if settings.search_style == 'top_drawer' %}top-drawer{% endif %} side-drawer search-side-drawer {{ settings.drawer_color_scheme }}-scheme{% if settings.enable_blur_effect %} background-blur{% endif %}" data-search-wrapper>
+  <div class="close-fullwidth" data-search-close=""></div>
+  <div class="side-drawer-panel">
+    <div class="side-drawer-inner">
+      <button class="drawer-close" data-search-close>
+        {% render 'theme-icons', theme_icon: 'drawer_close' %}
+      </button>
+      <div class="search-drawer-content" data-search-content>
+        <div class="serach-drawer-header">
+          <h4 class="serach-drawer-heading">{{ 'general.search.search' | t }}</h4>
+          <form action="{{ routes.search_url }}" method="get" role="search" class="search" data-search-form>
+            <div class="serach-drawer-input-group">
+              <button type="submit" class="serach-drawer-button" aria-label="{{ 'general.search.search' | t }}">
+                {% render 'theme-icons', theme_icon: 'search' %}
+              </button>
+              <label for="Search-In-Template" class="hidden">{{ 'general.search.search' | t }}</label>
+              <input
+                type="text"
+                class="form-control serach-drawer-input"
+                id="Search-In-Template"
+                name="q"
+                value="{{ search.terms | escape }}"
+                placeholder="{{ 'general.search.search' | t }}"
+                data-search-input
+              >
+              <span class="cursor-pointer search-drawer-clear text-small" data-clear-input>{{ 'templates.search.clear' | t }}</span>
+            </div>
+          </form>
+        </div>
+        <div class="serach-drawer-body">
+          {% if settings.enable_recent_search or settings.enable_suggestion %}
+            <div class="predictive-search" data-recent-suggestion>
+              {% if settings.enable_recent_search %}
+                <div class="predictive-search-popular" data-recent-search-result></div>
+              {% endif %}
+              {% if settings.enable_suggestion %}
+                <div class="predictive-search-suggestions">
+                  {% if settings.suggestion_heading != blank and settings.suggestion_product != blank %}
+                    <h6 class="predictive-search-heading">{{ settings.suggestion_heading }}</h6>
+                  {% endif %}
+                  {% if settings.suggestion_product != blank %}
+                    <div class="predictive-search-suggestions-list product-card-outer small-product">
+                      {%- for item in settings.suggestion_product limit: 6 -%}
+                        <div class="product-card-item">
+                          {%- assign placeholder_image = 'product-apparel-1' -%}
+                          {% render 'card-product'  placeholder_image: placeholder_image, cProduct: item, settings.suggestion_product, optionhide: false, gridImageSize: settings.common_grid_image_size %}
+                        </div>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+          <div class="predictive-search-result" data-search-body></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

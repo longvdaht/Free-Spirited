@@ -1,0 +1,111 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page_banner_KKpY7b": {
+      "type": "page-banner",
+      "settings": {
+        "enable_fullwidth": true,
+        "banner_height_desktop": "250px",
+        "banner_height_mobile": "200px",
+        "heading": "",
+        "heading_overly": true,
+        "heading_size": "h2",
+        "content_width": "medium",
+        "heading_alignment": "text-center",
+        "banner_bg_color": "#f2f2f2",
+        "bg_color_opacity": "#eeeeee",
+        "text_color": "#181818",
+        "overlay_opacity": 50,
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "collapsible_content_UGqVit": {
+      "type": "collapsible-content",
+      "blocks": {
+        "content_fhHq3D": {
+          "type": "content",
+          "settings": {
+            "heading": "Frequently asked question",
+            "content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "content_VBMAyW": {
+          "type": "content",
+          "settings": {
+            "heading": "Frequently asked question",
+            "content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "content_KL8r47": {
+          "type": "content",
+          "settings": {
+            "heading": "Frequently asked question",
+            "content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "content_prBbk4": {
+          "type": "content",
+          "settings": {
+            "heading": "Frequently asked question",
+            "content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        },
+        "content_dc6A9Y": {
+          "type": "content",
+          "settings": {
+            "heading": "Frequently asked question",
+            "content": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_fhHq3D",
+        "content_VBMAyW",
+        "content_KL8r47",
+        "content_prBbk4",
+        "content_dc6A9Y"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "show_first_default": true,
+        "heading": "",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "heading_alignment": "text-center",
+        "color_scheme": "",
+        "highlighted_color": "#EFF341",
+        "section_background": "",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    }
+  },
+  "order": [
+    "page_banner_KKpY7b",
+    "main",
+    "collapsible_content_UGqVit"
+  ]
+}

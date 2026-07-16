@@ -1,0 +1,195 @@
+<div id="menu" smoothscroll="fixed" class="menu-main-wrapper">
+  <svg class="hidden">
+    <defs>
+        <filter id="filter-1-{{ section.id }}">
+            <feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="1" result="warp"></feTurbulence>
+            <feOffset dx="-90" result="warpOffset"></feOffset>
+            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warpOffset"></feDisplacementMap>
+        </filter>
+    </defs>
+  </svg>
+  <div class="menu-container">
+    <div class="menu-container-inner">
+      <div class="menu-container-header">
+        <hamburger-menu
+          type="button"
+          action="menu.close"
+          aria-label="Close Menu"
+          class="close-toggle cursor-pointer" 
+          tabindex="0"
+        >
+          {% render 'theme-icons', theme_icon: 'drawer_close' %}
+        </hamburger-menu>
+        <a class="hamburger-logo" href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
+          {%- if section.settings.logo != blank -%}
+            {%- assign image_2x_size = section.settings.logo_width | times: 2 | at_most: 2560 -%}
+            <img
+              class="hamburger-logo-img"
+              srcset="{{ section.settings.logo | image_url: width: section.settings.logo_width }} 1x, {{ section.settings.logo | image_url: width: image_2x_size }} 2x"
+              src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
+              loading="lazy"
+              width="{{ section.settings.logo_width }}"
+              height="{{ section.settings.logo_width | divided_by : section.settings.logo.aspect_ratio | round }}"
+              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            >
+          {% else %}
+            <span class="logo-text">{{ shop.name }}</span>
+          {% endif %}
+        </a>
+        {%- if shop.customer_accounts_enabled and section.settings.enable_account -%}
+          <div class="hamburger-account-icon">
+            {%- liquid 
+                if customer
+                  assign btnText = 'customer.account_fallback' | t
+                  assign btnLink = routes.account_url
+                else
+                  assign btnText = 'customer.log_in' | t
+                  assign btnLink = routes.account_login_url
+                endif
+                render 'button', class: 'hamburger-account-link', button_link: btnLink, button_size:'default', button_text: btnText
+            -%}
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="menu-container-content">
+        <div class="menu-outer-main">
+          <div class="hamburger-menu-left">
+            <ul class="main-menu">
+              {%- for link in linklists[section.settings.menu].links -%}
+                <li id="menuItem-{{ section.id }}-{{ forloop.index }}" class="nav-menu">
+                  {% if link.links != blank %}
+                    <details
+                      class="dropdown-detail"
+                      data-detail-button
+                    >
+                      <summary class="nav-menu-link dropdown-menu {{ section.settings.hamburder_menu_font }}-font">
+                        <span class="nav-menu-link-item">
+                          {{ link.title | escape }}
+                        </span>
+                        <span class="nav-menu-icon">
+                          <svg class="arrow-right" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0L12.364 6.36396L6 12.7279L4.82813 11.5561L9.19164 7.19255L0.498208 7.19253L0.498198 5.53528L9.19163 5.53531L4.82816 1.17184L6 0Z" fill="currentColor"></path>
+                          </svg>
+                        </span>
+                        <span class="nav-menu-link-divider"></span>
+                      </summary>
+                      <div class="dropdown-menus-main" detail-expand>
+                        {%- for childlink in link.links -%}
+                          <div id="link-{{ childlink.title | escape }}" class="dropdown-menus-inner">
+                            {% if childlink.links != blank %}
+                              <details
+                                class="dropdown-detail"
+                                data-detail-button
+                              >
+                                <summary class="child-nav-menu-link dropdown-menu {{ section.settings.hamburder_menu_font }}-font">
+                                  <span class="submenu-title">
+                                    {{ childlink.title | escape }}
+                                  </span>
+                                  <span class="nav-menu-icon">
+                                    <svg class="arrow-right" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0L12.364 6.36396L6 12.7279L4.82813 11.5561L9.19164 7.19255L0.498208 7.19253L0.498198 5.53528L9.19163 5.53531L4.82816 1.17184L6 0Z" fill="currentColor"></path>
+                                    </svg>
+                                  </span>
+                                </summary>
+                                <ul class="dropdown-menus" detail-expand>
+                                  {%- for grandchildlink in childlink.links -%}
+                                    <li id="link-{{ link.grandchildlink | escape }}" class="nav-megamenu">
+                                      <a class="nav-menu-link" href="{{ grandchildlink.url }}">
+                                        <span>{{ grandchildlink.title | escape }}</span>
+                                      </a>
+                                    </li>
+                                  {% endfor %}
+                                </ul>
+                              </details>
+                            {% else %}
+                              <a
+                                class="child-nav-menu-link {{ section.settings.hamburder_menu_font }}-font"
+                                href="{{ childlink.url }}"
+                              >
+                                <span class="submenu-title"> {{ childlink.title | escape }}</span>
+                                <span class="nav-menu-link-divider"></span>
+                              </a>
+                            {% endif %}
+                          </div>
+                        {% endfor %}
+                      </div>
+                    </details>
+                  {% else %}
+                    <div class="dropdown-detail">
+                      <a
+                        href="{{ link.url }}"
+                        class="nav-menu-link {{ section.settings.hamburder_menu_font }}-font"
+                        data-filter="#filter-1-{{ section.id }}"
+                        data-menu-hover
+                        {% if link.links != blank %}
+                          data-menu-dropdown-item
+                        {% endif %}
+                      >
+                        <span class="nav-menu-link-item">
+                          {{ link.title | escape }}
+                        </span>
+                        <span class="nav-menu-link-divider"></span>
+                      </a>
+                    </div>
+                  {%- endif -%}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% assign hamburgerMegaMenus = section.blocks | where: 'type', 'hamburger_mega_menu' %}
+          {% if hamburgerMegaMenus.size > 0 %}
+            <div class="hamburger-menu-right">
+              <div class="hamburger-promotion-banner">
+                {% for block in hamburgerMegaMenus %}
+                  {% if block.settings.content_image != blank or block.settings.content_video != blank %}
+                    <div id="hamburgerPromotion-{{ block.id }}" class="hamburger-promotion" {{ block.shopify_attributes }}>
+                      <div class="hamburger-promotion-img">
+                        {% if block.settings.content_video != blank %}                              
+                                <deferred-media class="deferred-media " data-type="video"> 
+                                  <template>
+                                    <div class="media-box" style="--image-ratio: 70%">
+                                        {{ block.settings.content_video | video_tag:  image_size: '1100x',
+                                            class: 'videoBackgroundFile', 
+                                            autoplay: true,
+                                            loop: true,
+                                            controls: false,
+                                            muted: true
+                                        }}
+                                    </div>
+                                  </template>
+                                </deferred-media>
+                              {% elsif block.settings.content_image != blank %}
+                                <div
+                                  class="media-box"
+                                  style="--image-ratio:70%"
+                                >
+                                  {%- render 'image', image: block.settings.content_image -%}
+                                </div>
+                              {% endif %}
+                      </div>
+                      {% if block.settings.content_title != blank %}
+                        <div class="hamburger-promotion-content">
+                          <span class="hamburger-promotion-heading">{{ block.settings.content_title }}</span>
+                        </div>
+                      {% endif %}
+                      {% if block.settings.content_link != blank %}
+                        <a href="{{ block.settings.content_link }}" class="hamburger-promotion-link focus-inside" title="{{ block.settings.content_title | default:shop.name }}">{{ block.settings.content_title | default:shop.name }}</a>
+                      {% endif %}
+                    <style>
+                      #hamburgerPromotion-{{ block.id }}{
+                        --overlay-background:{{ block.settings.overlay_color }};
+                        --overlay-opacity:{{ block.settings.overlay_opacity | divided_by: 100.0  }};
+                        --overlay-text-color:{{ block.settings.overlay_text_color }};
+                      }
+                    </style>
+                  </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

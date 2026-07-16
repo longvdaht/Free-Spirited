@@ -1,0 +1,465 @@
+.account .section-container {
+    position: relative;
+}
+
+.account-background-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: var(--image-bg);
+}
+
+.account-background-img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.account-background-img:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--overlay-background, #000);
+    opacity: var(--overlay-opacity, 0.5);
+}
+
+.left-side-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-side-content {
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-left: 1px solid var(--border-color);
+}
+
+.customer-page-title {
+    padding-bottom: 20px;
+    color: var(--overlay-heading);
+}
+
+.customer-page-desc {
+    color: var(--overlay-text);
+}
+
+.customer-page-content {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.account-card {
+    padding: 30px 30px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.account-heading {
+    padding-bottom: 15px;
+}
+
+.account-form {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.account-form .button.btn-block {
+    margin-top: 10px;
+}
+
+.account-info-text {
+    padding-top: 20px;
+}
+
+div#recover,
+#recover:target+#login {
+    display: none;
+}
+
+
+/* account inner pages start */
+
+.account-main-header {
+    background: var(--body-alternate-background);
+    min-height: 200px;
+    padding: 30px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.main-account-heading {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+}
+
+.account-info-tabs {
+    gap: 20px;
+}
+
+.account-info-link {
+    padding: 12px 20px;
+    display: inline-block;
+    color: var(--heading-color);
+    background: var(--body-background);
+}
+
+.account-info-link.active {
+    background: var(--heading-color);
+    color: var(--body-background);
+}
+
+.rounded-layout .account-info-link {
+    border-radius: 30px;
+}
+
+.order-history,
+.address-history {
+    padding-top: 20px;
+}
+
+.order-table,
+.order-table th,
+.order-table td {
+    border: 0;
+    text-align: center;
+}
+
+.order-table:not(.order-detail-table) {
+    border-spacing: 0 10px;
+    border-collapse: unset;
+}
+
+.order-table th {
+    font-family: var(--heading-font-family);
+    font-style: var(--heading-font-style);
+    font-weight: var(--heading-font-weight);
+    line-height: var(--heading-font-line-height);
+    color: var(--heading-color);
+    font-size: var(--medium-text);
+}
+
+.order-detail-table td,
+.order-detail-table th {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.order-table tr th:first-child,
+.order-table tr td:first-child {
+    text-align: left;
+}
+
+.order-detail-table tr th:first-child,
+.order-detail-table tr td:first-child {
+    text-align: left;
+    padding-left: 0;
+}
+
+.order-table:not(.order-detail-table) tbody tr {
+    background-color: var(--body-alternate-background);
+}
+
+.order-detail-info {
+    padding-bottom: 20px;
+}
+
+.order-detail-desc {
+    padding-top: 3px;
+}
+
+.order-payment-detail {
+    background: var(--body-alternate-background);
+    border-radius: var(--block-radius);
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.order-payment-card {
+    padding: 20px;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.order-payment-item address {
+    padding-top: 15px;
+}
+
+.order-payment-status {
+    display: flex;
+    justify-content: space-between;
+    background: var(--body-alternate-background);
+    font-size: var(--small-text);
+    margin-top: 15px;
+}
+
+.payment-status {
+    background: var(--text-color);
+    color: var(--body-alternate-background);
+    padding: 2px 12px;
+    text-transform: uppercase;
+    font-size: 10px;
+    display: inline-block;
+}
+
+.rounded-layout .payment-status {
+    border-radius: 20px;
+}
+
+.order-product-info-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    align-items: center;
+    width: 300px;
+    white-space: normal;
+}
+
+.small-product-img {
+    display: block;
+    width: 55px;
+    background-color: var(--image-bg);
+    border-radius: var(--block-radius);
+    overflow: hidden;
+}
+
+.order-total-summary {
+    padding-top: 30px;
+}
+
+.order-summary-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.order-summary-item+.order-summary-item {
+    margin-top: 10px;
+}
+
+.order-back-button {
+    margin-top: 20px;
+}
+
+.address-card-item {
+    border: 1px solid var(--border-color);
+    border-radius: var(--block-radius);
+    overflow: hidden;
+}
+
+.address-body {
+    padding: 15px 20px;
+}
+
+.address-title {
+    padding-bottom: 15px;
+}
+
+.address-desc,
+.address-desc * {
+    font-size: var(--small-text);
+}
+
+.address-footer {
+    padding: 14px 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.address-footer-item {
+    color: var(--text-color);
+    background: transparent;
+    font-size: var(--small-text);
+}
+
+.address-footer-item+.address-footer-item {
+    border-left: 1px solid var(--text-color);
+    padding-left: 14px;
+    margin-left: 14px;
+}
+
+.address-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 100%));
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.add-address-button {
+    padding-top: 30px;
+}
+
+.address-popup-content {
+    padding: 20px 25px;
+}
+
+.address-popup-header {
+    padding-bottom: 20px;
+}
+
+.address-form-body .checkmark {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* end */
+
+@media (min-width:576px) {
+    .address-list {
+        grid-template-columns: repeat(auto-fit, minmax(0, 45%));
+    }
+}
+
+@media (min-width:768px) {
+    .account-background-img {
+        width: 50%;
+    }
+    .account-card {
+        padding: 40px 30px;
+        max-width: 500px;
+        min-height: calc(100vh - var(--header-height, 0px) - var(--announcement-height, 0px));
+    }
+    .order-table td {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .add-address-button {
+        padding-top: 40px;
+    }
+    .account-form .button.btn-block {
+        margin-top: 20px;
+    }
+    .address-body {
+        padding: 20px 25px;
+    }
+    .address-footer {
+        padding: 12px 25px;
+    }
+    .address-list {
+        grid-template-columns: repeat(auto-fit, minmax(0, 280px));
+    }
+}
+
+@media (min-width:992px) {
+    .address-list {
+        grid-template-columns: repeat(auto-fit, minmax(0, 350px));
+    }
+    .order-detail-content {
+        padding-right: 30px;
+    }
+    .order-history,
+    .address-history {
+        padding-top: 40px;
+    }
+    .order-detail-info {
+        padding-bottom: 40px;
+    }
+    .order-back-button {
+        margin-top: 40px;
+    }
+    .order-payment-card+.order-payment-card {
+        border-top: 1px solid var(--border-color);
+    }
+    .order-summary-item {
+        font-size: var(--medium-text);
+    }
+    .small-product-img {
+        display: block;
+        width: 80px;
+    }
+    .order-product-info-wrapper {
+        width: 400px;
+    }
+}
+
+@media (min-width:1025px) {
+    .order-table:not(.order-detail-table) tbody tr:hover {
+        background: var(--text-color);
+        color: var(--body-background);
+    }
+    .order-table:not(.order-detail-table) tbody tr:hover td {
+        color: var(--body-background);
+    }
+    .order-table:not(.order-detail-table) tbody tr:hover .payment-status {
+        color: var(--text-color);
+        background: var(--body-background);
+    }
+}
+
+@media (min-width:1200px) {
+    .order-payment-card {
+        padding: 25px;
+    }
+    .order-payment-detail {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .payment-status {
+        font-size: 12px;
+    }
+    .address-popup-content {
+        padding: 30px 35px;
+    }
+    .address-body {
+        padding: 30px 35px;
+    }
+    .address-footer {
+        padding: 14px 35px;
+    }
+}
+
+@media (max-width:991px) {
+    .order-payment-detail {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start;
+        gap: 30px;
+    }
+}
+
+@media (max-width:767px) {
+    .order-payment-detail {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .order-payment-card+.order-payment-card {
+        border-top: 1px solid var(--border-color);
+    }
+    .right-side-content {
+        min-height: 300px;
+    }
+    .account .row {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width:480px) {
+    .account-card {
+        padding: 25px 15px;
+        max-width: 350px;
+    }
+}

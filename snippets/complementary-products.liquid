@@ -1,0 +1,40 @@
+<div class="complimentory-product" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ block.settings.products_count }}&intent=complementary"
+    product-recommendations
+    {{ block.shopify_attributes }}>
+    {%- if recommendations.performed and recommendations.products_count > 0 -%}
+      <h5 class="complimentory-heading text-large">{{ block.settings.heading }}</h5>
+      <div class="complimentory-product-wrapper product-card-outer small-product">
+      <div
+        id="complementary_products-{{ section.id }}"
+        class="complimentory-products  slider"
+        tabindex="0"
+        data-slick='{"infinite": true,"slidesToShow":3, "slidesToScroll": 1, "autoplay":false, "arrows": true,"responsive": [
+            {
+              "breakpoint": 575,
+              "settings": {
+                  "slidesToShow": 2
+            
+              }
+            }
+          ]}'
+      >
+        {%- for product in recommendations.products limit: block.settings.products_count -%}
+          {%- assign productFormId = 'product-form-' | append: section.id | append: forloop.index -%}
+          <div class="product-card-item">
+            {%- assign placeholder_image = 'product-apparel-1' -%}
+            {%- render 'card-product',
+              placeholder_image: placeholder_image,
+              cProduct: product,
+              section: section,
+              productFormId: productFormId,
+              optionhide: false,
+              showbadges: false,
+              gridImageSize: settings.grid_image_size
+            -%}
+          </div>
+        {% endfor %}
+      </div>
+      </div>
+    {%- endif -%}
+  </div>
+  

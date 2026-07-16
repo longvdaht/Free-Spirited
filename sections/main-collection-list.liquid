@@ -1,0 +1,221 @@
+<link rel="preload" as="style" href="{{ 'collection-list.css' | asset_url }}">
+{{ 'collection-list.css' | asset_url | stylesheet_tag }}
+<div class="section-container {{ section.settings.color_scheme }}-scheme">
+  {%- liquid
+    case section.settings.sort
+      when 'products_high', 'products_low'
+        assign collections = collections | sort: 'all_products_count'
+      when 'date', 'date_reversed'
+        assign collections = collections | sort: 'published_at'
+    endcase
+    if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
+      assign collections = collections | reverse
+    endif
+
+
+    if section.settings.columns_desktop == 2 
+      assign columnsValue = 'col-lg-6'
+     elsif section.settings.columns_desktop == 3
+      assign columnsValue = 'col-lg-4'
+     else
+      assign columnsValue = 'col-lg-3'
+     endif
+ 
+    if section.settings.column_mobile == '1'
+      assign columnsValueMobile = 'col-12'
+      else 
+      assign columnsValueMobile = 'col-6'
+    endif 
+
+  -%}
+  {% assign limit = section.settings.collections_per_page %}
+  {% paginate collections by limit %}
+    <div class="collection-list-wrapper">
+      <div class="{{ settings.container_width }}">
+        <div class="row">
+          {% liquid
+            if collections.size > 0
+              for collection in collections
+               assign aosDelay = forloop.index | times: 100 
+                assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1
+                assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index
+                render 'card-collection', collection: collection, section: section, gridImageSize: section.settings.grid_image_size, placeholder_image: placeholder_image,aosDelay:aosDelay,columnsValue:columnsValue,columnsValueMobile:columnsValueMobile
+              endfor
+            endif
+          %}
+        </div>
+        {% liquid
+          if paginate.pages > 1
+            render 'pagination', paginate: paginate
+          endif
+        %}
+      </div>
+    </div>
+  {% endpaginate %}
+</div>
+<style>
+  #shopify-section-{{ section.id }}.shopify-section {
+    --top-spacer:{{ section.settings.top_space_desktop }}px;
+    --bottom-spacer:{{ section.settings.bottom_space_desktop }}px;
+
+  }
+  @media only screen and (max-width:767px) {
+    #shopify-section-{{ section.id }}.shopify-section{
+      --top-spacer:{{ section.settings.top_space_mobile }}px;
+      --bottom-spacer:{{ section.settings.bottom_space_mobile }}px;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "t:sections.main-collection-list.name",
+  "tag": "section",
+  "class": "main-collection-list",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-list.settings.grid.label"
+    },
+    {
+      "type": "range",
+      "id": "collections_per_page",
+      "min": 4,
+      "max": 24,
+      "step": 4,
+      "default": 12,
+      "label": "t:sections.main-collection-list.settings.collections_per_page.label"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "t:sections.main-collection-list.settings.columns_desktop.label",
+      "default": 4,
+      "min": 2,
+      "max": 4,
+      "step": 1
+    },
+    {
+      "type": "radio",
+      "id": "column_mobile",
+      "label": "t:sections.main-collection-list.settings.column_mobile.label",
+      "default": "2",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "grid_image_size",
+      "label": "t:global.common.image_ratio.label",
+      "default": "portrait",
+      "options": [
+        {
+          "value": "auto",
+          "label": "t:global.common.image_ratio.options.auto"
+        },
+        {
+          "value": "landscape",
+          "label": "t:global.common.image_ratio.options.landscape"
+        },
+        {
+          "value": "portrait",
+          "label": "t:global.common.image_ratio.options.portrait"
+        },
+        {
+          "value": "square",
+          "label": "t:global.common.image_ratio.options.square"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "sort",
+      "label": "t:sections.main-collection-list.settings.sort.label",
+      "options": [
+        {
+          "value": "alphabetical",
+          "label": "t:sections.main-collection-list.settings.sort.options.alphabetical.label"
+        },
+        {
+          "value": "alphabetical_reversed",
+          "label": "t:sections.main-collection-list.settings.sort.options.alphabetical_reversed.label"
+        },
+        {
+          "value": "date_reversed",
+          "label": "t:sections.main-collection-list.settings.sort.options.date_reversed.label"
+        },
+        {
+          "value": "date",
+          "label": "t:sections.main-collection-list.settings.sort.options.date.label"
+        },
+        {
+          "value": "products_high",
+          "label": "t:sections.main-collection-list.settings.sort.options.products_high.label"
+        },
+        {
+          "value": "products_low",
+          "label": "t:sections.main-collection-list.settings.sort.options.products_low.label"
+        }
+      ],
+      "default": "alphabetical"
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.color_section.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "primary",
+      "label": "t:global.header.color_scheme.label"
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.space_section.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:global.top_space_desktop.label",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:global.bottom_space_desktop.label",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:global.top_space_mobile.label",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:global.bottom_space_mobile.label",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    }
+  ]
+}
+{% endschema %}

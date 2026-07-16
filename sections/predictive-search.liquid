@@ -1,0 +1,163 @@
+{%- if predictive_search.performed -%}
+  {%- if predictive_search.resources.products.size > 0 or predictive_search.resources.collections.size > 0 or predictive_search.resources.articles.size > 0 or predictive_search.resources.pages.size > 0 -%}
+    {%- if predictive_search.resources.queries.size > 0 and settings.enable_queries -%}
+      <div class="related-search-query" data-recent-suggestion-result>
+        <h6 class="predictive-search-heading">{{ 'templates.search.suggestions' | t }}</h6>
+        <ul class="related-search-query-list">
+          {%- for query in predictive_search.resources.queries -%}
+            <li class="related-search-query-item"> <a href="{{ query.url }}" class="related-search-query-link"  aria-label="{{ query.text }}">{{ query.styled_text }}</a></li>   
+          {% endfor %} 
+        </ul>
+      </div>
+    {% endif %} 
+    {%- assign activeTab = 'active' -%}
+    {%- assign activeContent = 'active' -%}
+    {%- assign resultType = 'product' -%}
+    <div class="search-result-tabs">
+        <ul class="list-inline search-result-tabs-list">
+            {%- if predictive_search.resources.products.size > 0 -%}
+              <li
+                class="search-result-tabs-item {{ activeTab }}"
+                data-search-tab
+                data-results="filter-products" 
+                data-resultUrl="{{ routes.search_url }}?type=product&q={{ predictive_search.terms }}&options[prefix]=last"
+                tabindex="0"
+              >
+                <a class="search-result-tabs-link heading-font text-medium">{{ 'templates.search.products' | t }}</a>
+              </li>
+              {%- assign activeTab = '' -%}
+            {%- endif -%}
+
+            {%- if predictive_search.resources.collections.size > 0 and settings.enable_collections %}
+                {%- liquid
+                    if activeTab != ''
+                      assign resultType = 'collection'
+                    endif
+                  -%}
+                  <li
+                    class="search-result-tabs-item {{ activeTab }}"
+                    data-search-tab
+                    data-results="filter-collections"
+                    data-resultUrl="{{ routes.search_url }}?type=collection&q={{ predictive_search.terms }}&options[prefix]=last"
+                    tabindex="0"
+                  >
+                    <a class="search-result-tabs-link heading-font text-medium">{{ 'templates.search.collections' | t }}</a>
+                  </li>
+
+             {%- assign activeTab = '' -%}
+            {% endif %}
+
+            {%- if predictive_search.resources.articles.size > 0 and settings.enable_article -%}
+              {%- liquid
+                if activeTab != ''
+                endif
+              -%}
+              <li
+                class="search-result-tabs-item {{ activeTab }}"
+                data-search-tab
+                data-results="filter-articles"
+                data-resultUrl="{{ routes.search_url }}?type=article&q={{ predictive_search.terms }}&options[prefix]=last"
+                tabindex="0"
+              >
+                <a class="search-result-tabs-link heading-font text-medium">{{ 'templates.search.blog_posts' | t }}</a>
+              </li>
+              {%- assign activeTab = '' -%}
+            {%- endif -%}
+            {%- if predictive_search.resources.pages.size > 0 and settings.enable_pages -%}
+              {%- liquid
+                if activeTab != ''
+                endif
+              -%}
+              <li
+                class="search-result-tabs-item {{ activeTab }}"
+                data-search-tab
+                data-results="filter-pages"
+                data-resultUrl="{{ routes.search_url }}?type=page&q={{ predictive_search.terms }}&options[prefix]=last"
+                tabindex="0"
+              >
+                <a class="search-result-tabs-link heading-font text-medium">{{ 'templates.search.page' | t }}</a>
+              </li>
+            {%- endif -%}
+          </ul>
+    </div> 
+    <div class="search-result-inner">
+        <div class="search-result-tabs-content">
+            {% if predictive_search.resources.products.size > 0 %}
+                <div id="filter-products" data-content="filter-products" class="search-result-tabs-panel {{ activeContent }}">
+                    <div class="search-result-product-list product-card-outer small-product">
+                        {%- for item in predictive_search.resources.products  limit: 6 -%}
+                          {% assign aosDelay = forloop.index | times: 50 %}
+                            <div class="product-card-item">
+                              {%- capture current -%}{% cycle section.id: 1, 2, 3, 4 %}{%- endcapture -%}
+                               {%- assign placeholder_image = 'product-apparel-' | append: current -%}
+                                {% render 'card-product' placeholder_image: placeholder_image, cProduct : item, price: true, review: true, optionhide: false, hideVendor: true, gridImageSize: settings.common_grid_image_size , aosDelay: aosDelay %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {%- assign activeContent = '' -%}
+            {% endif %}
+
+            {%- if predictive_search.resources.collections.size > 0 and settings.enable_collections -%}
+                    <div id="filter-collections" data-content="filter-collections" class="search-result-tabs-panel {{ activeContent }}">
+                        <div class="search-result-collection-list">
+                            <div class="row">
+                                {%- for collection in predictive_search.resources.collections  limit: 4 -%}
+                                  <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                                    {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+                                    {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}                          
+                                    {% render 'card-collection', collection: collection, gridImageSize: settings.common_grid_image_size, collectionSearch: true, placeholder_image: placeholder_image %}
+                                  </div> 
+                                {% endfor %}
+                            </div>
+                        </div> 
+                    </div>
+              {%- assign activeContent = '' -%}
+            {% endif %}
+            {%- if predictive_search.resources.articles.size > 0 and settings.enable_article -%}
+                <div id="filter-articles" data-content="filter-articles" class="search-result-tabs-panel {{ activeContent }}">
+                    <div class="search-result-article-list">
+                        {%- for article in predictive_search.resources.articles  limit: 4 -%}
+                           {% render 'card-blog' article: article, textClass: 'text-medium', articleSearch: true,gridImageSize: settings.common_grid_image_size, class: 'horizontal-view' %}
+                        {%- endfor -%} 
+                    </div>
+                </div>
+                {%- assign activeContent = '' -%}
+            {% endif %}
+
+            {% if predictive_search.resources.pages.size > 0 and settings.enable_pages %}
+                <div id="filter-pages" data-content="filter-pages" class="search-result-tabs-panel {{ activeContent }}">
+                    <div class="search-result-pages-list">
+                        {%- for page in predictive_search.resources.pages limit: 4 -%}
+                          <div class="page-search-item">
+                            <h6>{{ page.title | truncate: 50 | escape }}</h6>
+                            <a href="{{ page.url }}" class="text-underline text-xsmall" title="{{ page.title | truncate: 50 | escape }}">{{ "templates.search.read_more" | t }}</a>
+                          </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+            {% endif %}
+        </div>
+        <div class="search-result-link">
+            <a href="{{ routes.search_url }}?q={{ predictive_search.terms }}&options%5Bprefix%5D=last" class="text-underline" title="{{ 'templates.search.view_all_results' | t }}"><strong>{{ 'templates.search.view_all_results' | t }}</strong></a>
+        </div>
+    </div>
+    {%- else -%}
+    <div class="empty-card">
+      <span class="empty-card-icon">
+        <svg width="41" height="42" viewBox="0 0 21 22" fill="none">
+          <path d="M16.0452 16.7143L20 21M18.5528 9.8C18.5528 14.6601 14.6235 18.6 9.77638 18.6C4.92932 18.6 1 14.6601 1 9.8C1 4.9399 4.92932 1 9.77638 1C14.6235 1 18.5528 4.9399 18.5528 9.8Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </span>
+      <div class="empty-card-content">
+        <h4 class="empty-card-heading">{{ 'templates.search.no_results_heading' | t }}</h4>
+          <p class="empty-card-desc">{{ 'templates.search.no_results_body' | t }}</p>
+
+         {% assign btnText = 'general.continue_shopping' | t %}
+          {% render 'button', class: 'empty-card-button', button_link: routes.all_products_collection_url, button_style: 'solid', button_size: 'small', button_text: btnText %}
+        
+      </div>
+    </div>
+  {% endif %}
+{% endif %}

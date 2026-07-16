@@ -1,0 +1,76 @@
+.event-calender-item {
+    box-shadow: 0 2px 3px #eee;
+    margin-bottom: 20px;
+    border-radius: var(--block-radius);
+    overflow: hidden;
+}
+
+.event-calender-img-box {
+    position: relative;
+}
+
+.event-calender-img {
+    background: var(--image-bg);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.event-calender-date {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+    background: var(--body-background);
+    display: flex;
+    flex-direction: column;
+    min-width: 60px;
+    min-height: 70px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 6px;
+}
+
+.event-calender-img-box.no-img .event-calender-date {
+    position: unset;
+    background: var(--body-alternate-background);
+    padding: 20px;
+    min-height: 200px;
+}
+
+.event-calender-content {
+    padding: 25px;
+}
+
+.event-calender-heading {
+    padding-bottom: 5px;
+}
+
+.event-calender-description {
+    padding-bottom: 10px;
+}
+
+.event-location,
+.event-timing {
+    margin-bottom: 5px;
+}
+
+.event-location-child svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+.event-button {
+    display: inline-block;
+    padding-top: 10px;
+    font-size: var(--small-text);
+}
+
+@media (max-width:767px) {
+    .event-calender-content {
+        padding: 20px;
+    }
+}

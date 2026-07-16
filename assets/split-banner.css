@@ -1,0 +1,109 @@
+.split-banner-item {
+    position: relative;
+    height: var(--media-height);
+}
+
+.split-banner-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: var(--body-background);
+    overflow: hidden;
+}
+
+.split-banner-image img {
+    object-position: top !important;
+}
+
+.split-banner-image:after {
+    content: "";
+    background-color: var(--overlay-bg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    opacity: var(--overlay-opacity);
+}
+
+.split-banner-content {
+    position: absolute;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.split-banner-heading {
+    color: var(--overlay-heading-color);
+}
+
+.split-banner-desc {
+    color: var(--overlay-text-color);
+    padding: 10px 0;
+}
+
+.split-banner-button-item {
+    padding: 10px 0;
+}
+
+.split-banner-desc+.split-banner-button-item {
+    padding-bottom: 0;
+}
+
+@media (min-width:1025px) {
+    .split-banner-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    .split-banner-item {
+        flex: 1;
+        transition: .8s ease;
+    }
+    .split-banner-item:hover {
+        flex: 2;
+    }
+    .split-banner-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: calc(50vw + 2px);
+    }
+    .split-banner-content {
+        max-width: 220px;
+    }
+}
+
+@media (min-width:1200px) {
+    .split-banner-content {
+        max-width: 300px;
+        padding-left: 25px;
+    }
+}
+
+@media (min-width:1441px) {
+    .split-banner-content {
+        max-width: 400px;
+    }
+}
+
+@media (max-width:1024px) {
+    .split-banner-wrapper {
+        display: grid;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        grid-auto-columns: minmax(75%, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(75%, 1fr));
+        grid-auto-flow: column;
+    }
+    .split-banner-item {
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
+}
+
+@media (max-width:480px) {
+    .split-banner-content {
+        max-width: 210px;
+    }
+}

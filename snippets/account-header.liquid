@@ -1,0 +1,14 @@
+<div class="main-account-header">
+  <ul class="list-inline account-info-tabs">
+    <li class="account-info-item">
+      <a href="{{ routes.account_url }}"  class="heading-font account-info-link {% if request.path == routes.account_url or request.path contains '/orders/' %}active{% endif %}">
+        {{ 'customer.orders.title' | t }}
+      </a>
+    </li>
+    <li class="account-info-item">
+      <a href="{{ routes.account_addresses_url }}" class="heading-font account-info-link {% if request.path == routes.account_addresses_url %}active{% endif %}">
+        {{ 'customer.account.view_addresses' | t }}
+      </a>
+    </li>
+  </ul>
+</div>

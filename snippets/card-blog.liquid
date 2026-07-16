@@ -1,0 +1,142 @@
+{%- liquid
+  
+    unless gridImageSize
+      assign gridImageSize = settings.blog_grid_image_size
+    endunless
+    if gridImageSize == 'landscape'
+      assign imageRatio = 75
+    elsif gridImageSize == 'square'
+      assign imageRatio = 100
+    elsif gridImageSize == 'portrait'
+      assign imageRatio = 125
+    else
+      if article.image.src != blank
+        assign imageRatio = 1 | divided_by: article.image.src.aspect_ratio | times: 100
+      else
+        assign imageRatio = 100
+      endif
+    endif
+%}
+
+{%- liquid
+  if settings.enable_animation
+    assign animationAttr = 'data-aos="fade-up" '
+  else
+    assign animationAttr = ''
+  endif
+-%}
+{% capture article_tags %}
+  {% if section.settings.show_tags and article.tags.size > 0 %}
+    <ul class="list-inline blog-post-tags">
+      {% for tag in article.tags %}
+        <li class="blog-post-tag-item">
+          <a class="unstyled-link blog-post-tag-link" href="{{ blog.url }}/tagged/{{tag}}">{{ tag }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endcapture %}
+{% capture article_heading %}
+  <h4 class="blog-post-title {{ textClass }}">
+    {% if article != blank %}
+      {{ article.title }}
+    {% else %}
+      {{ 'blogs.onboarding_article.title' | t }}
+    {% endif %}
+  </h4>
+{% endcapture %}
+<div class="blog-post-card">
+  <div class="blog-post-item animate-hvr {% if settings.show_content_overlay and articleSearch != true %}content-overlay{% endif %} {{ class }}" {%   if settings.enable_animation %}data-aos="fade-up" data-aos-easing="ease" data-aos-offset="0" data-aos-duration="500" data-aos-delay="{{ aosDelay }}" {% endif %}>
+    <{% if article != balnk %}a  href="{{ article.url }}"{% else %}div{% endif %}
+      class="blog-post-img{% if settings.blog_grid_image_size == 'adapt-to-content' %} adapt-to-content{% endif %}" >
+      
+      {% if article.image != blank or placeholder_image != blank %}
+      <div class="media-box" style="--image-ratio:{{ imageRatio }}%">
+        {% if article.image != blank %}
+          {% render 'image', image: article.image.src %}
+        {% else %}
+          {% if placeholder_image != blank %}
+            {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+        {% endif %}
+      </div>
+     {% endif %}
+    </{% if article != balnk %}a{% else %}div{% endif %}>
+    <div class="blog-post-content">
+      <div class="blog-post-content-head">
+        {% if articleSearch == true
+          or section.settings.show_date
+          or section.settings.show_author
+          or article.comments_count > 0
+          and blog.comments_enabled?
+          and section.settings.comments_enabled %}
+          <div class="blog-post-info">
+            {%- if articleSearch != true -%}
+              {%- if  article.comments_count > 0
+                and blog.comments_enabled?
+                and section.settings.comments_enabled
+              -%}
+                <span class="comment-count">
+                  {{ 'blogs.article.comments' | t: count: article.comments_count }}
+                </span>
+              {%- endif -%}
+            {%- endif -%}
+            {% if article != blank %}
+              {% if articleSearch == true or section.settings.show_date %}
+                <span class="blog-post-time">{{ article.published_at | date: '%B %d, %Y' }}</span>
+              {% endif %}
+              {%- if articleSearch == true or section.settings.show_author -%}
+                <span>{{ article.author }}</span>
+              {%- endif -%}
+            {% else %}
+              <span class="blog-post-time"> {{ 'blogs.onboarding_article.date' | t }}</span>
+            {% endif %}
+          </div>
+        {% endif %}
+        {% if settings.show_content_overlay == false %}
+          {{ article_heading }}
+        {% endif %}
+        {% if settings.show_content_overlay %}
+          {{ article_tags }}
+        {% endif %}
+      </div>
+      <div class="blog-post-content-body">
+        <div class="blog-post-text">
+          {% if settings.show_content_overlay == false %}
+            {{ article_tags }}
+          {% endif %}
+          {% if settings.show_content_overlay %}
+            {{ article_heading }}
+          {% endif %}
+          <p class="blog-post-desc rte">
+            {% liquid
+              if article != blank 
+               if section.settings.show_excerpt  
+                echo article.excerpt_or_content | strip_html | truncatewords: 10
+              endif 
+              else
+                echo 'blogs.onboarding_article.content' | t
+              endif
+            %}
+          </p> 
+        </div>
+        <{% if article != blank %}a  href="{{ article.url }}" aria-label="article link"{% else %}span{% endif %} class="arrow-btn{% if articleSearch == true %} small-arrow-btn{%else%} medium-arrow-btn{%  endif %} {% if settings.show_content_overlay and articleSearch != true %}no-bg{% endif %}">
+          {% if settings.show_content_overlay  and articleSearch != true %}
+            <svg width="44" height="43" viewBox="0 0 44 43" fill="none">
+              <path d="M2.44501 41.0194L41.7942 2.5922M41.7942 2.5922L4.46151 2.1497M41.7942 2.5922L41.3516 39.9248" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          {% else %} 
+          <svg class="arrow-btn-icon1" width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.07031 0L14.1414 7.07107L7.07031 14.1421L5.76824 12.8401L10.6166 7.99173L0.95721 7.9917L0.957199 6.15032L10.6166 6.15035L5.76827 1.30205L7.07031 0Z" fill="currentColor"></path>
+          </svg>
+          <svg class="arrow-btn-icon2" width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.07031 0L14.1414 7.07107L7.07031 14.1421L5.76824 12.8401L10.6166 7.99173L0.95721 7.9917L0.957199 6.15032L10.6166 6.15035L5.76827 1.30205L7.07031 0Z" fill="currentColor"></path>
+          </svg> 
+        {% endif %}                  
+        </{% if article != blank %}a{% else %}span{% endif %}>
+      </div>
+    </div>
+  </div>
+</div>
+
+

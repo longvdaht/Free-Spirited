@@ -1,0 +1,161 @@
+<!doctype html>
+  <html class="no-js" lang="{{ request.locale.iso_code }}">
+    <head>
+         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+     {%
+    include 'cc-cart.js' with      
+      checkout_url: 'https://checkout.shopfreespirited.com/checkout'
+  %}
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="theme-color" content="#F5F5F5">
+      {% render 'meta-tags' %}
+      <link rel="canonical" href="{{ canonical_url }}">
+      <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+      {%- if settings.favicon != blank -%}
+        <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      {%- endif -%}
+  
+      {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+        <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+      {%- endunless -%}
+  
+      <title>
+        {{ page_title }}
+      </title>
+  
+      {% if page_description %}
+        <meta name="description" content="{{ page_description | escape }}">
+      {% endif %}
+      {%- render 'header-scripts.zipifypages', renderctx: 'thm', apprxhbl: zp_apprxhbl -%}{{ content_for_header }}
+
+      {%- render 'global-style-variables' -%}
+      {%- render 'global-variables' -%}
+      {%- render 'global-variables' -%}
+
+<script async src="https://session.frauddeflect.net/static/v4.10195.js" charset="utf-8"></script>
+
+
+<script>
+  window._clymInit=window._clymInit||[];
+  window._clymInit.push(['privacy','27088145208f4924b8b2c374o6izw1cs',{}]);
+</script>
+<script src='https://widget.clym-sdk.net/blocking.js'></script>
+
+<script src='https://widget.clym-sdk.net/clym.js' async></script>
+    </head>
+    <body class="{{ settings.other_layout }} button-hover-{{ settings.button_hover_effect }}{% if settings.enable_animation %} animation-on{% endif %}">
+      <a class="unstyled-link skip-to-content-link button focus-inside{% if settings.enable_button_shadow %} button-shadow{% endif %}" href="#MainContent">
+        {{ 'accessibility.skip_to_text' | t }}
+      </a>
+      {%- render 'preloader' -%}
+      <div class="body-main">
+        {% sections 'header-group' %}
+        <main id="MainContent" class="main-content focus-none" role="main" tabindex="-1" >
+          {{ content_for_layout }} 
+        </main>
+        <div class="custom-footer-group">  
+        {% sections 'footer-group' %}
+        </div>
+        {% section 'mobile-dock' %}
+      </div> 
+        {% render 'newsletter-popup' %}
+        {% render 'cookies-popup' %}
+        {% render 'age-verification' %}
+        {% render 'search-drawer' %}
+        {% render 'cart-drawer' %}
+        {% render 'quick-view' %}
+        {% render 'scroll-top' %}
+
+        {% if settings.enable_shipping and settings.shipping_rate != blank %}
+          <div id="mini-cart-shipping"  data-minicart-shipping {% if settings.enable_shipping and settings.shipping_rate != blank %}  data-shipping-rate="{{ settings.shipping_rate | times: 100 }}" data-shippin-text="{{ settings.shipping_text }}"{% endif %}>
+            <select id="shipping-countries" class="hidden" disabled>
+              {{ country_option_tags }}
+            </select>
+          </div>
+        {% endif %}
+        {% if settings.enable_animation %}
+          <script>
+            document.addEventListener("DOMContentLoaded",function(){
+              AOS.init({
+                startEvent: 'DOMContentLoaded',
+                offset: 160,
+                once: true,
+              });
+              setTimeout(function () {
+                if (AOS) {
+                  AOS.refresh();
+                }
+              }, 1000);
+            });
+          </script>
+        {% endif %}
+      <script>
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+        if (Shopify.designMode) {
+          document.documentElement.classList.add('shopify-design-mode');
+        }
+    
+      </script>
+     
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I cancel my Free Spirited Insiders membership?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use our cancellation link, reply to any order email, or call us. You don’t need to return anything — and you won’t be charged again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get a refund?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We refund memberships whenever there’s confusion — no questions asked. Just contact us and we’ll make it right."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why was I charged after a one-time order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You likely got a free 21-day trial of our VIP club. After 21 days, it bills monthly unless canceled — like most subscription services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I never received emails or alerts! Is Free Spirited a scam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sometimes emails land in spam or promo folders. We always send multiple notices — but even if you missed them, we’ll make it right."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Free Spirited legit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — 100%. We’ve sold over 100,000 shirts and have thousands of 5-star reviews. We’re real people who care and fix every issue."
+      }
+    }
+  ]
+}
+</script>
+{% render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: oneclickupsellapp %}
+{% render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: oneclickupsellapp %}
+  }
+</script>
+ <script>
+  var sessionId = undefined;
+  if (typeof AFFRAUDDEFLECT !== 'undefined') {
+    sessionId = AFFRAUDDEFLECT.init({team: '10195', serverUrl: 'https://session.frauddeflect.net'});
+  }
+</script>
+</body>
+</html>

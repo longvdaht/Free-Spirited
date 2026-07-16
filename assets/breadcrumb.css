@@ -1,0 +1,36 @@
+.breadcrumb {
+    color: rgb(var(--text-color));
+    border-bottom: 1px solid rgb(var(--border-color));
+}
+
+.breadcrumb-item {
+    position: relative;
+    display: inline-flex;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.breadcrumb-item:after {
+    position: absolute;
+    content: "/";
+    right: -3px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.breadcrumb-item:last-of-type:after {
+    display: none;
+}
+
+.breadcrumb-link {
+    color: var(--link-color);
+    font-size: 14px;
+}
+
+.breadcrumb-link.breadcrumb-text {
+    color: var(--text-color);
+}

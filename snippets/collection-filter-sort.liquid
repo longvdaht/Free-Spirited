@@ -1,0 +1,128 @@
+
+{% liquid
+  assign checkFilter = false
+  if section.settings.enable_filtering and results.filters.size > 0 
+    assign checkFilter = true
+  elsif section.settings.enable_sorting
+    assign checkFilter = true
+  endif
+%}
+
+{% if checkFilter %}
+  <div class="filter-bar drawer-content" data-filter-sort>
+    <div class="container">
+      <div class="filter-bar-box">
+        <div class="filter-bar-left">
+          {% if section.settings.enable_filtering and results.filters.size > 0 %}
+            <div class="filter-menu">
+                <a
+                  href="#filter-side-drawer"
+                  class="filter-heading cursor-pointer d-none d-md-block"
+                  {% if section.settings.filter_type == 'dropdown'  %}
+                    data-dropdown-head
+                    data-dropdown-filter
+                  {% else %}
+                    data-id="filter-side-drawer" data-sidedrawer-button
+                  {% endif %}
+                >
+                
+                  <div class="filter-heading-inner">
+                  <span class="filter-heading-icon"><svg width="21" height="17" viewBox="0 0 21 17" fill="none">
+                    <path d="M4.85742 5C5.82392 5 6.60742 4.2165 6.60742 3.25C6.60742 2.2835 5.82392 1.5 4.85742 1.5C3.89092 1.5 3.10742 2.2835 3.10742 3.25C3.10742 4.2165 3.89092 5 4.85742 5Z" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M15.3574 10.5C16.3239 10.5 17.1074 9.7165 17.1074 8.75C17.1074 7.7835 16.3239 7 15.3574 7C14.3909 7 13.6074 7.7835 13.6074 8.75C13.6074 9.7165 14.3909 10.5 15.3574 10.5Z" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M6.60742 15.75C7.57392 15.75 8.35742 14.9665 8.35742 14C8.35742 13.0335 7.57392 12.25 6.60742 12.25C5.64092 12.25 4.85742 13.0335 4.85742 14C4.85742 14.9665 5.64092 15.75 6.60742 15.75Z" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M6.60742 3.25H20.0615" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M1 3.25H3.2168" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M1 14H4.8584" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M1 8.75H13.6641" stroke="currentColor" stroke-width="1.6"/>
+                    <path d="M8.63281 14H20.0645" stroke="currentColor" stroke-width="1.6"/>
+                  </svg></span>
+                  <h6 class="filter-heading-text text">{{ 'sections.collection_template.filter_by_label' | t }}</h6>
+                </div>
+              </a>
+
+
+              <a
+                href="#filter-side-drawer"
+                class="filter-heading cursor-pointer d-block d-md-none"
+                data-id="filter-side-drawer" data-sidedrawer-button
+              >
+              
+                <div class="filter-heading-inner">
+                <span class="filter-heading-icon"><svg width="21" height="17" viewBox="0 0 21 17" fill="none">
+                  <path d="M4.85742 5C5.82392 5 6.60742 4.2165 6.60742 3.25C6.60742 2.2835 5.82392 1.5 4.85742 1.5C3.89092 1.5 3.10742 2.2835 3.10742 3.25C3.10742 4.2165 3.89092 5 4.85742 5Z" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M15.3574 10.5C16.3239 10.5 17.1074 9.7165 17.1074 8.75C17.1074 7.7835 16.3239 7 15.3574 7C14.3909 7 13.6074 7.7835 13.6074 8.75C13.6074 9.7165 14.3909 10.5 15.3574 10.5Z" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M6.60742 15.75C7.57392 15.75 8.35742 14.9665 8.35742 14C8.35742 13.0335 7.57392 12.25 6.60742 12.25C5.64092 12.25 4.85742 13.0335 4.85742 14C4.85742 14.9665 5.64092 15.75 6.60742 15.75Z" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M6.60742 3.25H20.0615" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M1 3.25H3.2168" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M1 14H4.8584" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M1 8.75H13.6641" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M8.63281 14H20.0645" stroke="currentColor" stroke-width="1.6"/>
+                </svg></span>
+                <h6 class="filter-heading-text text">{{ 'sections.collection_template.filter_by_label' | t }}</h6>
+              </div>
+            </a>
+            </div>
+          {% endif %}
+        </div>
+        {% if section.settings.enable_sorting == true %}
+          {% assign sort_by = results.sort_by | default: results.default_sort_by %}
+          {% assign sort_by_name = '' %}
+          {% capture sortoption %}
+                {%- for option in results.sort_options -%}
+                {% if option.value == sort_by %}
+                {% assign sort_by_name = option.name | escape %}
+                {% endif %}
+                <li class="custom-select-item{% if option.value == sort_by %} selected{% endif %}">
+                  <input type="radio" class="custom-select-item-active hidden{% if option.value == sort_by %} sort-by-selected{% endif %}" name="sort_by" id="sortByOption-{{ forloop.index }}" value="{{ option.value | escape }}" form="filterForm"
+                    data-name="{{ option.name | escape }}"
+                    {% if option.value == sort_by %}
+                        checked 
+                    {% endif %}>
+                    <label class="custom-select-label hidden" for="sortByOption-{{ forloop.index }}"> {{ option.name | escape }}</label>
+                    <span class="custom-select-label" tabindex="0" data-sort-option> {{ option.name | escape }}</span>
+                </li>
+                {% endfor %}
+          {% endcapture %}
+         
+          <div class="filter-bar-right" data-filter-sort data-sorting-content>
+            {% if section.settings.enable_filtering == false or results.filters.size == 0 %}
+              <form class="" id="filterForm">
+             {% endif %}
+            <div class="filter-heading">
+              <h6 class="filter-heading-text text ">{{ 'sections.collection_template.sort_by_label' | t }}</h6>
+              <div
+                class="custom-select"
+                data-custom-select
+                data-collection-sort
+                id="tools-products-sort"
+                data-id="{{ section.id }}"
+                tabindex="0"
+              >
+                <div class="custom-select-button">
+                  <span class="custom-select-text  heading-font"
+                    ><strong> {{ sort_by_name }} </strong></span
+                  >
+                  <span class="custom-select-arrow">
+                    <svg width="8" height="5" viewBox="0 0 8 5" fill="none">
+                      <path d="M7 1L4 4L1 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </div>
+                <div class="custom-select-content right-position" data-custom-select-summary>
+                  <ul class="custom-select-list">
+                    {{ sortoption }}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            {% if section.settings.enable_filtering == false or results.filters.size == 0 %}
+            </form>
+            {% endif %}
+          </div>
+        
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}

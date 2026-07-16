@@ -1,0 +1,107 @@
+.accordion-item {
+    position: relative;
+    transition: .2s ease;
+    background: var(--body-background);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, .05);
+    border-radius: var(--block-radius);
+    overflow: hidden;
+}
+
+.accordion-item+.accordion-item {
+    margin-top: 20px;
+}
+
+.accordion-heading {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 12px 20px;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: var(--block-radius);
+}
+
+.accordion-heading-text {
+    padding-right: 10px;
+}
+
+.accordion-icon {
+    margin-left: auto;
+    color: var(--heading-color);
+    line-height: 0;
+    transition: .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--body-alternate-background);
+    border-radius: 100%;
+}
+
+.accordion-item[open] {
+    box-shadow: none;
+}
+
+.accordion-item[open] .accordion-icon {
+    transform: rotate(90deg);
+    background: var(--body-background);
+}
+
+.accordion-item[open] .accordion-heading {
+    background: var(--body-alternate-background);
+}
+
+.accordion-content {
+    padding: 20px 20px;
+}
+
+.accordion-content p+p {
+    margin-top: 6px;
+}
+
+@media (min-width:768px) {
+    .accordion-heading {
+        padding: 12px 30px;
+    }
+    .accordion-content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width:992px) {
+    .accordion-icon {
+        width: 46px;
+        height: 46px;
+    }
+}
+
+@media (min-width:1200px) {
+    .accordion-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .accordion-item+.accordion-item {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width:1441px) {
+    .accordion-heading {
+        padding: 12px 40px;
+    }
+    .accordion-content {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width:767px) {
+    .accordion-heading-text {
+        font-size: var(--h6);
+    }
+    .accordion-icon svg {
+        width: 13px;
+    }
+}

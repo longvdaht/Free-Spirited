@@ -1,0 +1,435 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page_banner_VGVQQM": {
+      "type": "page-banner",
+      "settings": {
+        "enable_fullwidth": true,
+        "banner_image": "shopify://shop_images/pexels-teona-swift-6850772_71fd93ab-7ebc-4ac7-9b4e-926f5e697907.jpg",
+        "banner_height_desktop": "250px",
+        "banner_height_mobile": "200px",
+        "heading": "",
+        "heading_overly": true,
+        "heading_size": "h2",
+        "seo_heading": "h3",
+        "content_width": "medium",
+        "heading_alignment": "text-center",
+        "banner_bg_color": "#f2f2f2",
+        "bg_color_opacity": "#000000",
+        "text_color": "#ffffff",
+        "overlay_opacity": 0,
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "image_with_text_cJBK76": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_w9gXci": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "We dye on Gildan 5000 tees as we find they are the absolute best to dye on!"
+          }
+        },
+        "text_xQjdxF": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Fit Tips</strong></h3><ul><li>Chest = measured armpit to armpit. Full circumference is double the listed measurement (or see the chart below!)</li><li>Our apparel is made from <strong>100% pre-shrunk cotton</strong>, ensuring that your fit stays true even after washing.</li><li>If you’re between sizes, we recommend sizing up for a more relaxed fit or down for a closer fit.</li></ul>",
+            "text_size": "medium"
+          }
+        },
+        "button_FPNLAP": {
+          "type": "button",
+          "settings": {
+            "button_style_1": "solid",
+            "btn_text": "CONTINUE SHOPPING",
+            "btn_url": "shopify://collections/shop-sale",
+            "btn_size": "regular",
+            "button_style_2": "solid",
+            "btn_text_2": "",
+            "btn_url_2": "",
+            "btn_size_2": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_w9gXci",
+        "text_xQjdxF",
+        "button_FPNLAP"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "section_fullwidth": false,
+        "card_background": false,
+        "image": "shopify://shop_images/Adult_Size_Chart_11f6eb63-b767-4e0b-9a6d-c061cd0dcaf3.png",
+        "image_overlay_enable": false,
+        "image_width": "large",
+        "image_position": "left",
+        "content_position": "center",
+        "content_alignment": "flex-start_left",
+        "hide_row_count": false,
+        "color_scheme": "",
+        "section_background": "",
+        "card_color": "",
+        "top_space_desktop": 70,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 50,
+        "bottom_space_mobile": 50
+      }
+    },
+    "custom_liquid_F7JXtF": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "section_visibility": "always",
+        "custom_liquid": "<script async src=\"https://app.kiwisizing.com/web/js/dist/kiwiSizing/plugin/SizingPlugin.prod.js?v=318\"></script>\n<!-- START KiwiSizing code !-->\n  <div id=\"KiwiSizingChart\" \n    data-sizing-id=\"61039210\"\n    data-display-mode=\"0\"\n    data-recommender-display-mode=\"0\"\n    data-layout-type=\"0\">\n  </div>\n<!-- END KiwiSizing code !-->\n  </div>\n<!-- END KiwiSizing code !-->",
+        "content_width": "medium",
+        "text_alignment": "center",
+        "color_scheme": "",
+        "top_space_desktop": 85,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "slideshow_mqyAG4": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_yd4npw": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/free_spirit_tie_dye.png",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_3.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "shopify://collections/all",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 0,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_yd4npw"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "image_with_text_HHTEm7": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_3LxRyB": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Use Our Size Chart to Choose the Right Size for Your Long Sleeve Tie-Dye"
+          }
+        },
+        "text_hHxQkU": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Fit Tips</strong></h3><ul><li>This is a 100% heavyweight cotton long sleeve, pick the same size as your tee!</li><li>Our apparel is made from <strong>100% pre-shrunk cotton</strong>, ensuring that your fit stays true even after washing.</li><li>If you’re between sizes, we recommend sizing up for a more relaxed fit or down for a closer fit.</li></ul>",
+            "text_size": "medium"
+          }
+        },
+        "button_D76feB": {
+          "type": "button",
+          "settings": {
+            "button_style_1": "solid",
+            "btn_text": "CONTINUE SHOPPING",
+            "btn_url": "shopify://collections/shop-sale",
+            "btn_size": "regular",
+            "button_style_2": "solid",
+            "btn_text_2": "",
+            "btn_url_2": "",
+            "btn_size_2": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_3LxRyB",
+        "text_hHxQkU",
+        "button_D76feB"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "section_fullwidth": false,
+        "card_background": false,
+        "image": "shopify://shop_images/Tie_Dye_Long_Sleeve_Mockup.webp",
+        "image_overlay_enable": false,
+        "image_width": "large",
+        "image_position": "right",
+        "content_position": "center",
+        "content_alignment": "flex-start_left",
+        "hide_row_count": false,
+        "color_scheme": "",
+        "section_background": "",
+        "card_color": "",
+        "top_space_desktop": 70,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 50,
+        "bottom_space_mobile": 50
+      }
+    },
+    "multicolumn_RmzEUe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_66RHAK": {
+          "type": "column",
+          "settings": {
+            "heading": "Relaxed Fits.",
+            "description": "For a relaxed fit, size up to allow more room around the chest and waist.",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        },
+        "column_p8bHbX": {
+          "type": "column",
+          "settings": {
+            "heading": "Tight Fits.",
+            "description": "For a closer fit, choose your usual size based on the measurements provided.",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        },
+        "column_RFGThi": {
+          "type": "column",
+          "settings": {
+            "heading": "Pre-Shrunk.",
+            "description": "Our Shirts are made from 100% pre-shrunk cotton, assuring it never loses size!",
+            "link_label": "",
+            "link_url": "",
+            "column_background": true,
+            "column_background_color": "#f2f2f2",
+            "column_text_color": "#000000",
+            "column_link_color": "#2877ff"
+          }
+        }
+      },
+      "block_order": [
+        "column_66RHAK",
+        "column_p8bHbX",
+        "column_RFGThi"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "multicolumn_image_size": "square",
+        "layout_type": "stacked",
+        "columns_desktop": 3,
+        "enable_swipe_mobile": false,
+        "heading": "<strong>Fit Tips for T-Shirts</strong>",
+        "heading_size": "h1",
+        "seo_heading": "h3",
+        "heading_alignment": "text-center",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#006f94",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "rich_text_FyAVf8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ARByYW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Need Help?</strong>",
+            "heading_size": "h2",
+            "seo_heading": "h2",
+            "highlighted_color": "#006f94"
+          }
+        },
+        "text_nbgMgQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you're unsure about your size still, our customer service team is here to help! <a href=\"/pages/contact\" title=\"Contact\"><strong>Contact us</strong></a> for personalized size recommendations.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ARByYW",
+        "text_nbgMgQ"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "content_width": "large",
+        "content_alignment": "text-center",
+        "content_postion": "center",
+        "color_scheme": "",
+        "section_background": "",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "slideshow_bNL7HG": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_LwzFAD": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Copy_of_Untitled_14.png",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_2.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "shopify://collections/all",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 0,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_LwzFAD"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "page_banner_VGVQQM",
+    "main",
+    "image_with_text_cJBK76",
+    "custom_liquid_F7JXtF",
+    "slideshow_mqyAG4",
+    "image_with_text_HHTEm7",
+    "multicolumn_RmzEUe",
+    "rich_text_FyAVf8",
+    "slideshow_bNL7HG"
+  ]
+}

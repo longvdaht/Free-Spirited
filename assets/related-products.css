@@ -1,0 +1,12 @@
+.related-products {
+    overflow: hidden;
+}
+
+html.no-js .related-products {
+    display: none;
+}
+
+.related-products-slider .product-card-item {
+    width: 100%;
+    flex: 0 0 25%;
+}

@@ -1,0 +1,114 @@
+{% comment %} <script src="{{ 'product-model.js' | asset_url }}" defer></script> {% endcomment %}
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+{% render 'quick-view', quickView: true, product: product, section: section, current_variant: current_variant %}
+
+
+{% schema %}
+{
+  "name": "Product quick view",
+  "blocks": [
+    {
+      "type": "title",
+      "name": "title",
+      "limit": 1
+    },
+    {
+      "type": "sku",
+      "name": "sku",
+      "limit": 1
+    },
+    {
+      "type": "price",
+      "name": "price",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "hide_shipping_content",
+          "label": "Hide shipping content",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "review_rating",
+      "name": "Review rating",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "To display ratings, add [Product Review app](https://apps.shopify.com/product-reviews)."
+        }
+      ]
+    },
+    {
+      "type": "variant",
+      "name": "Variant picker",
+      "limit": 1
+    },
+    {
+      "type": "quantity_selector",
+      "name": "quantity",
+      "limit": 1
+    },
+    {
+      "type": "button",
+      "name": "Buy buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "dynamic_checkout_btn",
+          "default": true,
+          "label": "Show dynamic checkout button"
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "limit": 1
+    },
+    {
+      "type": "social-icons",
+      "name": "Social sharing",
+      "limit": 1
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "title"
+      },
+      {
+        "type": "sku"
+      },
+      {
+        "type": "review_rating"
+      },
+      {
+        "type": "price"
+      },
+      {
+        "type": "variant"
+      },
+      {
+        "type": "quantity_selector"
+      },
+      {
+        "type": "button",
+        "settings": {
+          "dynamic_checkout_btn": true
+        }
+      },
+      {
+        "type": "description"
+      },
+      {
+        "type": "social-icons"
+      }
+    ]
+  }
+}
+{% endschema %}

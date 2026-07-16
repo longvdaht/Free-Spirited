@@ -1,0 +1,60 @@
+
+{% if section.settings.show_policies or section.settings.show_copyright %}
+  <div class="footer-secondary-bar">
+    <div class="container">
+      <div class="footer-secondary-bar-content">
+        {% if section.settings.show_policies %}
+          <ul class="list-inline footer-policies-list">
+            {%- for policy in shop.policies -%}
+              {%- if policy != blank -%}
+                <li class="footer-policies-item">
+                  <a href="{{ policy.url }}" class="footer-policies-link">{{ policy.title }}</a>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        {% endif %}
+        {% if section.settings.show_copyright %}
+          <div class="footer-secondary-copyright">
+            <p class="copyright-content text-small">
+              {% if section.settings.custom_copyright_content != blank %}
+                {{ section.settings.custom_copyright_content }}
+              {% else %}
+                Copyright&copy; {{ 'now' | date: '%Y' }}
+                {{ shop.name | link_to: routes.root_url }}
+                {{ powered_by_link -}}
+              {% endif %}
+            </p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+{
+  "name": "t:sections.footer_policies.name",
+  "tag": "section",
+  "class": "footer-policies",
+  "settings": [
+    {
+        "type": "checkbox",
+        "id": "show_policies",
+        "default": false,
+        "label": "t:sections.footer_policies.settings.show_policies.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_copyright",
+      "default": false,
+      "label": "t:sections.footer_policies.settings.show_copyright.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "custom_copyright_content",
+      "label": "t:sections.footer.settings.custom_copyright_content.label"
+    }
+
+  ]
+}
+{% endschema %}

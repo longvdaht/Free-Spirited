@@ -1,0 +1,18 @@
+/* @media (max-width:767px) {
+    .featured-collection-wrapper .product-card-slider.slider:not(.slick-initialized) {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width:575px) {
+    .product-card-item {
+        flex: 0 0 40%;
+    }
+}
+
+@media (max-width:400px) {
+    .product-card-item {
+        flex: 0 0 80%;
+    }
+} */

@@ -1,0 +1,420 @@
+{{ 'account.css' | asset_url | stylesheet_tag }}
+<div class="section-container {{ section.settings.color_scheme }}-scheme">
+  {% if section.settings.image != blank %}
+    <div class="account-background-img d-none d-md-block">
+      {% render 'image', image: section.settings.image %}
+    </div>
+  {% endif %}
+  <div class="container-fullwidth">
+    <div class="row no-gutters">
+      <div class="col-12 col-sm-12{% if section.settings.heading != blank or section.settings.description != blank or section.settings.image != blank  %} col-md-7 col-lg-6{% else %} col-md-12 col-lg-12{% endif %}">
+        <div class="left-side-content">
+          <div class="account-card">
+              <{{ section.settings.seo_heading }} class="account-heading {{ section.settings.heading_size }}">{{ 'customer.register.title' | t }}</{{ section.settings.seo_heading }}>
+            {%- form 'create_customer', novalidate: 'novalidate', class: 'account-form' -%}
+              {%- if form.errors -%}
+                <div class="error-message">
+                  <p tabindex="-1"> {{ 'templates.contact.form.error_heading' | t }}</p>
+                  <ul>
+                    {%- for field in form.errors -%}
+                      <li>
+                        {%- if field == 'form' -%}
+                          {{ form.errors.messages[field] }}
+                        {%- else -%}
+                          <a href="#Customer-{{ field }}">
+                            {{ form.errors.translated_fields[field] | capitalize }}
+                            {{ form.errors.messages[field] }}
+                          </a>
+                        {%- endif -%}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              {%- endif -%}
+              <div class="form-group">
+                  <label class="hidden" for="Customer-FName">{{ 'customer.register.first_name' | t }}</label>
+                  <input class="form-control input-md" type="email"
+                    name="customer[fName]"
+                    id="Customer-FName" 
+                    placeholder="{{ 'customer.register.first_name' | t }}" 
+                    autocapitalize="off" 
+                    {% if form.first_name %}
+                      value="{{ form.first_name }}"
+                    {% endif %}
+                    required="">
+              </div>
+              <div class="form-group">
+                  <label class="hidden" for="Customer-LName">{{ 'customer.register.last_name' | t }}</label>
+                  <input class="form-control input-md" type="email" 
+                    name="customer[lName]"
+                    id="Customer-LName" 
+                    autocomplete="email"
+                    autocapitalize="off" 
+                    {% if form.last_name %}
+                      value="{{ form.last_name }}"
+                    {% endif %} 
+                    placeholder="{{ 'customer.register.last_name' | t }}" 
+                    required="">
+              </div>
+              <div class="form-group">
+                  <label for="Customer-Email" class="hidden" for="CustomerEmail">{{ 'customer.register.email' | t }}</label>
+                  <input class="form-control input-md" type="email" value="" 
+                    name="customer[email]" 
+                    id="Customer-Email"
+                    autocomplete="email" 
+                    autocapitalize="off" 
+                    {% if form.email %} 
+                    value="{{ form.email }}"
+                    {% endif %}
+                    spellcheck="false"
+                    {% if form.errors contains 'email' %}
+                    aria-invalid="true"
+                    aria-describedby="Customer-Email-error"
+                    {% endif %}
+                    placeholder="{{ 'customer.register.email' | t }}" 
+                    required="">
+              </div>
+              <div class="form-group">
+                <label for="Customer-Password" class="hidden">{{ 'customer.register.password' | t }}</label>
+                <input class="form-control input-md" type="password"
+                  name="customer[password]" 
+                  id="Customer-Password"  
+                  autocapitalize="off" 
+                  {% if form.errors contains 'password' %}
+                  aria-invalid="true"
+                  aria-describedby="signUpForm-password-error"
+                  {% endif %}  
+                  placeholder="{{ 'customer.register.password' | t }}" 
+                  required="">
+              </div>
+              {% liquid
+                assign buttonText = 'customer.register.submit' | t
+                render 'button' type: 'button', button_size: section.settings.btn_size, button_text: buttonText
+              %}
+              <p class="account-info-text text-small">{{ 'customer.register.login_heading' | t }} <a href="{{ routes.account_login_url }}" class="text-underline">{{ 'customer.register.login_button' | t }}</a></p>
+            {%- endform -%}
+          </div>
+        </div>
+      </div>
+        {% if section.settings.heading != blank or section.settings.description != blank or section.settings.image != blank  %}
+          <div class="col-12 col-sm-12 col-md-5 col-lg-6">
+            {% if section.settings.image != blank %}
+              <div class="account-background-img d-block d-md-none">
+                {% render 'image', image: section.settings.image %}
+              </div>
+            {% endif %}
+            {% if section.settings.heading != blank or section.settings.description != blank %}
+              <div class="right-side-content">
+                <div class="customer-page-content text-{{ section.settings.content_alignment }}">
+                  {%- if section.settings.heading != blank -%} 
+                  {%- capture sectionhighlightPrefix -%}
+                    <strong class="highlight-text">
+                  {%- endcapture -%}
+          
+                  {%- capture sectionhighlightSuffix -%}
+                    </strong>
+                  {%- endcapture -%}
+                    <{{ section.settings.content_seo_heading }} class="customer-page-title {{ section.settings.content_heading_size }}">
+                      {{- section.settings.heading | replace: "<strong>", sectionhighlightPrefix | replace: "</strong>", sectionhighlightSuffix -}}
+                    </{{ section.settings.content_seo_heading }}>
+                {% endif %}
+                {%- if section.settings.description != blank -%} 
+                  <p class="customer-page-desc">
+                    {{ section.settings.description | newline_to_br }}
+                  </p>
+                {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>  
+<style>
+  #shopify-section-{{ section.id }} .section-container {
+    --top-spacer: {{ section.settings.top_space_desktop }}px;
+    --bottom-spacer: {{ section.settings.bottom_space_desktop }}px;
+    --overlay-background:{{ section.settings.overlay_color }};
+    --overlay-opacity:{{ section.settings.overlay_opacity | divided_by:100.0 }};
+    --overlay-heading:{{ section.settings.overlay_heading_color }};
+    --overlay-text:{{ section.settings.overlay_description_color }};
+  }
+  @media only screen and (max-width:991px) {
+    #shopify-section-{{ section.id }} .section-container{
+      --top-spacer:{{ section.settings.top_space_mobile }}px;
+      --bottom-spacer:{{ section.settings.bottom_space_mobile }}px;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "t:sections.main-register.name",
+  "class": "account main-register",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "t:global.common.general_labels.heading_size",
+      "default": "h3",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "seo_heading",
+      "label": "t:global.common.general_labels.heading_tag",
+      "info": "t:global.common.infos.seo_heading.label",
+      "default": "h3",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "btn_size",
+      "default": "regular",
+      "label": "t:global.common.general_labels.button_size",
+      "options": [
+        {
+          "value": "regular",
+          "label": "t:global.common.size.value.regular"
+        },
+        {
+          "value": "small",
+          "label": "t:global.common.size.value.small"
+        },
+        {
+          "value": "medium",
+          "label": "t:global.common.size.value.medium"
+        },
+        {
+          "value": "large",
+          "label": "t:global.common.size.value.large"
+        }
+      ]
+    },
+    {
+      "type": "header",  
+      "content": "t:global.common.general_labels.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.main-login.settings.image.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:global.common.general_labels.heading"
+    },
+    {
+      "type": "select",
+      "id": "content_heading_size",
+      "label": "t:global.common.general_labels.heading_size",
+      "default": "h3",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "content_seo_heading",
+      "label": "t:global.common.general_labels.heading_tag",
+      "info": "t:global.common.infos.seo_heading.label",
+      "default": "h3",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "t:global.common.general_labels.description"
+    },
+    {
+      "type": "text_alignment",
+      "id": "content_alignment",
+      "label": "t:sections.collection-carousel.settings.content_alignment.label",
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.color_section.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "primary",
+      "label": "t:global.header.color_scheme.label"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:global.common.general_labels.content"
+    },
+    {
+      "type": "color",
+      "id": "overlay_heading_color",
+      "label": "t:global.common.general_labels.heading",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "overlay_description_color",
+      "label": "t:global.common.general_labels.description",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "t:global.common.general_labels.overlay",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "t:global.common.general_labels.overlay_opacity",
+      "default": 15,
+      "max": 100,
+      "min": 0,
+      "step": 1,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.space_section.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:global.top_space_desktop.label",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:global.bottom_space_desktop.label",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:global.top_space_mobile.label",
+      "default": 35,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:global.bottom_space_mobile.label",
+      "default": 35,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    }
+  ]
+}
+{% endschema %}

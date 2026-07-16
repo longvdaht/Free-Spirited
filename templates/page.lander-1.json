@@ -1,0 +1,441 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_KzFfFP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_AbXgwt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get a <strong>FREE</strong> Camo Swirl Tie-Dye Shirt Today!",
+            "heading_size": "h2",
+            "seo_heading": "h2",
+            "highlighted_color": "#ffffff"
+          }
+        },
+        "image_KPAXJi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FREE.jpg",
+            "image_size": 67
+          }
+        },
+        "button_VYEnNx": {
+          "type": "button",
+          "settings": {
+            "button_style": "solid",
+            "text": "Yes! Send Me My FREE Shirt!",
+            "link": "https://shopfreespirited.com/pages/free-camo-swirl-tee-offer",
+            "button_size": "small"
+          }
+        }
+      },
+      "block_order": [
+        "heading_AbXgwt",
+        "image_KPAXJi",
+        "button_VYEnNx"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "content_width": "large",
+        "content_alignment": "text-center",
+        "content_postion": "center",
+        "color_scheme": "scheme-ea51a034-17c6-4885-9e6e-f46e303ea182",
+        "section_background": "",
+        "top_space_desktop": 100,
+        "bottom_space_desktop": 100,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "slideshow_pmqiMf": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_WqcPGQ": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Untitled_design_39_7d12026c-d269-4874-99a3-66f79105cd93.jpg",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_ec1e2837-4f53-4d59-9ddd-91cf04fa8a70.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 0,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_WqcPGQ"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "rich_text_zaFDjt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_36Y44d": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Thats Right! FREE!</strong>",
+            "heading_size": "h2",
+            "seo_heading": "h2",
+            "highlighted_color": "#006f94"
+          }
+        },
+        "text_cJnTw7": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Made from Soft, Breathable 100% Cotton<br/>Unique Handcrafted Camo Swirl Design<br/>Available in Size-Inclusive Options (S to 5XL)<br/>Durable and Colorful, Wash After Wash</strong></p>"
+          }
+        },
+        "button_FiMNxf": {
+          "type": "button",
+          "settings": {
+            "button_style": "solid",
+            "text": "SEND MY FREE SHIRT!",
+            "link": "https://shopfreespirited.com/discount/FREECAMO?redirect=%2Fcart",
+            "button_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_36Y44d",
+        "text_cJnTw7",
+        "button_FiMNxf"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "content_width": "large",
+        "content_alignment": "text-center",
+        "content_postion": "center",
+        "color_scheme": "",
+        "section_background": "",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "image_with_text_tTafCw": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_gWktUM": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "FREE 30-day trial membership to Free Spirited Insiders"
+          }
+        },
+        "heading_ipVajh": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>INSIDERS RECEIVE</strong>",
+            "heading_size": "h2",
+            "seo_heading": "h2",
+            "highlighted_color": "#006f94"
+          }
+        },
+        "text_XMbRcR": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Free Shipping on All Future Orders<br/>Exclusive First Access to New Collections<br/>Monthly Giveaways for Members</strong><br/></p>",
+            "text_size": "regular"
+          }
+        },
+        "text_DH3rRy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cancel anytime within 30 days without a charge.<br/></p>",
+            "text_size": "small"
+          }
+        },
+        "button_p9fBFX": {
+          "type": "button",
+          "settings": {
+            "button_style_1": "solid",
+            "btn_text": "CLAIM YOUR FREE SHIRT NOW!",
+            "btn_url": "https://shopfreespirited.com/discount/FREECAMO?redirect=%2Fcart",
+            "btn_size": "small",
+            "button_style_2": "solid",
+            "btn_text_2": "",
+            "btn_url_2": "",
+            "btn_size_2": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_gWktUM",
+        "heading_ipVajh",
+        "text_XMbRcR",
+        "text_DH3rRy",
+        "button_p9fBFX"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "section_fullwidth": false,
+        "card_background": false,
+        "image": "shopify://shop_images/321321321_7668f9fd-7d50-4502-ada6-2f930434571a.png",
+        "image_overlay_enable": true,
+        "image_overlay": "shopify://shop_images/IMG_3534_0a5c9711-b097-4d1c-973a-e3128e497c7c.jpg",
+        "image_width": "medium",
+        "image_position": "left",
+        "content_position": "center",
+        "content_alignment": "flex-start_left",
+        "hide_row_count": false,
+        "color_scheme": "",
+        "section_background": "",
+        "card_color": "",
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 50
+      }
+    },
+    "slideshow_bYC6hh": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_fBKP6a": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Copy_of_Untitled.jpg",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_6.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 0,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_fBKP6a"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "173203645844ce0480": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_YfzDE7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_YfzDE7"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "section_visibility": "always",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "image_with_text_xGfEmC": {
+      "type": "image-with-text",
+      "blocks": {
+        "button_xwhFBe": {
+          "type": "button",
+          "settings": {
+            "button_style_1": "solid",
+            "btn_text": "OK. I BELIEVE YOU NOW! SEND ME MY SHIRT!",
+            "btn_url": "https://shopfreespirited.com/discount/FREECAMO?redirect=%2Fcart",
+            "btn_size": "small",
+            "button_style_2": "solid",
+            "btn_text_2": "",
+            "btn_url_2": "",
+            "btn_size_2": "regular"
+          }
+        }
+      },
+      "block_order": [
+        "button_xwhFBe"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "section_fullwidth": false,
+        "card_background": false,
+        "image": "shopify://shop_images/FREE.png",
+        "image_overlay_enable": false,
+        "image_overlay": "shopify://shop_images/camo-swirl-premium-hand-dyed-comfort-shirt-814345_d175dd37-2ab1-4516-a69d-1d8f4f407dd5.jpg",
+        "image_width": "medium",
+        "image_position": "right",
+        "content_position": "center",
+        "content_alignment": "flex-start_left",
+        "hide_row_count": false,
+        "color_scheme": "",
+        "section_background": "",
+        "card_color": "",
+        "top_space_desktop": 25,
+        "bottom_space_desktop": 20,
+        "top_space_mobile": 20,
+        "bottom_space_mobile": 20
+      }
+    },
+    "rich_text_7M9iwh": {
+      "type": "rich-text",
+      "blocks": {
+        "text_XfJtJ7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>*Just pay a shipping and<br/>handling fee of ($4.95).*<br/><br/>While supplies last.<br/><br/>If you don’t cancel your Insider membership within the 30-day trial, you’ll be charged for the membership at the regular rate.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_XfJtJ7"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "content_width": "large",
+        "content_alignment": "text-center",
+        "content_postion": "center",
+        "color_scheme": "",
+        "section_background": "",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "rich_text_KzFfFP",
+    "slideshow_pmqiMf",
+    "main",
+    "rich_text_zaFDjt",
+    "image_with_text_tTafCw",
+    "slideshow_bYC6hh",
+    "173203645844ce0480",
+    "image_with_text_xGfEmC",
+    "rich_text_7M9iwh"
+  ]
+}

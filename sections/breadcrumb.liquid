@@ -1,0 +1,189 @@
+{{ 'breadcrumb.css' | asset_url | stylesheet_tag }}
+
+<div class="section-container {{ section.settings.color_scheme }}-scheme">
+  <div class="container"> 
+    <nav class="breadcrumb-nav">
+      <ul class="list-inline breadcrumb-list">
+
+        <li class="breadcrumb-item">
+          <a href="{{ routes.root_url }}" title="{{ 'sections.breadcrumbs.home' | t }}" class="unstyled-link breadcrumb-link">
+            {{ 'sections.breadcrumbs.home' | t }}
+          </a>
+        </li>
+        {%- if template contains 'page' -%}
+          <li class="breadcrumb-item">
+            <span class="breadcrumb-link">{{ page.title | strip_html }}</span>
+          </li>
+        {%- elsif template contains 'product' -%}
+          {%- if collection.url -%}
+            <li class="breadcrumb-item">
+              <span class="breadcrumb-link">
+                {{- collection.title | strip_html | truncatewords: 5 | link_to: collection.url }}
+              </span>
+            </li>
+          {%- endif -%}
+          <li class="breadcrumb-item">
+            <span class="breadcrumb-link breadcrumb-text">{{ product.title | strip_html | truncatewords: 5 }}</span>
+          </li>
+        {%- elsif template contains 'collection' and collection.handle -%}
+          {%- if current_tags -%}
+            <li class="breadcrumb-item">
+              <span class="breadcrumb-link">
+                {{- collection.title | strip_html | truncatewords: 5 | link_to: collection.url }}
+                <span>{{ current_tags | join: ' + ' }}</span>
+              </span>
+            </li>
+          {%- else -%}
+            <li class="breadcrumb-item">
+              <span class="breadcrumb-link breadcrumb-text">
+                {{- collection.title | strip_html | truncatewords: 5 -}}
+              </span>
+            </li>
+          {%- endif -%}
+        {%- elsif template == 'blog' -%}
+          {%- if current_tags -%}
+            {{ blog.title | link_to: blog.url }}
+            <li class="breadcrumb-item">
+              <span class="breadcrumb-link breadcrumb-text">{{ current_tags | join: ' + ' }}</span>
+            </li>
+          {%- else -%}
+            <li class="breadcrumb-item">
+              <span class="breadcrumb-link breadcrumb-text">{{ blog.title | strip_html }}</span>
+            </li>
+          {%- endif -%}
+        {%- elsif template == 'article' -%}
+          <li class="breadcrumb-item">
+            <span class="breadcrumb-link">{{ blog.title | strip_html | link_to: blog.url }} </span>
+          </li>
+          <li class="breadcrumb-item">
+            <span class="breadcrumb-link breadcrumb-text"> {{ 'blogs.article.blog_detail' | t }}</span>
+          </li>
+        {%- else -%}
+          <li class="breadcrumb-item">
+            <span class="breadcrumb-link breadcrumb-text">{{ page_title }}</span>
+          </li>
+        {%- endif -%}
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+<style>
+  #shopify-section-{{ section.id }}.shopify-section {
+    --top-spacer:{{ section.settings.top_space_desktop }}px;
+    --bottom-spacer:{{ section.settings.bottom_space_desktop }}px;
+  }
+  @media only screen and (max-width:767px) {
+    #shopify-section-{{ section.id }}.shopify-section{
+      --top-spacer:{{ section.settings.top_space_mobile }}px;
+      --bottom-spacer:{{ section.settings.bottom_space_mobile }}px;
+    }
+  }
+  {% if section.settings.section_visibility == 'large' %}
+    @media (max-width: 767px) {
+      #shopify-section-{{ section.id }}{
+        display: none !important;
+      }
+    }
+  {% elsif section.settings.section_visibility == 'small' %}
+    @media (min-width: 768px) {
+      #shopify-section-{{ section.id }}{
+        display: none !important;
+      }
+    }
+  {% endif %}
+</style>
+{% schema %}
+{
+  "name": "t:sections.breadcrumb.name",
+  "tag": "section",
+  "class": "breadcrumb",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ],
+    "templates": [
+      "index"
+    ]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_visibility",
+      "label": "t:global.common.section_visibility.label",
+      "default": "always",
+      "options": [
+        {
+          "label": "t:global.common.section_visibility.options.always",
+          "value": "always"
+        },
+        {
+          "label": "t:global.common.section_visibility.options.small",
+          "value": "small"
+        },
+        {
+          "label": "t:global.common.section_visibility.options.large",
+          "value": "large"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.color_section.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "primary",
+      "label": "t:global.header.color_scheme.label"
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.space_section.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:global.top_space_desktop.label",
+      "default": 15,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:global.bottom_space_desktop.label",
+      "default": 15,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:global.top_space_mobile.label",
+      "default": 10,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:global.bottom_space_mobile.label",
+      "default": 10,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.breadcrumb.presets.name"
+    }
+  ]
+}
+{% endschema %}

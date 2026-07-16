@@ -1,0 +1,29 @@
+{%- if product.metafields.reviews.rating_count > 0 -%}
+    {%- liquid 
+      assign productRating = product.metafields.reviews.rating.value.rating | floor
+      assign decimalProductRating = 0
+      assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+      if decimal >= 0.3 and decimal <= 0.7
+        assign decimalProductRating = 0.5
+      endif 
+    -%}
+    <div class="product-reviews" {{ block.shopify_attributes }}>
+      <ul class="list-inline product-reviews-list">
+        {% for i in (1..5) %}
+          {% if i <= productRating %}
+         
+              </svg>
+            </li>
+            {% elsif productRating < i and decimalProductRating == 0.5 %}
+     
+              </svg>
+            </li>
+            {% else %}
+      
+                </svg>
+            </li>
+          {% endif %}
+        {% endfor %}  
+      </ul>
+    </div>
+  {%- endif -%}  

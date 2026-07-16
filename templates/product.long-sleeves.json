@@ -1,0 +1,360 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "zp-product-header-content": {
+      "type": "product-header-content-zipifypages",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3",
+            "seo_heading": "h3"
+          }
+        },
+        "text_Xmh8TX": {
+          "type": "text",
+          "settings": {
+            "text": "💙  💙  💙  💙  💙"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "hide_shipping_content": false
+          }
+        },
+        "2080a8e4-2299-470d-950f-b8f8bf3f3668": {
+          "type": "variant",
+          "settings": {}
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "145209f6-ad8a-4614-93bf-0c9a973f23a3": {
+          "type": "pickup",
+          "settings": {}
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "dynamic_checkout_btn": true,
+            "show_recipient_form": false
+          }
+        },
+        "29852893-7b61-4932-b575-91695d8893b1": {
+          "type": "complementary_products",
+          "settings": {
+            "heading": "Pairs well with",
+            "products_count": 8
+          }
+        },
+        "a85ee93d-3864-4304-9926-0ed6854aa473": {
+          "type": "social-icons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "text_Xmh8TX",
+        "price",
+        "2080a8e4-2299-470d-950f-b8f8bf3f3668",
+        "quantity_selector",
+        "145209f6-ad8a-4614-93bf-0c9a973f23a3",
+        "button",
+        "29852893-7b61-4932-b575-91695d8893b1",
+        "a85ee93d-3864-4304-9926-0ed6854aa473"
+      ],
+      "settings": {
+        "gallery_style": "slider",
+        "thumbnail_position": "left",
+        "overlapped_thumbnails": false,
+        "enable_sticky_content": true,
+        "desktop_media_width": "medium",
+        "desktop_grid_image_size": "auto",
+        "image_zoom": "lightbox",
+        "enable_sticky_cart": false,
+        "thumbnial_on_mobile": false,
+        "mobile_grid_image_size": "auto",
+        "color_scheme": "",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 35,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 40
+      }
+    },
+    "product_details_WGEkdJ": {
+      "type": "product-details",
+      "blocks": {
+        "collapsible_tab_XxxDNp": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Exclusive Perks Just for You",
+            "content": "<ul><li>When you join our Insiders membership, you’re not just signing up for discounts—you’re joining a community that celebrates individuality, creativity, and joy. Your membership gives you access to benefits that go beyond sales, from early product access to rewards and personalized content.</li></ul>"
+          }
+        },
+        "collapsible_tab_ptJih3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "No Risk, All Reward",
+            "content": "<ul><li>With our flexible membership, you can start enjoying the benefits today with no long-term commitment. If you ever need to pause, upgrade, or cancel, it’s as simple as a few clicks.</li></ul>"
+          }
+        },
+        "collapsible_tab_7z4MMj": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Be a Part of Something Special",
+            "content": "<ul><li>Free Spirited is about more than just tie-dye. As an Insider, you’ll help shape future collections and contribute to the creative spirit that defines our brand.</li></ul>"
+          }
+        },
+        "collapsible_tab_dGxXbc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What Happens After I Sign Up?",
+            "content": "<ul><li>Once you join, you’ll immediately start receiving all member benefits, including access to exclusive products and discounts. You’ll also receive a personalized welcome email with tips on how to maximize your membership.</li></ul>"
+          }
+        },
+        "collapsible_tab_AAHGpr": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Can I Cancel Anytime?",
+            "content": "<ul><li>Absolutely! You’re in full control. Manage your subscription with ease—pause, upgrade, or cancel at any time, no questions asked.</li></ul>"
+          }
+        },
+        "specification_feWBna": {
+          "type": "specification",
+          "settings": {
+            "icon": "shopify://shop_images/Untitled_design_-_2024-11-07T125739.528.png",
+            "text": "Limited-Edition Designs",
+            "link": ""
+          }
+        },
+        "specification_Wb4dba": {
+          "type": "specification",
+          "settings": {
+            "icon": "shopify://shop_images/Untitled_design_-_2024-11-07T125747.160.png",
+            "text": "Members-Only Discounts & Offers",
+            "link": ""
+          }
+        },
+        "specification_aWUkqr": {
+          "type": "specification",
+          "settings": {
+            "icon": "shopify://shop_images/Untitled_design_-_2024-11-07T125730.271.png",
+            "text": "Earn Rewards with Every Purchase",
+            "link": ""
+          }
+        },
+        "specification_WpCajg": {
+          "type": "specification",
+          "settings": {
+            "icon": "shopify://shop_images/Untitled_design_-_2024-11-07T130528.290.png",
+            "text": "Personalized Style Recommendations",
+            "link": ""
+          }
+        },
+        "specification_JW4UbF": {
+          "type": "specification",
+          "settings": {
+            "icon": "shopify://shop_images/Untitled_design_-_2024-11-07T130815.743.png",
+            "text": "Free Shipping For Insiders",
+            "link": ""
+          }
+        },
+        "specification_4Wjfax": {
+          "type": "specification",
+          "settings": {
+            "icon": "shopify://shop_images/Untitled_design_-_2024-11-07T130931.174.png",
+            "text": "Member Voting on Future Designs",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_XxxDNp",
+        "collapsible_tab_ptJih3",
+        "collapsible_tab_7z4MMj",
+        "collapsible_tab_dGxXbc",
+        "collapsible_tab_AAHGpr",
+        "specification_feWBna",
+        "specification_Wb4dba",
+        "specification_aWUkqr",
+        "specification_WpCajg",
+        "specification_JW4UbF",
+        "specification_4Wjfax"
+      ],
+      "settings": {
+        "make_section_rounded": true,
+        "heading": "BECOME AN INSIDER!",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "description": "<p><strong>Unlock Exclusive Perks with Free Spirited Insiders</strong></p>",
+        "content_alignment": "text-center",
+        "open_first": false,
+        "spec_heading": "Specifications",
+        "spec_heading_size": "h3",
+        "spec_seo_heading": "h3",
+        "box-position": "left",
+        "specification_color_scheme": "quatnary",
+        "sp_highlighted_color": "",
+        "sp_gadiant_highlighted_color": "",
+        "color_scheme": "primary",
+        "section_background": "",
+        "highlighted_color": "#eff341",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 60,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 40
+      }
+    },
+    "1731004931aee2e868": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_T6FyFf": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_T6FyFf"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "section_visibility": "always",
+        "top_space_desktop": 10,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "collection_list_VeDAfC": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_9qcCcx": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-arrivals"
+          }
+        },
+        "collection_geKFbL": {
+          "type": "collection",
+          "settings": {
+            "collection": "long-sleeve-tie-dye-shirts"
+          }
+        },
+        "collection_9YmFQz": {
+          "type": "collection",
+          "settings": {
+            "collection": "tank-tops"
+          }
+        },
+        "collection_GaABzk": {
+          "type": "collection",
+          "settings": {
+            "collection": "bella-canvas-tee-sale"
+          }
+        },
+        "collection_X3pgJx": {
+          "type": "collection",
+          "settings": {
+            "collection": "tie-dye-shirts"
+          }
+        },
+        "collection_eFt4Dn": {
+          "type": "collection",
+          "settings": {
+            "collection": "crewnecks"
+          }
+        },
+        "collection_xUA4xe": {
+          "type": "collection",
+          "settings": {
+            "collection": "pullover-hoodies"
+          }
+        },
+        "collection_9T73Lk": {
+          "type": "collection",
+          "settings": {
+            "collection": "long-sleeve-hoodie"
+          }
+        }
+      },
+      "block_order": [
+        "collection_9qcCcx",
+        "collection_geKFbL",
+        "collection_9YmFQz",
+        "collection_GaABzk",
+        "collection_X3pgJx",
+        "collection_eFt4Dn",
+        "collection_xUA4xe",
+        "collection_9T73Lk"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "columns_desktop": 4,
+        "column_mobile": "2",
+        "enable_swipe_mobile": true,
+        "content_alignment": "text-left",
+        "heading": "<strong>Unleash Your Style</strong>",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "description": "",
+        "grid_image_size": "auto",
+        "color_scheme": "",
+        "highlighted_color": "#006f94",
+        "section_background": "",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "heading": "<strong>You may also like</strong>",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "heading_alignment": "text-left",
+        "products_count": 8,
+        "color_scheme": "primary",
+        "section_background": "",
+        "highlighted_color": "#006f94",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 60,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {}
+    }
+  },
+  "order": [
+    "zp-product-header-content",
+    "main",
+    "product_details_WGEkdJ",
+    "1731004931aee2e868",
+    "collection_list_VeDAfC",
+    "related-products",
+    "zp-product-footer-content"
+  ]
+}

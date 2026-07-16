@@ -1,0 +1,170 @@
+{% if section.settings.menu != blank %}
+  {{ 'mobile-menu.css' | asset_url | stylesheet_tag }}
+  <div class="mobile-menu-drawer" data-menu-drawer>
+    <div
+      class="close-fullwidth"
+      data-mobile-hamburger-close
+    ></div>
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-content">
+        <ul class="mobile-menu-list">
+          {%- for link in linklists[section.settings.menu].links -%}
+            {%- liquid
+              assign megaMenuBlocks = section.blocks | where: 'type', 'mega_menu'
+              assign linkTitle = link.title | handleize
+              capture megaMenuData
+                for block in megaMenuBlocks
+                  assign blockLabel = block.settings.title | handleize
+                  if blockLabel == linkTitle
+                    render 'mobile-mega-menu', block: block
+                  endif
+                endfor
+              endcapture
+            -%}
+            <li
+              class="mobile-menu-item {% if link.links.size > 0 or megaMenuData != blank %} has-children{% endif %}{% if megaMenuData != blank %} has-megamenu{% endif %}"
+              data-children-menu
+            >
+              <div class="mobile-menu-item-inner"{% if link.links.size > 0 or megaMenuData != blank %} data-mobile-hamburger{% endif %}>
+                {% if link.links.size > 0 or megaMenuData != blank %}
+                  <span
+                    class="mobile-menu-link {{ section.settings.mobile_menu_font }}-font"
+                    aria-label="{{ link.title }}"
+                  >
+                    {{- link.title -}}
+                  </span>
+                  <span class="mobile-menu-link-icon">
+                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.70744 5.8035L0.00039053 1.09647L1.09685 0L6.90039 5.8035L1.09685 11.607L0.00039053 10.5106L4.70744 5.8035Z" fill="currentColor"/>
+                    </svg>
+                  </span>
+                {% else %}
+                  <a
+                    href="{{ link.url }}"
+                    class="mobile-menu-link {{ section.settings.mobile_menu_font }}-font"
+                    aria-label="{{ link.title }}"
+                  >
+                    {{- link.title -}}
+                  </a>
+                {% endif %}
+              </div>
+              {% if link.links.size > 0 or megaMenuData != blank %}
+                <div class="mobile-submenu">
+                  <div class="mobile-submenu-title cursor-pointer" data-menu-navback>
+                    <span class="mobile-submenu-title-icon">
+                      <svg width="7" height="12" viewBox="0 0 7 12" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.19295 5.8035L6.9 1.09647L5.80354 0L0 5.8035L5.80354 11.607L6.9 10.5106L2.19295 5.8035Z" fill="currentColor"/>
+                      </svg>
+                    </span>
+                    <span class="mobile-menu-title-text text-small">{{ link.title }}</span>
+                  </div>
+                  {% if link.links.size > 0 %}
+                    <ul class="mobile-submenu-list">
+                      {% for childlink in link.links %}
+                        <li
+                          class="mobile-submenu-item  {% if childlink.links.size > 0 %}has-children{% endif %}"
+                          data-children-menu
+                        >
+                          <div class="mobile-submenu-item-inner">
+                            {% if childlink.links.size > 0 %}
+                              <span
+                                title="{{- childlink.title }}"
+                                class="mobile-submenu-link {{ section.settings.mobile_menu_font }}-font"
+                                role="menuitem"
+                                data-submenu-dropdown
+                              >
+                                {{- childlink.title -}}
+                              </span>
+                              <span class="mobile-submenu-link-icon" >
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.70744 5.8035L0.00039053 1.09647L1.09685 0L6.90039 5.8035L1.09685 11.607L0.00039053 10.5106L4.70744 5.8035Z" fill="currentColor"/>
+                                </svg>
+                              </span>
+                              {% else %}
+                              <a
+                                href="{{ childlink.url }}"
+                                title="{{- childlink.title }}"
+                                class="mobile-submenu-link {{ section.settings.mobile_menu_font }}-font"
+                                role="menuitem"
+                              >
+                                {{- childlink.title -}}
+                              </a>
+                            {% endif %}
+                          </div>
+                          {% if childlink.links.size > 0 %}
+                            <div class="mobile-grand-submenu" data-submenu-items>
+                              <ul class="mobile-grand-submenu-list">
+                                {% for grandchild in childlink.links %}
+                                  <li class="mobile-grand-submenu-item">
+                                    <a
+                                      href="{{ grandchild.url }}"
+                                      class="mobile-grand-submenu-link"
+                                      title="{{ grandchild.title }}"
+                                      role="menuitem"
+                                    >
+                                      {{- grandchild.title -}}
+                                    </a>
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                            </div>
+                          {% endif %}
+                        </li>
+                      {% endfor %}
+                      <li>
+                        {% if megaMenuData != blank %}
+                          <div class="mobile-megamenu-promotion-box">
+                            {{ megaMenuData }}
+                          </div>
+                        {% endif %}
+                      </li>
+                    </ul>
+                  {% elsif megaMenuData != blank %}
+                    <ul>
+                      <li>
+                        {% if megaMenuData != blank %}
+                          <div class="mobile-megamenu-promotion-box">
+                            {{ megaMenuData }}
+                          </div>
+                        {% endif %}
+                      </li>
+                    </ul>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+        {% if section.settings.enable_social_media
+          or section.settings.enable_language_selector
+          or section.settings.enable_currency_selector
+        %}
+          <div class="mobile-menu-footer">
+            {%- if shop.customer_accounts_enabled and section.settings.enable_account -%}
+            <div class="mobile-menu-account">
+              {%- liquid 
+                if customer
+                  assign btnText = 'customer.account_fallback' | t
+                  assign btnLink = routes.account_url
+                else
+                  assign btnText = 'customer.log_in' | t
+                  assign btnLink = routes.account_login_url
+                endif
+                render 'button', class: 'hamburger-account-link', button_link: btnLink, button_size:'small', button_text: btnText
+            -%}
+            </div>
+            {%- endif -%}
+            {% if section.settings.enable_social_media %}
+              {% render 'social-media' %}
+            {% endif %}
+            {% if section.settings.enable_language_selector or section.settings.enable_currency_selector %}
+              <div class="mobile-menu-footer-item">
+                {% render 'localization-form', section: section, class: 'top-position' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,562 @@
+
+<link rel="preload" as="style" href="{{ 'product-specifications.css' | asset_url }}">
+{{ 'product-specifications.css' | asset_url | stylesheet_tag }}
+<div class="section-container {{ section.settings.color_scheme }}-scheme {% if section.settings.make_section_rounded %}section-rounded{% endif %}" >
+  <div class="{{ settings.container_width }}">
+    {%- capture sectionhighlightPrefix -%}
+        <strong class="highlight-text">
+    {%- endcapture -%}
+    {%- capture sectionhighlightSuffix -%}
+      </strong>
+    {%- endcapture -%}
+    {% if section.settings.heading != blank or section.settings.description %}
+        <div class="section-heading-box{% if section.settings.description != blank %} desc-enabled{% endif %} {{ section.settings.content_alignment }}" {% if settings.enable_animation %}data-aos="fade-up" data-aos-duration="1000"{% endif %}>
+            {%- if section.settings.heading != blank -%}
+                <{{ section.settings.seo_heading }} class="section-heading {{ section.settings.heading_size }}">
+                    {{- section.settings.heading | replace: "<strong>", sectionhighlightPrefix | replace: "</strong>", sectionhighlightSuffix -}}
+                </{{ section.settings.seo_heading }}>
+            {%- endif -%}
+            {%- if section.settings.description != blank -%}
+            <div class="section-description">
+              {{ section.settings.description | newline_to_br }}
+            </div>
+            {%- endif -%}
+        </div>
+    {% endif %}
+
+    {% if section.blocks.size>0 %}
+      {% capture specification %}
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {%- when 'specification' -%}
+            {% if block.settings.text != blank  or block.settings.icon != blank %}
+              <li class="product-specifications-item">
+                {% if block.settings.link != blank %}
+                  <a class="product-specifications-link"  href="{{ block.settings.link }}" aria-label="specification title"></a>
+                {% endif %}
+
+                {% if  block.settings.icon != blank %}
+                  {% comment %} <span class="product-specifications-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <rect width="32" height="32" fill="none"/>
+                      <path d="M15.986 2.66602C8.62602 2.66602 2.66602 8.63935 2.66602 15.9993C2.66602 23.3594 8.62602 29.3327 15.986 29.3327C23.3594 29.3327 29.3327 23.3594 29.3327 15.9993C29.3327 8.63935 23.3594 2.66602 15.986 2.66602ZM15.9993 26.666C10.106 26.666 5.33268 21.8927 5.33268 15.9993C5.33268 10.106 10.106 5.33268 15.9993 5.33268C21.8927 5.33268 26.666 10.106 26.666 15.9993C26.666 21.8927 21.8927 26.666 15.9993 26.666Z" fill="currentColor"/>
+                      <path d="M16.666 9.33398H14.666V17.334L21.666 21.534L22.666 19.894L16.666 16.334V9.33398Z" fill="currentColor"/>
+                    </svg>
+                  </span> {% endcomment %}
+                  <span class="product-specifications-icon">
+                  {% render 'image', image: block.settings.icon %}
+                </span> 
+              {% endif %}
+
+                {% if block.settings.text != blank %}
+                <p class="product-specifications-title">{{ block.settings.text }}</p>
+                {% endif %}
+              </li>
+            {% endif %}
+        {% endcase %}
+      {% endfor %}
+      {% endcapture %}
+      {% capture specificationValue %}
+      <div class="product-specifications-content {{ section.settings.specification_color_scheme }}-scheme">
+        {% if section.settings.sp_gadiant_highlighted_color != blank %}
+          {% assign highlightClass='highlight-gradient-text' %}
+          {% else %}
+          {% assign highlightClass='highlight-text' %}
+        {% endif %}
+        {%- if section.settings.spec_heading != blank -%}
+          {%- capture spehighlightPrefix -%}
+            <strong class="{{ highlightClass }}">
+          {%- endcapture -%}
+          {%- capture spehighlightSuffix -%}
+            </strong>
+          {%- endcapture -%}
+          <{{ section.settings.spec_seo_heading }} class="{{ section.settings.spec_heading_size }}">
+            {{ section.settings.spec_heading  | replace: "<strong>", spehighlightPrefix | replace: "</strong>", spehighlightSuffix  }}
+          </{{ section.settings.spec_seo_heading}}>
+        {% endif %}
+          {% if specification !=  blank %}
+          <ul class=" list-inline product-specifications-list">
+            {{ specification }}
+          </ul>
+        {% endif %}
+      </div>
+    {% endcapture %}
+      <div class="product-specifications-wrapper box-{{ section.settings.box-position }}">
+      {% if section.settings.box-position == 'left' %}
+        {{ specificationValue }}
+      {% endif %}
+      {% assign index = 1 %}
+        <div class="product-specifications-accordion">
+          {% for block in section.blocks %}
+              {% case block.type %}
+                {%- when 'description' -%}
+                    {% if product.description != blank %}
+                        <details class="accordion-item " data-detail-button {% if index == 1 and section.settings.open_first %}open{% endif %}>
+                          <summary class="accordion-heading detail-summary focus-inside">
+                            <h6 class="accordion-heading-text text-medium">
+                              {% if block.settings.description_heading != blank %}
+                                {{- block.settings.description_heading -}}
+                              {% else %}
+                                {{ 'accessibility.collapsible_content_description' | t }}
+                              {% endif %}
+                            </h6>
+                            <span class="accordion-icon">
+                              <svg width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99219 0L15.0633 7.07107L7.99219 14.1421L6.69011 12.8401L11.5384 7.99173L1.87908 7.9917L1.87907 6.15032L11.5384 6.15035L6.69014 1.30205L7.99219 0Z" fill="currentColor"/>
+                              </svg>
+                            </span>
+                          </summary>
+                          <div class="accordion-content" detail-expand>
+                            <div class="accordion-content-body rte">
+                              {{
+                                product.description
+                                | replace: '<table', '<div class="table-main"><table '
+                                | replace: '</table>', '</table></div>'
+                              }}
+                            </div>
+                          </div>
+                        </details>
+                    {% endif %}  
+                    {% assign index = index | plus:1 %}   
+                {%- when 'collapsible_tab' -%}
+                      {% if block.settings.heading != blank %}
+                          <details class="accordion-item" {% if index == 1  and section.settings.open_first %}open{% endif %}>
+                            <summary class="accordion-heading detail-summary focus-inside">
+                              <h6 class="accordion-heading-text text-medium">{{- block.settings.heading -}}</h6>
+                              <span class="accordion-icon">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99219 0L15.0633 7.07107L7.99219 14.1421L6.69011 12.8401L11.5384 7.99173L1.87908 7.9917L1.87907 6.15032L11.5384 6.15035L6.69014 1.30205L7.99219 0Z" fill="currentColor"/>
+                                </svg>
+                              </span>
+                            </summary>
+                            <div class="accordion-content" detail-expand>
+                              <div class="accordion-content-body rte">
+                                {{ block.settings.content | replace : '<p></p>', '<br>' }}
+                              </div>
+                            </div>
+                          </details>
+                      {% endif %}
+                      {% assign index = index | plus:1 %}
+              {% endcase %}
+           
+          {% endfor %}
+        </div>
+        {% if section.settings.box-position == 'right' %}
+          {{ specificationValue }}
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+<style>
+  #shopify-section-{{ section.id }}.shopify-section {
+    {% if section.settings.make_section_rounded %}
+      background:{{ section.settings.section_background }};
+    {% endif %}
+    --top-spacer:{{ section.settings.top_space_desktop }}px;
+    --bottom-spacer:{{ section.settings.bottom_space_desktop }}px;
+    --highlight-text: {{ section.settings.highlighted_color }};
+  }
+  #shopify-section-{{ section.id }}.shopify-section .product-specifications-content{
+    --highlight-text: {{ section.settings.sp_highlighted_color }};
+    --highlight-gardient-text: {{ section.settings.sp_gadiant_highlighted_color }};
+  }
+
+  @media only screen and (max-width:767px) {
+    #shopify-section-{{ section.id }}.shopify-section{
+      --top-spacer:{{ section.settings.top_space_mobile }}px;
+      --bottom-spacer:{{ section.settings.bottom_space_mobile }}px;
+    }
+  }
+
+  {% if section.settings.section_visibility == 'large' %}
+    @media (max-width: 767px) {
+      #shopify-section-{{ section.id }}{
+        display: none !important;
+      }
+    }
+  {% elsif section.settings.section_visibility == 'small' %}
+    @media (min-width: 768px) {
+      #shopify-section-{{ section.id }}{
+        display: none !important;
+      }
+    }
+  {% endif %}
+</style>
+
+{% schema %}
+{
+  "name": "t:sections.product-details.name",
+  "class": "product-specifications",
+  "tag": "section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "make_section_rounded",
+      "label": "t:global.common.general_labels.make_section_rounded",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Product specifications",
+      "label": "t:global.common.general_labels.heading",
+      "info": "t:global.common.infos.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "t:global.common.general_labels.heading_size",
+      "default": "h3",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "seo_heading",
+      "label": "t:global.common.general_labels.heading_tag",
+      "info": "t:global.common.infos.seo_heading.label",
+      "default": "h3",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:global.common.general_labels.description"
+    },
+    {
+        "type": "select",
+        "id": "content_alignment",
+        "label": "t:global.header.content_alignment_section.label",
+        "default": "text-center",
+        "options": [
+          {
+            "label": "t:global.common.heading_alignment.options.left.label",
+            "value": "text-left"
+          },
+          {
+            "label": "t:global.common.heading_alignment.options.center.label",
+            "value": "text-center"
+          }
+        ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.product_details.settings.spec_header.label"
+    },
+    {
+      "type":"checkbox",
+      "id":"open_first",
+      "label":"t:sections.collapsible-content.settings.show_first_default.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "spec_heading",
+      "default": "Specifications",
+      "label": "t:global.common.general_labels.heading",
+      "info": "t:global.common.infos.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "spec_heading_size",
+      "label": "t:global.common.general_labels.heading_size",
+      "default": "h3",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "spec_seo_heading",
+      "label": "t:global.common.general_labels.heading_tag",
+      "info": "t:global.common.infos.seo_heading.label",
+      "default": "h3",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type":"select",
+      "id":"box-position",
+      "label":"t:sections.product_details.settings.box_position.label",
+      "default":"left",
+      "options":[
+        {
+          "label":"t:sections.product_details.settings.box_position.option.left.label",
+          "value":"left"
+        },
+        {
+          "label":"t:sections.product_details.settings.box_position.option.right.label",
+          "value":"right"
+        }
+      ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "specification_color_scheme",
+      "default": "primary",
+      "label": "t:sections.product_details.settings.spec_color.label"
+    },
+    {
+      "type":"color",
+      "id":"sp_highlighted_color",
+      "label": "t:global.common.general_labels.highlight_color"
+    },
+    {
+      "type":"color_background",
+      "id":"sp_gadiant_highlighted_color",
+      "label": "t:sections.product_details.settings.spec_grad_color.label",
+      "info": "t:sections.product_details.settings.spec_grad_color.info"
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.color_section.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "primary",
+      "label": "t:global.header.color_scheme.label"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "t:global.common.section_background.label",
+      "info": "t:global.common.section_background.info"
+    },
+    {
+      "type": "color",
+      "id": "highlighted_color",
+      "default": "#EFF341",
+      "label": "t:global.common.general_labels.highlight_color"
+    },
+    {
+      "type": "header",
+      "content": "t:global.header.space_section.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:global.top_space_desktop.label",
+      "default": 60,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:global.bottom_space_desktop.label",
+      "default": 60,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:global.top_space_mobile.label",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:global.bottom_space_mobile.label",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collapsible_tab",
+      "name": "t:sections.product_details.blocks.collapsible.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Collapsible row",
+          "label": "t:sections.product_details.blocks.collapsible.settings.collapsible_heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "t:sections.product_details.blocks.collapsible.settings.collapsible_heading.label",
+          "default": "<p>Add your collapsible row content here.</p>"
+        }
+      ]
+    },
+    {
+        "type":"description",
+        "name":"t:sections.product_details.blocks.description.name",
+        "limit":1,
+        "settings":[
+            {
+                "type": "text",
+                "id": "description_heading",
+                "label": "t:sections.product_details.blocks.description.settings.desc_heading.label"
+            }
+        ]
+    },
+    {
+      "type":"specification",
+      "name":"t:sections.product_details.blocks.specification.name",
+      "settings":[
+        {
+          "type":"image_picker",
+          "id":"icon",
+          "label":"t:global.common.general_labels.icon"
+        },
+        {
+          "type":"text",
+          "id":"text",
+          "label":"Heading",
+          "default":"t:global.common.general_labels.heading"
+        },
+        {
+          "type":"url",
+          "id":"link",
+          "label":"t:global.common.general_labels.link"
+        }
+      ]
+    }
+   
+  ],
+  "presets":[
+    {
+      "name":"t:sections.product-details.name",
+      "blocks":[
+        {
+          "type":"description"
+        },
+        {
+          "type":"collapsible_tab"
+        },
+        {
+          "type":"collapsible_tab"
+        },
+        {
+          "type":"collapsible_tab"
+        },
+        {
+          "type":"specification"
+        },
+        {
+          "type":"specification"
+        },
+        {
+          "type":"specification"
+        },
+        {
+          "type":"specification"
+        }
+      
+      ]
+      
+    }
+   
+  ]
+}
+{% endschema %}

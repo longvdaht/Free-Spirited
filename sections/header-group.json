@@ -1,0 +1,99 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Header Group",
+  "type": "header",
+  "sections": {
+    "announcement": {
+      "type": "announcement-bar",
+      "blocks": {
+        "6d70f3eb-3b40-48e6-b256-a3a8fb0d06f1": {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "<strong>Small batch. When it's gone, it's gone.</strong>",
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "link_color": "#a60c0c"
+          }
+        },
+        "c0f5b017-a1df-4b2b-8c87-536db035d7a8": {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "<strong>Free shipping on US orders over $50.</strong>",
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "link_color": "#ff0000"
+          }
+        },
+        "5fa576c0-2e92-4dcc-8cdd-276bee5c2b0a": {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "<strong>Make your purchase to join Free Spirit Insiders!</strong>",
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "link_color": "#ff0000"
+          }
+        }
+      },
+      "block_order": [
+        "6d70f3eb-3b40-48e6-b256-a3a8fb0d06f1",
+        "c0f5b017-a1df-4b2b-8c87-536db035d7a8",
+        "5fa576c0-2e92-4dcc-8cdd-276bee5c2b0a"
+      ],
+      "settings": {
+        "enable_announcement": true,
+        "show_on_homepage_only": false,
+        "block_color": false,
+        "autorotate": true,
+        "interval": 3,
+        "move_placement": false,
+        "enable_social_media": false,
+        "enable_language_selector": true,
+        "enable_currency_selector": true,
+        "background_color": "#adcc0d",
+        "text_color": "#000000",
+        "link_color": "#006796"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "header_style": "header_2",
+        "enable_sticky_header": true,
+        "sticky_header_type": "always",
+        "logo": "shopify://shop_images/free-spirited-logo-white-text-transparent.png",
+        "logo_width": 140,
+        "logo_width_mobile": 70,
+        "desktop_transparent_header": false,
+        "mobile_transparent_header": false,
+        "transparent_color": "#ffffff",
+        "menu": "main-menu",
+        "menu_type": "mega_menu",
+        "menu_font": "body",
+        "menu_font_size": "14",
+        "sub_menu_font": "body",
+        "submenu_font_size": "14",
+        "hamburder_menu_font": "body",
+        "mobile_menu_font": "heading",
+        "mobile_menu_font_size": 24,
+        "enable_social_media": false,
+        "enable_language_selector": true,
+        "enable_currency_selector": true,
+        "enable_search": true,
+        "enable_account": false,
+        "enable_cart": true
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header"
+  ]
+}

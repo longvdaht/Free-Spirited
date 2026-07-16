@@ -1,0 +1,105 @@
+.marque-text {
+    position: relative;
+    overflow: hidden;
+    padding-top: var(--top-spacer);
+    padding-bottom: var(--bottom-spacer);
+}
+
+.marque-text-item {
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-right: var(--marquee-gap);
+}
+
+.marque-text-item .marquee-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marquee-icon {
+    padding-left: var(--marquee-icon-gap);
+}
+
+.marque-text-content {
+    display: flex;
+}
+
+.marque-text-content.on-scroll-move {
+    justify-content: center;
+}
+
+.marque-text-node * {
+    font-size: var(--node-size);
+    color: var(--node-color);
+    line-height: 1.2;
+}
+
+.marque-text-node {
+    display: flex;
+}
+
+.outline-text {
+    -webkit-text-stroke-color: var(--node-outline-color);
+    -webkit-text-stroke-width: var(--outline-thickness);
+    -webkit-text-fill-color: transparent;
+}
+
+.outline-filled-text {
+    -webkit-text-stroke-color: var(--node-outline-color);
+    -webkit-text-stroke-width: var(--outline-thickness);
+}
+
+.gradient-text {
+    background: var(--node-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.marque-text-item svg {
+    /* fill: var(--node-color); */
+    width: var(--node-size);
+    height: var(--node-size);
+}
+
+.marque-text-item.small-icon svg {
+    width: calc(var(--node-size) / 2);
+    height: calc(var(--node-size) / 2);
+}
+
+.autoplay-infinite .marque-text-node {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: text-marque;
+    animation-duration: var(--animation-speed);
+}
+
+.ltr-direction .marque-text-node {
+    animation-direction: reverse;
+}
+
+.rtl-direction .marque-text-node {
+    animation-direction: normal;
+}
+
+@keyframes text-marque {
+    0% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.marque-text-inner-box {
+    width: 100%;
+}
+
+@media (max-width:767px) {
+    .autoplay-infinite .marque-text-node {
+        animation-duration: calc(var(--animation-speed)* 0.5);
+    }
+}

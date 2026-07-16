@@ -1,0 +1,43 @@
+{%- liquid
+  assign featuredImage = collection.featured_image
+  if gridImageSize == 'landscape'
+    assign collectionImageRatio = 75
+  elsif gridImageSize == 'square'
+    assign collectionImageRatio = 100
+  elsif gridImageSize == 'portrait'
+    assign collectionImageRatio = 125 
+  else
+    if featuredImage != blank
+      assign collectionImageRatio = 1 | divided_by: featuredImage.aspect_ratio | times: 100
+    else
+      assign collectionImageRatio = 100
+    endif
+  endif
+-%}
+{% if collectionSearch != true %}
+  <div class="{%if columnsValueMobile %}{{ columnsValueMobile }}{%else %}col-6{% endif %} col-sm-4 col-md-3 {%if columnsValue %}{{columnsValue}}{%else%}col-lg-3{% endif %}">
+{% endif %}
+
+<{% if collection != blank %}a href="{{ collection.url }}" {% else %}div{% endif %} class="collection-card {% if section.settings.heading_overlay %}content-overlay{% endif %}" tabindex="0" {%  if settings.enable_animation %} data-aos="fade-up" data-aos-easing="ease"  data-aos-delay="{{ aosDelay }}"{% endif %}>
+  <div class="collection-image">
+    <div class="media-box" style="--image-ratio:{{ collectionImageRatio }}%">
+      {% if featuredImage != blank %}
+        {% render 'image', image: featuredImage %}
+      {% else %}
+        {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }} 
+      {% endif %}
+    </div>
+  </div>
+  <div class="collection-content{% if collectionClass %} {{ collectionClass }}{% else %} text-{{ section.settings.title_postion }}{% endif %}">
+    <h5 class="collection-title">
+      {% if collection != blank %}
+        {{- collection.title -}}
+      {% else %}
+       {{ 'sections.collection_template.title' | t }}
+      {% endif %}
+    </h5>
+  </div>
+</{% if collection != blank %}a{% else %}div{% endif %}>
+{% if collectionSearch != true %}
+  </div>
+{% endif %}

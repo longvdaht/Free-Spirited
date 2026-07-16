@@ -1,0 +1,104 @@
+{% liquid 
+  if visibility == 'visible'
+    assign visibility = ''
+  else
+    assign visibility = 'disabled'
+  endif
+%}
+
+{%- form 'product',
+  product,
+  id: product_form_id,
+  class: 'form main-product-form',
+  novalidate: 'novalidate',
+  data-type: 'add-to-cart-form'
+-%}
+  {% liquid
+    assign preorder = false
+    if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0
+      assign preorder = true
+    endif
+  %}
+  <script type="application/json" data-name="product-variants">
+    {{ product.variants | json }}
+  </script>
+  <script type="application/json" data-name="product-options">
+    {{ product.options_with_values | json }}
+  </script>
+  <script type="application/json" data-name="product-inventories">
+    [
+    {% for variant in product.variants %}
+      {
+        "id": {{- variant.id -}},
+        "inventory_management": "{{- variant.inventory_management -}}",
+        "inventory_policy": "{{- variant.inventory_policy -}}",
+        "inventory_quantity": "{{- variant.inventory_quantity -}}"
+      }{%- unless forloop.last -%},{%- endunless -%}
+    {% endfor %}
+    ]
+  </script>
+  <input type="hidden" name="id" value="{{ current_variant.id }}" {{ visibility }}>
+
+  {%- liquid
+    assign gift_card_recipient_feature_active = false
+    if block.settings.show_recipient_form and product.gift_card?
+      assign gift_card_recipient_feature_active = true
+    endif
+    if block.settings.dynamic_checkout_btn and gift_card_recipient_feature_active == false
+    endif
+  -%}
+  {% if gift_card_recipient_feature_active %}
+    {%- render 'gift-card-form', product: product, form: form, section: section -%}
+  {% endif %}
+{% if quickViewcard != true %}
+  <div class="error-message no-bg" data-error-text style="display:none" role="status"></div>
+{% endif %}
+  <div class="product-checkout-buttons {% if block.settings.dynamic_checkout_btn and quickViewcard != true %}  dynamic-checkout-enabled {% endif %}">
+      <button type="submit" class="{% if quickViewcard  %}arrow-btn medium-arrow-btn{% else %}button atc-btn  btn-block medium-btn{% endif %}" {% unless current_variant.available %}  disabled {% endunless %} 
+       data-cart-drawer-status={{ settings.enable_cartdrawer }}
+       data-add-to-cart
+        data-addtocart-wrapper> 
+        {% if quickViewcard  %}
+       
+          <svg class="arrow-btn-icon1" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M15.9448 10.51V5.58694C15.9448 3.32115 14.1793 1.48438 12.0013 1.48438C9.82339 1.48438 8.05786 3.32115 8.05786 5.58694V10.51M19.9997 8.3299L21.328 21.4581C21.4016 22.1848 20.8538 22.8177 20.1514 22.8177H3.85113C3.14877 22.8177 2.60107 22.1848 2.67459 21.4581L4.00291 8.3299C4.06629 7.7035 4.57402 7.22796 5.17945 7.22796H18.8232C19.4285 7.22796 19.9364 7.7035 19.9997 8.3299ZM8.4522 10.51C8.4522 10.7366 8.27563 10.9203 8.05786 10.9203C7.84006 10.9203 7.66352 10.7366 7.66352 10.51C7.66352 10.2834 7.84006 10.0998 8.05786 10.0998C8.27563 10.0998 8.4522 10.2834 8.4522 10.51ZM16.339 10.51C16.339 10.7366 16.1625 10.9203 15.9448 10.9203C15.7269 10.9203 15.5504 10.7366 15.5504 10.51C15.5504 10.2834 15.7269 10.0998 15.9448 10.0998C16.1625 10.0998 16.339 10.2834 16.339 10.51Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          <svg class="arrow-btn-icon2" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M15.9448 10.51V5.58694C15.9448 3.32115 14.1793 1.48438 12.0013 1.48438C9.82339 1.48438 8.05786 3.32115 8.05786 5.58694V10.51M19.9997 8.3299L21.328 21.4581C21.4016 22.1848 20.8538 22.8177 20.1514 22.8177H3.85113C3.14877 22.8177 2.60107 22.1848 2.67459 21.4581L4.00291 8.3299C4.06629 7.7035 4.57402 7.22796 5.17945 7.22796H18.8232C19.4285 7.22796 19.9364 7.7035 19.9997 8.3299ZM8.4522 10.51C8.4522 10.7366 8.27563 10.9203 8.05786 10.9203C7.84006 10.9203 7.66352 10.7366 7.66352 10.51C7.66352 10.2834 7.84006 10.0998 8.05786 10.0998C8.27563 10.0998 8.4522 10.2834 8.4522 10.51ZM16.339 10.51C16.339 10.7366 16.1625 10.9203 15.9448 10.9203C15.7269 10.9203 15.5504 10.7366 15.5504 10.51C15.5504 10.2834 15.7269 10.0998 15.9448 10.0998C16.1625 10.0998 16.339 10.2834 16.339 10.51Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+           
+          {% else %}
+          <span data-addtocart-text>
+            {%- unless current_variant.available -%}
+              {{ 'products.product.sold_out' | t }}
+            {%- else -%}
+              {%- if preorder -%}
+                {{ 'products.product.preorder' | t }}
+              {%- else -%}
+                {{ 'products.product.add_to_cart' | t }}
+              {%- endif -%}
+            {%- endunless -%}
+          </span>
+          {% if settings.button_hover_effect == 'modern' %}
+            <div class="button-arrow">
+              <div class="button-arrow-bg">
+              <svg class="button-arrow-icon1" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.601562 0L6.57917 0.517835L6.06134 6.49545L4.96062 6.40009L5.31567 2.30149L0.879141 6.03062L0.168244 5.18488L4.60478 1.45576L0.50621 1.1007L0.601562 0Z" fill="currentColor"/>
+              </svg>
+              </div>
+            </div>
+          {% endif %}
+        {% endif %}
+          <span class="btn-loader">
+            <svg width="25" height="25" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" fill="none" stroke="currentColor" stroke-width="6" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+                <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"/>
+              </circle>
+            </svg>
+          </span>
+      </button>
+      {%- if block.settings.dynamic_checkout_btn -%}
+        {{ form | payment_button }}
+      {%- endif -%}
+  </div>
+{% endform %}

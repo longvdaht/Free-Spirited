@@ -1,0 +1,1105 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_pzybfK": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_VqXV4F": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Untitled_design_39_7d12026c-d269-4874-99a3-66f79105cd93.jpg",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_ec1e2837-4f53-4d59-9ddd-91cf04fa8a70.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "primary",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 10,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_VqXV4F"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "countdown_HVAyxH": {
+      "type": "countdown",
+      "disabled": true,
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "full_width": true,
+        "layout_style": "stacked-style",
+        "desktop_height": "400px",
+        "mobile_height": "auto",
+        "heading": "FREE SPIRITED VALENTINE'S SALE IS LIVE!",
+        "heading_size": "h4",
+        "seo_heading": "h3",
+        "date": "01/02/2025",
+        "enable_glass_background": true,
+        "content_position": "center",
+        "button_style": "solid",
+        "btn_text": "SHOP THE VALENTINE'S DAY SALE",
+        "btn_link": "https://shopfreespirited.com/discount/VALENTINE?redirect=%2Fcollections%2Fvalentines-day-special",
+        "btn_size": "regular",
+        "color_scheme": "primary",
+        "section_background": "",
+        "highlighted_color": "#eff341",
+        "overlay_background": "#000000",
+        "overlay_opacity": 0,
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 35
+      }
+    },
+    "countdown_rE36zn": {
+      "type": "countdown",
+      "name": "t:sections.countdown.presets.name",
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "full_width": true,
+        "layout_style": "stacked-style",
+        "desktop_height": "500px",
+        "mobile_height": "auto",
+        "heading": "Memorial Day sale ends in:",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "date": "26/05/2026",
+        "enable_glass_background": true,
+        "content_position": "center",
+        "button_style": "solid",
+        "btn_text": "Shop Sale",
+        "btn_link": "shopify://collections/usa-graphic-shirts",
+        "btn_size": "regular",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#EFF341",
+        "overlay_background": "#000000",
+        "overlay_opacity": 0,
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 35
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "image_with_text_NYpCce": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_GNEy38": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "SAVE UP TO 62% OFF ON SOME TIE-DYE!"
+          }
+        },
+        "heading_T3QRwe": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Our Memorial Day Sale is Live!</strong> Ships Fast from Florida.",
+            "heading_size": "h2",
+            "seo_heading": "h2",
+            "highlighted_color": "#ffd700"
+          }
+        },
+        "text_XwV96m": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All shirts are 62% off, and our hand-dyed Flag tee is $9.95. Order this weekend and it lands well before the 4th of July. Sale ends Monday night. Ships fast from our Florida studio.</p>",
+            "text_size": "large"
+          }
+        },
+        "button_BwkVKt": {
+          "type": "button",
+          "settings": {
+            "button_style_1": "solid",
+            "btn_text": "Shop Memorial Day Sale",
+            "btn_url": "https://shopfreespirited.com/collections/usa-graphic-shirts",
+            "btn_size": "small",
+            "button_style_2": "solid",
+            "btn_text_2": "",
+            "btn_url_2": "",
+            "btn_size_2": "small"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_GNEy38",
+        "heading_T3QRwe",
+        "text_XwV96m",
+        "button_BwkVKt"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "section_fullwidth": false,
+        "card_background": false,
+        "image": "shopify://shop_images/ChatGPT_Image_May_12_2026_03_21_29_PM.png",
+        "image_overlay_enable": false,
+        "image_overlay": "shopify://shop_images/Pink_heart_Plain.png",
+        "image_width": "medium",
+        "image_position": "left",
+        "content_position": "center",
+        "content_alignment": "flex-start_left",
+        "hide_row_count": false,
+        "color_scheme": "",
+        "section_background": "",
+        "card_color": "",
+        "top_space_desktop": 20,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 10,
+        "bottom_space_mobile": 10
+      }
+    },
+    "featured_product_gB6KgN": {
+      "type": "featured-product",
+      "blocks": {
+        "title_BygnDz": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "review_rating_gWpYBR": {
+          "type": "review_rating",
+          "settings": {}
+        },
+        "price_Ka68jd": {
+          "type": "price",
+          "settings": {
+            "hide_shipping_content": false
+          }
+        },
+        "variant_H7iUUB": {
+          "type": "variant",
+          "settings": {}
+        },
+        "quantity_selector_MDpWJP": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "button_i6Cr4W": {
+          "type": "button",
+          "settings": {
+            "dynamic_checkout_btn": false
+          }
+        }
+      },
+      "block_order": [
+        "title_BygnDz",
+        "review_rating_gWpYBR",
+        "price_Ka68jd",
+        "variant_H7iUUB",
+        "quantity_selector_MDpWJP",
+        "button_i6Cr4W"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "product": "american-flag-tie-dye-shirt",
+        "product_thumbnail": true,
+        "thumbnail_position": "left",
+        "overlapped_thumbnails": false,
+        "desktop_grid_image_size": "auto",
+        "image_zoom": "lightbox",
+        "thumbnial_on_mobile": false,
+        "mobile_grid_image_size": "auto",
+        "heading": "Only $9.95 Today!",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "heading_alignment": "text-left",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#eff341",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "video_wmYpaG": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "section_visibility": "always",
+        "video_full_width": false,
+        "make_section_rounded": false,
+        "autoplay": false,
+        "video_height": "550px",
+        "mobile_video_height": "450px",
+        "cover_image": "shopify://shop_images/IMG_8906.heic",
+        "video_url": "https://vimeo.com/1059038971?share=copy#t=0",
+        "heading": "Free Spirited’s Mardi Gras Sale!",
+        "heading_size": "h2",
+        "seo_heading": "h2",
+        "description": "",
+        "content_width": "small",
+        "content_position": "center",
+        "content_alignment": "center_center",
+        "color_scheme": "",
+        "section_background": "",
+        "text": "#ffffff",
+        "highlighted_color": "#eff341",
+        "button": "#000000",
+        "button_text": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "featured_product_HWXLGK": {
+      "type": "featured-product",
+      "blocks": {
+        "title_AA7H33": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "review_rating_YcVTPK": {
+          "type": "review_rating",
+          "settings": {}
+        },
+        "price_LYfbdN": {
+          "type": "price",
+          "settings": {
+            "hide_shipping_content": false
+          }
+        },
+        "variant_tBHYaD": {
+          "type": "variant",
+          "settings": {}
+        },
+        "quantity_selector_PVfkkf": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "button_Lbbwgk": {
+          "type": "button",
+          "settings": {
+            "dynamic_checkout_btn": true
+          }
+        }
+      },
+      "block_order": [
+        "title_AA7H33",
+        "review_rating_YcVTPK",
+        "price_LYfbdN",
+        "variant_tBHYaD",
+        "quantity_selector_PVfkkf",
+        "button_Lbbwgk"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "product": "american-pride-bundle",
+        "product_thumbnail": true,
+        "thumbnail_position": "left",
+        "overlapped_thumbnails": false,
+        "desktop_grid_image_size": "auto",
+        "image_zoom": "lightbox",
+        "thumbnial_on_mobile": false,
+        "mobile_grid_image_size": "auto",
+        "heading": "The Best Deal!",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "heading_alignment": "text-left",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#eff341",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "featured_product_trjCMb": {
+      "type": "featured-product",
+      "blocks": {
+        "title_BXVAaq": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "review_rating_FtntV4": {
+          "type": "review_rating",
+          "settings": {}
+        },
+        "price_U8wgL6": {
+          "type": "price",
+          "settings": {
+            "hide_shipping_content": false
+          }
+        },
+        "variant_7rMkw4": {
+          "type": "variant",
+          "settings": {}
+        },
+        "quantity_selector_GHE8U8": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "button_UUcPG8": {
+          "type": "button",
+          "settings": {
+            "dynamic_checkout_btn": true
+          }
+        }
+      },
+      "block_order": [
+        "title_BXVAaq",
+        "review_rating_FtntV4",
+        "price_U8wgL6",
+        "variant_7rMkw4",
+        "quantity_selector_GHE8U8",
+        "button_UUcPG8"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "product": "independence-tie-dye-tee",
+        "product_thumbnail": true,
+        "thumbnail_position": "left",
+        "overlapped_thumbnails": false,
+        "desktop_grid_image_size": "auto",
+        "image_zoom": "lightbox",
+        "thumbnial_on_mobile": false,
+        "mobile_grid_image_size": "auto",
+        "heading": "60% Off for a Limited Time!",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "heading_alignment": "text-left",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#eff341",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "featured_product_RtfAVt": {
+      "type": "featured-product",
+      "blocks": {
+        "title_BqEU9y": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "review_rating_jmybDU": {
+          "type": "review_rating",
+          "settings": {}
+        },
+        "price_FU8XBH": {
+          "type": "price",
+          "settings": {
+            "hide_shipping_content": false
+          }
+        },
+        "variant_hTXkAg": {
+          "type": "variant",
+          "settings": {}
+        },
+        "quantity_selector_WaQC8d": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "button_zwM8ta": {
+          "type": "button",
+          "settings": {
+            "dynamic_checkout_btn": true
+          }
+        }
+      },
+      "block_order": [
+        "title_BqEU9y",
+        "review_rating_jmybDU",
+        "price_FU8XBH",
+        "variant_hTXkAg",
+        "quantity_selector_WaQC8d",
+        "button_zwM8ta"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "product": "fire-cracker-premium-hand-dyed-comfort-shirt",
+        "product_thumbnail": true,
+        "thumbnail_position": "left",
+        "overlapped_thumbnails": false,
+        "desktop_grid_image_size": "auto",
+        "image_zoom": "lightbox",
+        "thumbnial_on_mobile": false,
+        "mobile_grid_image_size": "auto",
+        "heading": "On sale today!",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "heading_alignment": "text-left",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#eff341",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "featured_product_hPbXza": {
+      "type": "featured-product",
+      "blocks": {
+        "title_rtQfBF": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "review_rating_zEnfPb": {
+          "type": "review_rating",
+          "settings": {}
+        },
+        "price_RWPmhP": {
+          "type": "price",
+          "settings": {
+            "hide_shipping_content": false
+          }
+        },
+        "variant_fAnGLR": {
+          "type": "variant",
+          "settings": {}
+        },
+        "quantity_selector_gyWcbr": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "button_tGACAw": {
+          "type": "button",
+          "settings": {
+            "dynamic_checkout_btn": true
+          }
+        }
+      },
+      "block_order": [
+        "title_rtQfBF",
+        "review_rating_zEnfPb",
+        "price_RWPmhP",
+        "variant_fAnGLR",
+        "quantity_selector_gyWcbr",
+        "button_tGACAw"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "product": "union-jack-premium-hand-dyed-comfort-shirt",
+        "product_thumbnail": true,
+        "thumbnail_position": "left",
+        "overlapped_thumbnails": false,
+        "desktop_grid_image_size": "auto",
+        "image_zoom": "lightbox",
+        "thumbnial_on_mobile": false,
+        "mobile_grid_image_size": "auto",
+        "heading": "",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "heading_alignment": "text-left",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#eff341",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "collection_list_aHzLAB": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_qihDVi": {
+          "type": "collection",
+          "settings": {
+            "collection": "shop-sale"
+          }
+        },
+        "collection_FA38kc": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-love-is-love-collection"
+          }
+        },
+        "collection_k8mDFX": {
+          "type": "collection",
+          "settings": {
+            "collection": "tank-tops"
+          }
+        },
+        "collection_WW4Acq": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "new-arrivals"
+          }
+        },
+        "collection_fGXexg": {
+          "type": "collection",
+          "settings": {
+            "collection": "v-neck-tie-dye-shirts"
+          }
+        }
+      },
+      "block_order": [
+        "collection_qihDVi",
+        "collection_FA38kc",
+        "collection_k8mDFX",
+        "collection_WW4Acq",
+        "collection_fGXexg"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "columns_desktop": 4,
+        "column_mobile": "2",
+        "enable_swipe_mobile": false,
+        "content_alignment": "text-left",
+        "heading": "",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "description": "",
+        "grid_image_size": "auto",
+        "color_scheme": "",
+        "highlighted_color": "#006f94",
+        "section_background": "",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "slideshow_XjKhFm": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_qzwnNJ": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Copy_of_Untitled.jpg",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_6.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "primary",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 10,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_qzwnNJ"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "1732039078c5a5232a": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_featured_carousel_9eCrUy": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_featured_carousel_9eCrUy"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "section_visibility": "always",
+        "top_space_desktop": 85,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "featured_collection_hRtYTp": {
+      "type": "featured-collection",
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "collection": "shop-sale",
+        "products_style": "carousel",
+        "enable_swipe_mobile": false,
+        "products_to_show": 4,
+        "grid_image_size": "auto",
+        "image_fit": "cover",
+        "content_alignment": "text-left",
+        "title": "",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "description": "",
+        "btntext": "",
+        "promotion_card": false,
+        "promotion_border": false,
+        "promotion_in_stacked": 1,
+        "pr_heading": "Promotional card",
+        "pr_seo_heading": "h5",
+        "pr_description": "Add short description for this section",
+        "button_style": "solid",
+        "btn_text": "",
+        "btn_link": "",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#eff341",
+        "heading_color": "#000000",
+        "text_color": "#484848",
+        "btn_bg_color": "#000000",
+        "btn_text_color": "#ffffff",
+        "btn_border_color": "#000000",
+        "btn_hover_color": "#a60c0c",
+        "btn_hover_text_color": "#000000",
+        "btn_hover_border_color": "#a60c0c",
+        "background_color": "#ffffff",
+        "background_opacity": 30,
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "rich_text_mbAqjh": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Qpyxq7": {
+          "type": "heading",
+          "settings": {
+            "heading": "100% Satisfaction Guarantee",
+            "heading_size": "h2",
+            "seo_heading": "h2",
+            "highlighted_color": "#eff341"
+          }
+        },
+        "text_Y8EPnX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When you shop Free Spirited Co. You know you're in good hands.</p>"
+          }
+        },
+        "button_Rkf69e": {
+          "type": "button",
+          "settings": {
+            "button_style": "solid",
+            "text": "Shop Memorial Day Sale",
+            "link": "https://shopfreespirited.com/collections/usa-graphic-shirts",
+            "button_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Qpyxq7",
+        "text_Y8EPnX",
+        "button_Rkf69e"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "content_width": "large",
+        "content_alignment": "text-center",
+        "content_postion": "center",
+        "color_scheme": "",
+        "section_background": "",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "slideshow_tpX86A": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_9CjW6Q": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/free_spirit_tie_dye_667b3423-e8c4-4ebd-99d4-11d1d4b4d700.png",
+            "image_mobile": "shopify://shop_images/Copy_of_Untitled_320_x_480_px_3_52749ac4-406e-465d-985c-96a9a36a8a29.png",
+            "subheading": "",
+            "heading": "",
+            "enable_highlight_background": false,
+            "heading_size": "h1",
+            "seo_heading": "h1",
+            "description": "",
+            "btn_text_1": "",
+            "btn_link_1": "",
+            "button_syle_1": "solid",
+            "button_size_1": "regular",
+            "btn_text_2": "",
+            "btn_link_2": "",
+            "button_syle_2": "solid",
+            "button_size_2": "regular",
+            "content_width": "medium",
+            "desktop_content_position": "d-center-left",
+            "desktop_alignment": "d-text-left",
+            "mobile_content_position": "m-center",
+            "mobile_alignment": "m-text-center",
+            "enable_background": false,
+            "color_scheme": "primary",
+            "highlighted_color": "#ffffff",
+            "highlighted_bg_color": "#000000",
+            "highlighted_bg_opacity": 10,
+            "content_overlay_color": "#000000",
+            "content_overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slide_9CjW6Q"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "enable_full_width": true,
+        "enable_compact_width": false,
+        "enable_block_color": false,
+        "desktop_height": "adapt_image",
+        "mobile_height": "adapt_image",
+        "auto_rotate": false,
+        "interval": 5,
+        "slider_transition": "fade",
+        "navigation_type": "arrow",
+        "show_arrow_hover": false,
+        "banner_marquee": false,
+        "marquee_text": "",
+        "rotation_style": "always",
+        "direction": "rtl",
+        "banner_marquee_color": "#ffffff",
+        "scrolling_speed": 15,
+        "scrolling_speed_mobile": 15,
+        "outline_thickness": 2,
+        "marquee_text_size": 100,
+        "marquee_text_size_mobile": 80,
+        "item_gap_desktop": 30,
+        "item_gap_mobile": 20,
+        "color_scheme": "",
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "before_after_image_JGgFiA": {
+      "type": "before-after-image",
+      "blocks": {
+        "image_xYVDdk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/tie_dye_before_100_wash_b5495918-549e-4777-ae59-4f564efd797f.jpg",
+            "text": "Free Spirited Tie-Dye",
+            "text_position": "center"
+          }
+        },
+        "image_JjfxwA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/tie_dye_after_100_wash_v1.jpg",
+            "text": "The \"Others\"",
+            "text_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_xYVDdk",
+        "image_JjfxwA"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "heading": "SEE THE DIFFERENCE AFTER 100 WASHES",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "heading_alignment": "text-center",
+        "desktop_height": "500px",
+        "mobile_height": "adapt_to_first",
+        "color_scheme": "quatnary",
+        "highlighted_color": "#eff341",
+        "section_background": "",
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "featured_collection_99QjEq": {
+      "type": "featured-collection",
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "collection": "tie-dye-shirts",
+        "products_style": "carousel",
+        "enable_swipe_mobile": false,
+        "products_to_show": 4,
+        "grid_image_size": "auto",
+        "image_fit": "cover",
+        "content_alignment": "text-left",
+        "title": "",
+        "heading_size": "h3",
+        "seo_heading": "h3",
+        "description": "",
+        "btntext": "",
+        "promotion_card": false,
+        "promotion_border": false,
+        "promotion_in_stacked": 1,
+        "pr_heading": "Promotional card",
+        "pr_seo_heading": "h5",
+        "pr_description": "Add short description for this section",
+        "button_style": "solid",
+        "btn_text": "",
+        "btn_link": "",
+        "color_scheme": "",
+        "section_background": "",
+        "highlighted_color": "#eff341",
+        "heading_color": "#000000",
+        "text_color": "#484848",
+        "btn_bg_color": "#000000",
+        "btn_text_color": "#ffffff",
+        "btn_border_color": "#000000",
+        "btn_hover_color": "#a60c0c",
+        "btn_hover_text_color": "#000000",
+        "btn_hover_border_color": "#a60c0c",
+        "background_color": "#ffffff",
+        "background_opacity": 30,
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    },
+    "rich_text_GarDF9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_t4Gr46": {
+          "type": "heading",
+          "settings": {
+            "heading": "Feel the Difference",
+            "heading_size": "h2",
+            "seo_heading": "h2",
+            "highlighted_color": "#eff341"
+          }
+        },
+        "text_XDmY8G": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Know the difference when you feel our unique textures, with exceptional breathability, made with quality fabrics. Only at Free Spirited Co.</p>"
+          }
+        },
+        "button_KUarmA": {
+          "type": "button",
+          "settings": {
+            "button_style": "solid",
+            "text": "Shop Memorial Day Sale",
+            "link": "https://shopfreespirited.com/collections/usa-graphic-shirts",
+            "button_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_t4Gr46",
+        "text_XDmY8G",
+        "button_KUarmA"
+      ],
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "content_width": "large",
+        "content_alignment": "text-center",
+        "content_postion": "center",
+        "color_scheme": "",
+        "section_background": "",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
+    "video_ackyWB": {
+      "type": "video",
+      "settings": {
+        "section_visibility": "always",
+        "video_full_width": false,
+        "make_section_rounded": false,
+        "autoplay": false,
+        "video_height": "adapt_image",
+        "mobile_video_height": "adapt_image",
+        "cover_image": "shopify://shop_images/321321321_7668f9fd-7d50-4502-ada6-2f930434571a.png",
+        "video_url": "https://vimeo.com/1020214496",
+        "heading": "MEET OUR TEAM - Fast USA Shipping",
+        "heading_size": "h2",
+        "seo_heading": "h2",
+        "description": "",
+        "content_width": "small",
+        "content_position": "center",
+        "content_alignment": "center_center",
+        "color_scheme": "",
+        "section_background": "",
+        "text": "#ffffff",
+        "highlighted_color": "#eff341",
+        "button": "#006f94",
+        "button_text": "#adcc0d",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
+      }
+    }
+  },
+  "order": [
+    "slideshow_pzybfK",
+    "countdown_HVAyxH",
+    "countdown_rE36zn",
+    "main",
+    "image_with_text_NYpCce",
+    "featured_product_gB6KgN",
+    "video_wmYpaG",
+    "featured_product_HWXLGK",
+    "featured_product_trjCMb",
+    "featured_product_RtfAVt",
+    "featured_product_hPbXza",
+    "collection_list_aHzLAB",
+    "slideshow_XjKhFm",
+    "1732039078c5a5232a",
+    "featured_collection_hRtYTp",
+    "rich_text_mbAqjh",
+    "slideshow_tpX86A",
+    "before_after_image_JGgFiA",
+    "featured_collection_99QjEq",
+    "rich_text_GarDF9",
+    "video_ackyWB"
+  ]
+}

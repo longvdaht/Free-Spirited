@@ -1,0 +1,123 @@
+{% if section.settings.menu != blank %}
+  {% unless section.settings.header_style == 'header_7' %}
+  <div class="menu-list-box">
+    <ul class="list-inline menu-list">
+      {%- for link in linklists[section.settings.menu].links -%}
+        {%- liquid
+          assign megaMenuBlocks = section.blocks | where: 'type', 'mega_menu'
+          assign megaMenuStatus = false
+          assign linkTitle = link.title | handleize
+          assign indexmenu = forloop.index
+          assign blockAttributes = ''
+          capture megaMenuData
+            for block in megaMenuBlocks
+              assign blockLabel = block.settings.title | handleize
+              if blockLabel == linkTitle
+                assign megaMenuStatus = true
+                assign megamenuClass = 'mega-menu-' | append: indexmenu
+                render 'mega-menu', block: block,megamenu:megamenuClass
+                assign blockAttributes = block.shopify_attributes
+                break
+              endif
+            endfor
+          endcapture
+        -%}
+        <li
+          class="menu-item {% if link.links.size > 0 or megaMenuData != blank %}has-children{% endif %}{% if section.settings.menu_type == 'mega_menu' or megaMenuData != blank or megaMenuStatus == true %} has-megamenu full-megamenu mega-menu-{{ forloop.index }}{% endif %}"
+          data-navigation-item{% if megaMenuData != blank %} {{ blockAttributes }}{% endif %}
+        >
+          <a href="{{ link.url }}" class="menu-link {{ section.settings.menu_font }}-font"
+            aria-label="{{ link.title }}"
+          >
+            {{- link.title }}
+            {% if link.links.size > 0 or megaMenuData != blank %}
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                <path d="M1.00006 0.999871L4.99994 5L9.00006 1.00013" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            {% endif %}
+          </a>
+          {% if link.links.size > 0 or megaMenuData != blank %}
+            {% if megaMenuStatus == true or section.settings.menu_type == 'mega_menu' or megaMenuData != blank %}
+              <div class="nav-submenu nav-megamenu-container">
+                <div class="container">
+                  <ul class="nav-megamenu-columns">
+                    {% for childlink in link.links %}
+                      <li>
+                        <a
+                          href="{{ childlink.url }}"
+                          title="{{- childlink.title }}"
+                          class="megamenu-columns-heading {{ section.settings.sub_menu_font }}-font"
+                          role="menuitem"
+                        >
+                          {{- childlink.title -}}
+                        </a>
+                        {% if childlink.links.size > 0 %}
+                          <ul role="menu" class="nav-megamenu-inner">
+                            {% for grandchild in childlink.links %}
+                              <li class="" role="menuitem">
+                                <a class="" href="{{ grandchild.url }}" title="{{ grandchild.title }}" role="menuitem">
+                                  {{- grandchild.title -}}
+                                </a>
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+                      </li>
+                    {% endfor %}
+                    {% liquid
+                      if megaMenuData != blank
+                        echo megaMenuData
+                      endif
+                    %}
+                  </ul>
+                </div>
+              </div>
+            {% else %}
+              <ul class="nav-submenu">
+                {% for childlink in link.links %}
+                  <li class="nav-submenu-item {% if childlink.links.size > 0 %} has-children {% endif %}">
+                    <a
+                      class="focus-inside nav-submenu-link {{ section.settings.sub_menu_font }}-font"
+                      href="{{ childlink.url }}"
+                    >
+                      {{- childlink.title }}
+                      {% if childlink.links.size > 0 %}
+                        <span class="submenu-link-arrow">
+                          <svg width="6" height="10" viewBox="0 0 6 10" fill="none">
+                            <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
+                      {% endif %}
+                    </a>
+                    {% if childlink.links.size > 0 %}
+                      <ul class="nav-submenu inner">
+                        {% for grandchild in childlink.links %}
+                          <li class="nav-submenu-item">
+                            <a
+                              class="focus-inside nav-submenu-link"
+                              href="{{ grandchild.url }}"
+                              title="{{ grandchild.title }}"
+                            >
+                              {{- grandchild.title -}}
+                            </a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+                {% if megaMenuData != blank %}
+                  {{ megaMenuData }}
+                {% endif %}
+              </ul>
+            {% endif %}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    {% if section.settings.header_style == 'header_6' %}
+      {% render 'header-search-group' %}
+    {% endif %}
+  </div>
+{% endunless %}
+{% endif %}

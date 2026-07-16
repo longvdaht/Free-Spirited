@@ -1,0 +1,30 @@
+
+{%- for i in (1..5) -%}
+    {%- liquid
+      assign headingSetting = 'content_title_' | append: i
+      assign linkSetting = 'content_link_' | append: i
+      assign imageSetting = 'content_image_' | append: i
+    -%}
+    {%- if block.settings[headingSetting] != blank or block.settings[imageSetting] != blank -%}
+        <div class="megamenu-promotion{% if block.settings.text_overlay %} content-overlay{% endif %}">
+            {%- if block.settings[imageSetting] != blank -%}
+                {% assign image =  block.settings[imageSetting] %}
+                <div class="megamenu-promotion-img">
+                <div class="media-box" style="--image-ratio:100%">
+                    {% render 'image', image: image %}
+                </div>
+                </div>
+            {%- endif -%}
+            {%- if block.settings[headingSetting] != blank -%}
+                <div class="megamenu-promotion-content">
+                <h6 class="megamenu-promotion-title {{ section.settings.mobile_menu_font }}-font">{{ block.settings[headingSetting] }}</h6>
+                </div>
+            {%- endif -%}
+            {%- if block.settings[linkSetting] != blank -%}
+                <a href="{{ block.settings[linkSetting] }}" class="focus-inside megamenu-promotion-link "></a>
+            {%- endif -%}
+        </div>
+    {%- endif -%}
+  {%- endfor -%}
+
+

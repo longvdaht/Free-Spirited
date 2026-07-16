@@ -1,0 +1,27 @@
+<div id="product-media-popup-{{ section.id }}" class="popup product-media-popup background-enabled position-center" data-popup-body>
+  <div class="close-fullwidth" data-popup-close></div>
+  <div class="popup-dialog fullwidth">
+    <div class="popup-content">
+      <button class="popup-close" data-popup-close aria-label="close">
+        {% render 'theme-icons', theme_icon: 'popup_close' %}
+      </button>
+      {%- if product.media.size > 0 -%}
+        <div class="product-media-popup-content">
+          {% for media in product.media %}
+            {% case media.media_type %}
+              {% when 'image' %}
+                <div id="productMedia-{{ media.id }}" class="product-media-popup-item">
+                  <div
+                    class="media-box"
+                    style="--image-ratio:{{ 1 | divided_by : media.preview_image.aspect_ratio | times: 100 }}%"
+                  >
+                    {%- render 'image', image: media -%}
+                  </div>
+                </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

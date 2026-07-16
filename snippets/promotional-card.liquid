@@ -1,0 +1,51 @@
+{% liquid
+  if gridImageSize == 'landscape'
+    assign promotionalImageRatio = 75
+  elsif gridImageSize == 'square'
+    assign promotionalImageRatio = 100
+  elsif gridImageSize == 'portrait'
+    assign promotionalImageRatio = 125
+  else
+    if section.settings.image != blank
+      assign promotionalImageRatio = 1 | divided_by: section.settings.image.aspect_ratio | times: 100
+    else
+      assign promotionalImageRatio = 100
+    endif
+  endif
+%}
+<div class="promotional-card-item">
+  <div class="promotional-card {% if section.settings.promotion_border %} border-enabled{% endif %}">
+    <div class="promotional-card-img">
+      <div class="media-box" style="--image-ratio:{{ promotionalImageRatio }}%">
+        {% if section.settings.image != blank %}
+          {%- render 'image', image: section.settings.image -%}
+        {% else %}
+          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
+      </div>
+    </div>
+
+    {% if section.settings.pr_heading != blank
+      or section.settings.pr_description != blank
+      or section.settings.btn_link != blank
+      and section.settings.btn_text != blank
+    %}
+      <div class="promotional-card-content">
+        {% if section.settings.pr_heading != blank %}
+          <{{ section.settings.pr_seo_heading }} class="promotional-card-heading h5">
+            {{ section.settings.pr_heading }}
+          </{{ section.settings.pr_seo_heading }}>
+        {% endif %}
+        {% if section.settings.pr_description != blank %}
+          <div class="promotional-card-desc text-xsmall">{{ section.settings.pr_description | newline_to_br}}</div>
+        {% endif %}
+
+        {% if section.settings.btn_link != blank and section.settings.btn_text != blank %}
+          <div class="promotional-card-button">
+            {% render 'button', button_link: section.settings.btn_link , button_style: section.settings.button_style , button_size: 'small', button_text: section.settings.btn_text %}
+            </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>

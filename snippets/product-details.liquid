@@ -1,0 +1,490 @@
+{% liquid
+  if quick_view_form_id != blank
+    assign product_form_id = quick_view_form_id
+    assign section_id = quick_view_form_id
+  else
+    assign product_form_id = 'product-form-' | append: section.id
+    assign section_id = section.id
+  endif
+%}
+
+{%- comment -%} {% assign product_form_id = 'product-form-' | append: section.id %} {%- endcomment -%}
+
+{% for block in section.blocks %}
+  {% case block.type %}
+    {%- when '@app' -%}
+      {% render block %}
+    {% when 'title' %}
+      {% if quickView %}
+        <a
+          class="unstyled-link product-title-heading {{ settings.heading_size }} heading-font"
+          href="{{ product.url }}"
+          {{ block.shopify_attributes }}
+        >
+          {{- product.title | strip_html -}}
+        </a>
+      {% else %}
+        <{{block.settings.seo_heading}} class="product-title-heading {{block.settings.heading_size}} heading-font" {{ block.shopify_attributes }}>
+          {{ product.title | escape }}
+        </{{block.settings.seo_heading}}>
+      {% endif %}
+    {% when 'price' %}
+      <div
+        class="product-pricing no-js-hidden {% if current_variant.compare_at_price > current_variant.price %} discount-price {% endif %}"
+        id="price-{{ section_id }}"
+        role="status"
+        data-price-wrapper
+        {{ block.shopify_attributes }}
+      >
+        {% render 'product-price', quickView: quickView, product: product %}
+
+        {% unless block.settings.hide_shipping_content %}
+          {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+            <p class="text-xsmall product-tax-shipping">
+              {%- if cart.taxes_included -%}
+                {{ 'products.product.tax_included' | t }}
+              {%- endif -%}
+              {%- if shop.shipping_policy.body != blank -%}
+                {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+              {%- endif -%}
+            </p>
+          {%- endif -%}
+        {% endunless %}
+        <div {{ block.shopify_attributes }}>
+          {%- assign product_form_installment_id = 'product-form-installment-' | append: section_id -%}
+          {%- form 'product', product, id: product_form_installment_id, class: 'text-small' -%}
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            {{ form | payment_terms }}
+          {%- endform -%}
+        </div>
+      </div>
+    {% when 'text' %}
+      <p class="product-description detail-text" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+    {% when 'sku' %}
+      {% if current_variant.sku != blank %}
+        <p class="product-description  sku" data-variant-sku {{ block.shopify_attributes }}>
+          {{ current_variant.sku }}
+        </p>
+      {% endif %}
+    {%- when 'review_rating' -%}
+      {% render 'review-rating', product: product, block: block %}
+    {% when 'variant' %}
+      {%- unless product.has_only_default_variant -%}
+        <div class="product-variants-options" {{ block.shopify_attributes }} data-product-variants>
+          {%- for option in product.options_with_values -%}
+            {%- liquid
+              assign variantOption = 'option' | append: option.position
+              assign colorOptions = settings.color_name | downcase
+              assign downOption = option.name | downcase
+              assign optionIndex = forloop.index
+            -%}
+            <div class="product-variants-wrapper no-js-hidden">
+              <h6 class="product-variants-title text">{{ option.name }}</h6>
+              {% if settings.option_style == 'swatch' %}
+                <div class="product-variants-box {% if colorOptions contains downOption %}color-option {{ settings.color_swatch_type }}{% endif %} ">
+                  <ul class="product-variants-list product-loop-variants{% if quickViewcard ==  true %} variants-small{% endif %}">
+                    {%- for value in option.values -%}
+                      {% assign variantValue = product.variants
+                        | where: variantOption, value
+                        | compact: 'featured_media'
+                        | first
+                      %}
+                      {% liquid
+
+                        if value.swatch.image
+                        assign image_url = value.swatch.image | image_url: width: 50
+                        assign swatch_value = '--swatch-img: url(' | append: image_url | append: ')'
+                        assign swatch_focal_point = value.swatch.image.presentation.focal_point
+                        elsif value.swatch.color
+                          assign swatch_value = '--swatch-color: rgb(' | append: value.swatch.color.rgb | append: ')'
+                        else
+                          assign swatch_value = null
+                        endif
+                      
+                      %}
+                      <li class="variant-item {% if option.selected_value == value %}active{% endif %}">
+                        <label class="hidden" for="option-{{ optionIndex }}-{{ forloop.index }}">{{- value -}}</label>
+                        <input
+                          class="productOption"
+                          id="option-{{ optionIndex }}-{{ forloop.index }}"
+                          form="{{ product_form_id }}"
+                          type="radio"
+                          name="option-{{ optionIndex }}"
+                          value="{{ value | escape }}"
+                          title="{{ value }}"
+                          {% if option.selected_value == value %}
+                            checked
+                          {% endif %}
+                        >
+                        <span
+                          class="variant-item-name{% if variantValue and settings.show_variant_image  %} variant-img {% elsif value.swatch.image %} variant-img{% endif %} {% if swatch_focal_point %} variant-image-focal{% endif %}"
+                          {% if colorOptions contains downOption %}
+                            data-tooltip="{{ value }}"
+                            {% if variantValue and settings.show_variant_image %}
+                              style="--swatch-img:url({{ variantValue.featured_media.preview_image | image_url: width: '30' }});"
+                            {% else %}
+                              {% if swatch_value != null %}style="{{ swatch_value }}; {% if swatch_focal_point %} --swatch-focal-point: {{ swatch_focal_point }};{% endif %}" {% else %} data-color="{{ value }}" style="--swatch-color:{{ value }};"{% endif %}
+                            {% endif %}
+                          {% endif %}
+                        >
+                          {% unless colorOptions contains downOption -%}
+                            {{- value -}}
+                          {%- endunless -%}
+                        </span>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% else %}
+                <div class="custom-select fullwidth" data-custom-select>
+                  <div class="custom-select-button form-control" data-type="{{ option.selected_value }}" custom>
+                    <span class="custom-select-text">
+                      <strong> {{ option.selected_value }}</strong>
+                    </span>
+                    <span class="custom-select-arrow">
+                      <svg width="8" height="5" viewBox="0 0 8 5" fill="none">
+                        <path d="M7 1L4 4L1 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="custom-select-content" data-custom-select-summary>
+                    <ul class="custom-select-list product-loop-variants">
+                      {%- for value in option.values -%}
+                        {% liquid
+                          assign variantOption = 'option' | append: option.position
+                          assign variantValue = product.variants | where: variantOption, value | compact: 'featured_media' | first
+                        -%}
+                        <li class="custom-select-item">
+                          <input
+                            class="productOption hidden"
+                            id="option-{{ optionIndex }}-{{ forloop.index }}-{{ section.id }}"
+                            form="{{ product_form_id }}"
+                            type="radio"
+                            name="option-{{ optionIndex }}"
+                            value="{{ value | escape }}"
+                            title="{{ value }}"
+                            {% if option.selected_value == value %}
+                              checked
+                            {% endif %}
+                            custom-dropdown
+                          >
+                          <label
+                            class="option"
+                            for="option-{{ optionIndex }}-{{ forloop.index }}-{{ section.id }}"
+                            data-type="{{- value -}}"
+                          >
+                            {{- value -}}
+                          </label>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          {% endfor -%}
+
+          <noscript>
+            <div class="product-variants-wrapper">
+              <h6 class="product-variants-title text">{{ 'products.product.product_variants' | t }}</h6>
+              <div class="select-box">
+                <select class="form-control" name="id" form="{{ product_form_id }}">
+                  {%- for variant in product.variants -%}
+                    <option
+                      {% if variant == product.selected_or_first_available_variant %}
+                        selected="selected"
+                      {% endif %}
+                      {% if variant.available == false %}
+                        disabled
+                      {% endif %}
+                      value="{{ variant.id }}"
+                    >
+                      {{ variant.title }}
+                      {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                      - {{ variant.price | money | strip_html }}
+                    </option>
+                  {%- endfor -%}
+                </select>
+              </div>
+            </div>
+          </noscript>
+        </div>
+      {% endunless %}
+    {% when 'sizeChart' %}
+      {%- liquid
+        for option in product.options
+          assign sizeOptions = settings.size_name | downcase
+
+          assign sizedownOption = option | downcase
+
+          assign optionIndex = forloop.index
+          if sizeOptions contains sizedownOption
+            render 'size-chart', block: block, downOption: downOption, sizeTrigger: true
+          endif
+        endfor
+      -%}
+    {% when 'inventory_status' %}
+      {% render 'product-inventory-bar', product: product, current_variant: current_variant, block: block %}
+    {% when 'description' %}
+      {% if  product.description != blank %}
+        <div class="product-description description rte" {{ block.shopify_attributes }}>
+          {{
+            product.description
+            | replace: '<table', '<div class="table-main"><table '
+            | replace: '</table>', '</table></div>'
+          }}
+        </div>
+    {% endif %}
+    {%- when 'quantity_selector' -%}
+      {% render 'quantity' product, product_form_id: product_form_id,quickViewcard:quickViewcard %}
+    {% when 'button' %}
+      <div {{ block.shopify_attributes }} data-atc-form>
+        {% render 'product-form', product_form_id: product_form_id, current_variant: current_variant, block: block,quickViewcard:quickViewcard %}
+      </div>
+    {%- when 'social-icons' -%}
+      {% if settings.social_facebook or settings.social_tiwtter or settings.social_pinterest %}
+      <div
+        class="product-social-icons"
+        data-slide-toggle-wrapper
+      >
+        <div class="social-icons-button cursor-pointer">
+        <span class="heading-font">{{ 'general.social.share' | t }}</span>
+        </div>
+        <div
+          class="social-icon-wrapper"
+          data-slide-toggle-body
+        >
+          {%- render 'social-sharing',
+            share_title: product.title,
+            share_permalink: product.url,
+            share_image: product
+          -%}
+        </div>
+      </div>
+    {% endif %}
+    {%- when 'collapsible_tab' -%}
+      <div class="accordion-wrapper details-box-outer product-detail-accordion">
+        {% if block.settings.show_description and product.description != blank %}
+          <details class="accordion-item" data-detail-button>
+            <summary class="accordion-heading detail-summary focus-inside">
+              <h6 class="accordion-heading-text text-medium">
+                {% if block.settings.description_heading != blank %}
+                  {{- block.settings.description_heading -}}
+                {% else %}
+                  {{ 'accessibility.collapsible_content_description' | t }}
+                {% endif %}
+              </h6>
+              <span class="accordion-icon">
+                <svg width="16" height="15" viewBox="0 0 16 15" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99219 0L15.0633 7.07107L7.99219 14.1421L6.69011 12.8401L11.5384 7.99173L1.87908 7.9917L1.87907 6.15032L11.5384 6.15035L6.69014 1.30205L7.99219 0Z" fill="currentColor"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="accordion-content" detail-expand>
+              <div class="accordion-content-body rte">
+                {{
+                  product.description
+                  | replace: '<table', '<div class="table-main"><table '
+                  | replace: '</table>', '</table></div>'
+                }}
+              </div>
+            </div>
+          </details>
+        {% endif %}
+        {% for i in (1..3) %}
+          {% liquid
+            assign custom_heading_index = 'heading_' | append: forloop.index
+            assign heading = block.settings[custom_heading_index]
+            assign description_index = 'content_' | append: forloop.index
+            assign content = block.settings[description_index]
+          %}
+          {% if heading != blank %}
+            <details class="accordion-item">
+              <summary class="accordion-heading detail-summary focus-inside">
+                <h6 class="accordion-heading-text text-medium">{{- heading -}}</h6>
+                <span class="accordion-icon">
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99219 0L15.0633 7.07107L7.99219 14.1421L6.69011 12.8401L11.5384 7.99173L1.87908 7.9917L1.87907 6.15032L11.5384 6.15035L6.69014 1.30205L7.99219 0Z" fill="currentColor"/>
+                  </svg>
+                </span>
+              </summary>
+              <div class="accordion-content" detail-expand>
+                <div class="accordion-content-body rte">
+                  {{ content }}
+                </div>
+              </div>
+            </details>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% when 'custom_liquid' %}
+      <div class="custom-liquid-box" {{ block.shopify_attributes }}>
+        {{
+          block.settings.custom_liquid
+          | replace: '<table', '<div class="table-main"><table'
+          | replace: '</table>', '</table></div>'
+        }}
+      </div>
+    {% when 'complementary_products' %}
+      {% render 'complementary-products' product , section, block: block %}
+    {%- when 'pickup' -%}
+      {%- assign pickupAvailabilities = current_variant.store_availabilities | where: 'pick_up_enabled', true -%}
+      <div
+        class="pickup-availability-box"
+        id="pickup-availability__container"
+        data-root-url="{{ routes.root_url }}"
+        {% if current_variant.available and pickupAvailabilities.size > 0 %}
+          available
+        {% endif %}
+        data-pickup-availability
+        {{ block.shopify_attributes }}
+      >
+        {% render 'pickup-availability', product: product, current_variant: current_variant %}
+      </div>
+    {%- when 'icontext' -%}
+      <div class="custom-icons-box">
+        <ul class="list-inline custom-icons-list">
+          <li class="custom-icons-item">
+            <span class="custom-icons-icon">
+              {% if block.settings.icon != blank %}
+                {{ block.settings.icon }}
+              {% else %}
+                {% render 'icons', icon: block.settings.icon_list %}
+              {% endif %}
+            </span>
+            {% if block.settings.text != blank %}
+              <p class="custom-icons-text">{{ block.settings.text }}</p>
+            {% endif %}
+          </li>
+          <li class="custom-icons-item">
+            <span class="custom-icons-icon">
+              {% if block.settings.icon_2 != blank %}
+                {{ block.settings.icon_2 }}
+              {% else %}
+                {% render 'icons', icon: block.settings.icon_list_2 %}
+              {% endif %}
+            </span>
+            {% if block.settings.text_2 != blank %}
+              <p class="custom-icons-text">{{ block.settings.text_2 }}</p>
+            {% endif %}
+          </li>
+          <li class="custom-icons-item">
+            <span class="custom-icons-icon">
+              {% if block.settings.icon_3 != blank %}
+                {{ block.settings.icon_3 }}
+              {% else %}
+                {% render 'icons', icon: block.settings.icon_list_3 %}
+              {% endif %}
+            </span>
+            {% if block.settings.text_3 != blank %}
+              <p class="custom-icons-text">{{ block.settings.text_3 }}</p>
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+    {%- when 'coupon' -%}
+      {% if block.settings.coupon_heading != blank or block.settings.coupon_description != blank or block.settings.coupon_code != blank %}
+      <div class="coupon-code-box">
+        <h6 class="coupon-main-heading text-small">{{ 'accessibility.coupon_text' | t }}</h6>
+        <div class="coupon-code-content">
+          {% if block.settings.coupon_heading != blank %}
+            <h6 class="coupon-code-heading text">{{ block.settings.coupon_heading }}</h6>
+          {% endif %}
+          {% if block.settings.coupon_description != blank %}
+            <p class="coupon-code-description">{{ block.settings.coupon_description }}</p>
+          {% endif %}
+          {% if block.settings.coupon_code != blank %}
+            <div class="coupon-code-name-wrapper">
+              <div class="coupon-code-name">
+                <span class="coupon-code-name-text">{{ block.settings.coupon_code }}</span>
+                <span class="coupon-code-name-icon cursor-pointer" onclick="copyCouponcode()">
+                  <svg width="13" height="13" viewBox="0 0 193 193" fill="none">
+                    <path d="M184.993 152.995V8.994H40.986M8.986 40.995H152.992V184.995H8.986V40.995Z" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <span class="coupon-code-message text-xsmall"></span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+    {% when 'back_in_stock' %}
+      <div  class="stock-notify-box {% unless request.design_mode %}{% if current_variant == available %}hidden{% endif %}{% endunless %}"  data-back-in-stock {{ block.settings.shopify_attributes }}  >
+        {% if block.settings.heading != blank %}
+          <h6 class="stock-notify-heading text-medium">{{ block.settings.heading }}</h6>
+        {% endif %}
+        
+        {% assign formId = 'productBackInStockForm' | append: product.id | append: '_' | append: section.id %}
+        {%- form 'contact', id: formId, class: 'stock-notify-form' -%}
+          <div class="stock-notify-content">
+            <input
+              type="hidden"
+              name="return_to"
+              value="{{ product.url }}?variant={{ current_variant.id }}&contact_posted=true"
+              data-variant-url
+            >
+            <input type="hidden" name="contact[Message]" value="Customer has filled the notify me form.">
+            <input type="hidden" name="contact[Product]" value="{{ product.id }}">
+            <input
+              type="hidden"
+              name="contact[Product Title]"
+              value="{{ product.title }} - {{ current_variant.title }}"
+              data-variant-title
+            >
+
+              <label class="hidden" for="backInStockEmail">{{ 'templates.contact.form.email' | t }}</label>
+              <input
+                type="email"
+                class="form-control"
+                name="contact[email]"
+                id="backInStockEmail"
+                autocomplete="email"
+                autocapitalize="off"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                aria-required="true"
+                spellcheck="false"
+                {% if form.errors contains 'email' %}
+                  aria-invalid="true"
+                  aria-describedby="ContactForm-email-error"
+                {% endif %}
+                placeholder="{% if block.settings.placeholder != blank %}{{block.settings.placeholder}}{% else %}{{ 'templates.contact.form.email' | t }}{% endif %}"
+                pattern="^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$"
+                required
+              >
+           
+
+            {% liquid
+              assign buttonAttributes = 'type="submit" '
+              assign buttonText = block.settings.btn_text | default: 'Notify me'
+              assign button_size = 'small'
+              render 'button' class:'notify-btn button', type: 'button', button_size: button_size, button_text: buttonText, buttonAttributes: buttonAttributes, source: 'notify'
+            %}
+          </div>
+            {%- if form.errors -%}
+              <p
+                class="error-message"
+                autofocus
+                id="form-message__error-{{ block.id }}"
+              >
+                  {{ form.errors.translated_fields.email | capitalize }}
+                  {{ form.errors.messages.email }}
+              </p>
+           
+            {%- endif -%}
+            {%- if form.posted_successfully? -%}
+                <p class="success-message" id="form-message__success-{{ block.id }}" tabindex="-1" role="status" autofocus>
+                
+                  {% if block.settings.success_message != blank %}
+                    {{ block.settings.success_message }}
+                  {% else %}
+                  {{- 'templates.contact.form.post_success' | t -}}
+                  {% endif %}
+                </p>
+    
+            {%- endif -%}
+          
+        {% endform %}
+      </div>
+  {% endcase %}
+{% endfor %}
