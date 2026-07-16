@@ -3448,3 +3448,9 @@ shopify-payment-terms {
         min-height: 36px !important;
     }
 }
+
+
+.product-pricing .fs-price {
+    display: flex;
+    flex-direction: column;
+}
