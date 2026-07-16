@@ -1539,6 +1539,15 @@
         "type": "inline_richtext",
         "id": "cart_notification_bar",
         "label": "t:settings_schema.cart.settings.cart_notification_header.cart_notification_bar.label"
+      },
+       {
+        "type": "header",
+        "content": "Cart Insider"
+      },
+      {
+        "type": "product",
+        "id": "insider_mode_free_product",
+        "label": "Free insider product"
       }
     ]
   },

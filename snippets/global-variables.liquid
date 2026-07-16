@@ -88,4 +88,11 @@
 <script src="{{ 'product-model.js' | asset_url }}" defer></script>
 <script src="{{ 'global.js' | asset_url }}" defer></script>
 <script src="{{ 'search.js' | asset_url }}" defer></script>
-
+<script>
+  window.FS_INSIDER = {
+    freeVariantId: {{ settings.insider_mode_free_product.first_available_variant.id | default: settings.insider_free_product.variants.first.id | json }},
+    freeProductId: {{ settings.insider_mode_free_product.id | json }},
+    mode: {{ cart.attributes.pricing_mode | default: 'insider' | json }}
+  };
+</script>
+<script src="{{ 'cart-mode.js' | asset_url }}" defer></script>
