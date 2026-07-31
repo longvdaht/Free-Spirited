@@ -257,6 +257,10 @@
     overflow: hidden;
 }
 
+.cart-drawer-content.empty-mini-cart .fs-mode-toggle {
+    display: none;
+}
+
 .cart-drawer-content-item .cart-product-item {
     display: grid;
     grid-template-columns: auto 1fr auto;
