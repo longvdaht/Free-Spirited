@@ -76,6 +76,13 @@
     }
 
     reflectActiveButtons();
+
+    // Insider discount display is owned by fs-discount.js. After a mode switch
+    // the drawer is fresh (discount row shows its "—" placeholder), so trigger
+    // the recompute directly rather than relying on observer timing.
+    if (typeof window.fsRecalcInsiderDiscount === 'function') {
+      window.fsRecalcInsiderDiscount();
+    }
   }
 
   /* --- keep the two toggle buttons in sync with the active mode --- */

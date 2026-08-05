@@ -118,6 +118,11 @@
     margin-top: 15px;
 }
 
+.fs-discount .fs-discount__form {
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
 .cart-summary-heading {
     padding-bottom: 20px;
 }
