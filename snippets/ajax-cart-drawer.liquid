@@ -508,12 +508,58 @@
                 {%- endif -%}
               {%- endfor -%}
 
-              <div class="cart-summary-price">
-                {%- if mode != 'insider' -%}
+              {%- comment -%} ---- Discount code input (fs-discount.js handles apply/remove) ---- {%- endcomment -%}
+              {%- assign applied_code = nil -%}
+              {%- for d in cart.discount_codes -%}
+                {%- if d.applicable -%}{%- assign applied_code = d -%}{%- break -%}{%- endif -%}
+              {%- endfor -%}
+              {%- comment -%} Applied-code chip + input are rendered by fs-discount.js from /cart.js.
+                Liquid can't see codes applied via /discount/ (cart.discount_codes is null),
+                so we only render the default input shell here. {%- endcomment -%}
+              <div class="fs-discount" data-fs-discount>
+                <div class="fs-discount__form">
+                  <label class="visually-hidden" for="fs-discount-input">Discount code</label>
+                  <input type="text" id="fs-discount-input" class="fs-discount__input"
+                    data-fs-discount-input placeholder="Discount code"
+                    autocomplete="off" autocapitalize="characters" spellcheck="false">
+                  <button type="button" class="fs-discount__apply button" data-fs-discount-apply>Apply</button>
+                </div>
+                <p class="fs-discount__error" data-fs-discount-error hidden></p>
+              </div>
+
+              {%- comment -%} Discount data for the insider recompute (fs-discount.js) {%- endcomment -%}
+              <script type="application/json" data-fs-discount-data>
+                {
+                  "mode": {{ mode | json }},
+                  "insiderSubtotal": {{ insider_total | json }},
+                  "applications": [
+                    {%- for d in cart.cart_level_discount_applications -%}
+                      {
+                        "title": {{ d.title | json }},
+                        "valueType": {{ d.value_type | json }},
+                        "value": {{ d.value | json }},
+                        "fullAllocated": {{ d.total_allocated_amount | json }}
+                      }{%- unless forloop.last -%},{%- endunless -%}
+                    {%- endfor -%}
+                  ]
+                }
+              </script>
+              {% render 'fs-coupon-rules' %}
+              <div class="cart-summary-price" data-cart-summary>
+                {%- if mode == 'insider' -%}
+                  {%- comment -%} Insider: JS fills the amount from insider_total {%- endcomment -%}
+                  {%- for discount in cart.cart_level_discount_applications -%}
+                    <div class="cart-summary-price-item discount-item"
+                         data-insider-discount-row data-discount-index="{{ forloop.index0 }}">
+                      <h6 class="text cart-summary-price-title">{{ discount.title }}</h6>
+                      <h6 class="text-medium cart-summary-price-amount" data-insider-discount-amount>&mdash;</h6>
+                    </div>
+                  {%- endfor -%}
+                {%- else -%}
                   {%- for discount in cart.cart_level_discount_applications -%}
                     <div class="cart-summary-price-item discount-item">
                       <h6 class="text cart-summary-price-title">{{ discount.title }}</h6>
-                      <h6 class="text-medium cart-summary-price-amount">{{ discount.total_allocated_amount | money }}</h6>
+                      <h6 class="text-medium cart-summary-price-amount">&mdash;{{ discount.total_allocated_amount | money }}</h6>
                     </div>
                   {%- endfor -%}
                 {%- endif -%}
