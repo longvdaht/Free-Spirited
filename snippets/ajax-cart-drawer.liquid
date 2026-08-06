@@ -513,28 +513,17 @@
               {%- for d in cart.discount_codes -%}
                 {%- if d.applicable -%}{%- assign applied_code = d -%}{%- break -%}{%- endif -%}
               {%- endfor -%}
+              {%- comment -%} Applied-code chip + input are rendered by fs-discount.js from /cart.js.
+                Liquid can't see codes applied via /discount/ (cart.discount_codes is null),
+                so we only render the default input shell here. {%- endcomment -%}
               <div class="fs-discount" data-fs-discount>
-                {%- if applied_code -%}
-                  <div class="fs-discount__applied" role="status">
-                    <span class="fs-discount__chip">
-                      <span class="fs-discount__code">{{ applied_code.code }}</span>
-                      {%- comment -%} amount is FULL-price based; JS corrects it in insider mode {%- endcomment -%}
-                      {%- unless mode == 'insider' -%}
-                        <span class="fs-discount__amount" data-fs-discount-amount>-{{ applied_code.amount | money }}</span>
-                      {%- endunless -%}
-                    </span>
-                    <button type="button" class="fs-discount__remove" data-fs-discount-remove
-                      aria-label="Remove discount code {{ applied_code.code }}">&times;</button>
-                  </div>
-                {%- else -%}
-                  <div class="fs-discount__form" style="display: flex;">
-                    {% comment %} <label class="visually-hidden" for="fs-discount-input">Discount code</label> {% endcomment %}
-                    <input type="text" id="fs-discount-input" class="fs-discount__input"
-                      data-fs-discount-input placeholder="Discount code"
-                      autocomplete="off" autocapitalize="characters" spellcheck="false">
-                    <button type="button" class="fs-discount__apply button" data-fs-discount-apply>Apply</button>
-                  </div>
-                {%- endif -%}
+                <div class="fs-discount__form">
+                  <label class="visually-hidden" for="fs-discount-input">Discount code</label>
+                  <input type="text" id="fs-discount-input" class="fs-discount__input"
+                    data-fs-discount-input placeholder="Discount code"
+                    autocomplete="off" autocapitalize="characters" spellcheck="false">
+                  <button type="button" class="fs-discount__apply button" data-fs-discount-apply>Apply</button>
+                </div>
                 <p class="fs-discount__error" data-fs-discount-error hidden></p>
               </div>
 

@@ -28,6 +28,11 @@
     return (cfg().mode) || 'insider';
   }
 
+  // When true, our own DOM writes (chip render / recalc) are in progress and the
+  // MutationObserver must ignore them — otherwise they retrigger the observer and
+  // loop, fetching /cart.js forever.
+  var _selfUpdating = false;
+
   /* ---------------- apply / remove ---------------- */
 
   function applyDiscount(code) {
@@ -68,7 +73,14 @@
 
   function clearDiscount(silent) {
     if (!silent) { setLoading(true); clearError(); }
-    return fetch('/discount/?redirect=/cart.js', { headers: { 'Accept': 'application/json' } })
+    // Confirmed on this store: /cart/update.js with an empty `discount` string
+    // removes the code. (discount_codes:[] and expiring the cookie both fail —
+    // the code lives in a session discount, not the cart-level discount object.)
+    return fetch('/cart/update.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ discount: '' })
+    })
       .then(function (r) { return r.json(); })
       .then(function () {
         if (silent) return;
@@ -118,6 +130,112 @@
 
     // Insider display correction hook (see note at top).
     recalcInsiderDiscount(cart);
+
+    // The Liquid `applied_code` is always empty: codes applied via /discount/{code}
+    // don't surface in cart.discount_codes when the section is server-rendered
+    // (it comes back null). So the applied-code chip + remove button must be built
+    // client-side from /cart.js, which DOES see the code.
+    syncDiscountUI();
+  }
+
+  /* ---------------- applied-code chip + remove (client-side) ---------------- */
+  // cart.discount_codes is null in Liquid section renders, so we render the
+  // "applied" state from /cart.js instead of relying on {% if applied_code %}.
+  function syncDiscountUI(done) {
+    if (typeof done !== 'function') done = function () {};
+    var root = document.querySelector('[data-fs-discount]');
+    if (!root) { done(); return; }
+
+    fetch('/cart.js', { headers: { 'Accept': 'application/json' } })
+      .then(function (r) { return r.json(); })
+      .then(function (cart) {
+        var applied = (cart.discount_codes || []).find(function (d) {
+          return d && d.applicable;
+        });
+        // Re-query: rerenderDrawer may have replaced the node since the fetch started.
+        var el = document.querySelector('[data-fs-discount]');
+        if (!el) { done(); return; }
+        if (applied) {
+          renderChip(el, applied.code);
+        } else {
+          renderInput(el);
+        }
+        // Insider mode: if the applied code isn't verifiable (e.g. under min on
+        // the Insider subtotal), hide its chip too — show nothing at all.
+        hideUnverifiedChips();
+        done();
+      })
+      .catch(function (e) {
+        console.error('[fs] syncDiscountUI failed', e);
+        done();
+      });
+  }
+
+  // Hide the applied-code chip when its code couldn't be verified in Insider mode
+  // (populated by recalcInsiderDiscount -> window.__fsUnverifiedCodes).
+  function hideUnverifiedChips() {
+    if (currentMode() !== 'insider') return;
+    var unverified = window.__fsUnverifiedCodes || [];
+    var root = document.querySelector('[data-fs-discount]');
+    if (!root) return;
+    var applied = root.querySelector('.fs-discount__applied');
+    if (!applied) return;
+    var codeEl = applied.querySelector('.fs-discount__code');
+    var code = codeEl ? codeEl.textContent.trim().toLowerCase() : '';
+    if (code && unverified.indexOf(code) !== -1) {
+      applied.hidden = true;
+      applied.classList.add('hidden');
+    } else {
+      applied.hidden = false;
+      applied.classList.remove('hidden');
+    }
+  }
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function renderChip(root, code) {
+    var safe = esc(code);
+    root.innerHTML =
+      '<div class="fs-discount__applied" role="status">' +
+        '<button type="button" class="fs-discount__remove button" data-fs-discount-remove ' +
+          'aria-label="Remove discount code ' + safe + '">' +
+          '<span class="fs-discount__chip">' +
+            '<span class="fs-discount__code">' + safe + '</span>' +
+          '</span>' +
+          '<svg class="drawer-close-icon2" x="0px" y="0px" viewBox="0 0 11.8 11.8" ' +
+            'style="enable-background:new 0 0 11.8 11.8;" fill="currentColor">' +
+            '<path d="M11.5,10.6L6.7,5.9l4.7-4.7c0.2-0.2,0.2-0.6,0-0.8c-0.1-0.1-0.3-0.2-0.4-0.2c0,0,0,0,0,0c-0.2,0-0.3,0.1-0.4,0.2L5.9,5.1L1.2,0.3c-0.2-0.2-0.6-0.2-0.8,0c-0.2,0.2-0.2,0.6,0,0.8l4.7,4.7l-4.7,4.7c-0.1,0.1-0.2,0.3-0.2,0.4c0,0.3,0.3,0.6,0.6,0.6c0.2,0,0.3-0.1,0.4-0.2l4.7-4.7l4.7,4.7c0.1,0.1,0.3,0.2,0.4,0.2s0.3-0.1,0.4-0.2C11.7,11.3,11.7,10.9,11.5,10.6z"></path>' +
+          '</svg>' +
+        '</button>' +
+      '</div>' +
+      // Keep the input so the customer can try a different code (applying a new
+      // one replaces the current code — Shopify holds a single session discount).
+      '<div class="fs-discount__form">' +
+        '<label class="visually-hidden" for="fs-discount-input">Discount code</label>' +
+        '<input type="text" id="fs-discount-input" class="fs-discount__input" ' +
+          'data-fs-discount-input placeholder="Discount code" autocomplete="off" ' +
+          'autocapitalize="characters" spellcheck="false">' +
+        '<button type="button" class="fs-discount__apply button" data-fs-discount-apply>Apply</button>' +
+      '</div>' +
+      '<p class="fs-discount__error" data-fs-discount-error hidden></p>';
+  }
+
+  function renderInput(root) {
+    // Only rebuild if it isn't already showing the input (avoid clobbering focus).
+    if (root.querySelector('[data-fs-discount-input]')) return;
+    root.innerHTML =
+      '<div class="fs-discount__form">' +
+        '<label class="visually-hidden" for="fs-discount-input">Discount code</label>' +
+        '<input type="text" id="fs-discount-input" class="fs-discount__input" ' +
+          'data-fs-discount-input placeholder="Discount code" autocomplete="off" ' +
+          'autocapitalize="characters" spellcheck="false">' +
+        '<button type="button" class="fs-discount__apply button" data-fs-discount-apply>Apply</button>' +
+      '</div>' +
+      '<p class="fs-discount__error" data-fs-discount-error hidden></p>';
   }
 
   /* ---------------- Insider discount display ---------------- */
@@ -185,6 +303,9 @@
     });
 
     // Write each discount row: show verified amounts, hide unverifiable ones.
+    // Also collect the codes we could NOT verify so the applied-code chip for
+    // them gets hidden too (an unverifiable code shows nothing at all in Insider).
+    var unverifiedCodes = [];
     var rows = document.querySelectorAll('[data-insider-discount-row]');
     rows.forEach(function (row) {
       var idx = parseInt(row.getAttribute('data-discount-index'), 10) || 0;
@@ -193,15 +314,24 @@
 
       if (entry && entry.verified) {
         row.hidden = false;
-        row.classList.remove('hidden'); 
+        row.classList.remove('hidden');
         if (amountEl) amountEl.textContent = '-' + money(entry.amount);
       } else {
-        // Not verifiable → hide the discount row entirely (don't promise it).
+        // Not verifiable (e.g. under the minimum on the Insider subtotal) → hide
+        // the row entirely; don't promise a discount CC won't charge.
         row.hidden = true;
         row.classList.add('hidden');
         if (amountEl) amountEl.textContent = '';
+        var app = apps[idx];
+        if (app && (app.title || app.code)) {
+          unverifiedCodes.push((app.title || app.code).toLowerCase());
+        }
       }
     });
+
+    // Expose unverified codes so syncDiscountUI hides their chips in Insider mode.
+    window.__fsUnverifiedCodes = unverifiedCodes;
+    hideUnverifiedChips();
 
     // Insider total = subtotal minus only the VERIFIED discounts.
     var totalEl = document.querySelector('[data-cart-total][data-insider-total]');
@@ -329,11 +459,21 @@
       scheduled = true;
       requestAnimationFrame(function () {
         scheduled = false;
+        // Guard: syncDiscountUI/recalc mutate the drawer (which this observer
+        // watches). Without this flag those mutations re-trigger schedule() and
+        // loop forever, hammering /cart.js. Suppress observer while we self-update.
+        _selfUpdating = true;
         recalcInsiderDiscount();
+        syncDiscountUI(function () {
+          // Defer re-enabling to the next frame so the observer has drained the
+          // mutations we just made before it starts watching for real changes again.
+          requestAnimationFrame(function () { _selfUpdating = false; });
+        });
       });
     }
 
     new MutationObserver(function () {
+      if (_selfUpdating) return;                 // ignore our own DOM writes
       if (currentMode() !== 'insider') return;
       if (drawer.querySelector('[data-insider-discount-amount]')) schedule();
     }).observe(drawer, { childList: true, subtree: true });
@@ -343,6 +483,7 @@
 
   function init() {
     watchDrawerForDiscount();
+    syncDiscountUI();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
@@ -354,4 +495,5 @@
   window.fsApplyDiscount = applyDiscount;
   window.fsClearDiscount = clearDiscount;
   window.fsRecalcInsiderDiscount = recalcInsiderDiscount;
+  window.fsSyncDiscountUI = syncDiscountUI;
 })();
