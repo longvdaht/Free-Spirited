@@ -118,6 +118,29 @@
     margin-top: 15px;
 }
 
+.fs-discount .fs-discount__form {
+    gap: 15px;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.fs-discount .fs-discount__form label {
+    display: none;
+}
+
+.fs-discount__remove {
+    margin-bottom: 15px;
+}
+
+.fs-discount__remove svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 12px;
+    height: 12px;
+}
+
 .cart-summary-heading {
     padding-bottom: 20px;
 }
@@ -255,6 +278,10 @@
     /* grid-template-rows: auto auto 1fr auto; */
     height: 100%;
     overflow: hidden;
+}
+
+.cart-drawer-content.empty-mini-cart .fs-mode-toggle {
+    display: none;
 }
 
 .cart-drawer-content-item .cart-product-item {

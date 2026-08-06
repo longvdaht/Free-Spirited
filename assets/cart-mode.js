@@ -76,6 +76,19 @@
     }
 
     reflectActiveButtons();
+
+    // Insider discount display is owned by fs-discount.js. After a mode switch
+    // the drawer is fresh (discount row shows its "—" placeholder), so trigger
+    // the recompute directly rather than relying on observer timing.
+    if (typeof window.fsRecalcInsiderDiscount === 'function') {
+      window.fsRecalcInsiderDiscount();
+    }
+    // The applied-code chip + remove button are rendered by JS from /cart.js
+    // (Liquid can't see the code). The mode re-render replaces the drawer HTML
+    // with the default input state, so rebuild the chip after switching.
+    if (typeof window.fsSyncDiscountUI === 'function') {
+      window.fsSyncDiscountUI();
+    }
   }
 
   /* --- keep the two toggle buttons in sync with the active mode --- */
