@@ -83,7 +83,13 @@
     padding-top: 4px;
     display: block;
 }
-
+.cart-product-item.free-sample .cart-remove,
+.cart-product-item.free-sample .quantity-inner .quantity-button {
+    display: none;
+}
+.cart-product-item.free-sample .quantity-inner .quantity-input {
+    pointer-events: none;
+}
 .cart-product-total .product-pricing {
     justify-content: flex-end;
 }
@@ -386,6 +392,14 @@
     gap: 10px;
 }
 
+.cart-drawer-buttons.fs-mode-toggle {
+    grid-template-columns: 1fr 1fr;
+}
+
+.fs-discount__error {
+    color: var(--vtl-red-100);
+    margin: 0 0 8px;
+}
 
 /* end */
 

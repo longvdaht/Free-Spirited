@@ -1,5 +1,6 @@
 {%- layout none -%}
 {
+  "customer_logged_in": {% if customer %}true{% else %}false{% endif %},
   "meta_product_id_array": [
     {% for item in cart.items %}
       {% if item.variant.metafields.productId.productId %}
