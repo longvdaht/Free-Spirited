@@ -155,7 +155,14 @@
                       assign isGiftWrapProduct = true
                     endif
                   %}
-                  <div class="cart-product-item" id="cart-drawer-item-{{ forloop.index }}" data-cart-item>
+
+                  {%- assign is_membership = false -%}
+                  {%- assign membership_product = settings.insider_mode_free_product -%}
+                  {%- if membership_product and item.variant.id == membership_product.variants.first.id -%}
+                    {%- assign is_membership = true -%}
+                  {%- endif -%}
+
+                  <div class="cart-product-item {% if is_membership %}free-sample{% endif %}" id="cart-drawer-item-{{ forloop.index }}" data-cart-item>
                     <a href="{{ item.url }}" class="cart-product-item-img">
                       {%- if item.image != blank -%}
                         <div
@@ -541,7 +548,10 @@
                         "fullAllocated": {{ d.total_allocated_amount | json }}
                       }{%- unless forloop.last -%},{%- endunless -%}
                     {%- endfor -%}
-                  ]
+                  ],
+                  "customerLoggedIn": {% if customer %}true{% else %}false{% endif %},
+                  "customerEmail": {{ customer.email | default: '' | downcase | json }},
+                  "loginUrl": {{ '/account/login?return_url=%2Fcart' | json }}
                 }
               </script>
               {% render 'fs-coupon-rules' %}
