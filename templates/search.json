@@ -12,6 +12,8 @@
     "main": {
       "type": "main-search",
       "settings": {
+        "heading_size": "h4",
+        "seo_heading": "h1",
         "enable_filtering": true,
         "enable_sorting": true,
         "top_space_desktop": 80,

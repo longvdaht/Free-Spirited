@@ -135,7 +135,7 @@
         "btn_size": "regular",
         "color_scheme": "",
         "section_background": "",
-        "highlighted_color": "#EFF341",
+        "highlighted_color": "#eff341",
         "overlay_background": "#000000",
         "overlay_opacity": 0,
         "top_space_desktop": 0,
@@ -169,7 +169,7 @@
           "settings": {
             "heading": "<strong>Our Memorial Day Sale is Live!</strong> Ships Fast from Florida.",
             "heading_size": "h2",
-            "seo_heading": "h2",
+            "seo_heading": "h1",
             "highlighted_color": "#ffd700"
           }
         },

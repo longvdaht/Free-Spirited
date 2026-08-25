@@ -156,13 +156,14 @@
                   </div>
                 </div>
                 <div class="collection-card-overlay-footer">
-                  <h4 class="collection-card-count">
+                  <p class="collection-card-count h4" style="color: var(--card-overlay-color); font-weight: 700; font-family: var(--heading-font-family);
+    font-style: var(--heading-font-style);">
                     {% if forloop.index < 10 %}
                     0{{ forloop.index }}
                     {% else %}
                         {{ forloop.index }}
                     {% endif %}
-                  </h4>
+                  </p>
                 </div>
               </div>
             </div>

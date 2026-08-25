@@ -19,9 +19,9 @@
         "image": "shopify://shop_images/ChatGPT_Image_May_12_2026_02_18_20_PM_ef54b64d-7167-45d2-b11d-ddee867b61b0.png",
         "desktop_height": "100vh",
         "mobile_height": "500px",
-        "banner_title": "Free Spirited Co is now Free Spirited Clothing!",
+        "banner_title": "Free Spirited Clothing",
         "heading_size": "h3",
-        "seo_heading": "h3",
+        "seo_heading": "h1",
         "banner_desc": "$11.95 Insider pricing with Free Spirited Insiders membership. Membership details shown at checkout. Hand dyed. One of a kind. Made with love and shipped fast from Florida.",
         "button_style": "solid",
         "button_text": "Shop Insider Sale",
@@ -174,8 +174,8 @@
         "collection_tcCAzm": {
           "type": "collection",
           "settings": {
-            "collection": "tie-dye-maxi-dresses",
-            "heading": ""
+            "collection": "tie-dye-dresses",
+            "heading": "Dresses"
           }
         },
         "collection_bayHXV": {
@@ -261,7 +261,7 @@
         "text_3NkVVM": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Become a Free Spirited Insider for $24.95/month plus applicable taxes. Unlock member-only pricing, a $30 monthly credit toward new shirts, exclusive drops, flash sales, and priority support. Pause or cancel anytime.</strong></p>",
+            "text": "<p><strong>Become a Free Spirited Insider for $24.95/month plus applicable taxes. Unlock member-only pricing, a $30 monthly credit toward new shirts of your choosing, exclusive drops, flash sales, and priority support. Pause or cancel anytime.</strong></p>",
             "text_size": "medium"
           }
         },
@@ -517,7 +517,7 @@
         "heading_hVjwbh": {
           "type": "heading",
           "settings": {
-            "heading": "Free Spirited Insiders: Your July Insider Member Credit Is Live!",
+            "heading": "Free Spirited Insiders: Your August Insider Member Credit Is Live!",
             "heading_size": "h2",
             "seo_heading": "h2",
             "highlighted_color": "#eff341"
@@ -534,7 +534,7 @@
           "type": "button",
           "settings": {
             "button_style_1": "solid",
-            "btn_text": "Unlock my July Credit",
+            "btn_text": "Unlock my August Credit",
             "btn_url": "https://insiders.shopfreespirited.com/login",
             "btn_size": "regular",
             "button_style_2": "solid",
@@ -555,7 +555,7 @@
         "make_section_rounded": false,
         "section_fullwidth": false,
         "card_background": false,
-        "image": "shopify://shop_images/ChatGPT_Image_Jul_6_2026_12_09_26_PM.png",
+        "image": "shopify://shop_images/ChatGPT_Image_Aug_4_2026_10_36_30_AM.png",
         "image_overlay_enable": false,
         "image_width": "small",
         "image_position": "left",

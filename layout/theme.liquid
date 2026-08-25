@@ -1,7 +1,6 @@
 <!doctype html>
   <html class="no-js" lang="{{ request.locale.iso_code }}">
     <head>
-         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
      {%
     include 'cc-cart.js' with      
       checkout_url: 'https://checkout.shopfreespirited.com/checkout'
@@ -11,7 +10,11 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta name="theme-color" content="#F5F5F5">
       {% render 'meta-tags' %}
+      {% if request.page_type == 'collection' and collection %}
+      <link rel="canonical" href="{{ collection.url | prepend: request.origin }}">
+      {% else %}
       <link rel="canonical" href="{{ canonical_url }}">
+      {% endif %}
       <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
       {%- if settings.favicon != blank -%}
         <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -32,19 +35,15 @@
 
       {%- render 'global-style-variables' -%}
       {%- render 'global-variables' -%}
+      {%- render 'global-variables' -%}
 
 <script async src="https://session.frauddeflect.net/static/v4.10195.js" charset="utf-8"></script>
 
-
-<script>
-  window._clymInit=window._clymInit||[];
-  window._clymInit.push(['privacy','27088145208f4924b8b2c374o6izw1cs',{}]);
-</script>
-<script src='https://widget.clym-sdk.net/blocking.js'></script>
-
-<script src='https://widget.clym-sdk.net/clym.js' async></script>
     </head>
     <body class="{{ settings.other_layout }} button-hover-{{ settings.button_hover_effect }}{% if settings.enable_animation %} animation-on{% endif %}">
+      {% if template contains 'cart' %}
+        <h1 class="visually-hidden" style="display: none">Cart</h1>
+      {% endif %}
       <a class="unstyled-link skip-to-content-link button focus-inside{% if settings.enable_button_shadow %} button-shadow{% endif %}" href="#MainContent">
         {{ 'accessibility.skip_to_text' | t }}
       </a>

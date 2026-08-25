@@ -1139,9 +1139,7 @@ function updateCartHtml(section, cart, sectionId) {
             let itemcount = cart.item_count;
             if (sectionId == 'ajax-cart') {
                 let datasection = document.querySelector('[data-cart-drawer-body]');
-                if (cart.item_count === 0) {
-                    datasection.classList.add('empty-mini-cart');
-                }
+                datasection.classList.add('empty-mini-cart');
                 quantitySelectors(datasection);
                 cartItemRemoveElements(datasection);
             }

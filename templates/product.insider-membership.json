@@ -93,7 +93,7 @@
           "type": "title",
           "settings": {
             "heading_size": "h3",
-            "seo_heading": "h3"
+            "seo_heading": "h1"
           }
         },
         "price": {
@@ -106,7 +106,7 @@
         "text_HrEDVJ": {
           "type": "text",
           "settings": {
-            "text": "Members get $30 to spend every month — that’s more than the $24.95 membership itself! Your credit can be used on anything, from new releases to best-sellers. Cancel anytime."
+            "text": "Free 21 day trial! Members get $30 to spend every month — that’s more than the $24.95 membership itself! Your credit can be used on anything, from new releases to best-sellers. Cancel anytime."
           }
         },
         "text_rzxGzX": {

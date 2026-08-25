@@ -136,7 +136,7 @@
           "settings": {
             "heading": "<strong>Our Pride Sale ends Today!</strong> <em>Ships Fast from Florida.</em>",
             "heading_size": "h2",
-            "seo_heading": "h2",
+            "seo_heading": "h1",
             "highlighted_color": "#ffd700"
           }
         },

@@ -137,7 +137,7 @@
           "settings": {
             "heading": "<strong>Rainbow Shirt Sale is Live!</strong> <em>Ships Fast from Florida.</em>",
             "heading_size": "h2",
-            "seo_heading": "h2",
+            "seo_heading": "h1",
             "highlighted_color": "#ffd700"
           }
         },
@@ -958,7 +958,7 @@
           "settings": {
             "button_style": "solid",
             "text": "Shop Rainbow Sale",
-            "link": "https://shopfreespirited.com/collections/pride-sale",
+            "link": "https://shopfreespirited.com/collections/new",
             "button_size": "medium"
           }
         }
