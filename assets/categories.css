@@ -96,3 +96,12 @@
         padding-bottom: 10pX;
     }
 }
+p.categories-box-heading {
+    color: var(--heading-color);
+    font-family: var(--heading-font-family);
+    font-style: var(--heading-font-style);
+    font-weight: var(--heading-font-weight);
+    line-height: var(--heading-font-line-height);
+    letter-spacing: var(--heading-letter-spacing);
+    margin: 0;
+}

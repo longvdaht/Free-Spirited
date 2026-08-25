@@ -25,7 +25,11 @@
               <span>{{ article.author }}</span>
             {%- endif -%}
           </div>
+          {% if template contains 'article' %}
+            <h1 class="blog-content-heading h3">{{ article.title | escape }}</h1>
+          {% else %}
           <h3 class="blog-content-heading ">{{ article.title | escape }}</h3>
+          {% endif %}
           <div class="blog-content-desc rte">
             {{ article.content 
               | replace: '<table', '<div class="table-main"><table'

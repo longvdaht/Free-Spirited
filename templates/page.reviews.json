@@ -16,15 +16,15 @@
         "banner_image": "shopify://shop_images/pexels-diva-plavalaguna-6150367_1.jpg",
         "banner_height_desktop": "350px",
         "banner_height_mobile": "200px",
-        "heading": "What Our Customers Say",
+        "heading": "Free Spirited Clothing Reviews",
         "heading_overly": true,
         "heading_size": "h2",
-        "seo_heading": "h3",
+        "seo_heading": "h1",
         "content_width": "medium",
         "heading_alignment": "text-center",
         "banner_bg_color": "#f2f2f2",
         "bg_color_opacity": "#000000",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "overlay_opacity": 36,
         "top_space_desktop": 0,
         "bottom_space_desktop": 0,
@@ -47,7 +47,13 @@
       "blocks": {
         "judge_me_reviews_all_reviews_page_6XpcXx": {
           "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_page/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "max_width": 1200,
+            "review_source": "all",
+            "show_all_reviews_in_same_tab": false,
+            "show_first": "product",
+            "empty_state": "empty_widget"
+          }
         }
       },
       "block_order": [
@@ -60,6 +66,44 @@
         "bottom_space_desktop": 40,
         "top_space_mobile": 35,
         "bottom_space_mobile": 35
+      }
+    },
+    "rich_text_nBr4HU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tbBE6K": {
+          "type": "heading",
+          "settings": {
+            "heading": "Free Spirited Reviews: See What Our Happy Customers Are Saying!",
+            "heading_size": "h2",
+            "seo_heading": "h2",
+            "highlighted_color": "#EFF341"
+          }
+        },
+        "text_UyHGBT": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Free Spirited Reviews: See What Our Happy Customers Are Saying!</strong></p><p>Looking for <strong>honest Free Spirited reviews</strong> before placing your order? You're in the right place! We take pride in our <strong>handcrafted tie-dye shirts</strong>, and our customers love them too! Check out real customer feedback below.</p><p>⭐ <strong>Why Customers Love Free Spirited</strong></p><p>✅ <strong>Super Soft & Comfortable:</strong> \"This is the softest shirt I’ve ever owned! It feels amazing, even after washing.\" – ⭐⭐⭐⭐⭐ Sarah T.</p><p>✅ <strong>Vibrant Colors That Last:</strong> \"The colors are stunning and stay bright wash after wash.\" – ⭐⭐⭐⭐⭐ Lisa M.</p><p>✅ <strong>True-to-Size Fit:</strong> \"Finally, a tie-dye brand that carries plus sizes that actually fit well!\" – ⭐⭐⭐⭐⭐ Mary J.</p><p>✅ <strong>Fast & Reliable Shipping:</strong> \"I got my order quickly, and the customer service was top-notch!\" – ⭐⭐⭐⭐⭐ Carol W.</p><p>✅ <strong>One-of-a-Kind Designs:</strong> \"Each shirt is unique, and I love knowing no one else has the exact same one!\" – ⭐⭐⭐⭐⭐ Debbie P.</p><p><strong>Is Free Spirited Legit?</strong></p><p>Yes! <strong>Free Spirited is a trusted, customer-loved brand</strong> with thousands of happy buyers. We focus on <strong>quality, comfort, and exceptional service.</strong></p><p>✔️ <strong>Thousands of satisfied customers</strong><br/>✔️ <strong>100% pre-shrunk cotton for the perfect fit</strong><br/>✔️ <strong>Hassle-free returns & exchanges</strong><br/>✔️ <strong>Secure checkout & fast shipping</strong></p><p><strong>Still unsure? Read more Free Spirited reviews below!</strong></p><p><strong>Verified Free Spirited Reviews</strong></p><p>We’re proud to have earned <strong>hundreds of 5-star reviews</strong> from customers who love our products. Here’s what people are saying:</p><p>🛍️ <a href=\"https://shopfreespirited.com/pages/reviews\"><strong>See More Free Spirited Reviews Here</strong></a></p><p><strong>How to Leave a Review for Free Spirited</strong></p><p>Love your new tie-dye? We'd love to hear from you! Share your experience by:</p><p>1️⃣ <strong>Leaving a review on our website</strong> after your purchase<br/>2️⃣ <strong>Tagging us on Instagram</strong> <a href=\"https://www.instagram.com/shop_freespirited/\">@shop_freespirited</a> with your Free Spirited gear<br/></p><p><strong>Join Thousands of Happy Free Spirited Customers Today!</strong></p><p>💜 <strong>Ready to shop?</strong> Browse our best-selling tie-dye shirts now!</p><p>🛒 <a href=\"https://shopfreespirited.com/collections/shop-sale\"><strong>Shop Free Spirited Now</strong></a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_tbBE6K",
+        "text_UyHGBT"
+      ],
+      "name": "t:sections.rich_text.presets.name",
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "content_width": "large",
+        "content_alignment": "text-left",
+        "content_postion": "left",
+        "color_scheme": "",
+        "section_background": "",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
       }
     },
     "slideshow_bNL7HG": {
@@ -140,6 +184,7 @@
     "page_banner_VGVQQM",
     "main",
     "17310012550c87a1a6",
+    "rich_text_nBr4HU",
     "slideshow_bNL7HG"
   ]
 }

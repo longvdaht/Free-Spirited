@@ -100,7 +100,7 @@
           "settings": {
             "heading": "🌈 Who We Are",
             "heading_size": "h2",
-            "seo_heading": "h2",
+            "seo_heading": "h1",
             "highlighted_color": "#eff341"
           }
         },

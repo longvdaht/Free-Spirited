@@ -137,7 +137,7 @@
           "settings": {
             "heading": "<strong>Our St. Paddy's Day Sale is Live!</strong> <em>Ships Fast from Florida, USA</em>",
             "heading_size": "h2",
-            "seo_heading": "h2",
+            "seo_heading": "h1",
             "highlighted_color": "#a7d96b"
           }
         },

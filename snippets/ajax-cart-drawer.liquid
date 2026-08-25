@@ -12,7 +12,7 @@
     data-sidedrawer-close
   ></div>
   <div class="side-drawer-panel">
-    <div class="side-drawer-inner {% if cart.item_count == 0 %}empty-cart{% endif %}">
+    <div class="side-drawer-inner">
       {% if settings.cart_notification_bar == blank   %}
         <button class="drawer-close" data-sidedrawer-close aria-label="close">
           {% render 'theme-icons', theme_icon: 'drawer_close' %}
@@ -29,11 +29,7 @@
           {% endif %}
         </div>
        
-        {%- assign fsmode = cart.attributes.pricing_mode | default: 'insider' -%}
-        <div class="fs-mode-toggle cart-drawer-buttons" role="group" aria-label="Pricing mode">
-          <button type="button" data-fs-mode="insider" class="button fs-mode-btn{% if fsmode == 'insider' %} active{% endif %}">Insider pricing</button>
-          <button type="button" data-fs-mode="full_price" class="button fs-mode-btn{% if fsmode == 'full_price' %} active{% endif %}">Full price</button>
-        </div>
+
         <div class="cart-drawer-content-header" data-cart-drawer-header>
 
           {% if settings.cart_notification_bar != blank   %}
@@ -41,7 +37,13 @@
               {% render 'theme-icons', theme_icon: 'drawer_close' %}
             </button>
          {% endif %}
-          <h4 class="cart-drawer-heading">{{ 'templates.cart.cart' | t }}</h4>
+          <p style="
+    color: var(--heading-color);
+    font-family: var(--heading-font-family);
+    font-style: var(--heading-font-style);
+    font-weight: var(--heading-font-weight);"
+              class="cart-drawer-heading h4">{{ 'templates.cart.cart' | t }}</p
+        >
 
           {%- if settings.enable_shipping and settings.shipping_rate != blank and cart.item_count > 0 -%}
             {% liquid
@@ -78,7 +80,6 @@
             </div>
           {%- endif -%}
         </div>
-        
         <div
           class="cart-drawer-content-body"
           data-section="ajax-cart"
@@ -107,7 +108,11 @@
                   
               </span>
               <div class="empty-card-content">
-                <h4 class="empty-card-heading">{{ 'sections.cart.empty' | t }}</h4>
+                <p class="empty-card-heading h4" style="
+                color: var(--heading-color);
+    font-family: var(--heading-font-family);
+    font-style: var(--heading-font-style);
+    font-weight: var(--heading-font-weight);">{{ 'sections.cart.empty' | t }}</p>
                 <p class="empty-card-desc">{{ 'sections.cart.empty_description' | t }}</p>
                
                 {% assign btnText = 'general.continue_shopping' | t %}
@@ -155,14 +160,7 @@
                       assign isGiftWrapProduct = true
                     endif
                   %}
-
-                  {%- assign is_membership = false -%}
-                  {%- assign membership_product = settings.insider_mode_free_product -%}
-                  {%- if membership_product and item.variant.id == membership_product.variants.first.id -%}
-                    {%- assign is_membership = true -%}
-                  {%- endif -%}
-
-                  <div class="cart-product-item {% if is_membership %}free-sample{% endif %}" id="cart-drawer-item-{{ forloop.index }}" data-cart-item>
+                  <div class="cart-product-item" id="cart-drawer-item-{{ forloop.index }}" data-cart-item>
                     <a href="{{ item.url }}" class="cart-product-item-img">
                       {%- if item.image != blank -%}
                         <div
@@ -217,31 +215,23 @@
                           {%- endfor -%}
                         </div>
                       {% endif %}
-                      {% assign mode = cart.attributes.pricing_mode | default: 'insider' %}
-                      {% assign insider = item.variant.metafields.custom.insider_price.value %}
                       <div
-                        class="product-pricing p-0 no-js-hidden fs-pricing fs-pricing--{{ mode }}"
+                        class="product-pricing p-0 no-js-hidden {% if item.original_price > item.final_price %}item-compare-price{% endif %}"
                         data-item-original="{{ item.original_price }}"
                         data-item-final="{{ item.final_price }}"
                       >
-                        {%- if insider != blank -%}
-                          <span class="fs-price fs-price--insider">
-                            <span class="fs-price__amount product-actual-price">{{ insider | money }}</span>
-                            <span class="fs-price__label">Insider</span>
+                        {%- if item.original_price != item.final_price -%}
+                          <span class="product-actual-price">
+                            {{- item.final_price | money -}}
                           </span>
-                          <span class="fs-price fs-price--full">
-                            <span class="fs-price__amount">{{ item.variant.price | money }}</span>
-                            <span class="fs-price__label">Full price</span>
+                          <span class="product-compare-price">
+                            {{- item.original_price | money -}}
                           </span>
                         {%- else -%}
-                          {%- if item.original_price != item.final_price -%}
-                            <span class="product-actual-price">{{- item.final_price | money -}}</span>
-                            <span class="product-compare-price">{{- item.original_price | money -}}</span>
-                          {%- else -%}
-                            <span class="product-actual-price">{{- item.original_price | money -}}</span>
-                          {%- endif -%}
+                          <span class="product-actual-price">
+                            {{- item.original_price | money -}}
+                          </span>
                         {%- endif -%}
-
                         {%- if item.unit_price_measurement -%}
                           <span class="product-unit-price text-small">
                             {{ item.unit_price | money }}
@@ -502,99 +492,8 @@
                   </div>
                 {%- endif -%}
               </div>
-             
-              {%- assign mode = cart.attributes.pricing_mode | default: 'insider' -%}
-              {%- assign insider_total = 0 -%}
-              {%- for line in cart.items -%}
-                {%- assign ip = line.variant.metafields.custom.insider_price.value -%}
-                {%- if ip != blank and ip > 0 -%}
-                  {%- assign cents = ip | times: line.quantity -%}
-                  {%- assign insider_total = insider_total | plus: cents -%}
-                {%- else -%}
-                  {%- assign insider_total = insider_total | plus: line.final_line_price -%}
-                {%- endif -%}
-              {%- endfor -%}
 
-              {%- comment -%} ---- Discount code input (fs-discount.js handles apply/remove) ---- {%- endcomment -%}
-              {%- assign applied_code = nil -%}
-              {%- for d in cart.discount_codes -%}
-                {%- if d.applicable -%}{%- assign applied_code = d -%}{%- break -%}{%- endif -%}
-              {%- endfor -%}
-              {%- comment -%} Applied-code chip + input are rendered by fs-discount.js from /cart.js.
-                Liquid can't see codes applied via /discount/ (cart.discount_codes is null),
-                so we only render the default input shell here. {%- endcomment -%}
-              <div class="fs-discount" data-fs-discount>
-                <div class="fs-discount__form">
-                  <label class="visually-hidden" for="fs-discount-input">Discount code</label>
-                  <input type="text" id="fs-discount-input" class="fs-discount__input"
-                    data-fs-discount-input placeholder="Discount code"
-                    autocomplete="off" autocapitalize="characters" spellcheck="false">
-                  <button type="button" class="fs-discount__apply button" data-fs-discount-apply>Apply</button>
-                </div>
-                <p class="fs-discount__error" data-fs-discount-error hidden></p>
-              </div>
-
-              {%- comment -%} Discount data for the insider recompute (fs-discount.js) {%- endcomment -%}
-              <script type="application/json" data-fs-discount-data>
-                {
-                  "mode": {{ mode | json }},
-                  "insiderSubtotal": {{ insider_total | json }},
-                  "applications": [
-                    {%- for d in cart.cart_level_discount_applications -%}
-                      {
-                        "title": {{ d.title | json }},
-                        "valueType": {{ d.value_type | json }},
-                        "value": {{ d.value | json }},
-                        "fullAllocated": {{ d.total_allocated_amount | json }}
-                      }{%- unless forloop.last -%},{%- endunless -%}
-                    {%- endfor -%}
-                  ],
-                  "customerLoggedIn": {% if customer %}true{% else %}false{% endif %},
-                  "customerEmail": {{ customer.email | default: '' | downcase | json }},
-                  "loginUrl": {{ '/account/login?return_url=%2Fcart' | json }}
-                }
-              </script>
-              {% render 'fs-coupon-rules' %}
-              <div class="cart-summary-price" data-cart-summary>
-                {%- if mode == 'insider' -%}
-                  {%- comment -%} Insider: JS fills the amount from insider_total {%- endcomment -%}
-                  {%- for discount in cart.cart_level_discount_applications -%}
-                    <div class="cart-summary-price-item discount-item"
-                         data-insider-discount-row data-discount-index="{{ forloop.index0 }}">
-                      <h6 class="text cart-summary-price-title">{{ discount.title }}</h6>
-                      <h6 class="text-medium cart-summary-price-amount" data-insider-discount-amount>&mdash;</h6>
-                    </div>
-                  {%- endfor -%}
-                {%- else -%}
-                  {%- for discount in cart.cart_level_discount_applications -%}
-                    <div class="cart-summary-price-item discount-item">
-                      <h6 class="text cart-summary-price-title">{{ discount.title }}</h6>
-                      <h6 class="text-medium cart-summary-price-amount">&mdash;{{ discount.total_allocated_amount | money }}</h6>
-                    </div>
-                  {%- endfor -%}
-                {%- endif -%}
-
-                <div class="cart-summary-price-item">
-                  <h6 class="text cart-summary-price-title">{{ 'sections.cart.subtotal' | t }}</h6>
-                  <h6 class="text-medium cart-summary-price-amount"
-                      data-cart-subtotal
-                      data-full-subtotal="{{ cart.original_total_price }}"
-                      data-insider-subtotal="{{ insider_total }}">
-                    {%- if mode == 'insider' -%}{{ insider_total | money }}{%- else -%}{{ cart.original_total_price | money }}{%- endif -%}
-                  </h6>
-                </div>
-
-                <div class="cart-summary-price-item">
-                  <h6 class="text cart-summary-price-title">{{ 'sections.cart.headings.total' | t }}</h6>
-                  <h6 class="h5 cart-summary-price-amount"
-                      data-cart-total
-                      data-full-total="{{ cart.total_price }}"
-                      data-insider-total="{{ insider_total }}">
-                    {%- if mode == 'insider' -%}{{ insider_total | money }}{%- else -%}{{ cart.total_price | money }}{%- endif -%}
-                  </h6>
-                </div>
-              </div>
-              {% comment %} <div class="cart-summary-price">
+              <div class="cart-summary-price">
                 {%- for discount in cart.cart_level_discount_applications -%}
                   <div class="cart-summary-price-item discount-item">
                     <h6 class="text cart-summary-price-title">{{ discount.title }}</h6>
@@ -609,8 +508,8 @@
                   <h6 class="text cart-summary-price-title">{{ 'sections.cart.headings.total' | t }}</h6>
                   <h6 class="h5 cart-summary-price-amount">{{ cart.total_price | money }}</h6>
                 </div>
-              </div> {% endcomment %}
-              {% comment %} <div class="cart-drawer-buttons">
+              </div>
+              <div class="cart-drawer-buttons">
                 {% liquid
                   assign buttonAttributes = 'type="submit" name="checkout2" form="cart"'
                   assign buttonText = 'sections.cart.checkout' | t
@@ -623,29 +522,6 @@
                   render 'button', button_link: routes.cart_url , button_style: 'outline' , button_size: 'default', button_text: buttonText
                 %}
                 
-              </div> {% endcomment %}
-              {%- assign fsmode = cart.attributes.pricing_mode | default: 'insider' -%}
-              <div class="cart-drawer-buttons" data-fs-mode-buttons>
-                {%- if fsmode == 'insider' -%}
-                  {% liquid
-                    assign buttonAttributes = 'type="submit" name="checkout2" form="cart" data-fs-cc-checkout'
-                    assign buttonText = 'sections.cart.checkout' | t
-                    assign button_size = 'default'
-                    render 'button' type: 'button', button_size: button_size, button_text: buttonText, buttonAttributes: buttonAttributes
-                  %}
-                {%- else -%}
-                  {% liquid
-                    assign buttonAttributes = 'type="submit" name="checkout" form="cart" data-fs-native-checkout'
-                    assign buttonText = 'sections.cart.checkout' | t
-                    assign button_size = 'default'
-                    render 'button' type: 'button', button_size: button_size, button_text: buttonText, buttonAttributes: buttonAttributes
-                  %}
-                {%- endif -%}
-
-                {% liquid
-                  assign buttonText = 'sections.cart.button_heading' | t
-                  render 'button', button_link: routes.cart_url , button_style: 'outline' , button_size: 'default', button_text: buttonText
-                %}
               </div>
               <p class="cart-summary-tax-info text-small">
                 {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}

@@ -139,7 +139,7 @@
           "settings": {
             "heading": "<strong>250 Years of Freedom Sale!</strong> Ships Fast from Florida.",
             "heading_size": "h2",
-            "seo_heading": "h2",
+            "seo_heading": "h1",
             "highlighted_color": "#df2c21"
           }
         },
