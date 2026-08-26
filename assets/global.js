@@ -1481,6 +1481,7 @@ function updateVariantPrice(_productSection, priceContainer, selectedVariant, sh
 
             Array.from(savingPercentageSelector).forEach(function(spSelector) {
                 spSelector.innerHTML = showSaving ? savingPercentage : '';
+                spSelector.setAttribute('data-insider-saving', hasInsiderPrice ? 'true' : 'false');
                 spSelector.classList.toggle('hidden', !showSaving);
             });
 
