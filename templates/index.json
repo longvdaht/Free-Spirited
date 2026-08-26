@@ -22,7 +22,7 @@
         "banner_title": "Free Spirited Clothing",
         "heading_size": "h3",
         "seo_heading": "h1",
-        "banner_desc": "$11.95 Insider pricing with Free Spirited Insiders membership. Membership details shown at checkout. Hand dyed. One of a kind. Made with love and shipped fast from Florida.",
+        "banner_desc": "Just $11.95 with Insider Pricing — full details at checkout. Prefer not to join? Choose Full Price in the cart drawer.",
         "button_style": "solid",
         "button_text": "Shop Insider Sale",
         "button_link": "shopify://collections/twloha",
@@ -327,7 +327,7 @@
         "text_DHzGyi": {
           "type": "text",
           "settings": {
-            "text": "<p>No problem — if you’d rather not sign up, you can still shop our full-priced collection on Etsy (no membership required).</p>",
+            "text": "<p>Every product is available at full price with a standard checkout — no membership, no trial, nothing extra. Just choose Full Price in the cart drawer and check out.</p>",
             "text_size": "medium"
           }
         },
@@ -335,8 +335,8 @@
           "type": "button",
           "settings": {
             "button_style_1": "solid",
-            "btn_text": "Shop Without Joining",
-            "btn_url": "https://shopfreespiritedco.etsy.com",
+            "btn_text": "Shop Full Price",
+            "btn_url": "/collections/all",
             "btn_size": "regular",
             "button_style_2": "solid",
             "btn_text_2": "",
@@ -417,7 +417,7 @@
         "text_N8JKgE": {
           "type": "text",
           "settings": {
-            "text": "DESIGNER-QUALITY TIE DYE STARTING @ JUST $12",
+            "text": "INSIDER PRICING FROM JUST $12 • DESIGNER-QUALITY HAND-DYED TIE DYE",
             "text_gap": 50,
             "text_style": "outline-filled",
             "font_family": "heading",
@@ -466,7 +466,7 @@
         "text_qpKc7Q": {
           "type": "text",
           "settings": {
-            "text": "<p>This store is exclusively for Free Spirited Insiders. Every purchase includes enrollment in our membership program, and that's what makes these prices possible.<br/><br/>For just <strong>$24.95/month plus applicable state taxes</strong>, Free Spirited Insiders get <em>real, tangible perks</em> that easily pay for themselves in your first order:</p><p></p><ul><li><strong>$30 Insider Credit</strong> every month to spend on <em>anything you want</em>—tees, jewelry, hoodies, yoga pants, new arrivals, you name it.</li><li><strong>Up to 60% off</strong> regular prices, every day.</li><li><strong>Exclusive $5 Tees of the Month</strong> (members grab them before they sell out).</li><li><strong>First access</strong> to limited-run tie-dye designs and seasonal collections.</li><li><strong>Priority support</strong> and insider-only flash sales.</li><li><strong>Behind-the-scenes drops</strong>, sneak peeks, and styling tips.</li></ul><p></p><p>That's hundreds of dollars in annual savings, just for being part of the most colorful club on earth. Not ready to join? No worries. Scroll down to shop our full-priced collection on Etsy with no membership required.</p>",
+            "text": "<p>Insider Pricing is how prices stay this low. Choose Insider Pricing in the cart drawer and your order includes the Free Spirited Insiders membership — 21 days free, then $24.95/month, cancel anytime. Members get our lowest prices on everything, monthly store credit, and first access to new drops. Prefer to skip it? Every product is also available at Full Price — choose Full Price in the cart drawer and check out normally.</p>",
             "text_size": "medium"
           }
         },
@@ -1504,8 +1504,8 @@
         "content_wLzhNq": {
           "type": "content",
           "settings": {
-            "heading": "Can I shop without joining Free Spirited Insiders?",
-            "content": "<p>All purchases on our website include enrollment in our Insiders membership. If you'd prefer to shop without joining, you can browse our full-priced collection on our Etsy store at <a href=\"https://shopfreespiritedco.etsy.com\" title=\"https://shopfreespiritedco.etsy.com\">shopfreespiritedco.etsy.com</a> with no membership required.</p>"
+            "heading": "Can I Shop Full Price Free Spirited Insiders?",
+            "content": "<p>Yes! Every product can be purchased two ways. Insider Pricing (the default) gives you our lowest prices and includes the Free Spirited Insiders membership — free for 21 days, then $24.95/month, cancel anytime. Or choose Full Price in the cart drawer and check out like any normal store, no membership involved.</p>"
           }
         },
         "content_hUnJgU": {
