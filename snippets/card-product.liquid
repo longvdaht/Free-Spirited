@@ -370,7 +370,7 @@
           {%- comment -%}
             Insider price first, full price second, mirroring the product page.
           {%- endcomment -%}
-          <span class="fs-price-label text-xsmall">Insider price</span>
+          <span class="fs-card-price-line" style="display:block;white-space:nowrap;line-height:1.3;"><span class="fs-price-label text-xsmall">Insider price</span>
           {%- if insider_varies -%}
             <span class="product-actual-price price-varies">
               {{ insider_money }}
@@ -379,8 +379,9 @@
             <span class="product-actual-price">{{ insider_money }}</span>
           {%- endif -%}
 
-          <span class="fs-price-label text-xsmall">Full price</span>
-          <span class="product-full-price product-compare-price">{{ price_min }}</span>
+          </span>
+          <span class="fs-card-price-line" style="display:block;white-space:nowrap;line-height:1.3;margin-top:.15em;"><span class="fs-price-label text-xsmall">Full price</span>
+          <span class="product-full-price product-compare-price">{{ price_min }}</span></span>
         {%- else -%}
           {%- comment -%}
             No Insider price on this product: unchanged from the original markup.
