@@ -89,6 +89,13 @@
 <script src="{{ 'global.js' | asset_url }}" defer></script>
 <script src="{{ 'search.js' | asset_url }}" defer></script>
 <script>
+  window.FS_CUSTOMER = {
+    loggedIn: {% if customer %}true{% else %}false{% endif %},
+    email: {{ customer.email | default: '' | downcase | json }},
+    loginUrl: {{ '/account/login' | json }}
+  };
+</script>
+<script>
   window.FS_INSIDER = {
     freeVariantId: {{ settings.insider_mode_free_product.first_available_variant.id | default: settings.insider_free_product.variants.first.id | json }},
     freeProductId: {{ settings.insider_mode_free_product.id | json }},

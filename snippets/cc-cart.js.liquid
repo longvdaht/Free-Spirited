@@ -2,6 +2,20 @@
   @param cart (cart, mandatory)
   @param checkout_url (string, mandatory) the checkout url
   @param checkout_button_selector (string) the query selector for the checkout button
+
+  COUPON HANDLING — changed deliberately, read before editing.
+
+  This snippet used to read the `discount_code` cookie and forward it to CC as
+  couponCode. That is unsafe: Shopify's /discount/ endpoint sets that cookie even
+  when it REJECTS the code, and CC does not re-validate customer eligibility. So
+  a code Shopify refused (belongs to another customer) or one the theme hid
+  (under its minimum on the Insider subtotal) was still charged at CC — the cart
+  showed one price, the checkout charged another.
+
+  The coupon now comes from window.fsCheckoutCoupon() in fs-discount.js, which
+  returns a code ONLY if Shopify says it is applicable AND the theme verified it
+  against the Insider subtotal. It fails closed: if it cannot verify, no coupon is
+  sent. Do not reintroduce the cookie read as a fallback — that restores the hole.
 {% endcomment -%}
 
 {% unless checkout_url %}
@@ -38,7 +52,7 @@
         };
       }
 
-      function init() {     
+      function init() {
         self.options = Object.assign({
           checkoutButtonSelector: '{{ checkout_button_selector }}',
           checkoutUrl: '{{ checkout_url }}'
@@ -56,45 +70,58 @@
         $(document).on('click', self.options.checkoutButtonSelector, checkout);
       }
 
+      // Ask the theme which coupon (if any) CC is allowed to apply. Resolves to
+      // null when fs-discount.js is absent, so a missing script means no coupon
+      // rather than an unverified one.
+      function verifiedCoupon() {
+        if (typeof window.fsCheckoutCoupon !== 'function') {
+          debug('fsCheckoutCoupon unavailable -> no coupon');
+          return Promise.resolve(null);
+        }
+        return window.fsCheckoutCoupon().catch(function (e) {
+          debug('coupon gate failed -> no coupon', e);
+          return null;
+        });
+      }
+
       function checkout(event) {
         event.preventDefault();
         event.stopPropagation();
-        fetch('/cart?view=meta-data.json')
-          .then(response => response.json())
-          .then(data => { 
-            var checkoutUrl = getCheckoutURL(data);
-            debug('Checkout ->', checkoutUrl);        
-            window.location.href = checkoutUrl;
-          });       
+
+        Promise.all([
+          fetch('/cart?view=meta-data.json').then(function (r) { return r.json(); }),
+          verifiedCoupon()
+        ]).then(function (results) {
+          var checkoutUrl = getCheckoutURL(results[0], results[1]);
+          debug('Checkout ->', checkoutUrl);
+          window.location.href = checkoutUrl;
+        });
       }
 
       function getCartCookie(name) {
         var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-        if (match) { 
+        if (match) {
           return match[2];
         }
         return null;
       }
 
-      function getCheckoutURL(data) {
+      function getCheckoutURL(data, couponCode) {
         var cookie = getCartCookie('cart');
         var affId = getCartCookie('?affId');
-        var discountCode = getCartCookie('discount_code'); // New: Get discount_code cookie
 
-        var urlLineItems = Object.keys(data.meta_product_id_array).reduce(function (output, productId) {             
+        var urlLineItems = Object.keys(data.meta_product_id_array).reduce(function (output, productId) {
           return output.concat([ data.meta_product_id_array[productId].id + ':' + data.meta_product_id_array[productId].quantity ]);
         }, []).join(';');
-
-        var couponParam = '';
-        if (discountCode) {
-          couponParam = '&couponCode=' + discountCode;
-        }
 
         var checkoutUrl = self.options.checkoutUrl + '?products=' + urlLineItems + '&cartId=' + cookie;
         if (typeof affId !== 'undefined') {
           checkoutUrl += '&affId=' + affId;
         }
-        checkoutUrl += couponParam; // Append couponParam to checkout URL
+        // Verified codes only — see the comment at the top of this file.
+        if (couponCode) {
+          checkoutUrl += '&couponCode=' + encodeURIComponent(couponCode);
+        }
 
         return checkoutUrl;
       }
