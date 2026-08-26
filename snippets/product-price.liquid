@@ -121,12 +121,14 @@ endif
   data-has-insider="{{ has_insider_price }}"
 >
   <span
-    class="product-actual-price {% if sticky != true %}h5{% endif %}"
+    class="product-actual-price fs-labeled-price {% if sticky != true %}h5{% endif %}"
+    data-price-label="Insider price"
     data-actual-price
   >{% if has_insider_price %}{{ insider_money }}{% else %}{{ money_price }}{% endif %}</span>
 
   <span
-    class="product-compare-price product-full-price {% if sticky != true %}h6{% endif %}{% unless has_insider_price %} hidden{% endunless %}"
+    class="product-compare-price product-full-price fs-labeled-price {% if sticky != true %}h6{% endif %}{% unless has_insider_price %} hidden{% endunless %}"
+    data-price-label="Full price"
     data-full-price
   >{{ money_price }}</span>
 </div>
