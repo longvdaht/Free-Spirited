@@ -513,26 +513,27 @@
         "content_DkJCN7": {
           "type": "content",
           "settings": {
-            "heading": "Where are you located?",
-            "content": "<p>Free Spirited is proudly based in sunny Sunrise, Florida! We ship all our tie-dye shirt orders directly from here! 🇺🇸</p>"
+            "heading": "What Shoe Sizes Do Free Spirited Clothing Tie Dye Socks Fit?",
+            "content": "<p>The stretch-knit fabric fits most US women's shoe sizes 4-12 and men's sizes 3-11. If you'd like a more snug or looser fit, order a size up or down.</p>"
           }
         },
         "content_hGyciK": {
           "type": "content",
           "settings": {
-            "heading": "Are all of your shirts really made by hand?",
-            "content": "<p>Yes! Every single shirt is dyed by hand, then pre-washed and pre-shrunk before it ships. Want to see for yourself? Check out <a href=\"/pages/how-we-make-your-shirt\" title=\"How we make your shirt\">how we make your shirt.</a></p>"
+            "heading": "Are the Men's Tie Dye Socks True to Size?",
+            "content": "<p>Absolutely! Our tie dye socks are true to size, so order with confidence. If you're ever unsure which size to choose, use our <a href=\"https://shopfreespirited.com/pages/adult-size-chart\"><span style=\"text-decoration:underline\">Size Chart</span></a> or reach out to our customer care team for help</p>"
           }
         },
         "content_zB7xPz": {
           "type": "content",
           "settings": {
-            "heading": "Will I get a tracking number for my order?",
-            "content": "<p>Of course! As soon as your order ships, you’ll get a tracking email so you can follow your package’s magical journey to your doorstep.</p>"
+            "heading": "Will My Tie Dye Socks Look Exactly Like the Picture?",
+            "content": "<p>Every pair of socks is unique, one of a kind, hand-dyed for a unique color pattern. They might not look identical to the picture or to each other. Your pair of socks will follow the same color pattern, but the colors might vary slightly.</p>"
           }
         },
         "content_N3HAa6": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "heading": "What size would fit me best?",
             "content": "<p>We get it—sizing can be tricky! That’s why we include a handy size chart on every product page. Still unsure? Reach out to us using the “Contact Us” form or email us at <a><strong>support@shopfreespirited.com</strong></a>. We’re here to help! Fun fact: 98.4% of our customers say our shirts fit true to size. 💫</p>"
@@ -540,6 +541,7 @@
         },
         "content_JJDzzM": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "heading": "What are your shirts made from?",
             "content": "<p>Our shirts are crafted from premium fabrics that feel amazing to wear:</p><ul><li><strong>Tees and Tank Tops</strong>: 100% pre-shrunk, softer-than-soft cotton.</li><li><strong>V-Necks</strong>: A comfy blend of 60% ring-spun cotton and 40% polyester.</li><li><strong>Long Sleeves</strong>: Made from durable, pre-shrunk 100% heavyweight cotton.</li></ul><p>That’s why they’re not just soft—they’re <em>softer-than-soft!</em> 🌈</p>"
@@ -547,6 +549,7 @@
         },
         "content_rbQYYK": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "heading": "Do you offer plus sizes?",
             "content": "<p>Yes! We proudly offer sizes from S to 5XL, so everyone can join the tie-dye fun. We offer every style in at least a 3XL, and you can check out our 4XL and 5XL designs <a href=\"https://shopfreespirited.com/collections/shop-sale?filter.v.price.gte=&filter.v.price.lte=&filter.v.option.size=4XL&filter.v.option.size=5XL&sort_by=manual\" title=\"https://shopfreespirited.com/collections/shop-sale?filter.v.price.gte=&filter.v.price.lte=&filter.v.option.size=4XL&filter.v.option.size=5XL&sort_by=manual\">here</a>.</p>"
@@ -554,6 +557,7 @@
         },
         "content_fUXj3w": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "heading": "What if I need to return my shirts?",
             "content": "<p>No worries—we’ve got a problem-free philosophy! If you’re not totally in love with your purchase, you can return it for a full refund within 30 days. Just make sure it’s unworn and unwashed, and we’ll handle the rest.</p>"
@@ -561,6 +565,7 @@
         },
         "content_wRNY9t": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "heading": "Why are these shirts discounted so much?",
             "content": "<p>These exclusive prices are only available to Free Spirited Insiders — our members-only community. When you place an order, it includes a <strong>free 21-day trial</strong> of the membership, which renews at <strong>$24.95/month unless canceled</strong>. You can <a href=\"https://insiders.shopfreespirited.com/login?action=CANCEL\" title=\"https://insiders.shopfreespirited.com/login?action=CANCEL\">cancel anytime here.</a></p>"
@@ -568,6 +573,7 @@
         },
         "content_NrE6rf": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "heading": "Are you closing your entire store?",
             "content": "<p><strong>No, we’re not closing our store!</strong> We run collection closing sales to make room for new designs. Some of our current styles will be <strong>retired</strong>, while others may return in our upcoming collections.</p><p>If you see a design you love, we recommend grabbing it before it’s gone—prices and availability may change in future collections!</p>"
