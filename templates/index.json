@@ -1396,7 +1396,7 @@
             "image": "shopify://shop_images/Untitled_design_-_2024-11-07T130815.743.png",
             "heading": "Free Shipping for Insiders",
             "description": "As a member, you'll get access to a free U.S. shipping code in your member portal. Log in after starting your free trial to grab yours!",
-            "link_label": "",
+            "link_label": "After joining, retrieve your free U.S. shipping code from the member portal for future eligible orders.",
             "link_url": "",
             "column_background": true,
             "column_background_color": "#f2f2f2",
@@ -1484,7 +1484,7 @@
           "type": "content",
           "settings": {
             "heading": "How much does shipping cost?",
-            "content": "<p>We offer <strong>free U.S. shipping on orders over $50</strong>. For orders under $50, shipping fees are $4.95. Shipping is always free for Insiders!</p>"
+            "content": "<p>We offer free U.S. shipping on orders over $50. For orders under $50, shipping fees are $4.95. After joining, retrieve your free U.S. shipping code from the member portal for future eligible orders.</p>"
           }
         },
         "content_3rekQA": {
