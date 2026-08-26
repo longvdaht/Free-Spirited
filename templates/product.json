@@ -556,7 +556,7 @@
           "type": "content",
           "settings": {
             "heading": "Why are these shirts discounted so much?",
-            "content": "<p>These exclusive prices are only available to Free Spirited Insiders — our members-only community. When you place an order, it includes a <strong>free 21-day trial</strong> of the membership, which renews at <strong>$24.95/month unless canceled</strong>. You can <a href=\"https://insiders.shopfreespirited.com/login?action=CANCEL\" title=\"https://insiders.shopfreespirited.com/login?action=CANCEL\">cancel anytime here.</a></p>"
+            "content": "<p>Insider Pricing keeps our prices this low. When you shop at Insider Pricing, your order includes our Insiders membership — that's what makes $11.95 hand-dyed tees possible. Every product is also available at Full Price with no membership. Same premium hand-dyed quality either way.</p>"
           }
         },
         "content_NrE6rf": {
@@ -961,10 +961,10 @@
       ],
       "settings": {
         "make_section_rounded": true,
-        "heading": "BECOME AN INSIDER!",
+        "heading": "UNLOCK INSIDER PRICING",
         "heading_size": "h3",
         "seo_heading": "h3",
-        "description": "<p>Unlock Exclusive Perks with Free Spirited Insiders. All offers on our site are for Free Spirited Insiders only. Every purchase includes a 21-day free trial of the membership, which renews at $24.95 per month unless canceled. <a href=\"https://insiders.shopfreespirited.com/login?action=CANCEL\" title=\"https://insiders.shopfreespirited.com/login?action=CANCEL\">Cancel anytime by clicking here.</a></p>",
+        "description": "<p>The price you see is our Insider price, included with the Free Spirited Insiders membership (21 days free, then $24.95/month, cancel anytime — full details at checkout). Rather not join? Choose Full Price in the cart drawer and check out normally. Same shirts, your choice.</p>",
         "content_alignment": "text-center",
         "open_first": false,
         "spec_heading": "Specifications",
