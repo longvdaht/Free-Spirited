@@ -30,6 +30,44 @@
         </div>
        
         {%- assign fsmode = cart.attributes.pricing_mode | default: 'insider' -%}
+
+        {%- liquid
+          # Insider subtotal, computed once here and reused by the free shipping
+          # bar and by the cart summary further down. It has to live above the
+          # shipping bar because Liquid evaluates top to bottom.
+          #
+          # A `money` metafield comes back as a money-typed value in Liquid, so
+          # `times: 1` coerces it to a number first. Comparing the raw value
+          # against variant.price always reports a difference, because the two
+          # are different types, which is why an insider price equal to the
+          # selling price previously still rendered as a discount.
+          assign insider_total = 0
+
+          for line in cart.items
+            assign line_insider = 0
+            if line.variant.metafields.custom.insider_price.value != blank
+              assign line_insider = line.variant.metafields.custom.insider_price.value | times: 1 | round
+            endif
+
+            # Only variants whose insider price is strictly below their own price
+            # take part. Everything else falls back to the discounted line price,
+            # which preserves existing line-level discounts.
+            if line_insider > 0 and line_insider < line.variant.price
+              assign cents = line_insider | times: line.quantity
+              assign insider_total = insider_total | plus: cents
+            else
+              assign insider_total = insider_total | plus: line.final_line_price
+            endif
+          endfor
+
+          # The total the shopper is actually being shown, which is what the free
+          # shipping threshold should measure against.
+          assign effective_total = cart.total_price
+          if fsmode == 'insider'
+            assign effective_total = insider_total
+          endif
+        -%}
+
         <div class="fs-mode-toggle cart-drawer-buttons" role="group" aria-label="Pricing mode">
           <button type="button" data-fs-mode="insider" class="button fs-mode-btn{% if fsmode == 'insider' %} active{% endif %}">Insider pricing</button>
           <button type="button" data-fs-mode="full_price" class="button fs-mode-btn{% if fsmode == 'full_price' %} active{% endif %}">Full price</button>
@@ -46,7 +84,10 @@
           {%- if settings.enable_shipping and settings.shipping_rate != blank and cart.item_count > 0 -%}
             {% liquid
               assign shippingRate = settings.shipping_rate | times: 100
-              assign cartTotal = cart.total_price
+              # Follows the active pricing mode. Using cart.total_price here made
+              # the bar claim free shipping was reached while the Insider
+              # subtotal shown below was still short of the threshold.
+              assign cartTotal = effective_total
               assign shippingPrice = shippingRate | minus: cartTotal
               if shippingPrice > 0
                 assign shippingPrice = shippingPrice | money
@@ -62,7 +103,22 @@
                 assign shippingPercentage = 100
               endif
             %}
-            <div class="cart-shipping-bar" data-free-shipping-container="" data-free-shipping-wrapper>
+            <div
+              class="cart-shipping-bar"
+              data-free-shipping-container=""
+              data-free-shipping-wrapper
+              {%- comment -%}
+                Both totals and the threshold are exposed so the mode toggle can
+                recompute the bar client side when it does not re-render the
+                section. The message templates come from theme settings, which JS
+                cannot otherwise read.
+              {%- endcomment -%}
+              data-shipping-rate="{{ shippingRate }}"
+              data-insider-total="{{ insider_total }}"
+              data-full-total="{{ cart.total_price }}"
+              data-shipping-message-template="{{ settings.shipping_message | escape }}"
+              data-shipping-success-template="{{ settings.shipping_success | escape }}"
+            >
               <p data-free-shipping-text="" data-shipping-message>{{ shippingMessage }}</p>
               <div class="cart-shipping-bar-progress">
                 <div
@@ -218,15 +274,35 @@
                         </div>
                       {% endif %}
                       {% assign mode = cart.attributes.pricing_mode | default: 'insider' %}
-                      {% assign insider = item.variant.metafields.custom.insider_price.value %}
+                      {%- liquid
+                        # Coerce before comparing: the raw money metafield and
+                        # item.variant.price are different types, so `!=` between
+                        # them is always true and the dual price block rendered
+                        # even when both amounts matched.
+                        #
+                        # `<` rather than `!=` also guards against an insider
+                        # price above the selling price, which would advertise a
+                        # discount that costs more.
+                        assign insider_cents = 0
+                        if item.variant.metafields.custom.insider_price.value != blank
+                          assign insider_cents = item.variant.metafields.custom.insider_price.value | times: 1 | round
+                        endif
+
+                        assign has_insider = false
+                        if insider_cents > 0 and insider_cents < item.variant.price
+                          assign has_insider = true
+                        endif
+                      -%}
                       <div
                         class="product-pricing p-0 no-js-hidden fs-pricing fs-pricing--{{ mode }}"
                         data-item-original="{{ item.original_price }}"
                         data-item-final="{{ item.final_price }}"
+                        data-item-insider="{{ insider_cents }}"
+                        data-has-insider="{{ has_insider }}"
                       >
-                        {%- if insider != blank and insider != item.variant.price -%}
+                        {%- if has_insider -%}
                           <span class="fs-price fs-price--insider">
-                            <span class="fs-price__amount product-actual-price">{{ insider | money }}</span>
+                            <span class="fs-price__amount product-actual-price">{{ insider_cents | money }}</span>
                             <span class="fs-price__label">Insider</span>
                           </span>
                           <span class="fs-price fs-price--full">
@@ -503,17 +579,14 @@
                 {%- endif -%}
               </div>
              
+              {%- comment -%}
+                `insider_total` is computed near the top of this snippet so the
+                free shipping bar can use it too. The previous calculation here
+                accepted any insider price above zero, which would have made the
+                Insider subtotal exceed the full price subtotal for any variant
+                whose metafield sat above its selling price.
+              {%- endcomment -%}
               {%- assign mode = cart.attributes.pricing_mode | default: 'insider' -%}
-              {%- assign insider_total = 0 -%}
-              {%- for line in cart.items -%}
-                {%- assign ip = line.variant.metafields.custom.insider_price.value -%}
-                {%- if ip != blank and ip > 0 -%}
-                  {%- assign cents = ip | times: line.quantity -%}
-                  {%- assign insider_total = insider_total | plus: cents -%}
-                {%- else -%}
-                  {%- assign insider_total = insider_total | plus: line.final_line_price -%}
-                {%- endif -%}
-              {%- endfor -%}
 
               {%- comment -%} ---- Discount code input (fs-discount.js handles apply/remove) ---- {%- endcomment -%}
               {%- assign applied_code = nil -%}
