@@ -357,7 +357,7 @@
         "make_section_rounded": false,
         "section_fullwidth": false,
         "card_background": false,
-        "image": "shopify://shop_images/Screenshot_2025-11-03_at_11.57.41_AM_2f5fc6dc-1a4a-4f36-81cd-388fc0d0e190.png",
+        "image": "shopify://shop_images/full-price-cart-choice.png",
         "image_overlay_enable": false,
         "image_width": "medium",
         "image_position": "left",
@@ -1504,7 +1504,7 @@
         "content_wLzhNq": {
           "type": "content",
           "settings": {
-            "heading": "Can I Shop Full Price Free Spirited Insiders?",
+            "heading": "Can I shop at Full Price without joining Insiders?",
             "content": "<p>Yes! Every product can be purchased two ways. Insider Pricing (the default) gives you our lowest prices and includes the Free Spirited Insiders membership — free for 21 days, then $24.95/month, cancel anytime. Or choose Full Price in the cart drawer and check out like any normal store, no membership involved.</p>"
           }
         },
