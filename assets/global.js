@@ -1457,6 +1457,7 @@ function updateVariantPrice(_productSection, priceContainer, selectedVariant, sh
 
             Array.from(priceContainer.querySelectorAll('[data-full-price]')).forEach(function(fullPriceSelector) {
                 fullPriceSelector.innerHTML = Shopify.formatMoney(price, moneyFormat);
+                fullPriceSelector.classList.toggle('hidden', !hasInsiderPrice);
             });
 
             // Both blocks and labels always exist in the DOM, so only classes
