@@ -224,7 +224,7 @@
                         data-item-original="{{ item.original_price }}"
                         data-item-final="{{ item.final_price }}"
                       >
-                        {%- if insider != blank -%}
+                        {%- if insider != blank and insider != item.variant.price -%}
                           <span class="fs-price fs-price--insider">
                             <span class="fs-price__amount product-actual-price">{{ insider | money }}</span>
                             <span class="fs-price__label">Insider</span>
