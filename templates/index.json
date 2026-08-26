@@ -336,7 +336,7 @@
           "settings": {
             "button_style_1": "solid",
             "btn_text": "Shop Full Price",
-            "btn_url": "/collections/all",
+            "btn_url": "shopify://collections/shop-sale",
             "btn_size": "regular",
             "button_style_2": "solid",
             "btn_text_2": "",
