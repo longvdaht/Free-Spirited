@@ -131,6 +131,14 @@ endif
     data-price-label="Full price"
     data-full-price
   >{{ money_price }}</span>
+
+  {%- if sticky != true -%}
+    <span class="fs-insider-price-terms text-xsmall{% unless has_insider_price %} hidden{% endunless %}" data-insider-terms>Insider price includes a 21-day free trial, then $24.95/month until canceled. Or choose Full Price in the cart—no membership.</span>
+    <style>
+      .product-price-group[data-has-insider="true"] .fs-labeled-price::before { content: attr(data-price-label); display: inline-block; margin-right: .45em; font-size: .56em; line-height: 1; letter-spacing: .05em; text-transform: uppercase; font-weight: 700; text-decoration: none; vertical-align: middle; }
+      .fs-insider-price-terms { display: block; flex-basis: 100%; width: 100%; margin-top: .45rem; line-height: 1.45; }
+    </style>
+  {%- endif -%}
 </div>
 
 <span class="hidden">{{ 'products.product.price.regular_price' | t }}</span>

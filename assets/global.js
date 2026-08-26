@@ -1469,6 +1469,10 @@ function updateVariantPrice(_productSection, priceContainer, selectedVariant, sh
                 label.classList.toggle('hidden', !hasInsiderPrice);
             });
 
+            Array.from(priceContainer.querySelectorAll('[data-insider-terms]')).forEach(function(term) {
+                term.classList.toggle('hidden', !hasInsiderPrice);
+            });
+
             Array.from(priceContainer.querySelectorAll('[data-price-group]')).forEach(function(group) {
                 group.classList.toggle('is-single-price', !hasInsiderPrice);
                 group.setAttribute('data-has-insider', hasInsiderPrice ? 'true' : 'false');
