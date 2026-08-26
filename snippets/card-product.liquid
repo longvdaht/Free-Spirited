@@ -294,39 +294,115 @@
       {%- if settings.product_rating -%}
         {% render 'review-rating', product: product, block: block %}
       {%- endif -%}
-      {% if settings.show_price %}
-      <div class="product-pricing  {% if cProduct.compare_at_price_min > cProduct.price_min %} discount-price {% endif %}">
-        {%- assign price_min = cProduct.price_min | default: 1900 | money -%}
-        {%- if cProduct.price_varies -%}
-          <span class="product-actual-price price-varies">
-            {{- 'products.product.price.from_price_html' | t: price: price_min -}}
-          </span>
-        {%- else -%}
-          <span class="product-actual-price">{{ price_min }}</span>
-        {%- endif -%}
-        {%- if cProduct.compare_at_price_min > cProduct.price_min -%}
-          <span class="product-compare-price">{{ cProduct.compare_at_price_min | money }}</span>
-        {%- endif -%}
-        {%- if cProduct.compare_at_price_min > cProduct.price_min -%}
-          {% if settings.product_price_saving %}
-            {% assign offText = 'products.product.off' | t %}
-            <span
-              class="product-discount-price {% if cProduct.compare_at_price_min > cProduct.price_min %}price-saving{% else %}hidden{% endif %}"
-              data-price-saving
-            >
-              {%- if cProduct.compare_at_price_min > cProduct.price_min %}
-                {{-
-                  cProduct.compare_at_price_min
-                  | minus: cProduct.price_min
-                  | times: 100
-                  | divided_by: cProduct.compare_at_price_min
-                  | append: '% '
-                  | append: offText
-                -}}
-              {% endif %}
+      
+      {%- comment -%}
+      Replaces the `{% if settings.show_price %}` ... `{% endif %}` pricing block in
+      snippets/card-product.liquid (around lines 297-339).
+
+      The card shows product-level prices, not a single variant, so the Insider
+      figure has to be the minimum across variants to match how price_min works.
+      Insider prices are tiered by size (S cheaper than 3XL), so picking any single
+      variant would show an inconsistent number next to "From".
+    {%- endcomment -%}
+
+    {% if settings.show_price %}
+      {%- liquid
+        # In Liquid a `money` metafield returns cents, directly comparable to
+        # variant.price. There is no `.amount` here: that exists only in the GraphQL
+        # Admin API. Do not scale these values.
+        assign insider_min = 0
+        assign insider_max = 0
+        assign insider_variant_count = 0
+
+        for variant in cProduct.variants
+          assign variant_insider = 0
+          if variant.metafields.custom.insider_price.value != blank
+            assign variant_insider = variant.metafields.custom.insider_price.value | times: 1 | round
+          endif
+
+          # Only count variants that actually take part: the metafield exists and is
+          # strictly below that variant's own price. Variants outside the programme
+          # carry an insider price equal to their price and must not drag the
+          # minimum down.
+          if variant_insider > 0 and variant_insider < variant.price
+            assign insider_variant_count = insider_variant_count | plus: 1
+            if insider_min == 0 or variant_insider < insider_min
+              assign insider_min = variant_insider
+            endif
+            if variant_insider > insider_max
+              assign insider_max = variant_insider
+            endif
+          endif
+        endfor
+
+        assign has_insider_price = false
+        if insider_min > 0 and insider_min < cProduct.price_min
+          assign has_insider_price = true
+        endif
+
+        assign insider_varies = false
+        if insider_max > insider_min
+          assign insider_varies = true
+        endif
+
+        assign price_min = cProduct.price_min | default: 1900 | money
+        assign insider_money = insider_min | money
+
+        # Saving prefers the Insider gap and falls back to compare-at, so discount
+        # badges keep working both before and after the price flip.
+        assign show_saving = false
+        assign saving_percent = 0
+
+        if has_insider_price
+          assign saving_percent = cProduct.price_min | minus: insider_min | times: 100 | divided_by: cProduct.price_min
+          assign show_saving = true
+        elsif cProduct.compare_at_price_min > cProduct.price_min
+          assign saving_percent = cProduct.compare_at_price_min | minus: cProduct.price_min | times: 100 | divided_by: cProduct.compare_at_price_min
+          assign show_saving = true
+        endif
+      -%}
+
+      <div
+        class="product-pricing{% if show_saving %} discount-price{% endif %}{% if has_insider_price %} has-insider-price{% endif %}"
+        data-has-insider="{{ has_insider_price }}"
+      >
+        {%- if has_insider_price -%}
+          {%- comment -%}
+            Insider price first, full price second, mirroring the product page.
+          {%- endcomment -%}
+          {%- if insider_varies -%}
+            <span class="product-actual-price price-varies">
+              {{ insider_money }}
             </span>
-          {% endif %}
-        {% endif %}
+          {%- else -%}
+            <span class="product-actual-price">{{ insider_money }}</span>
+          {%- endif -%}
+
+          <span class="product-full-price product-compare-price">{{ price_min }}</span>
+        {%- else -%}
+          {%- comment -%}
+            No Insider price on this product: unchanged from the original markup.
+          {%- endcomment -%}
+          {%- if cProduct.price_varies -%}
+            <span class="product-actual-price price-varies">
+              {{- 'products.product.price.from_price_html' | t: price: price_min -}}
+            </span>
+          {%- else -%}
+            <span class="product-actual-price">{{ price_min }}</span>
+          {%- endif -%}
+
+          {%- if cProduct.compare_at_price_min > cProduct.price_min -%}
+            <span class="product-compare-price">{{ cProduct.compare_at_price_min | money }}</span>
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- if show_saving and settings.product_price_saving -%}
+          {%- assign offText = 'products.product.off' | t -%}
+          <span class="product-discount-price price-saving hidden" data-price-saving>
+            {{- saving_percent | append: '% ' | append: offText -}}
+          </span>
+        {%- endif -%}
+
         {%- if current_variant.unit_price_measurement -%}
           <span class="product-unit-price text-small">
             {{ current_variant.unit_price | money }} /
@@ -338,6 +414,7 @@
         {%- endif -%}
       </div>
     {% endif %}
+
     </div>
     {% if optionhide != false %}
       {% if settings.show_inventory or productColorSwatchs != blank %}

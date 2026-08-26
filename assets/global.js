@@ -1309,9 +1309,108 @@ function updateAllVariantInput(selectedVariant, _productParent) {
     }
 }
 
-/* update the price based on selected variant start */
-function updateVariantPrice(_productSection, priceContainer, selectedVariant, showSaved) {
+// /* update the price based on selected variant start */
+// function updateVariantPrice(_productSection, priceContainer, selectedVariant, showSaved) {
     
+//     if (priceContainer) {
+//         if (selectedVariant != undefined) {
+//             priceContainer.style.display = 'block';
+//             var compareAtPrice = parseInt(selectedVariant.compare_at_price);
+//             var comparePriceSelectors = priceContainer.querySelectorAll('[data-compare-price]');
+//             var price = parseInt(selectedVariant.price);
+//             var priceSelectors = priceContainer.querySelectorAll('[data-actual-price]');
+//             var savingPercentage = Math.round((compareAtPrice - price) * 100 / compareAtPrice) + "% " + saleOffText;
+//             var savingPercentageSelector = priceContainer.querySelectorAll('[data-price-saving]');
+//             var unitPriceSelectors = priceContainer.querySelectorAll('[data-unit-price]');
+//             var soldoutTextSelectors = priceContainer.querySelectorAll('[data-soldout-text]');
+//             Array.from(priceSelectors).forEach(function(priceSelector) {
+//                 priceSelector.innerHTML = Shopify.formatMoney(price, moneyFormat);
+//             })
+
+
+//             Array.from(comparePriceSelectors).forEach(function(comparePriceSelector) {
+//                 if (compareAtPrice > price) {
+//                     if (comparePriceSelector) {
+//                         comparePriceSelector.innerHTML = Shopify.formatMoney(compareAtPrice, moneyFormat);
+//                         comparePriceSelector.classList.remove('hidden');
+//                         Array.from(savingPercentageSelector).forEach(function(spSelector) {
+//                             spSelector.innerHTML = savingPercentage;
+//                             spSelector.classList.remove('hidden');
+//                         })
+//                     }
+//                 } else {
+//                     comparePriceSelector.innerHTML = Shopify.formatMoney(compareAtPrice, moneyFormat);
+//                     comparePriceSelector.classList.add('hidden');
+//                     Array.from(savingPercentageSelector).forEach(function(spSelector) {
+//                         spSelector.innerHTML = savingPercentage;
+//                         spSelector.classList.add('hidden');
+//                     })
+//                 }
+//             })
+
+//             Array.from(unitPriceSelectors).forEach(function(unitPriceSelector) {
+//                 if (unitPriceSelector) {
+//                     if (selectedVariant.unit_price_measurement) {
+//                         var unitpriceText = Shopify.formatMoney(selectedVariant.unit_price, moneyFormat) + " / ";
+//                         unitpriceText +=
+//                             selectedVariant.reference_value == 1 ? "" : selectedVariant.unit_price_measurement.reference_value;
+//                         unitpriceText += selectedVariant.unit_price_measurement.reference_unit + "</p>";
+//                         unitPriceSelector.innerHTML = unitpriceText;
+//                         unitPriceSelector.classList.remove('hidden');
+//                     } else {
+//                         unitPriceSelector.classList.add('hidden');
+//                     }
+//                 }
+//                 Array.from(soldoutTextSelectors).forEach(function(soldoutTextSelector) {
+//                     if (soldoutTextSelector) {
+//                         if (selectedVariant.available != true) {
+//                             soldoutTextSelector.innerHTML = soldOutText;
+//                         } else {
+//                             soldoutTextSelector.innerHTML = '';
+//                         }
+//                     }
+//                 })
+//             })
+//         }
+//         else{
+//             priceContainer.style.display = 'none';
+//         }
+//     }
+// }
+
+/* update the price based on selected variant start */
+
+/**
+ * Variant metafields are absent from `product.variants | json`, so Insider
+ * prices are published separately by snippets/product-price.liquid as a JSON
+ * map of variant id to amount in cents. Null means the variant has no Insider
+ * price at all.
+ */
+function getInsiderPriceMap(priceContainer) {
+    var selector = '[type="application/json"][data-name="product-insider-prices"]';
+    var node = priceContainer.querySelector(selector);
+
+    if (!node) {
+        // Sticky bars and quick views render the price snippet in a different
+        // subtree, so fall back to the nearest product wrapper, then the page.
+        var wrapper = priceContainer.closest('[data-product-wrapper]')
+            || priceContainer.closest('.main-product')
+            || document;
+        node = wrapper.querySelector(selector);
+    }
+
+    if (!node) return {};
+
+    try {
+        return JSON.parse(node.textContent) || {};
+    } catch (error) {
+        console.warn('Insider price map could not be parsed', error);
+        return {};
+    }
+}
+
+function updateVariantPrice(_productSection, priceContainer, selectedVariant, showSaved) {
+
     if (priceContainer) {
         if (selectedVariant != undefined) {
             priceContainer.style.display = 'block';
@@ -1319,34 +1418,74 @@ function updateVariantPrice(_productSection, priceContainer, selectedVariant, sh
             var comparePriceSelectors = priceContainer.querySelectorAll('[data-compare-price]');
             var price = parseInt(selectedVariant.price);
             var priceSelectors = priceContainer.querySelectorAll('[data-actual-price]');
-            var savingPercentage = Math.round((compareAtPrice - price) * 100 / compareAtPrice) + "% " + saleOffText;
             var savingPercentageSelector = priceContainer.querySelectorAll('[data-price-saving]');
             var unitPriceSelectors = priceContainer.querySelectorAll('[data-unit-price]');
             var soldoutTextSelectors = priceContainer.querySelectorAll('[data-soldout-text]');
-            Array.from(priceSelectors).forEach(function(priceSelector) {
-                priceSelector.innerHTML = Shopify.formatMoney(price, moneyFormat);
-            })
 
+            var insiderMap = getInsiderPriceMap(priceContainer);
+            var insiderCents = parseInt(insiderMap[selectedVariant.id]);
+            if (isNaN(insiderCents)) insiderCents = 0;
+
+            // Mirrors the Liquid condition exactly: strictly below the selling
+            // price. Variants outside the Insider programme, and variants whose
+            // compare-at merely equals the price, both land here as false.
+            var hasInsiderPrice = insiderCents > 0 && insiderCents < price;
+
+            var hasCompareAt = compareAtPrice > price;
+
+            // Prefer the Insider gap, fall back to compare-at. Before the price
+            // flip nothing has an Insider gap, so the fallback keeps existing
+            // discount badges alive.
+            var showSaving = false;
+            var savingPercentage = '';
+            if (hasInsiderPrice) {
+                savingPercentage = Math.round((price - insiderCents) * 100 / price) + '% ' + saleOffText;
+                showSaving = true;
+            } else if (hasCompareAt) {
+                savingPercentage = Math.round((compareAtPrice - price) * 100 / compareAtPrice) + '% ' + saleOffText;
+                showSaving = true;
+            }
+
+            // The Insider block carries the metafield amount when there is one,
+            // otherwise it is the only price on screen and shows variant.price.
+            Array.from(priceSelectors).forEach(function(priceSelector) {
+                priceSelector.innerHTML = Shopify.formatMoney(
+                    hasInsiderPrice ? insiderCents : price,
+                    moneyFormat
+                );
+            });
+
+            Array.from(priceContainer.querySelectorAll('[data-full-price]')).forEach(function(fullPriceSelector) {
+                fullPriceSelector.innerHTML = Shopify.formatMoney(price, moneyFormat);
+            });
+
+            // Both blocks and labels always exist in the DOM, so only classes
+            // need toggling here.
+            Array.from(priceContainer.querySelectorAll('[data-full-block]')).forEach(function(block) {
+                block.classList.toggle('hidden', !hasInsiderPrice);
+            });
+
+            Array.from(priceContainer.querySelectorAll('[data-insider-label]')).forEach(function(label) {
+                label.classList.toggle('hidden', !hasInsiderPrice);
+            });
+
+            Array.from(priceContainer.querySelectorAll('[data-price-group]')).forEach(function(group) {
+                group.classList.toggle('is-single-price', !hasInsiderPrice);
+                group.setAttribute('data-has-insider', hasInsiderPrice ? 'true' : 'false');
+            });
+
+            Array.from(savingPercentageSelector).forEach(function(spSelector) {
+                spSelector.innerHTML = showSaving ? savingPercentage : '';
+                spSelector.classList.toggle('hidden', !showSaving);
+            });
 
             Array.from(comparePriceSelectors).forEach(function(comparePriceSelector) {
-                if (compareAtPrice > price) {
-                    if (comparePriceSelector) {
-                        comparePriceSelector.innerHTML = Shopify.formatMoney(compareAtPrice, moneyFormat);
-                        comparePriceSelector.classList.remove('hidden');
-                        Array.from(savingPercentageSelector).forEach(function(spSelector) {
-                            spSelector.innerHTML = savingPercentage;
-                            spSelector.classList.remove('hidden');
-                        })
-                    }
-                } else {
-                    comparePriceSelector.innerHTML = Shopify.formatMoney(compareAtPrice, moneyFormat);
-                    comparePriceSelector.classList.add('hidden');
-                    Array.from(savingPercentageSelector).forEach(function(spSelector) {
-                        spSelector.innerHTML = savingPercentage;
-                        spSelector.classList.add('hidden');
-                    })
-                }
-            })
+                if (!comparePriceSelector) return;
+                comparePriceSelector.innerHTML = hasCompareAt
+                    ? Shopify.formatMoney(compareAtPrice, moneyFormat)
+                    : '';
+                comparePriceSelector.classList.toggle('hidden', !hasCompareAt);
+            });
 
             Array.from(unitPriceSelectors).forEach(function(unitPriceSelector) {
                 if (unitPriceSelector) {
@@ -1361,22 +1500,23 @@ function updateVariantPrice(_productSection, priceContainer, selectedVariant, sh
                         unitPriceSelector.classList.add('hidden');
                     }
                 }
-                Array.from(soldoutTextSelectors).forEach(function(soldoutTextSelector) {
-                    if (soldoutTextSelector) {
-                        if (selectedVariant.available != true) {
-                            soldoutTextSelector.innerHTML = soldOutText;
-                        } else {
-                            soldoutTextSelector.innerHTML = '';
-                        }
-                    }
-                })
-            })
+            });
+
+            // Moved out of the unit price loop: it was previously nested inside,
+            // so the sold out text was rewritten once per unit price element and
+            // skipped entirely on products with none.
+            Array.from(soldoutTextSelectors).forEach(function(soldoutTextSelector) {
+                if (soldoutTextSelector) {
+                    soldoutTextSelector.innerHTML = selectedVariant.available != true ? soldOutText : '';
+                }
+            });
         }
-        else{
+        else {
             priceContainer.style.display = 'none';
         }
     }
 }
+
 
 /* variant sku update on change */
 function updateVariantSku(selectedVariant, _productParent) {
