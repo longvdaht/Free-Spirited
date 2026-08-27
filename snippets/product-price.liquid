@@ -127,22 +127,25 @@ endif
     data-actual-price
   >{% if has_insider_price %}{{ insider_money }}{% else %}{{ money_price }}{% endif %}</span>
 
-  {%- if sticky != true -%}
-    <a
-      class="fs-insider-explainer-link{% unless has_insider_price %} hidden{% endunless %}"
-      href="/pages/free-spirited-insider-membership"
-      aria-label="Learn how the Free Spirited Insiders Club works"
-    >What's the Insiders Club?</a>
-  {%- endif -%}
-
-  <span
+.fs-insider-explainer-link { align-self: center; margin: 0 .65rem 0 .15rem; font-size: .78rem; line-height: 1.2; font-weight: 700; color: inherit; text-decoration: underline; text-underline-offset: .16em; white-space: nowrap; }  <span
     class="product-compare-price product-full-price fs-labeled-price {% if sticky != true %}h6{% endif %}{% unless has_insider_price %} hidden{% endunless %}"
     data-price-label="Full price"
     data-full-price
   >{{ money_price }}</span>
 
   {%- if sticky != true -%}
-    <span class="fs-insider-price-terms text-xsmall{% unless has_insider_price %} hidden{% endunless %}" data-insider-terms>Insider Pricing includes a 21-day Free Spirited Insiders Club trial, then $24.95/month plus applicable taxes unless canceled. Or choose Full Price for a standard purchase.</span>
+    <a
+      class="fs-insider-benefits-card{% unless has_insider_price %} hidden{% endunless %}"
+      href="/pages/insiders-club"
+      aria-label="See all Free Spirited Insiders Club benefits"
+    >
+      <span class="fs-insider-benefits-card__copy">
+        <strong>✦ See all Club benefits</strong>
+        <small>21-day free trial · $30 monthly credit · early access</small>
+      </span>
+      <span class="fs-insider-benefits-card__arrow" aria-hidden="true">→</span>
+    </a>
+    <span class="fs-insider-price-terms text-xsmall{% unless has_insider_price %} hidden{% endunless %}" data-insider-terms>Then $24.95/month plus applicable taxes until canceled. Cancel anytime. Full Price is available in the cart.</span>
     <style>
       .product-price-group[data-has-insider="true"] .fs-labeled-price::before { content: attr(data-price-label); display: inline-block; margin-right: .45em; font-size: .56em; line-height: 1; letter-spacing: .05em; text-transform: uppercase; font-weight: 700; text-decoration: none; vertical-align: middle; }
       .product-discount-price[data-insider-saving="true"]::after { content: " with Insider"; }
