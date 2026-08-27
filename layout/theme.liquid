@@ -166,16 +166,17 @@
           }
 
           /* A true mobile purchase bar: price + selected size + clear action. */
+          .sticky-cart,
           .sticky-cart.show {
             display: grid !important;
             height: auto !important;
-            min-height: 66px;
-            max-height: 86px;
-            grid-template-columns: minmax(88px, .75fr) minmax(190px, 1.55fr);
-            gap: 10px;
+            min-height: 68px !important;
+            max-height: none !important;
+            grid-template-columns: minmax(72px, .7fr) minmax(0, 1.8fr);
+            gap: 8px;
             align-items: center;
             overflow: visible !important;
-            padding: 9px 10px calc(9px + env(safe-area-inset-bottom));
+            padding: 8px 10px max(8px, env(safe-area-inset-bottom)) !important;
             background: #fff;
             border-top: 1px solid rgba(0, 0, 0, .12);
             box-shadow: 0 -8px 24px rgba(0, 0, 0, .14);
@@ -239,14 +240,16 @@
           }
           .sticky-cart .sticky-cart-options {
             display: grid !important;
-            grid-template-columns: 66px minmax(118px, 1fr);
-            gap: 7px;
+            grid-template-columns: 78px minmax(0, 1fr);
+            gap: 6px;
             align-items: stretch;
             min-width: 0;
+            overflow: visible !important;
           }
           .sticky-cart .product-variants-options,
           .sticky-cart .product-checkout-buttons {
             min-width: 0;
+            overflow: visible !important;
           }
           .sticky-cart .product-variants-title {
             display: none;
@@ -256,24 +259,78 @@
             height: 100%;
             min-height: 48px;
           }
+          .sticky-cart .custom-select {
+            position: relative;
+            overflow: visible !important;
+          }
           .sticky-cart .custom-select-button {
             display: flex;
-            padding: 7px 8px;
+            padding: 7px 9px;
             align-items: center;
             justify-content: space-between;
             border-color: rgba(0, 0, 0, .25);
             border-radius: 8px;
           }
           .sticky-cart .custom-select-text::before {
-            content: "Size ";
+            content: "Size: ";
             font-size: 10px;
             font-weight: 600;
           }
+          .sticky-cart .custom-select-content {
+            top: auto !important;
+            right: auto !important;
+            bottom: calc(100% + 9px) !important;
+            left: 0 !important;
+            z-index: 100000 !important;
+            width: max-content !important;
+            min-width: 180px !important;
+            max-width: min(82vw, 260px) !important;
+            max-height: min(52dvh, 360px) !important;
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            overscroll-behavior: contain;
+            -webkit-overflow-scrolling: touch;
+            background: #fff;
+            border: 1px solid rgba(1, 111, 148, .22);
+            border-radius: 12px;
+            box-shadow: 0 -10px 28px rgba(17, 39, 48, .2);
+          }
+          .sticky-cart .custom-select-content .custom-select-list {
+            margin: 0;
+            padding: 4px 0 6px;
+          }
+          .sticky-cart .custom-select-content .option {
+            display: flex !important;
+            min-height: 44px;
+            padding: 9px 14px !important;
+            align-items: center;
+          }
+          .sticky-cart .fs-sticky-size-guide {
+            display: flex;
+            width: 100%;
+            min-height: 46px;
+            padding: 10px 13px;
+            align-items: center;
+            justify-content: space-between;
+            color: #016f94;
+            background: #eff5dd;
+            border: 0;
+            border-bottom: 1px solid rgba(1, 111, 148, .14);
+            font: inherit;
+            font-size: 13px;
+            font-weight: 850;
+            text-align: left;
+            cursor: pointer;
+          }
+          .sticky-cart .fs-sticky-size-guide::after {
+            content: "→";
+            font-size: 17px;
+          }
           .sticky-cart [data-sticky-atc-wrapper] {
             min-height: 48px;
-            padding: 9px 11px;
+            padding: 9px 8px;
             border-radius: 8px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 850;
             white-space: nowrap;
           }
@@ -297,6 +354,209 @@
             text-align: center;
           }
         }
+
+        /* Product-page reassurance for first-time and paid-social visitors. */
+        .fs-cold-reassurance,
+        .fs-cold-reassurance * {
+          box-sizing: border-box;
+        }
+        .fs-cold-reassurance {
+          margin: 14px 0 10px;
+          color: #151515;
+        }
+        .fs-cold-reassurance__grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 6px;
+        }
+        .fs-cold-reassurance__item {
+          display: flex;
+          min-width: 0;
+          min-height: 76px;
+          padding: 9px 5px;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          text-align: center;
+          background: #fff;
+          border: 1px solid rgba(1, 111, 148, .16);
+          border-radius: 10px;
+        }
+        .fs-cold-reassurance__icon {
+          display: grid;
+          width: 25px;
+          height: 25px;
+          margin-bottom: 5px;
+          place-items: center;
+          color: #fff;
+          background: #016f94;
+          border-radius: 50%;
+          font-size: 13px;
+          font-weight: 900;
+          line-height: 1;
+        }
+        .fs-cold-reassurance__item:nth-child(2) .fs-cold-reassurance__icon {
+          color: #283000;
+          background: #adcc0c;
+        }
+        .fs-cold-reassurance__item strong {
+          display: block;
+          font-size: 11.5px;
+          line-height: 1.22;
+        }
+        .fs-cold-reassurance__item small {
+          display: block;
+          margin-top: 2px;
+          color: #5b5b5b;
+          font-size: 9.5px;
+          line-height: 1.25;
+        }
+        .fs-cold-reassurance__footer {
+          margin: 8px 0 0;
+          color: #555;
+          font-size: 10.5px;
+          font-weight: 650;
+          line-height: 1.35;
+          text-align: center;
+        }
+        .main-product-content .fs-trust {
+          display: none !important;
+        }
+
+        .fs-pdp-ugc,
+        .fs-pdp-ugc * {
+          box-sizing: border-box;
+        }
+        .fs-pdp-ugc {
+          padding: 40px 20px 44px;
+          overflow: hidden;
+          color: #151515;
+          background: linear-gradient(180deg, #f7f8f2 0%, #fff 100%);
+        }
+        .fs-pdp-ugc__inner {
+          max-width: 1120px;
+          margin: 0 auto;
+          text-align: center;
+        }
+        .fs-pdp-ugc__eyebrow {
+          margin: 0 0 7px;
+          color: #016f94;
+          font-size: 11px;
+          font-weight: 850;
+          letter-spacing: .09em;
+          text-transform: uppercase;
+        }
+        .fs-pdp-ugc__title {
+          margin: 0 auto 8px;
+          font-size: clamp(25px, 3.2vw, 36px);
+          line-height: 1.1;
+        }
+        .fs-pdp-ugc__rating {
+          display: none;
+          width: fit-content;
+          margin: 0 auto 10px;
+          padding: 6px 10px;
+          color: #173000;
+          background: #eff5dd;
+          border-radius: 999px;
+          font-size: 12px;
+          font-weight: 800;
+          line-height: 1.25;
+        }
+        .fs-pdp-ugc__copy {
+          max-width: 650px;
+          margin: 0 auto 21px;
+          color: #4b4b4b;
+          font-size: 14px;
+          line-height: 1.5;
+        }
+        .fs-pdp-ugc__track {
+          display: grid;
+          grid-auto-flow: column;
+          grid-auto-columns: calc((100% - 24px) / 3);
+          gap: 12px;
+          padding: 5px 3px 12px;
+          overflow-x: auto;
+          overscroll-behavior-inline: contain;
+          scroll-behavior: smooth;
+          scroll-snap-type: x mandatory;
+          scrollbar-width: none;
+        }
+        .fs-pdp-ugc__track::-webkit-scrollbar {
+          display: none;
+        }
+        .fs-pdp-ugc__card {
+          overflow: hidden;
+          background: #fff;
+          border: 1px solid rgba(1, 111, 148, .14);
+          border-radius: 13px;
+          box-shadow: 0 7px 20px rgba(17, 39, 48, .08);
+          scroll-snap-align: start;
+        }
+        .fs-pdp-ugc__card img {
+          display: block;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 4 / 5;
+          object-fit: cover;
+        }
+        .fs-pdp-ugc__note {
+          margin: 6px 0 0;
+          color: #666;
+          font-size: 11px;
+        }
+        .fs-pdp-ugc__cta {
+          display: inline-flex;
+          min-height: 48px;
+          margin-top: 16px;
+          padding: 11px 25px;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          background: #016f94;
+          border: 2px solid #adcc0c;
+          border-radius: 999px;
+          font: inherit;
+          font-size: 14px;
+          font-weight: 850;
+          cursor: pointer;
+        }
+        @media (max-width: 767px) {
+          .fs-pdp-ugc {
+            padding: 31px 0 35px;
+          }
+          .fs-pdp-ugc__inner {
+            padding: 0 17px;
+          }
+          .fs-pdp-ugc__title {
+            font-size: 26px;
+          }
+          .fs-pdp-ugc__copy {
+            margin-bottom: 16px;
+            font-size: 13.5px;
+          }
+          .fs-pdp-ugc__track {
+            grid-auto-columns: 80%;
+            margin-right: -17px;
+            padding-right: 17px;
+          }
+          .fs-pdp-ugc__cta {
+            width: 100%;
+          }
+        }
+        @media (max-width: 360px) {
+          .fs-cold-reassurance__item strong {
+            font-size: 10.5px;
+          }
+          .fs-cold-reassurance__item small {
+            font-size: 8.75px;
+          }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .fs-pdp-ugc__track {
+            scroll-behavior: auto;
+          }
+        }
       </style>
 
     </head>
@@ -313,6 +573,170 @@
         <main id="MainContent" class="main-content focus-none" role="main" tabindex="-1" >
           {{ content_for_layout }} 
         </main>
+        {% if request.page_type == 'product' %}
+          <template id="fs-cold-reassurance-template">
+            <aside class="fs-cold-reassurance" aria-label="Order reassurance">
+              <div class="fs-cold-reassurance__grid">
+                <div class="fs-cold-reassurance__item">
+                  <span class="fs-cold-reassurance__icon" aria-hidden="true">→</span>
+                  <strong>Ships in 1 business day</strong>
+                  <small>From Sunrise, Florida</small>
+                </div>
+                <div class="fs-cold-reassurance__item">
+                  <span class="fs-cold-reassurance__icon" aria-hidden="true">30</span>
+                  <strong>30-day returns</strong>
+                  <small>No questions asked</small>
+                </div>
+                <div class="fs-cold-reassurance__item">
+                  <span class="fs-cold-reassurance__icon" aria-hidden="true">✦</span>
+                  <strong>Hand-dyed in Florida</strong>
+                  <small>Every shirt is one of a kind</small>
+                </div>
+              </div>
+              <p class="fs-cold-reassurance__footer">Secure checkout · Tracking on every order · Real 24/7 human support</p>
+            </aside>
+          </template>
+
+          <template id="fs-pdp-ugc-template">
+            <section class="fs-pdp-ugc" aria-labelledby="fs-pdp-ugc-title">
+              <div class="fs-pdp-ugc__inner">
+                <p class="fs-pdp-ugc__eyebrow">Real Free Spirited customers</p>
+                <h2 class="fs-pdp-ugc__title" id="fs-pdp-ugc-title">Worn by real people. Made to be noticed.</h2>
+                <p class="fs-pdp-ugc__rating" data-fs-pdp-rating></p>
+                <p class="fs-pdp-ugc__copy">See how Free Spirited shirts look in everyday life—bright, comfortable, and unmistakably personal.</p>
+                <div class="fs-pdp-ugc__track" aria-label="Real customer photos">
+                  <div class="fs-pdp-ugc__card">
+                    <img src="https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-1.jpg?v=1787857564&amp;width=700" width="700" height="875" loading="lazy" decoding="async" alt="Real Free Spirited customers wearing colorful hand-dyed shirts">
+                  </div>
+                  <div class="fs-pdp-ugc__card">
+                    <img src="https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-01.jpg?v=1787858490&amp;width=700" width="700" height="875" loading="lazy" decoding="async" alt="Real Free Spirited customers wearing tie-dye in everyday life">
+                  </div>
+                  <div class="fs-pdp-ugc__card">
+                    <img src="https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-07.jpg?v=1787858494&amp;width=700" width="700" height="875" loading="lazy" decoding="async" alt="Free Spirited customers enjoying colorful hand-dyed clothing together">
+                  </div>
+                  <div class="fs-pdp-ugc__card">
+                    <img src="https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-2.png?v=1787857568&amp;width=700" width="700" height="875" loading="lazy" decoding="async" alt="Customers of different ages wearing Free Spirited tie-dye shirts">
+                  </div>
+                </div>
+                <p class="fs-pdp-ugc__note">Customer photos, shared with permission. Swipe to see more.</p>
+                <button class="fs-pdp-ugc__cta" type="button" data-fs-pdp-choose-size>Choose Your Size</button>
+              </div>
+            </section>
+          </template>
+
+          <script>
+            (() => {
+              let fsProductEnhanceQueued = false;
+
+              const fsOpenSizeHelp = () => {
+                const directSizeHelp = Array.from(document.querySelectorAll('button, a, [role="button"]')).find((element) => {
+                  if (element.classList.contains('fs-sticky-size-guide')) return false;
+                  return /what.?s my size|find my size|size calculator/i.test((element.textContent || '').trim());
+                });
+
+                if (directSizeHelp) {
+                  directSizeHelp.click();
+                  return;
+                }
+
+                const sizingAccordion = Array.from(document.querySelectorAll('button, summary, [role="button"]')).find((element) =>
+                  /sizing help|find your perfect fit/i.test((element.textContent || '').trim())
+                );
+
+                if (sizingAccordion) {
+                  sizingAccordion.click();
+                  sizingAccordion.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  return;
+                }
+
+                const sizePicker = document.querySelector('.main-product-content .product-variants-options');
+                if (sizePicker) sizePicker.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              };
+
+              const fsEnhanceProduct = () => {
+                fsProductEnhanceQueued = false;
+                const productContent = document.querySelector('.main-product-content');
+                if (!productContent) return;
+
+                const mainAtc = productContent.querySelector('[data-add-to-cart]:not([data-sticky-atc-wrapper])');
+                const checkoutButtons = mainAtc && mainAtc.closest('.product-checkout-buttons');
+                const reassuranceTemplate = document.getElementById('fs-cold-reassurance-template');
+                if (checkoutButtons && reassuranceTemplate && !productContent.querySelector('.fs-cold-reassurance')) {
+                  checkoutButtons.insertAdjacentElement('afterend', reassuranceTemplate.content.firstElementChild.cloneNode(true));
+                }
+
+                productContent.querySelectorAll('p.product-description.detail-text').forEach((paragraph) => {
+                  if (/easy returns and exchanges.*24\/7 human support/i.test(paragraph.textContent || '')) paragraph.hidden = true;
+                });
+
+                const mainSection = productContent.closest('.shopify-section');
+                const ugcTemplate = document.getElementById('fs-pdp-ugc-template');
+                if (mainSection && ugcTemplate && !document.querySelector('.fs-pdp-ugc')) {
+                  mainSection.insertAdjacentElement('afterend', ugcTemplate.content.firstElementChild.cloneNode(true));
+                }
+
+                const ratingBadge = productContent.querySelector('.jdgm-prev-badge');
+                const ratingOutput = document.querySelector('[data-fs-pdp-rating]');
+                if (ratingBadge && ratingOutput && !ratingOutput.dataset.hydrated) {
+                  const average = Number(ratingBadge.dataset.averageRating || 0);
+                  const reviews = Number(ratingBadge.dataset.numberOfReviews || 0);
+                  if (average > 0 && reviews > 0) {
+                    ratingOutput.textContent = `★★★★★ $${average.toFixed(1)} from $${reviews.toLocaleString()} verified reviews`;
+                    ratingOutput.style.display = 'block';
+                    ratingOutput.dataset.hydrated = 'true';
+                  }
+                }
+
+                document.querySelectorAll('.sticky-cart .custom-select-content').forEach((menu) => {
+                  if (menu.querySelector('.fs-sticky-size-guide')) return;
+                  const guideButton = document.createElement('button');
+                  guideButton.type = 'button';
+                  guideButton.className = 'fs-sticky-size-guide';
+                  guideButton.textContent = 'What’s my size?';
+                  guideButton.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    fsOpenSizeHelp();
+                  });
+                  menu.prepend(guideButton);
+                });
+
+                document.querySelectorAll('.sticky-cart .custom-select-button').forEach((button) => {
+                  if (!button.hasAttribute('role')) button.setAttribute('role', 'button');
+                  if (!button.hasAttribute('tabindex')) button.setAttribute('tabindex', '0');
+                  if (!button.hasAttribute('aria-label')) button.setAttribute('aria-label', 'Choose a size');
+                });
+
+                const chooseSize = document.querySelector('[data-fs-pdp-choose-size]');
+                if (chooseSize && !chooseSize.dataset.bound) {
+                  chooseSize.dataset.bound = 'true';
+                  chooseSize.addEventListener('click', () => {
+                    const sizePicker = productContent.querySelector('.product-variants-options');
+                    (sizePicker || productContent).scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    window.setTimeout(() => {
+                      const sizeControl = productContent.querySelector('.custom-select-button, input[name^="option"]');
+                      if (sizeControl) sizeControl.focus({ preventScroll: true });
+                    }, 450);
+                  });
+                }
+              };
+
+              const fsQueueProductEnhance = () => {
+                if (fsProductEnhanceQueued) return;
+                fsProductEnhanceQueued = true;
+                window.requestAnimationFrame(fsEnhanceProduct);
+              };
+
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', fsEnhanceProduct, { once: true });
+              } else {
+                fsEnhanceProduct();
+              }
+              document.addEventListener('shopify:section:load', fsQueueProductEnhance);
+              new MutationObserver(fsQueueProductEnhance).observe(document.documentElement, { childList: true, subtree: true });
+            })();
+          </script>
+        {% endif %}
         <div class="custom-footer-group">  
         {% sections 'footer-group' %}
         </div>
