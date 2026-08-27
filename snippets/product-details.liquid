@@ -24,7 +24,7 @@
           href="{{ product.url }}"
           {{ block.shopify_attributes }}
         >
-          {{- product.title | strip_html -}}
+          {{- fs_display_title | strip_html -}}
         </a>
       {% else %}
         <{{block.settings.seo_heading}} class="product-title-heading {{block.settings.heading_size}} heading-font" {{ block.shopify_attributes }}>
