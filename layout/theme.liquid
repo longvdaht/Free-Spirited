@@ -38,6 +38,31 @@
 
 <script async src="https://session.frauddeflect.net/static/v4.10195.js" charset="utf-8"></script>
 
+      <style id="fs-cro-release-2026-08-27">
+        .product-full-price,
+        .product-price-group .product-full-price,
+        .fs-card-price-line .product-full-price,
+        .sticky-cart .product-full-price {
+          text-decoration: none !important;
+        }
+        @media (max-width: 767px) {
+          .jdgm-revs-tab-btn,
+          .privy-tab-container,
+          .pushowl-simple-toast {
+            display: none !important;
+          }
+          .main-product-image-slider [id^="productMedia"] .media-box {
+            --image-ratio: 75% !important;
+          }
+          .main-product-image-slider [id^="productMedia"] .media-box > img {
+            object-fit: contain !important;
+          }
+          .main-product-content {
+            padding-top: 12px !important;
+          }
+        }
+      </style>
+
     </head>
     <body class="{{ settings.other_layout }} button-hover-{{ settings.button_hover_effect }}{% if settings.enable_animation %} animation-on{% endif %}">
       {% if template contains 'cart' %}
@@ -114,7 +139,7 @@
       "name": "How do I get a refund?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We refund memberships whenever there’s confusion — no questions asked. Just contact us and we’ll make it right."
+        "text": "We refund Club membership charges whenever there’s confusion — no questions asked. Just contact us and we’ll make it right."
       }
     },
     {
