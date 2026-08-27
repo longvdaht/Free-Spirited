@@ -716,7 +716,42 @@
                   if (!button.hasAttribute('role')) button.setAttribute('role', 'button');
                   if (!button.hasAttribute('tabindex')) button.setAttribute('tabindex', '0');
                   if (!button.hasAttribute('aria-label')) button.setAttribute('aria-label', 'Choose a size');
+                  if (!button.hasAttribute('aria-expanded')) button.setAttribute('aria-expanded', 'false');
+                  if (!button.dataset.fsStickyBound) {
+                    button.dataset.fsStickyBound = 'true';
+                    button.addEventListener('click', (event) => {
+                      event.preventDefault();
+                      event.stopImmediatePropagation();
+                      const menu = button.parentElement && button.parentElement.querySelector('.custom-select-content');
+                      if (!menu) return;
+                      const shouldOpen = window.getComputedStyle(menu).display === 'none';
+                      document.querySelectorAll('.sticky-cart .custom-select-content').forEach((otherMenu) => {
+                        if (otherMenu !== menu) otherMenu.style.display = 'none';
+                      });
+                      menu.style.display = shouldOpen ? 'block' : 'none';
+                      button.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+                    }, true);
+                    button.addEventListener('keydown', (event) => {
+                      if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        button.click();
+                      }
+                    });
+                  }
                 });
+
+                if (!document.documentElement.dataset.fsStickyOutsideBound) {
+                  document.documentElement.dataset.fsStickyOutsideBound = 'true';
+                  document.addEventListener('click', (event) => {
+                    if (event.target.closest('.sticky-cart .custom-select')) return;
+                    document.querySelectorAll('.sticky-cart .custom-select-content').forEach((menu) => {
+                      menu.style.display = 'none';
+                    });
+                    document.querySelectorAll('.sticky-cart .custom-select-button').forEach((button) => {
+                      button.setAttribute('aria-expanded', 'false');
+                    });
+                  });
+                }
 
                 const chooseSize = document.querySelector('[data-fs-pdp-choose-size]');
                 if (chooseSize && !chooseSize.dataset.bound) {
