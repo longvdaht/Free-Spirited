@@ -563,3 +563,27 @@ footer {
         border-radius: 14px;
     }
 }
+
+
+/* Keep footer content clear of the fixed offer and review tabs. */
+@media (min-width: 768px) {
+    .footer-main > .container,
+    .footer-main .fs-footer-trust > .container,
+    .footer-main .footer-bottom > .container {
+        padding-left: 56px;
+        padding-right: 56px;
+    }
+}
+
+/* Make the policy row easy to read. */
+.footer-secondary-bar {
+    background: #003f56 !important;
+    color: #ffffff !important;
+}
+
+.footer-secondary-bar a,
+.footer-secondary-bar .footer-policies-link,
+.footer-secondary-bar .footer-secondary-copyright {
+    color: #ffffff !important;
+    opacity: 0.92;
+}
