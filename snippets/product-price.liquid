@@ -127,6 +127,14 @@ endif
     data-actual-price
   >{% if has_insider_price %}{{ insider_money }}{% else %}{{ money_price }}{% endif %}</span>
 
+  {%- if sticky != true -%}
+    <a
+      class="fs-insider-explainer-link{% unless has_insider_price %} hidden{% endunless %}"
+      href="/pages/free-spirited-insider-membership"
+      aria-label="Learn how the Free Spirited Insiders Club works"
+    >What's the Insiders Club?</a>
+  {%- endif -%}
+
   <span
     class="product-compare-price product-full-price fs-labeled-price {% if sticky != true %}h6{% endif %}{% unless has_insider_price %} hidden{% endunless %}"
     data-price-label="Full price"
