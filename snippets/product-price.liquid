@@ -127,7 +127,12 @@ endif
     data-actual-price
   >{% if has_insider_price %}{{ insider_money }}{% else %}{{ money_price }}{% endif %}</span>
 
-.fs-insider-explainer-link { align-self: center; margin: 0 .65rem 0 .15rem; font-size: .78rem; line-height: 1.2; font-weight: 700; color: inherit; text-decoration: underline; text-underline-offset: .16em; white-space: nowrap; }  <span
+      .fs-insider-price-terms { display: block; flex-basis: 100%; width: 100%; margin-top: .48rem; line-height: 1.4; }
+      @media (max-width: 480px) {
+        .fs-insider-benefits-card { padding: .68rem .72rem; }
+        .fs-insider-benefits-card__copy strong { font-size: .86rem; }
+        .fs-insider-benefits-card__copy small { font-size: .68rem; }
+      }  <span
     class="product-compare-price product-full-price fs-labeled-price {% if sticky != true %}h6{% endif %}{% unless has_insider_price %} hidden{% endunless %}"
     data-price-label="Full price"
     data-full-price
