@@ -724,7 +724,7 @@
                       event.stopImmediatePropagation();
                       const menu = button.parentElement && button.parentElement.querySelector('.custom-select-content');
                       if (!menu) return;
-                      const shouldOpen = window.getComputedStyle(menu).display === 'none';
+                      const shouldOpen = button.getAttribute('aria-expanded') !== 'true';
                       document.querySelectorAll('.sticky-cart .custom-select-content').forEach((otherMenu) => {
                         if (otherMenu !== menu) otherMenu.style.display = 'none';
                       });
