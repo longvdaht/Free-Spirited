@@ -36,7 +36,7 @@
         "highlighted_color": "#eff341",
         "desc_color": "#ffffff",
         "overlay_color": "#000000",
-        "overlay_opacity": 10,
+        "overlay_opacity": 25,
         "btn_bg_color": "{{ shop.brand.colors.primary[1].background }}",
         "btn_text_color": "#ffffff",
         "btn_border_color": "#adcc0d",
@@ -209,28 +209,22 @@
         }
       },
       "block_order": [
-        "collection_CWQqxE",
         "collection_hqF69A",
-        "collection_qbg7qb",
         "collection_Y6jk3b",
         "collection_A3gREr",
-        "collection_jWnHjF",
         "collection_mDbqYg",
-        "collection_tcCAzm",
-        "collection_bayHXV",
-        "collection_dL3TeX",
-        "collection_z6cMjx",
-        "collection_cYkTf6"
+        "collection_jWnHjF",
+        "collection_qbg7qb"
       ],
       "settings": {
         "section_visibility": "always",
         "make_section_rounded": false,
-        "heading": "",
+        "heading": "Shop by Style",
         "heading_size": "h3",
-        "seo_heading": "h3",
+        "seo_heading": "h2",
         "heading_alignment": "text-center",
         "column_style": "rounded",
-        "desktop_column_count": 8,
+        "desktop_column_count": 6,
         "desktop_column_gap": 20,
         "desktop_column_width": "65%",
         "card_hover_style": "inside-shadow",
@@ -241,10 +235,10 @@
         "color_scheme": "",
         "highlighted_color": "#eff341",
         "section_background": "",
-        "top_space_desktop": 40,
-        "bottom_space_desktop": 35,
-        "top_space_mobile": 35,
-        "bottom_space_mobile": 35
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "image_with_text_9XaJWE": {
@@ -372,7 +366,8 @@
         "bottom_space_desktop": 70,
         "top_space_mobile": 50,
         "bottom_space_mobile": 0
-      }
+      },
+      "disabled": true
     },
     "contact_form_jDtGJb": {
       "type": "contact-form",
@@ -392,7 +387,8 @@
         "bottom_space_desktop": 0,
         "top_space_mobile": 0,
         "bottom_space_mobile": 0
-      }
+      },
+      "disabled": true
     },
     "marquee_pN3iRh": {
       "type": "marquee",
@@ -400,12 +396,12 @@
         "text_x9zETJ": {
           "type": "text",
           "settings": {
-            "text": "FREE SHIPPING ON ORDERS OVER $50",
+            "text": "HAND-DYED IN SMALL BATCHES • FREE U.S. SHIPPING ON ORDERS $50+",
             "text_gap": 50,
             "text_style": "outline-filled",
             "font_family": "heading",
-            "desktop_font": 28,
-            "mobile_font": 28,
+            "desktop_font": 22,
+            "mobile_font": 18,
             "outline_thickness": 2,
             "color": "#fb76ff",
             "outline_color": "#000000",
@@ -418,12 +414,12 @@
         "text_N8JKgE": {
           "type": "text",
           "settings": {
-            "text": "INSIDER PRICING FROM JUST $12 • DESIGNER-QUALITY HAND-DYED TIE DYE",
+            "text": "INSIDER PRICING OR FULL PRICE — YOU CHOOSE IN THE CART",
             "text_gap": 50,
             "text_style": "outline-filled",
             "font_family": "heading",
-            "desktop_font": 28,
-            "mobile_font": 28,
+            "desktop_font": 22,
+            "mobile_font": 18,
             "outline_thickness": 2,
             "color": "#adcc0d",
             "outline_color": "#000000",
@@ -570,7 +566,8 @@
         "bottom_space_desktop": 70,
         "top_space_mobile": 50,
         "bottom_space_mobile": 50
-      }
+      },
+      "disabled": true
     },
     "image_with_text_VQAMAA": {
       "type": "image-with-text",
@@ -578,7 +575,7 @@
         "heading_pNnCWK": {
           "type": "heading",
           "settings": {
-            "heading": "Every shirt is dyed by hand.",
+            "heading": "Hand-dyed. Pre-washed. Made to stand out.",
             "heading_size": "h2",
             "seo_heading": "h2",
             "highlighted_color": "#eff341"
@@ -587,7 +584,7 @@
         "text_eAfPRL": {
           "type": "text",
           "settings": {
-            "text": "<p>See exactly how we make your shirt, from hand-dyeing to pre-washing to your doorstep.</p>",
+            "text": "<p>Every shirt is dyed by hand, so yours is genuinely one of a kind. See how we create the color, softness, and quality Free Spirited customers love.</p>",
             "text_size": "medium"
           }
         },
@@ -595,7 +592,7 @@
           "type": "button",
           "settings": {
             "button_style_1": "solid",
-            "btn_text": "See how it's made.",
+            "btn_text": "See How It’s Made",
             "btn_url": "shopify://pages/how-we-make-your-shirt",
             "btn_size": "regular",
             "button_style_2": "solid",
