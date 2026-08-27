@@ -168,9 +168,13 @@
           /* A true mobile purchase bar: price + selected size + clear action. */
           .sticky-cart.show {
             display: grid !important;
+            height: auto !important;
+            min-height: 66px;
+            max-height: 86px;
             grid-template-columns: minmax(88px, .75fr) minmax(190px, 1.55fr);
             gap: 10px;
             align-items: center;
+            overflow: visible !important;
             padding: 9px 10px calc(9px + env(safe-area-inset-bottom));
             background: #fff;
             border-top: 1px solid rgba(0, 0, 0, .12);
@@ -186,9 +190,20 @@
           .sticky-cart .sticky-cart-detail {
             min-width: 0;
             margin: 0;
+            height: auto !important;
+            min-height: 0 !important;
           }
           .sticky-cart .sticky-cart-info {
             min-width: 0;
+            height: auto !important;
+            min-height: 0 !important;
+          }
+          .sticky-cart .product-pricing {
+            height: auto !important;
+            min-height: 0 !important;
+          }
+          .sticky-cart .product-pricing > div[style*="monospace"] {
+            display: none !important;
           }
           .sticky-cart .product-price-group {
             display: block;
