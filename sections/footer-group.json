@@ -14,48 +14,54 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "182bb80a-c709-4de9-b7be-ed06ace866d5": {
-          "type": "link_list",
-          "disabled": true,
-          "settings": {
-            "heading": "",
-            "menu": "main-menu"
-          }
-        },
-        "8c648525-39b2-4d08-a5aa-1af6a1138ba4": {
+        "shop_links": {
           "type": "link_list",
           "settings": {
-            "heading": "",
-            "menu": "footer"
+            "heading": "Shop",
+            "menu": "footer-shop"
           }
         },
-        "text_fMmz4b": {
-          "type": "text",
+        "insider_links": {
+          "type": "link_list",
           "settings": {
-            "image_url": "",
-            "description": "",
-            "show_social": true
+            "heading": "Insiders",
+            "menu": "footer-insiders"
           }
         },
-        "text_4V6QGa": {
-          "type": "text",
+        "help_links": {
+          "type": "link_list",
           "settings": {
-            "image_url": "",
-            "description": "",
-            "show_social": true
+            "heading": "Help",
+            "menu": "footer-help"
+          }
+        },
+        "about_links": {
+          "type": "link_list",
+          "settings": {
+            "heading": "About",
+            "menu": "footer-about"
+          }
+        },
+        "newsletter_cta": {
+          "type": "newsletter",
+          "settings": {
+            "heading": "Get colorful updates",
+            "description": "New drops, restocks, limited editions, and Insider offers—straight to your inbox.",
+            "placeholder": "Email address"
           }
         }
       },
       "block_order": [
-        "182bb80a-c709-4de9-b7be-ed06ace866d5",
-        "8c648525-39b2-4d08-a5aa-1af6a1138ba4",
-        "text_fMmz4b",
-        "text_4V6QGa"
+        "shop_links",
+        "insider_links",
+        "help_links",
+        "about_links",
+        "newsletter_cta"
       ],
       "settings": {
         "image": "shopify://shop_images/Free_Spirited_Co_WHITE_STACKED_22511950-d2ee-47b2-a174-0d13beca92f2.png",
         "image_width": 120,
-        "show_social": false,
+        "show_social": true,
         "enable_follow_on_shop": false,
         "make_section_rounded": false,
         "menu_style": "accordion",
