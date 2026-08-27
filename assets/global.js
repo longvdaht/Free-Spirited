@@ -888,7 +888,22 @@ function checkShippingAvailablity() {
     }
 }
 
+function fsShippingTotal(fallbackTotal) {
+    var mode = (window.FS_INSIDER && window.FS_INSIDER.mode) || 'insider';
+    if (mode !== 'insider') return fallbackTotal;
+
+    // Scoped to the footer on purpose. That block is replaced on every cart
+    // update, so its value is current; anything outside it is not re-rendered
+    // and would go stale after a quantity change.
+    var el = document.querySelector('[data-cart-drawer-footer] [data-insider-total]');
+    if (!el) return fallbackTotal;
+
+    var insiderTotal = parseInt(el.getAttribute('data-insider-total'), 10);
+    return isNaN(insiderTotal) ? fallbackTotal : insiderTotal;
+}
+
 function freeShippingBar(totalPrice, itemCount) {
+    totalPrice = fsShippingTotal(totalPrice);
     let shippingCountryAvailable = checkShippingAvailablity();
       console.log("shippingCountryAvailable",shippingCountryAvailable)
   
