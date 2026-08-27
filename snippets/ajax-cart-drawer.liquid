@@ -203,6 +203,9 @@
                 {%- for item in cart.items -%}
                   {% liquid
                     assign isGiftWrapProduct = false
+                    assign fs_item_display_title = item.product.title
+                    assign fs_item_display_title = fs_item_display_title | replace: ' Premium Hand-Dyed Comfort Shirt', ' Hand-Dyed Tee'
+                    assign fs_item_display_title = fs_item_display_title | replace: ' Hand-Dyed Comfort Shirt', ' Hand-Dyed Tee'
                     if item.product_id == settings.gift_wrap_product.id and settings.enable_gift_wrap
                       assign giftWrapProductStatus = true
                       assign isGiftWrapProduct = true
@@ -233,10 +236,10 @@
                     <div class="cart-product-item-info">
                       <a
                         href="{{ item.url }}"
-                        aria-label="{{ item.product.title | strip_html }}"
+                        aria-label="{{ fs_item_display_title | strip_html }}"
                         class="product-title {{ settings.font_type }}-font"
                       >
-                        {{- item.product.title | strip_html -}}
+                        {{- fs_item_display_title | strip_html -}}
                       </a>
                       {% if item.product.has_only_default_variant == false
                         or item.selling_plan_allocation != null
