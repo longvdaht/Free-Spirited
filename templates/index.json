@@ -759,7 +759,8 @@
         "bottom_space_desktop": 40,
         "top_space_mobile": 35,
         "bottom_space_mobile": 35
-      }
+      },
+      "disabled": true
     },
     "slideshow_gDt9P8": {
       "type": "slideshow",
@@ -832,7 +833,8 @@
         "bottom_space_desktop": 0,
         "top_space_mobile": 0,
         "bottom_space_mobile": 0
-      }
+      },
+      "disabled": true
     },
     "before_after_image_xqYfhj": {
       "type": "before-after-image",
@@ -966,7 +968,8 @@
         "bottom_space_desktop": 25,
         "top_space_mobile": 35,
         "bottom_space_mobile": 35
-      }
+      },
+      "disabled": true
     },
     "image_with_text_8FdfUm": {
       "type": "image-with-text",
@@ -1240,7 +1243,8 @@
         "bottom_space_desktop": 40,
         "top_space_mobile": 35,
         "bottom_space_mobile": 35
-      }
+      },
+      "disabled": true
     },
     "images_carousel_8hp8Yk": {
       "type": "images-carousel",
@@ -1445,7 +1449,8 @@
         "bottom_space_desktop": 40,
         "top_space_mobile": 35,
         "bottom_space_mobile": 35
-      }
+      },
+      "disabled": true
     },
     "collapsible_content_WLFhP6": {
       "type": "collapsible-content",
@@ -1460,15 +1465,15 @@
         "content_g6G89R": {
           "type": "content",
           "settings": {
-            "heading": "What are the benefits of becoming an Insider?",
-            "content": "<p>As an Insider, you'll receive a $30 monthly credit, exclusive discounts of up to 60% off, access to limited-edition designs, $5 Tee of the Month deals, early access to new collections, free shipping code in your member portal, and priority support</p>"
+            "heading": "What are the benefits of the Free Spirited Insiders Club?",
+            "content": "<p>Club members receive a $30 monthly credit, our lowest Insider Pricing, early access to new drops, special offers, priority support, and a free U.S. shipping code in the member portal for future eligible orders.</p>"
           }
         },
         "content_8wVekt": {
           "type": "content",
           "settings": {
-            "heading": "How do I join the Free Spirited Insiders membership?",
-            "content": "<p>Joining is easy! Simply click <a href=\"/products/free-spirited-insiders\" title=\"Free Spirited Insiders\"><strong>“Join Now</strong></a><strong>” </strong>on our website and sign up to enjoy exclusive benefits like early access to new designs, members-only discounts, and your monthly member credit.</p>"
+            "heading": "How do I join the Free Spirited Insiders Club?",
+            "content": "<p>Choose Insider Pricing in the cart or <a href=\"/products/free-spirited-insiders\" title=\"Free Spirited Insiders Club\"><strong>join the Club directly</strong></a>. Insider Pricing includes a 21-day Club trial; after that, recurring Club membership is $24.95/month plus applicable taxes unless canceled.</p>"
           }
         },
         "content_FHkFKA": {
@@ -1546,24 +1551,19 @@
         "content_DeJHiW",
         "content_g6G89R",
         "content_8wVekt",
+        "content_wLzhNq",
         "content_FHkFKA",
         "content_BmjRic",
         "content_3rekQA",
-        "content_UJC66F",
-        "content_wLzhNq",
-        "content_hUnJgU",
-        "content_z9dWYL",
-        "content_R8f4Tx",
-        "content_C4CDfi",
-        "content_gDe66p"
+        "content_hUnJgU"
       ],
       "settings": {
         "section_visibility": "always",
         "make_section_rounded": false,
         "show_first_default": true,
-        "heading": "FREQUENTLY ASKED QUESTIONS",
-        "heading_size": "h5",
-        "seo_heading": "h4",
+        "heading": "Questions Before You Order?",
+        "heading_size": "h3",
+        "seo_heading": "h2",
         "heading_alignment": "text-center",
         "color_scheme": "",
         "highlighted_color": "#eff341",
@@ -1580,8 +1580,8 @@
         "section_visibility": "always",
         "make_section_rounded": false,
         "newsletter_background": false,
-        "heading": "Join our newsletter",
-        "heading_size": "h2",
+        "heading": "Get First Dibs on New Drops",
+        "heading_size": "h3",
         "seo_heading": "h2",
         "placeholder": "",
         "content_alignment": "text-center",
@@ -1591,10 +1591,10 @@
         "highlighted_color": "#eff341",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 0.5,
-        "top_space_desktop": 100,
-        "bottom_space_desktop": 100,
-        "top_space_mobile": 50,
-        "bottom_space_mobile": 50
+        "top_space_desktop": 70,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 40
       }
     },
     "featured_blog_d6eGcb": {
@@ -1623,34 +1623,35 @@
         "bottom_space_desktop": 60,
         "top_space_mobile": 40,
         "bottom_space_mobile": 40
-      }
+      },
+      "disabled": true
     }
   },
   "order": [
     "media_banner_kJd6pg",
-    "slideshow_JyCYWp",
+    "marquee_pN3iRh",
+    "featured_collection_jKwNRg",
     "categories_AwydGQ",
+    "image_with_text_VQAMAA",
+    "before_after_image_xqYfhj",
+    "1730999833cf34f07b",
+    "image_with_text_n34CeF",
+    "image_with_text_9Naqky",
+    "collapsible_content_WLFhP6",
+    "newsletter_DcBcMy",
+    "slideshow_JyCYWp",
     "image_with_text_9XaJWE",
     "image_with_text_HR7n83",
     "contact_form_jDtGJb",
-    "marquee_pN3iRh",
-    "image_with_text_n34CeF",
     "image_with_text_x6fGRw",
-    "image_with_text_VQAMAA",
-    "1730999833cf34f07b",
     "collection_carousel_KVtjcD",
     "slideshow_gDt9P8",
-    "before_after_image_xqYfhj",
     "custom_liquid_PcMnFE",
-    "featured_collection_jKwNRg",
     "video_rKTtkk",
     "image_with_text_8FdfUm",
-    "image_with_text_9Naqky",
     "logo_list_Hmn4kX",
     "images_carousel_8hp8Yk",
     "multicolumn_EtRVFd",
-    "collapsible_content_WLFhP6",
-    "newsletter_DcBcMy",
     "featured_blog_d6eGcb"
   ]
 }
