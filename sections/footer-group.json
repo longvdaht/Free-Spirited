@@ -65,11 +65,11 @@
         "enable_follow_on_shop": false,
         "make_section_rounded": false,
         "menu_style": "accordion",
-        "open_menu_mobile": true,
+        "open_menu_mobile": false,
         "enable_language_selector": true,
         "enable_currency_selector": true,
         "payment_enable": true,
-        "hide_copyright_content": true,
+        "hide_copyright_content": false,
         "custom_copyright_content": "",
         "top_space_desktop": 0,
         "bottom_space_desktop": 0,
@@ -83,7 +83,7 @@
     "footer-policies": {
       "type": "footer-policies",
       "settings": {
-        "show_policies": false,
+        "show_policies": true,
         "show_copyright": false,
         "custom_copyright_content": ""
       }
