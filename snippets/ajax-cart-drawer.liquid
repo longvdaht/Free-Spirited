@@ -749,7 +749,15 @@
                   {%- endfor -%}
                 {%- endif -%}
 
-                <div class="cart-summary-price-item">
+                {%- assign insider_savings = cart.original_total_price | minus: insider_total -%}
+                {%- if mode == 'insider' and insider_savings > 0 -%}
+                  <div class="cart-summary-price-item fs-insider-savings-row">
+                    <h6 class="text cart-summary-price-title">You save with Insider</h6>
+                    <h6 class="text-medium cart-summary-price-amount">&minus;{{ insider_savings | money }}</h6>
+                  </div>
+                {%- endif -%}
+
+                <div class="cart-summary-price-item fs-cart-subtotal-row">
                   <h6 class="text cart-summary-price-title">{{ 'sections.cart.subtotal' | t }}</h6>
                   <h6 class="text-medium cart-summary-price-amount"
                       data-cart-subtotal
