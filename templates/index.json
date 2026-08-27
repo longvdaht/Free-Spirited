@@ -134,7 +134,7 @@
           "type": "collection",
           "settings": {
             "collection": "new-arrivals",
-            "heading": ""
+            "heading": "New Arrivals"
           }
         },
         "collection_qbg7qb": {
@@ -162,7 +162,7 @@
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-hoodie",
-            "heading": ""
+            "heading": "Hoodies"
           }
         },
         "collection_mDbqYg": {
