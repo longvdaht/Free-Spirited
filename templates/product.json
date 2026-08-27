@@ -500,6 +500,7 @@
       }
     },
     "collapsible_content_BTNAaz": {
+      "disabled": true,
       "type": "collapsible-content",
       "blocks": {
         "content_DkJCN7": {
@@ -595,6 +596,7 @@
       }
     },
     "collection_list_VeDAfC": {
+      "disabled": true,
       "type": "collection-list",
       "blocks": {
         "collection_9qcCcx": {
@@ -736,6 +738,7 @@
       }
     },
     "images_carousel_eYEm88": {
+      "disabled": true,
       "type": "images-carousel",
       "blocks": {
         "image_QGY8yh": {
