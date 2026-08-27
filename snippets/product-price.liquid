@@ -156,7 +156,12 @@ endif
       .fs-insider-benefits-card__arrow { align-items: center; background: #b6d500; border-radius: 50%; color: #142126; display: inline-flex; flex: 0 0 auto; font-size: 1rem; font-weight: 900; height: 2rem; justify-content: center; width: 2rem; }
       .fs-insider-benefits-card:hover { border-color: #057b9f; box-shadow: 0 6px 18px rgba(5, 91, 119, .11); transform: translateY(-1px); }
       .product-price-group[data-has-insider="false"] .fs-insider-benefits-card { display: none; }
-      .fs-insider-price-terms { display: block; flex-basis: 100%; width: 100%; margin-top: .45rem; line-height: 1.45; }
+      .fs-insider-price-terms { display: block; flex-basis: 100%; width: 100%; margin-top: .48rem; line-height: 1.4; }
+      @media (max-width: 480px) {
+        .fs-insider-benefits-card { padding: .68rem .72rem; }
+        .fs-insider-benefits-card__copy strong { font-size: .86rem; }
+        .fs-insider-benefits-card__copy small { font-size: .68rem; }
+      }
     </style>
   {%- endif -%}
 </div>
