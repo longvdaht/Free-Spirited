@@ -681,7 +681,7 @@
                   const average = Number(ratingBadge.dataset.averageRating || 0);
                   const reviews = Number(ratingBadge.dataset.numberOfReviews || 0);
                   if (average > 0 && reviews > 0) {
-                    ratingOutput.textContent = `★★★★★ $${average.toFixed(1)} from $${reviews.toLocaleString()} verified reviews`;
+                    ratingOutput.textContent = '★★★★★ ' + average.toFixed(1) + ' from ' + reviews.toLocaleString() + ' verified reviews';
                     ratingOutput.style.display = 'block';
                     ratingOutput.dataset.hydrated = 'true';
                   }
