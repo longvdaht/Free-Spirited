@@ -418,7 +418,9 @@
                       "arrows": true
                     }'
                   >
-                    {%- for item in settings.recomded_products limit: 1 -%}
+                    {%- assign fs_cart_product_ids = cart.items | map: 'product_id' %}
+                    {%- for item in settings.recomded_products -%}
+                      {% unless fs_cart_product_ids contains item.id -%}
                       <div class="cart-recomdations-item" id="cart-recomdations-item-{{ forloop.index }}">
                         <div class="cart-recomdations-item-inner">
                           <a href="{{ item.url }}" class="cart-recomdations-item-image">
@@ -596,6 +598,8 @@
                           </div>
                         </div>
                       </div>
+                      {% break %}
+                      {% endunless %}
                     {% endfor %}
                   </div>
                 {% endif %}
