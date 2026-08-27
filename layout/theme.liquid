@@ -572,7 +572,15 @@
         }
       </style>
 
-    </head>
+    <style id="fs-render-speed">
+  @supports (content-visibility: auto) {
+    .fs-ugc-proof, .fs-pdp-ugc {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 1100px;
+    }
+  }
+</style>
+</head>
     <body class="{{ settings.other_layout }} button-hover-{{ settings.button_hover_effect }}{% if settings.enable_animation %} animation-on{% endif %}">
       {% if template contains 'cart' %}
         <h1 class="visually-hidden" style="display: none">Cart</h1>
