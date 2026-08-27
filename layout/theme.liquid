@@ -707,6 +707,8 @@
                     event.preventDefault();
                     event.stopPropagation();
                     menu.style.display = 'none';
+                    const stickyButton = menu.parentElement && menu.parentElement.querySelector('.custom-select-button');
+                    if (stickyButton) stickyButton.setAttribute('aria-expanded', 'false');
                     fsOpenSizeHelp();
                   });
                   menu.prepend(guideButton);
