@@ -175,8 +175,8 @@
         "desktop_grid_image_size": "auto",
         "image_zoom": "lightbox",
         "enable_sticky_cart": true,
-        "thumbnial_on_mobile": true,
-        "mobile_grid_image_size": "auto",
+        "thumbnial_on_mobile": false,
+        "mobile_grid_image_size": "landscape",
         "color_scheme": "",
         "top_space_desktop": 0,
         "bottom_space_desktop": 35,
@@ -938,7 +938,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "What Happens After I Sign Up?",
-            "content": "<ul><li>Once you join, you’ll immediately start receiving all member benefits, including access to exclusive products and discounts. You’ll also receive a personalized welcome email with tips on how to maximize your membership.</li></ul>"
+            "content": "<ul><li>Once you join the Club, your benefits begin right away. You’ll receive a welcome email explaining how to use your monthly credit, member portal, and other Club perks.</li></ul>"
           }
         },
         "collapsible_tab_AAHGpr": {

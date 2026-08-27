@@ -156,9 +156,9 @@
       "settings": {
         "section_visibility": "always",
         "make_section_rounded": false,
-        "heading": "",
-        "heading_size": "h6",
-        "seo_heading": "h6",
+        "heading": "Keep Exploring",
+        "heading_size": "h4",
+        "seo_heading": "h2",
         "heading_alignment": "text-center",
         "column_style": "rounded",
         "desktop_column_count": 6,
@@ -238,11 +238,11 @@
     }
   },
   "order": [
-    "breadcrumb_CA79zc",
-    "countdown_wGcfkg",
-    "categories_9UpaFm",
     "main-collection-banner",
     "main-collection",
-    "read_more_description_fVWYVM"
+    "categories_9UpaFm",
+    "read_more_description_fVWYVM",
+    "breadcrumb_CA79zc",
+    "countdown_wGcfkg"
   ]
 }
