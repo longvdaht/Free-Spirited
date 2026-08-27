@@ -98,7 +98,7 @@
           "type": "button",
           "settings": {
             "button_style": "solid",
-            "text": "SHOP FREE SPIRITED CO",
+            "text": "SHOP Free Spirited Clothing",
             "link": "shopify://collections/all",
             "button_size": "small"
           }
@@ -161,7 +161,7 @@
           "type": "button",
           "settings": {
             "button_style_1": "solid",
-            "btn_text": "Shop Free Spirited Co",
+            "btn_text": "Shop Free Spirited Clothing",
             "btn_url": "shopify://collections/all",
             "btn_size": "small",
             "button_style_2": "solid",
@@ -409,14 +409,14 @@
         "text_Y8EPnX": {
           "type": "text",
           "settings": {
-            "text": "<p>When you shop Free Spirited Co. You know you're in good hands.</p>"
+            "text": "<p>When you shop Free Spirited Clothing. You know you're in good hands.</p>"
           }
         },
         "button_Rkf69e": {
           "type": "button",
           "settings": {
             "button_style": "solid",
-            "text": "Shop Free Spirited Co",
+            "text": "Shop Free Spirited Clothing",
             "link": "shopify://collections/all",
             "button_size": "medium"
           }
@@ -682,14 +682,14 @@
         "text_XDmY8G": {
           "type": "text",
           "settings": {
-            "text": "<p>Know the difference when you feel our unique textures, with exceptional breathability, made with quality fabrics. Only at Free Spirited Co.</p>"
+            "text": "<p>Know the difference when you feel our unique textures, with exceptional breathability, made with quality fabrics. Only at Free Spirited Clothing.</p>"
           }
         },
         "button_KUarmA": {
           "type": "button",
           "settings": {
             "button_style": "solid",
-            "text": "Shop Free Spirited Co",
+            "text": "Shop Free Spirited Clothing",
             "link": "shopify://collections/all",
             "button_size": "medium"
           }
