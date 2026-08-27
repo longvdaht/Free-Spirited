@@ -415,7 +415,7 @@
                       "arrows": true
                     }'
                   >
-                    {%- for item in settings.recomded_products -%}
+                    {%- for item in settings.recomded_products limit: 1 -%}
                       <div class="cart-recomdations-item" id="cart-recomdations-item-{{ forloop.index }}">
                         <div class="cart-recomdations-item-inner">
                           <a href="{{ item.url }}" class="cart-recomdations-item-image">
