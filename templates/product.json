@@ -864,6 +864,7 @@
       }
     },
     "product_details_WGEkdJ": {
+      "disabled": true,
       "type": "product-details",
       "blocks": {
         "collapsible_tab_XxxDNp": {
@@ -988,10 +989,12 @@
       }
     },
     "zp-product-footer-content": {
+      "disabled": true,
       "type": "product-footer-content-zipifypages",
       "settings": {}
     },
     "image_with_text_iWhzie": {
+      "disabled": true,
       "type": "image-with-text",
       "blocks": {
         "subheading_X4pgNY": {
@@ -1059,6 +1062,7 @@
       }
     },
     "1731004931aee2e868": {
+      "disabled": true,
       "type": "apps",
       "blocks": {
         "judge_me_reviews_featured_carousel_T6FyFf": {
