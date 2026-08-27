@@ -583,7 +583,7 @@
         <main id="MainContent" class="main-content focus-none" role="main" tabindex="-1" >
           {{ content_for_layout }} 
         </main>
-        {% if request.page_type == 'product' %}
+        {% if request.page_type == 'product' and template.suffix != 'insider-membership' %}
           <template id="fs-cold-reassurance-template">
             <aside class="fs-cold-reassurance" aria-label="Order reassurance">
               <div class="fs-cold-reassurance__grid">
@@ -613,7 +613,7 @@
                 <p class="fs-pdp-ugc__eyebrow">Real Free Spirited customers</p>
                 <h2 class="fs-pdp-ugc__title" id="fs-pdp-ugc-title">Worn by real people. Made to be noticed.</h2>
                 <p class="fs-pdp-ugc__rating" data-fs-pdp-rating></p>
-                <p class="fs-pdp-ugc__copy">See how Free Spirited shirts look in everyday life—bright, comfortable, and unmistakably personal.</p>
+                <p class="fs-pdp-ugc__copy">See how Free Spirited color looks in everyday life—bright, comfortable, and unmistakably personal.</p>
                 <div class="fs-pdp-ugc__track" aria-label="Real customer photos">
                   <div class="fs-pdp-ugc__card">
                     <img src="https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-1.jpg?v=1787857564&amp;width=700" width="700" height="875" loading="lazy" decoding="async" alt="Real Free Spirited customers wearing colorful hand-dyed shirts">
