@@ -22,10 +22,10 @@
         "banner_title": "The tie-dye people stop you to ask about.",
         "heading_size": "h3",
         "seo_heading": "h1",
-        "banner_desc": "Just $11.95 with Insider Pricing — full details at checkout. Prefer not to join? Choose Full Price in the cart drawer.",
+        "banner_desc": "Hand-dyed in small batches. Unbelievably soft, completely one of a kind, and made to stay vibrant wash after wash.",
         "button_style": "solid",
-        "button_text": "Shop Insider Sale",
-        "button_link": "shopify://collections/twloha",
+        "button_text": "Shop Best Sellers",
+        "button_link": "shopify://collections/shop-sale",
         "button_size": "regular",
         "content_width": "medium",
         "desktop_position": "middle",
@@ -116,7 +116,8 @@
         "bottom_space_desktop": 0,
         "top_space_mobile": 0,
         "bottom_space_mobile": 0
-      }
+      },
+      "disabled": true
     },
     "categories_AwydGQ": {
       "type": "categories",
@@ -140,21 +141,21 @@
           "type": "collection",
           "settings": {
             "collection": "bundle-to-save",
-            "heading": ""
+            "heading": "Bundles"
           }
         },
         "collection_Y6jk3b": {
           "type": "collection",
           "settings": {
             "collection": "tie-dye-shirts",
-            "heading": ""
+            "heading": "Tie-Dye Tees"
           }
         },
         "collection_A3gREr": {
           "type": "collection",
           "settings": {
             "collection": "tank-tops",
-            "heading": ""
+            "heading": "Tank Tops"
           }
         },
         "collection_jWnHjF": {
@@ -168,7 +169,7 @@
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-tie-dye-shirts",
-            "heading": ""
+            "heading": "Long Sleeves"
           }
         },
         "collection_tcCAzm": {
@@ -660,14 +661,14 @@
           "type": "collection",
           "settings": {
             "collection": "tie-dye-shirts",
-            "heading": ""
+            "heading": "Tie-Dye Tees"
           }
         },
         "collection_3iGn4z": {
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-tie-dye-shirts",
-            "heading": ""
+            "heading": "Long Sleeves"
           }
         },
         "collection_KWkCBM": {
@@ -695,7 +696,7 @@
           "type": "collection",
           "settings": {
             "collection": "tank-tops",
-            "heading": ""
+            "heading": "Tank Tops"
           }
         },
         "collection_pp6gFk": {
