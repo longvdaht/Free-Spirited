@@ -606,7 +606,7 @@
           "disabled": true,
           "settings": {
             "heading": "Why are these shirts discounted so much?",
-            "content": "<p>These exclusive prices are only available to Free Spirited Insiders — our members-only community. When you place an order, it includes a <strong>free 21-day trial</strong> of the membership, which renews at <strong>$24.95/month unless canceled</strong>. You can <a href=\"https://insiders.shopfreespirited.com/login?action=CANCEL\" title=\"https://insiders.shopfreespirited.com/login?action=CANCEL\">cancel anytime here.</a></p>"
+            "content": "<p>Choose Insider Pricing for our lowest price and a <strong>21-day Free Spirited Insiders Club trial</strong>. After the trial, recurring Club membership renews at <strong>$24.95/month plus applicable taxes unless canceled</strong>. Prefer a standard one-time purchase? Choose Full Price in the cart drawer. You can <a href=\"https://insiders.shopfreespirited.com/login?action=CANCEL\" title=\"https://insiders.shopfreespirited.com/login?action=CANCEL\">cancel anytime here.</a></p>"
           }
         },
         "content_NrE6rf": {
@@ -1015,7 +1015,7 @@
         "heading": "BECOME AN INSIDER!",
         "heading_size": "h3",
         "seo_heading": "h3",
-        "description": "<p>Unlock Exclusive Perks with Free Spirited Insiders. All offers on our site are for Free Spirited Insiders only. Every purchase includes a 21-day free trial of the membership, which renews at $24.95 per month unless canceled. <a href=\"https://insiders.shopfreespirited.com/login?action=CANCEL\" title=\"https://insiders.shopfreespirited.com/login?action=CANCEL\">Cancel anytime by clicking here.</a></p>",
+        "description": "<p>Choose Insider Pricing to join the Free Spirited Insiders Club and unlock our lowest prices. Insider Pricing includes a 21-day trial, then recurring Club membership at $24.95/month plus applicable taxes unless canceled. Or choose Full Price for a standard one-time purchase. Sitewide promotional discounts apply to both carts unless a specific offer says otherwise. <a href=\"https://insiders.shopfreespirited.com/login?action=CANCEL\" title=\"https://insiders.shopfreespirited.com/login?action=CANCEL\">Cancel anytime by clicking here.</a></p>",
         "content_alignment": "text-center",
         "open_first": false,
         "spec_heading": "Specifications",
