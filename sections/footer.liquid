@@ -2,14 +2,39 @@
 {{ 'footer.css' | asset_url | stylesheet_tag }}
 
 <div class="footer-main {% if section.settings.make_section_rounded %}section-rounded{% endif %}" open-menu-mobile="{{ section.settings.open_menu_mobile }}{% if section.settings.footer_bg_image %} section-container{% endif %}">
+    <div class="fs-footer-trust" aria-label="Why shop Free Spirited">
+      <div class="container">
+        <ul class="fs-footer-trust-list" role="list">
+          <li class="fs-footer-trust-item">Hand-dyed in small batches</li>
+          <li class="fs-footer-trust-item">Free U.S. shipping over $50</li>
+          <li class="fs-footer-trust-item">Easy 30-day returns</li>
+          <li class="fs-footer-trust-item">Real human support</li>
+        </ul>
+      </div>
+    </div>
     {%- if section.blocks.size > 0 -%}
       <div class="container">
+        <div class="fs-footer-intro">
+          {%- if section.settings.image != blank -%}
+            <a href="{{ routes.root_url }}" class="fs-footer-brand" aria-label="{{ shop.name | escape }} home">
+              <img
+                src="{{ section.settings.image | image_url: width: 280 }}"
+                srcset="{{ section.settings.image | image_url: width: 140 }} 1x, {{ section.settings.image | image_url: width: 280 }} 2x"
+                loading="lazy"
+                width="140"
+                height="{{ 140 | divided_by: section.settings.image.aspect_ratio | round }}"
+                alt="{{ section.settings.image.alt | default: shop.name | escape }}"
+              >
+            </a>
+          {%- endif -%}
+          <p class="fs-footer-intro-copy">Hand-dyed color, joyful designs, and real people here to help.</p>
+        </div>
         <div class="footer-top">
           <div class="row">
             {%- for block in section.blocks -%}
               {%- case block.type -%}
                 {%- when 'newsletter' -%}
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4" {{ block.shopify_attributes }}>
+                  <div class="fs-footer-newsletter col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4" {{ block.shopify_attributes }}>
                     <div class="footer-menu newsletter-menu">
                       {%- if block.settings.heading != blank -%}
                         <h3 class="newsletter-menu-heading">{{ block.settings.heading }}</h3>
