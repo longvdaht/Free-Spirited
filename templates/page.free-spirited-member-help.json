@@ -99,8 +99,8 @@
           "type": "button",
           "settings": {
             "button_style": "solid",
-            "text": "Request Membership Refund",
-            "link": "mailto:support@shopfreespirited.com?subject=Membership%20Refund%20Request",
+            "text": "Request a Club Membership Refund",
+            "link": "mailto:support@shopfreespirited.com?subject=Club%20Membership%20Refund%20Request",
             "button_size": "medium"
           }
         },
@@ -108,7 +108,7 @@
           "type": "button",
           "settings": {
             "button_style": "solid",
-            "text": "Cancel Membership Online",
+            "text": "Cancel Club Membership Online",
             "link": "https://insiders.shopfreespirited.com/login?action=CANCEL",
             "button_size": "medium"
           }
@@ -125,7 +125,7 @@
         "text_dTYCxq": {
           "type": "text",
           "settings": {
-            "text": "<p>Need help with your membership, a recent charge, cancellation, or a refund request? Our support team is here to help and make the process clear.<br/><br/>HOW FREE SPIRITED INSIDERS WORKS<br/><br/>Free Spirited Insiders is an optional membership connected to Insider Pricing. When you choose Insider Pricing and accept the membership terms at checkout, your membership begins with a 21-day free trial. After the trial, it renews for $24.95 per month, plus applicable taxes, until canceled.<br/><br/>If you prefer not to join, choose Full Price in the cart drawer. Full Price purchases include no membership, free trial, or recurring membership charge.<br/><br/>INSIDER BENEFITS<br/><br/>• Insider Pricing on eligible products, with savings of up to 60%.<br/>• A $30 monthly Insider credit, subject to the details shown in your member portal.<br/>• Early access to new products and limited-edition designs.<br/>• Member-only promotions, voting, and priority support.<br/><br/>After joining, retrieve your free U.S. shipping code from the member portal for future eligible orders.<br/><br/>Unless a specific offer says otherwise, sitewide promotional discounts—including the current 15% offer—apply to both Insider Pricing carts and Full Price carts.<br/><br/>CANCEL OR REQUEST HELP WITH A CHARGE<br/><br/>You may cancel at any time, including during the 21-day free trial. There is no seven-day advance-cancellation requirement. To prevent the next membership charge, complete your cancellation before that charge is processed.<br/><br/>Use the cancellation button below to log in and cancel online. If you did not intend to enroll, were confused about a membership charge, or believe a charge was made in error, use the refund-request button below. We will review the account promptly and help make it right.<br/><br/>You do not need to return merchandise to cancel a membership.<br/><br/>Other ways to reach us:<br/>Email: support@shopfreespirited.com<br/>Phone: 252-597-9371<br/><br/>Your trust matters to us. If something was unclear or unexpected, please contact our team so we can help resolve it quickly.</p>"
+            "text": "<p>Need help with your Free Spirited Insiders Club membership, a recent charge, cancellation, or a refund request? Our support team is here to help and make the process clear.<br/><br/>HOW THE INSIDERS CLUB WORKS<br/><br/>The Free Spirited Insiders Club is an optional recurring membership connected to Insider Pricing. When you choose Insider Pricing and accept the Club membership terms at checkout, your Club membership begins with a 21-day free trial. After the trial, it renews for $24.95 per month, plus applicable taxes, until canceled.<br/><br/>If you prefer not to join the Club, choose Full Price in the cart drawer. Full Price purchases include no Club membership, free trial, or recurring membership charge.<br/><br/>CLUB BENEFITS<br/><br/>• Insider Pricing on eligible products, with savings of up to 60%.<br/>• A $30 monthly Insider credit, subject to the details shown in your member portal.<br/>• Early access to new products and limited-edition designs.<br/>• Club-only promotions, voting, and priority support.<br/><br/>After joining, retrieve your free U.S. shipping code from the member portal for future eligible orders.<br/><br/>Unless a specific offer says otherwise, sitewide promotional discounts—including the current 15% offer—apply to both Insider Pricing carts and Full Price carts.<br/><br/>CANCEL OR REQUEST HELP WITH A CHARGE<br/><br/>You may cancel at any time, including during the 21-day free trial. There is no seven-day advance-cancellation requirement. To prevent the next Club membership charge, complete your cancellation before that charge is processed.<br/><br/>Use the cancellation button below to log in and cancel online. If you did not intend to enroll, were confused about a Club membership charge, or believe a charge was made in error, use the refund-request button below. We will review the account promptly and help make it right.<br/><br/>You do not need to return merchandise to cancel your Club membership.<br/><br/>Other ways to reach us:<br/>Email: support@shopfreespirited.com<br/>Phone: 252-597-9371<br/><br/>Your trust matters to us. If something was unclear or unexpected, please contact our team so we can help resolve it quickly.</p>"
           }
         }
       },

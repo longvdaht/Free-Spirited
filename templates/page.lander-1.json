@@ -193,7 +193,7 @@
         "subheading_gWktUM": {
           "type": "subheading",
           "settings": {
-            "subheading": "FREE 30-day trial membership to Free Spirited Insiders"
+            "subheading": "FREE 30-day trial to the Free Spirited Insiders Club"
           }
         },
         "heading_ipVajh": {
@@ -405,7 +405,7 @@
         "text_XfJtJ7": {
           "type": "text",
           "settings": {
-            "text": "<p>*Just pay a shipping and<br/>handling fee of ($4.95).*<br/><br/>While supplies last.<br/><br/>If you don’t cancel your Insider membership within the 30-day trial, you’ll be charged for the membership at the regular rate.<br/></p>"
+            "text": "<p>*Just pay a shipping and<br/>handling fee of ($4.95).*<br/><br/>While supplies last.<br/><br/>If you don’t cancel your Club membership within the 30-day trial, you’ll be charged the regular recurring Club membership rate.<br/></p>"
           }
         }
       },
