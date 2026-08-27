@@ -249,6 +249,7 @@
     },
     "slideshow_hV7Eh6": {
       "type": "slideshow",
+      "disabled": true,
       "blocks": {
         "slide_7i6Jcf": {
           "type": "slide",
@@ -368,6 +369,7 @@
     },
     "image_with_text_WPQrbW": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
         "subheading_YzcW7m": {
           "type": "subheading",
@@ -421,6 +423,7 @@
     },
     "image_with_text_AaJaAz": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
         "subheading_BD7Ry8": {
           "type": "subheading",
