@@ -1019,3 +1019,44 @@ body.megamenu-open:after {
         z-index: 6;
     }
 }
+
+/* CRO desktop navigation polish */
+@media (min-width: 992px) {
+    .menu-list {
+        flex-wrap: nowrap;
+    }
+
+    .menu-item {
+        flex: 0 0 auto;
+    }
+
+    .nav-megamenu-container {
+        padding: 26px 0 32px;
+        border-top: 1px solid rgba(0, 0, 0, .08);
+        box-shadow: 0 18px 34px rgba(0, 0, 0, .14);
+    }
+
+    .menu-item.has-children.has-megamenu.full-megamenu .nav-submenu .nav-megamenu-columns {
+        gap: 44px;
+    }
+
+    .megamenu-columns-heading {
+        margin-bottom: 10px;
+        padding-bottom: 9px !important;
+        border-bottom: 2px solid #b4d000;
+        color: #087596 !important;
+        font-size: 15px !important;
+        font-weight: 800;
+        letter-spacing: .01em;
+    }
+
+    .nav-megamenu-inner a {
+        padding: 6px 0 !important;
+        line-height: 1.35;
+        transition: color .15s ease, transform .15s ease;
+    }
+
+    .nav-megamenu-inner a:hover {
+        transform: translateX(2px);
+    }
+}
