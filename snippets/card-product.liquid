@@ -2,6 +2,9 @@
   assign current_variant = cProduct.selected_or_first_available_variant
   assign second_image = ''
   assign price_min = cProduct.price_min | default: 1899 | money
+  assign fs_display_title = cProduct.title
+  assign fs_display_title = fs_display_title | replace: ' Premium Hand-Dyed Comfort Shirt', ' Hand-Dyed Tee'
+  assign fs_display_title = fs_display_title | replace: ' Hand-Dyed Comfort Shirt', ' Hand-Dyed Tee'
 
 
   assign product_url = cProduct.url | within : collection
@@ -133,7 +136,7 @@
 <div class="product-card{% if settings.image_border and settings.product_card_style == 'card' %} product-border-enabled {% endif %}{% if settings.product_card_style == 'card' %} background-enabled {% endif %} {% if optionhide != false and settings.show_inventory or productColorSwatchs != blank and optionhide != false %}option-enabled{% endif %}{% if inventoryCheck  or swatchescheck %}{% if cProduct != blank %} options-hover{% endif %}{% endif %}"
   {% if settings.enable_animation %}{{ animationAttr }} data-aos-easing="ease" data-aos-delay="{{ aosDelay }}"{% endif %} data-product-card {% if inventoryCheck  or swatchescheck %}{% if cProduct != blank %} data-options-hover{% endif %}{% endif %}>
   <div class="product-card-img {% if second_image != blank and onProductHover == true %}hover-image {% endif %} {% if settings.image_border and settings.product_card_style != 'card' %} product-border-enabled {% endif %}">
-    <{% if cProduct != blank %}a href="{{ product_url }}" aria-label="{{ cProduct.title | strip_html }}"{% else %}div{% endif %} class="product-img do-not-change" tabindex="-1" >
+    <{% if cProduct != blank %}a href="{{ product_url }}" aria-label="{{ fs_display_title | strip_html }}"{% else %}div{% endif %} class="product-img do-not-change" tabindex="-1" >
       <div
         class="media-box {% if cProduct.featured_media == blank %} no-product-image {% endif %}"
         style="--image-ratio:{{ productImageRatio }}%"
@@ -283,9 +286,9 @@
           </p>
         {% endif %}
       {% endunless %}
-      <{% if cProduct != blank %}a href="{{ product_url }}" title="{{ cProduct.title | strip_html }}"{% else %}div{% endif %} class="product-title {{ settings.font_type }}-font">
+      <{% if cProduct != blank %}a href="{{ product_url }}" title="{{ fs_display_title | strip_html }}"{% else %}div{% endif %} class="product-title {{ settings.font_type }}-font">
         {% if cProduct.title %}
-          {{- cProduct.title | strip_html -}}
+          {{- fs_display_title | strip_html -}}
         {% else %}
           {{ 'products.product.onboarding.title' | t }}
         {% endif %}
