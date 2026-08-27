@@ -796,6 +796,7 @@
       }
     },
     "custom_liquid_VGAqRM": {
+      "disabled": true,
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
@@ -811,6 +812,7 @@
       }
     },
     "video_Mbewhq": {
+      "disabled": true,
       "type": "video",
       "settings": {
         "section_visibility": "always",
