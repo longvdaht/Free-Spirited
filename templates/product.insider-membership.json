@@ -106,13 +106,13 @@
         "text_HrEDVJ": {
           "type": "text",
           "settings": {
-            "text": "Free 21 day trial! Members get $30 to spend every month — that’s more than the $24.95 membership itself! Your credit can be used on anything, from new releases to best-sellers. Cancel anytime."
+            "text": "Join the Free Spirited Insiders Club with a 21-day trial. Club members get a $30 monthly credit — more than the $24.95 recurring Club membership rate. Use your credit on anything from new releases to best sellers. Cancel anytime."
           }
         },
         "text_rzxGzX": {
           "type": "text",
           "settings": {
-            "text": "Plus, unlock up to 60% off our regular retail prices compared to buying directly from our Etsy store, insider-only flash sales, priority support, access to limited-edition products, and behind-the-scenes content. Enjoy a 21 day free trial, then just $24.95/month plus taxes billed monthly, cancel anytime."
+            "text": "Plus, unlock Insider Pricing on eligible products, Club-only flash sales, priority support, access to limited-edition products, and behind-the-scenes content. Enjoy a 21-day trial, then recurring Club membership is $24.95/month plus applicable taxes unless canceled."
           }
         },
         "2080a8e4-2299-470d-950f-b8f8bf3f3668": {
@@ -152,8 +152,8 @@
             "content_1": "<p>Get a fresh <strong>$30 credit every month</strong> to spend on anything — new releases, sale items, even gift bundles.<br/><br/>Use it anytime during the month, and it <strong>stacks with your member discounts</strong> for maximum savings.</p>",
             "heading_2": "Exclusive Access & Discounts:",
             "content_2": "<p>Be the first to shop <strong>limited-edition designs</strong> and enjoy <strong>members-only discounts, free shipping, and flash deals</strong> on your favorite tie-dye collections.</p><p></p>",
-            "heading_3": "Flexible Membership Control:",
-            "content_3": "<ul><li>Easily <strong>manage your membership</strong>—pause, upgrade, or cancel anytime with <a href=\"https://insiders.shopfreespirited.com/login?action=CANCEL\" title=\"https://insiders.shopfreespirited.com/login?action=CANCEL\">one-click cancelation here.</a></li></ul>",
+            "heading_3": "Flexible Club Membership Control:",
+            "content_3": "<ul><li>Easily <strong>manage your Club membership</strong>—pause, upgrade, or cancel anytime with <a href=\"https://insiders.shopfreespirited.com/login?action=CANCEL\" title=\"https://insiders.shopfreespirited.com/login?action=CANCEL\">one-click cancelation here.</a></li></ul>",
             "heading_4": "",
             "content_4": "<p>Add your collapsible row content here.</p>"
           }
@@ -227,9 +227,9 @@
         "banner_title": "No-Hassle Cancellation",
         "heading_size": "h2",
         "seo_heading": "h2",
-        "banner_desc": "We’ll miss you, but we believe in keeping things simple. Cancel your membership anytime with one click—no hoops, no hassle. Just search your inbox for the \"Welcome to the Insiders!\" email, log in to your membership portal using the details provided, and manage your subscription with ease. Or you can email us at support@shopfreespirited.com or use the contact form below! 💜",
+        "banner_desc": "We’ll miss you, but we believe in keeping things simple. Cancel your Club membership anytime with one click—no hoops, no hassle. Just search your inbox for the \"Welcome to the Insiders!\" email, log in to your member portal using the details provided, and manage your subscription with ease. Or you can email us at support@shopfreespirited.com or use the contact form below! 💜",
         "button_style": "outline",
-        "button_text": "Cancel Membership",
+        "button_text": "Cancel Club Membership",
         "button_link": "https://insiders.shopfreespirited.com/login?action=CANCEL",
         "button_size": "regular",
         "content_width": "medium",
@@ -422,7 +422,7 @@
           "type": "specification",
           "settings": {
             "icon": "shopify://shop_images/Untitled_design_-_2024-11-07T125730.271.png",
-            "text": "Unlock Exclusive Perks with Free Spirited Insiders",
+            "text": "Unlock Exclusive Perks with the Free Spirited Insiders Club",
             "link": ""
           }
         },
@@ -467,7 +467,7 @@
       ],
       "settings": {
         "make_section_rounded": true,
-        "heading": "<strong>Unlock Exclusive Perks with Free Spirited Insiders</strong>",
+        "heading": "<strong>Unlock Exclusive Perks with the Free Spirited Insiders Club</strong>",
         "heading_size": "h3",
         "seo_heading": "h3",
         "description": "<p>Join our Free Spirited Insiders community and get access to exclusive benefits, discounts, and early access to the designs you love</p>",
@@ -659,7 +659,7 @@
         "text_TEARdq": {
           "type": "text",
           "settings": {
-            "text": "<p>These one-of-a-kind tie-dye styles are only available to Free Spirited Insiders. As a member, you get access to exclusive designs, deep discounts, and special perks.</p><p>Join today to shop these limited-edition styles before they’re gone.</p>",
+            "text": "<p>These one-of-a-kind tie-dye styles are available to Free Spirited Insiders Club members. As a Club member, you get access to exclusive designs, Insider Pricing, and special perks.</p><p>Join today to shop these limited-edition styles before they’re gone.</p>",
             "text_size": "medium"
           }
         },

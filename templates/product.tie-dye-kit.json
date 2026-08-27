@@ -76,7 +76,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "Free Spirited Insiders pricing. 21-day trial, then $24.95/mo. Cancel anytime."
+            "text": "Free Spirited Insiders Club pricing. 21-day trial, then $24.95/month plus applicable taxes unless canceled."
           }
         },
         "text_YnDngR": {
@@ -437,7 +437,7 @@
         "text_VXVwHe": {
           "type": "text",
           "settings": {
-            "text": "<p>We love connecting with women who enjoy creativity, individuality, and plenty of color. That spirit has helped shape our Free Spirited community. Free Spirited Insiders get even more reasons to enjoy being part of our club. Members receive:</p><ul><li>A $30 monthly credit</li><li>Special pricing</li><li>Exclusive designs</li><li>Early access to new drops</li><li>Free shipping</li><li>Surprise perks</li><li>VIP pricing</li></ul><p>We also support To Write Love On Her Arms, a nonprofit that connects people with hope, treatment, recovery, and helpful resources.</p>",
+            "text": "<p>We love connecting with women who enjoy creativity, individuality, and plenty of color. That spirit has helped shape our Free Spirited community. Free Spirited Insiders Club members get even more reasons to enjoy being part of our community. Club members receive:</p><ul><li>A $30 monthly credit</li><li>Special pricing</li><li>Exclusive designs</li><li>Early access to new drops</li><li>Free shipping</li><li>Surprise perks</li><li>VIP pricing</li></ul><p>We also support To Write Love On Her Arms, a nonprofit that connects people with hope, treatment, recovery, and helpful resources.</p>",
             "text_size": "medium"
           }
         }
