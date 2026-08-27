@@ -111,14 +111,7 @@
               class="cart-shipping-bar"
               data-free-shipping-container=""
               data-free-shipping-wrapper
-              {%- comment -%}
-                Both totals and the threshold are exposed so the mode toggle can
-                recompute the bar client side when it does not re-render the
-                section. The message templates come from theme settings, which JS
-                cannot otherwise read.
-              {%- endcomment -%}
               data-shipping-rate="{{ shippingRate }}"
-              data-insider-total="{{ insider_total }}"
               data-full-total="{{ cart.total_price }}"
               data-shipping-message-template="{{ settings.shipping_message | escape }}"
               data-shipping-success-template="{{ settings.shipping_success | escape }}"
@@ -438,7 +431,8 @@
                           </a>
                           <div class="cart-recomdations-item-info">
                             <a href="{{ item.url }}" aria-label="{{ item.title | strip_html }}"  class="product-title {{ settings.font_type }}-font">{{ item.title | strip_html }}</a>
-                            {% if settings.show_price %}
+                            
+                            {% comment %} {% if settings.show_price %}
                               <div class="product-pricing  {% if item.compare_at_price_min > item.price_min %} discount-price {% endif %}">
                                 {%- assign price_min = item.price_min | default: 1900 | money -%}
                                 {%- if item.price_varies -%}
@@ -478,6 +472,110 @@
                                       {{- current_variant.unit_price_measurement.reference_value -}}
                                     {%- endif %}
                                     {{ current_variant.unit_price_measurement.reference_unit }}
+                                  </span>
+                                {%- endif -%}
+                              </div>
+                            {% endif %} {% endcomment %}
+
+                            {%- comment -%}
+                              Replaces the `{% if settings.show_price %}` pricing block inside the
+                              cart-recommendations loop in snippets/ajax-cart-drawer.liquid (around lines
+                              361-405).
+
+                              These are product-level prices, not a single variant, so the Insider figure
+                              has to be the minimum across variants to match how price_min behaves. Insider
+                              prices are tiered by size, so picking any one variant would print a number
+                              that does not match the "From" label.
+
+                              Variable names are prefixed `xs_` on purpose. Liquid assignments are global to
+                              the template, and this loop sits above the cart summary, which relies on
+                              `insider_total`. Reusing that name here would silently overwrite the subtotal.
+                            {%- endcomment -%}
+
+                            {% if settings.show_price %}
+                              {%- liquid
+                                # In Liquid a `money` metafield returns cents, directly comparable to
+                                # variant.price. `times: 1` coerces before comparing, since the raw value is
+                                # a different type and would always report a difference.
+                                assign xs_insider_min = 0
+                                assign xs_insider_max = 0
+
+                                for xs_variant in item.variants
+                                  assign xs_variant_insider = 0
+                                  if xs_variant.metafields.custom.insider_price.value != blank
+                                    assign xs_variant_insider = xs_variant.metafields.custom.insider_price.value | times: 1 | round
+                                  endif
+
+                                  # Only variants genuinely in the programme count. Variants outside it carry
+                                  # an insider price equal to their own price and must not pull the minimum
+                                  # down.
+                                  if xs_variant_insider > 0 and xs_variant_insider < xs_variant.price
+                                    if xs_insider_min == 0 or xs_variant_insider < xs_insider_min
+                                      assign xs_insider_min = xs_variant_insider
+                                    endif
+                                    if xs_variant_insider > xs_insider_max
+                                      assign xs_insider_max = xs_variant_insider
+                                    endif
+                                  endif
+                                endfor
+
+                                assign xs_has_insider = false
+                                if xs_insider_min > 0 and xs_insider_min < item.price_min
+                                  assign xs_has_insider = true
+                                endif
+
+                                assign xs_insider_varies = false
+                                if xs_insider_max > xs_insider_min
+                                  assign xs_insider_varies = true
+                                endif
+
+                                assign xs_price_min = item.price_min | default: 1900 | money
+                                assign xs_insider_money = xs_insider_min | money
+
+                                # Saving prefers the Insider gap and falls back to compare-at, so the badge
+                                # works both before and after the price flip.
+                                assign xs_show_saving = false
+                                assign xs_saving_percent = 0
+
+                                if xs_has_insider
+                                  assign xs_saving_percent = item.price_min | minus: xs_insider_min | times: 100 | divided_by: item.price_min
+                                  assign xs_show_saving = true
+                                elsif item.compare_at_price_min > item.price_min
+                                  assign xs_saving_percent = item.compare_at_price_min | minus: item.price_min | times: 100 | divided_by: item.compare_at_price_min
+                                  assign xs_show_saving = true
+                                endif
+                              -%}
+
+                              <div class="product-pricing{% if xs_show_saving %} discount-price{% endif %}{% if xs_has_insider %} has-insider-price{% endif %}">
+                                {%- if xs_has_insider -%}
+                                  {%- if xs_insider_varies -%}
+                                    <span class="product-actual-price price-varies">
+                                      {{ xs_insider_money }}
+                                    </span>
+                                  {%- else -%}
+                                    <span class="product-actual-price">{{ xs_insider_money }}</span>
+                                  {%- endif -%}
+
+                                  <span class="product-full-price">{{ xs_price_min }}</span>
+                                {%- else -%}
+                                  {%- comment -%} Unchanged from the original markup. {%- endcomment -%}
+                                  {%- if item.price_varies -%}
+                                    <span class="product-actual-price price-varies">
+                                      {{- 'products.product.price.from_price_html' | t: price: xs_price_min -}}
+                                    </span>
+                                  {%- else -%}
+                                    <span class="product-actual-price">{{ xs_price_min }}</span>
+                                  {%- endif -%}
+
+                                  {%- if item.compare_at_price_min > item.price_min -%}
+                                    <span class="product-compare-price">{{ item.compare_at_price_min | money }}</span>
+                                  {%- endif -%}
+                                {%- endif -%}
+
+                                {%- if xs_show_saving and settings.product_price_saving -%}
+                                  {%- assign offText = 'products.product.off' | t -%}
+                                  <span class="product-discount-price price-saving hidden" data-price-saving>
+                                    {{- xs_saving_percent | append: '% ' | append: offText -}}
                                   </span>
                                 {%- endif -%}
                               </div>
