@@ -89,6 +89,9 @@
                     | append: '-'
                     | append: collection.handle
                   %}
+                  {% if forloop.index <= 4 and product.featured_media != blank %}
+                    <link rel="preload" as="image" href="{{ product.featured_media.preview_image | image_url: width: 750 }}"{% if forloop.index <= 2 %} fetchpriority="high"{% endif %}>
+                  {% endif %}
                   <div class="col-6 col-sm-6 col-md-4 {{ columnsValue }}">
                     {% assign aosDelay = forloop.index | times: 50 %}
                     {%- capture current -%}{% cycle section.id: 1, 2, 3, 4 %}{%- endcapture -%}
