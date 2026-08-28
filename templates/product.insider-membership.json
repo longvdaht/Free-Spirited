@@ -336,7 +336,7 @@
       "settings": {
         "section_visibility": "always",
         "make_section_rounded": false,
-        "heading": "<strong>GET EXCLUSIVE DISCOUNTS ON ALL OUR PRODUCTS</strong>",
+        "heading": "<strong>GET EXCLUSIVE DISCOUNTS ON ELIGIBLE PRODUCTS</strong>",
         "heading_size": "h4",
         "seo_heading": "h3",
         "heading_alignment": "text-center",
