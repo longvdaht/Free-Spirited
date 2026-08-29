@@ -218,7 +218,14 @@
                     {%- assign is_membership = true -%}
                   {%- endif -%}
 
-                  <div class="cart-product-item {% if is_membership %}free-sample{% endif %}" id="cart-drawer-item-{{ forloop.index }}" data-cart-item>
+                  {%- comment -%}
+                    `data-fs-join-source` / `data-line-key` let cart-mode.js tell a Club
+                    line that was added automatically (because merchandise is on Insider
+                    Pricing) apart from one the customer added themselves from the Club
+                    product page, without re-fetching /cart.js first. The property is
+                    hidden (leading underscore), so it is never shown to the shopper.
+                  {%- endcomment -%}
+                  <div class="cart-product-item {% if is_membership %}free-sample{% endif %}" id="cart-drawer-item-{{ forloop.index }}" data-cart-item data-line-key="{{ item.key }}" data-fs-join-source="{{ item.properties._fs_join_source }}">
                     <a href="{{ item.url }}" class="cart-product-item-img">
                       {%- if item.image != blank -%}
                         <div
@@ -814,23 +821,8 @@
                 %}
                 
               </div> {% endcomment %}
-              {%- assign fsmode = cart.attributes.pricing_mode | default: 'insider' -%}
               <div class="cart-drawer-buttons" data-fs-mode-buttons>
-                {%- if fsmode == 'insider' -%}
-                  {% liquid
-                    assign buttonAttributes = 'type="submit" name="checkout2" form="cart" data-fs-cc-checkout'
-                    assign buttonText = 'sections.cart.checkout' | t
-                    assign button_size = 'default'
-                    render 'button' type: 'button', button_size: button_size, button_text: buttonText, buttonAttributes: buttonAttributes
-                  %}
-                {%- else -%}
-                  {% liquid
-                    assign buttonAttributes = 'type="submit" name="checkout" form="cart" data-fs-native-checkout'
-                    assign buttonText = 'sections.cart.checkout' | t
-                    assign button_size = 'default'
-                    render 'button' type: 'button', button_size: button_size, button_text: buttonText, buttonAttributes: buttonAttributes
-                  %}
-                {%- endif -%}
+                {%- render 'fs-checkout-button', button_size: 'default' -%}
 
                 {% liquid
                   assign buttonText = 'sections.cart.button_heading' | t
