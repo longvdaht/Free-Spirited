@@ -72,6 +72,10 @@
           <button type="button" data-fs-mode="insider" class="button fs-mode-btn{% if fsmode == 'insider' %} active{% endif %}">Insider pricing</button>
           <button type="button" data-fs-mode="full_price" class="button fs-mode-btn{% if fsmode == 'full_price' %} active{% endif %}">Full price</button>
         </div>
+        <p class="fs-mode-disclosure"><strong>Insider Pricing</strong> includes a 21-day Free Spirited Insiders Club trial, then $24.95/month plus applicable taxes unless canceled. <strong>Full Price</strong> is a standard purchase with no Club membership.</p>
+        <style>
+          .fs-mode-disclosure { font-size: 12px; line-height: 1.45; margin: 8px 0 14px; padding: 10px 12px; border-radius: 8px; background: rgba(0, 0, 0, .045); }
+        </style>
         <div class="cart-drawer-content-header" data-cart-drawer-header>
 
           {% if settings.cart_notification_bar != blank   %}
@@ -199,6 +203,9 @@
                 {%- for item in cart.items -%}
                   {% liquid
                     assign isGiftWrapProduct = false
+                    assign fs_item_display_title = item.product.title
+                    assign fs_item_display_title = fs_item_display_title | replace: ' Premium Hand-Dyed Comfort Shirt', ' Hand-Dyed Tee'
+                    assign fs_item_display_title = fs_item_display_title | replace: ' Hand-Dyed Comfort Shirt', ' Hand-Dyed Tee'
                     if item.product_id == settings.gift_wrap_product.id and settings.enable_gift_wrap
                       assign giftWrapProductStatus = true
                       assign isGiftWrapProduct = true
@@ -211,7 +218,14 @@
                     {%- assign is_membership = true -%}
                   {%- endif -%}
 
-                  <div class="cart-product-item {% if is_membership %}free-sample{% endif %}" id="cart-drawer-item-{{ forloop.index }}" data-cart-item>
+                  {%- comment -%}
+                    `data-fs-join-source` / `data-line-key` let cart-mode.js tell a Club
+                    line that was added automatically (because merchandise is on Insider
+                    Pricing) apart from one the customer added themselves from the Club
+                    product page, without re-fetching /cart.js first. The property is
+                    hidden (leading underscore), so it is never shown to the shopper.
+                  {%- endcomment -%}
+                  <div class="cart-product-item {% if is_membership %}free-sample{% endif %}" id="cart-drawer-item-{{ forloop.index }}" data-cart-item data-line-key="{{ item.key }}" data-fs-join-source="{{ item.properties._fs_join_source }}">
                     <a href="{{ item.url }}" class="cart-product-item-img">
                       {%- if item.image != blank -%}
                         <div
@@ -229,10 +243,10 @@
                     <div class="cart-product-item-info">
                       <a
                         href="{{ item.url }}"
-                        aria-label="{{ item.product.title | strip_html }}"
+                        aria-label="{{ fs_item_display_title | strip_html }}"
                         class="product-title {{ settings.font_type }}-font"
                       >
-                        {{- item.product.title | strip_html -}}
+                        {{- fs_item_display_title | strip_html -}}
                       </a>
                       {% if item.product.has_only_default_variant == false
                         or item.selling_plan_allocation != null
@@ -411,7 +425,9 @@
                       "arrows": true
                     }'
                   >
+                    {%- assign fs_cart_product_ids = cart.items | map: 'product_id' %}
                     {%- for item in settings.recomded_products -%}
+                      {% unless fs_cart_product_ids contains item.id -%}
                       <div class="cart-recomdations-item" id="cart-recomdations-item-{{ forloop.index }}">
                         <div class="cart-recomdations-item-inner">
                           <a href="{{ item.url }}" class="cart-recomdations-item-image">
@@ -589,6 +605,8 @@
                           </div>
                         </div>
                       </div>
+                      {% break %}
+                      {% endunless %}
                     {% endfor %}
                   </div>
                 {% endif %}
@@ -745,7 +763,15 @@
                   {%- endfor -%}
                 {%- endif -%}
 
-                <div class="cart-summary-price-item">
+                {%- assign insider_savings = cart.original_total_price | minus: insider_total -%}
+                {%- if mode == 'insider' and insider_savings > 0 -%}
+                  <div class="cart-summary-price-item fs-insider-savings-row">
+                    <h6 class="text cart-summary-price-title">You save with Insider</h6>
+                    <h6 class="text-medium cart-summary-price-amount">&minus;{{ insider_savings | money }}</h6>
+                  </div>
+                {%- endif -%}
+
+                <div class="cart-summary-price-item fs-cart-subtotal-row">
                   <h6 class="text cart-summary-price-title">{{ 'sections.cart.subtotal' | t }}</h6>
                   <h6 class="text-medium cart-summary-price-amount"
                       data-cart-subtotal
@@ -795,23 +821,8 @@
                 %}
                 
               </div> {% endcomment %}
-              {%- assign fsmode = cart.attributes.pricing_mode | default: 'insider' -%}
               <div class="cart-drawer-buttons" data-fs-mode-buttons>
-                {%- if fsmode == 'insider' -%}
-                  {% liquid
-                    assign buttonAttributes = 'type="submit" name="checkout2" form="cart" data-fs-cc-checkout'
-                    assign buttonText = 'sections.cart.checkout' | t
-                    assign button_size = 'default'
-                    render 'button' type: 'button', button_size: button_size, button_text: buttonText, buttonAttributes: buttonAttributes
-                  %}
-                {%- else -%}
-                  {% liquid
-                    assign buttonAttributes = 'type="submit" name="checkout" form="cart" data-fs-native-checkout'
-                    assign buttonText = 'sections.cart.checkout' | t
-                    assign button_size = 'default'
-                    render 'button' type: 'button', button_size: button_size, button_text: buttonText, buttonAttributes: buttonAttributes
-                  %}
-                {%- endif -%}
+                {%- render 'fs-checkout-button', button_size: 'default' -%}
 
                 {% liquid
                   assign buttonText = 'sections.cart.button_heading' | t
