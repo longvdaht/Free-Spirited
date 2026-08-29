@@ -86,7 +86,8 @@
                           assign isGiftWrapProduct = true
                         endif
                       %}
-                      <tr id="cartItem{{ forloop.index }}" data-cart-item>
+                      {%- comment -%} See ajax-cart-drawer.liquid: read by cart-mode.js. {%- endcomment -%}
+                      <tr id="cartItem{{ forloop.index }}" data-cart-item data-line-key="{{ item.key }}" data-fs-join-source="{{ item.properties._fs_join_source }}">
                         <td class="cart-product-name">
                           <div class="cart-product-item">
                             <a href="{{ item.url }}" class="cart-product-item-img">
@@ -450,13 +451,14 @@
                     render 'button' type: 'button', id: id, button_size: button_size, button_text: buttonText, buttonAttributes: buttonAttributes
                   %}
                 </noscript>
-                {% liquid
-                  assign buttonAttributes = 'type="submit" name="checkout2" form="cart"'
-                  assign buttonText = 'sections.cart.checkout' | t
-                  assign id = 'cartCheckout'
-                  assign button_size = 'medium'
-                  render 'button' type: 'button', id: id, button_size: button_size, button_text: buttonText, buttonAttributes: buttonAttributes
-                %}
+                {%- comment -%}
+                  Was hardcoded to name="checkout2", which sent every cart page
+                  checkout to Checkout Champ — Full Price included, against the
+                  "standard Shopify checkout" the Insiders Club page promises.
+                  The snippet routes on the pricing mode and on whether the Club
+                  is in the cart; see snippets/fs-checkout-button.liquid.
+                {%- endcomment -%}
+                {%- render 'fs-checkout-button', button_size: 'medium', button_id: 'cartCheckout' -%}
               
               </div>
               <p class="cart-summary-tax-info text-small">
