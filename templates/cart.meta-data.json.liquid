@@ -1,15 +1,31 @@
 {%- layout none -%}
+{%- comment -%}
+  Read by cc-cart.js.liquid to build the Checkout Champ `products=` list.
+
+  The separator is driven by a `first` flag rather than `forloop.last`. Only
+  items that carry the productId metafield are emitted, so `forloop.last` put a
+  comma after the last EMITTED item whenever the last CART item was skipped —
+  `[{...},]`, which is invalid JSON. The checkout handler parses this response
+  before redirecting, so that parse failure silently killed the checkout button.
+  A cart ending in a line with no metafield is exactly the standalone Insiders
+  Club enrollment case, which is how it surfaced.
+
+  The Club product carries no `productId` metafield of its own, so it is not
+  forwarded. cc-cart.js.liquid handles the cart where that leaves the list empty.
+{%- endcomment -%}
 {
   "customer_logged_in": {% if customer %}true{% else %}false{% endif %},
   "meta_product_id_array": [
-    {% for item in cart.items %}
-      {% if item.variant.metafields.productId.productId %}
+    {%- assign first = true -%}
+    {%- for item in cart.items -%}
+      {%- if item.variant.metafields.productId.productId != blank -%}
+        {%- unless first %},{% endunless -%}
         {
-          "id": "{{ item.variant.metafields.productId.productId }}",
-          "quantity": {{ item.quantity }}
+          "id": {{ item.variant.metafields.productId.productId | json }},
+          "quantity": {{ item.quantity | json }}
         }
-        {% unless forloop.last %},{% endunless %}
-      {% endif %}
-    {% endfor %}
+        {%- assign first = false -%}
+      {%- endif -%}
+    {%- endfor -%}
   ]
 }
