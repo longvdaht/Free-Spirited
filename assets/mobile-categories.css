@@ -141,3 +141,11 @@
     opacity: 1;
     pointer-events: all;
 }
+@media (max-width: 768px) {
+  #template--17800075116743__categories_9UpaFm {
+    margin-bottom: 0 !important;
+  }
+  #template--17800075116743__main-collection-banner {
+    margin-top: 0 !important;
+  }
+}

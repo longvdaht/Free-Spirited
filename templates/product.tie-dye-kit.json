@@ -42,7 +42,7 @@
         "text_LWTq96": {
           "type": "text",
           "settings": {
-            "text": "\"The colors are even brighter in person, and the softness is unreal!\" - Kim R."
+            "text": "Ready to get colorful? Bring more color into your day with our tie-dye kit to create unique designs. Have fun creating something personal with the colors you love."
           }
         },
         "price": {
@@ -95,7 +95,13 @@
         "custom_liquid_BXqWDW": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% assign fs_one_of_kind_url = 'free-spirited-one-of-a-kind.svg' | file_url %}\n{% assign fs_money_back_url = 'free-spirited-money-back-guarantee.svg' | file_url %}\n{% assign fs_returns_url = 'free-spirited-free-returns.svg' | file_url %}\n\n<style>\n  .fs-trust,\n  .fs-trust * {\n    box-sizing: border-box;\n  }\n\n  .fs-trust {\n    --fs-teal: #016f94;\n    --fs-lime: #adcc0c;\n    --fs-ink: #151515;\n    max-width: 620px;\n    margin: 18px auto 26px;\n    padding: 0 6px;\n    font-family: inherit;\n  }\n\n  .fs-trust__grid {\n    display: grid;\n    grid-template-columns: repeat(3, minmax(0, 1fr));\n    gap: 8px;\n  }\n\n  .fs-trust__item {\n    display: flex;\n    min-width: 0;\n    min-height: 132px;\n    padding: 12px 6px 13px;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    text-align: center;\n    background: #ffffff;\n    border: 1px solid rgba(1, 111, 148, 0.16);\n    border-radius: 14px;\n    box-shadow: 0 3px 10px rgba(17, 39, 48, 0.04);\n  }\n\n  .fs-trust__item--promise {\n    background: linear-gradient(\n      145deg,\n      rgba(173, 204, 12, 0.13),\n      rgba(1, 111, 148, 0.055)\n    );\n    border-color: rgba(139, 166, 0, 0.52);\n    box-shadow: 0 6px 16px rgba(1, 111, 148, 0.10);\n    transform: translateY(-2px);\n  }\n\n  .fs-trust__icon {\n    display: grid;\n    width: 60px;\n    height: 60px;\n    margin: 0 auto 8px;\n    place-items: center;\n  }\n\n  .fs-trust__icon img {\n    display: block;\n    width: 56px;\n    height: 56px;\n    object-fit: contain;\n  }\n\n  .fs-trust__item--promise .fs-trust__icon img {\n    width: 59px;\n    height: 59px;\n  }\n\n  .fs-trust__eyebrow {\n    margin-bottom: 3px;\n    color: var(--fs-teal);\n    font-size: 9px;\n    font-weight: 800;\n    line-height: 1.15;\n    letter-spacing: 0.045em;\n    text-transform: uppercase;\n  }\n\n  .fs-trust__item--promise .fs-trust__eyebrow {\n    color: #718500;\n  }\n\n  .fs-trust__title {\n    color: var(--fs-ink);\n    font-size: 13.5px;\n    font-weight: 800;\n    line-height: 1.23;\n  }\n\n  .fs-trust__proof {\n    display: flex;\n    margin-top: 10px;\n    padding: 11px 13px;\n    align-items: center;\n    gap: 9px;\n    color: var(--fs-ink);\n    background: #eff5dd;\n    border: 1px solid rgba(126, 150, 0, 0.12);\n    border-radius: 10px;\n    font-size: 12.5px;\n    line-height: 1.35;\n  }\n\n  .fs-trust__proof-check {\n    display: grid;\n    width: 20px;\n    height: 20px;\n    flex: 0 0 20px;\n    place-items: center;\n    color: #ffffff;\n    background: var(--fs-teal);\n    border-radius: 50%;\n    font-size: 11px;\n    font-weight: 900;\n    line-height: 1;\n  }\n\n  @media (max-width: 420px) {\n    .fs-trust {\n      margin-top: 16px;\n      padding: 0 2px;\n    }\n\n    .fs-trust__grid {\n      gap: 5px;\n    }\n\n    .fs-trust__item {\n      min-height: 122px;\n      padding: 10px 3px 11px;\n      border-radius: 12px;\n    }\n\n    .fs-trust__icon {\n      width: 52px;\n      height: 52px;\n      margin-bottom: 7px;\n    }\n\n    .fs-trust__icon img {\n      width: 49px;\n      height: 49px;\n    }\n\n    .fs-trust__item--promise .fs-trust__icon img {\n      width: 52px;\n      height: 52px;\n    }\n\n    .fs-trust__eyebrow {\n      font-size: 8.1px;\n      letter-spacing: 0.025em;\n    }\n\n    .fs-trust__title {\n      font-size: 12.25px;\n    }\n\n    .fs-trust__proof {\n      padding: 10px 11px;\n      font-size: 12px;\n    }\n  }\n</style>\n\n<section class=\"fs-trust\" aria-label=\"Why shop Free Spirited\">\n\n  <div class=\"fs-trust__grid\">\n\n    <div class=\"fs-trust__item\">\n      <div class=\"fs-trust__icon\" aria-hidden=\"true\">\n        <img\n          src=\"{{ fs_one_of_kind_url }}\"\n          alt=\"\"\n          width=\"512\"\n          height=\"512\"\n          decoding=\"async\"\n        >\n      </div>\n\n      <div class=\"fs-trust__eyebrow\">\n        Hand-Dyed\n      </div>\n\n      <div class=\"fs-trust__title\">\n        Always One<br>\n        of a Kind\n      </div>\n    </div>\n\n    <div class=\"fs-trust__item fs-trust__item--promise\">\n      <div class=\"fs-trust__icon\" aria-hidden=\"true\">\n        <img\n          src=\"{{ fs_money_back_url }}\"\n          alt=\"\"\n          width=\"512\"\n          height=\"512\"\n          decoding=\"async\"\n        >\n      </div>\n\n      <div class=\"fs-trust__eyebrow\">\n        Free Spirited Promise\n      </div>\n\n      <div class=\"fs-trust__title\">\n        Love It or<br>\n        Your Money Back\n      </div>\n    </div>\n\n    <div class=\"fs-trust__item\">\n      <div class=\"fs-trust__icon\" aria-hidden=\"true\">\n        <img\n          src=\"{{ fs_returns_url }}\"\n          alt=\"\"\n          width=\"512\"\n          height=\"512\"\n          decoding=\"async\"\n        >\n      </div>\n\n      <div class=\"fs-trust__eyebrow\">\n        No-Stress Shopping\n      </div>\n\n      <div class=\"fs-trust__title\">\n        Free &amp; Easy<br>\n        Returns\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"fs-trust__proof\">\n    <span class=\"fs-trust__proof-check\" aria-hidden=\"true\">\n      ✓\n    </span>\n\n    <span>\n      <strong>Shop with confidence.</strong>\n      Tracking is included, and a real 24/7 human support team is ready to help.\n    </span>\n  </div>"
+            "custom_liquid": "<div style=\"max-width: 600px; margin: 24px auto 32px; padding: 0 8px;\">\n\n  <div style=\"display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;\">\n\n    <div style=\"display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;\">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"64\" height=\"64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n        <path d=\"M40 8 C28 8 16 14 16 14 C16 14 14 38 22 52 C28 62 40 70 40 70 C40 70 52 62 58 52 C66 38 64 14 64 14 C64 14 52 8 40 8 Z\"/>\n        <path d=\"M40 50 C40 50 28 42 28 32 C28 27 31 24 35 24 C37.5 24 39 25.5 40 27.5 C41 25.5 42.5 24 45 24 C49 24 52 27 52 32 C52 42 40 50 40 50 Z\"/>\n      </svg>\n      <div style=\"font-size: 14px; font-weight: 700; line-height: 1.3; color: #000; white-space: nowrap;\">Free Spirit<br>Guarantee</div>\n    </div>\n\n    <div style=\"display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;\">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"64\" height=\"64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n        <path d=\"M64 36 C62 24 51 16 40 16 C32 16 25 20 21 26\"/>\n        <polyline points=\"20,18 20,28 30,28\"/>\n        <path d=\"M16 44 C18 56 29 64 40 64 C48 64 55 60 59 54\"/>\n        <polyline points=\"60,62 60,52 50,52\"/>\n      </svg>\n      <div style=\"font-size: 14px; font-weight: 700; line-height: 1.3; color: #000; white-space: nowrap;\">Free<br>Returns</div>\n    </div>\n\n    <div style=\"display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;\">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"64\" height=\"64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n        <rect x=\"14\" y=\"28\" width=\"32\" height=\"24\" rx=\"1.5\"/>\n        <path d=\"M46 34 L58 34 L66 42 L66 52 L46 52 Z\"/>\n        <circle cx=\"24\" cy=\"56\" r=\"5\"/>\n        <circle cx=\"56\" cy=\"56\" r=\"5\"/>\n        <line x1=\"50\" y1=\"42\" x2=\"62\" y2=\"42\"/>\n        <line x1=\"2\" y1=\"36\" x2=\"12\" y2=\"36\"/>\n        <line x1=\"4\" y1=\"42\" x2=\"10\" y2=\"42\"/>\n        <line x1=\"6\" y1=\"48\" x2=\"12\" y2=\"48\"/>\n      </svg>\n      <div style=\"font-size: 14px; font-weight: 700; line-height: 1.3; color: #000; white-space: nowrap;\">Fast<br>Shipping</div>\n    </div>\n\n  </div>\n\n</div>"
+          }
+        },
+        "custom_liquid_FbXtXA": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"display: flex; align-items: center; gap: 14px; max-width: 600px; margin: 20px auto; padding: 16px 20px; background: #EAF3DE; border-radius: 10px;\">\n  <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 40 40\" width=\"28\" height=\"28\" style=\"flex-shrink: 0;\" aria-hidden=\"true\">\n    <path fill=\"#000\" d=\"M20 2 L23.5 5 L28 4 L29.5 8.5 L34 10 L33 14.5 L36 18 L33 21.5 L34 26 L29.5 27.5 L28 32 L23.5 31 L20 34 L16.5 31 L12 32 L10.5 27.5 L6 26 L7 21.5 L4 18 L7 14.5 L6 10 L10.5 8.5 L12 4 L16.5 5 Z\"/>\n    <polyline points=\"13,19 18,24 27,14\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n  </svg>\n  <span style=\"font-weight: 700; font-size: 15px; color: #000; line-height: 1.4;\">Less than 1% of customers use our money back guarantee.</span>\n</div>"
           }
         },
         "description_GkVG9c": {
@@ -140,11 +146,17 @@
       "block_order": [
         "title",
         "judge_me_reviews_preview_badge_U8rP3K",
+        "text_LWTq96",
         "price",
-        "2080a8e4-2299-470d-950f-b8f8bf3f3668",
-        "button",
         "text_pCJ47h",
+        "2080a8e4-2299-470d-950f-b8f8bf3f3668",
+        "quantity_selector",
+        "button",
+        "text_GkGiyp",
+        "text_YnDngR",
+        "text_wEKae9",
         "custom_liquid_BXqWDW",
+        "custom_liquid_FbXtXA",
         "description_GkVG9c",
         "collapsible_tab_Va34xQ",
         "29852893-7b61-4932-b575-91695d8893b1",
@@ -172,9 +184,46 @@
         "bottom_space_mobile": 40
       }
     },
+    "rich_text_ritHw6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_arUhyD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Find Your Favorite Tie-Dye Kit to Build Your Own Creativity",
+            "heading_size": "h2",
+            "seo_heading": "h2",
+            "highlighted_color": "#EFF341"
+          }
+        },
+        "text_N9wifY": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>A fun way to explore your creative side</li><li>Great for colorful projects at home with friends and family</li><li>Create designs that feel personal</li><li>Perfect for anyone who loves color</li><li>Backed by our colorful Free Spirited community</li></ul><h2>The Best Tie-Dye Kits Made For Color Lovers</h2><p>Our kits give you a fun way to enjoy the playful spirit behind tie-dye. Why do we love tie-dye so much? It lets us play with color and create something that feels unique and original.</p><h3>Have Fun Creating Something Personal</h3><p>The thing we love most about tie-dye is that it celebrates individuality. Our tie-dye kit lets you bring your own ideas to life. From bold shades to softer tones, you can explore your creative side.</p><p>Experiment with patterns and color combinations that match your personality. Make something bold, playful, relaxed, or completely unexpected. That freedom makes every tie-dye session exciting. You never know exactly how your finished design will look until you see it.</p><h3>Enjoy A Creative Activity With Others</h3><p>Tie-dye can turn an ordinary afternoon into something much more colorful. Invite friends and family to join you for some tie-dye fun. Everyone can approach their design differently. That makes tie-dye a fun choice for parties, family activities, or relaxed weekends together.</p><p>You can compare finished designs once everyone finishes. Each person gets the chance to express their individual style through color and share the fun with those around them.</p><h3>Discover The Fun Behind Our Hand-Dyed Style</h3><p>We know how much hand-dyed color can add personality to clothing. Unlike printing tie-dye patterns, we hand-dye our clothes. This ensures each finished piece is unique to you. Subtle differences in swirls and color placement give each design its own personality.</p><p>We love that individuality, and that's what makes our community in love with our colors. You can try your hand at some of that creative fun with our tie-dye kit.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_arUhyD",
+        "text_N9wifY"
+      ],
+      "name": "t:sections.rich_text.presets.name",
+      "settings": {
+        "section_visibility": "always",
+        "make_section_rounded": false,
+        "content_width": "large",
+        "content_alignment": "text-left",
+        "content_postion": "center",
+        "color_scheme": "",
+        "section_background": "",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 40,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
     "1768418027650ac097": {
       "type": "apps",
-      "disabled": true,
       "blocks": {
         "judge_me_reviews_all_reviews_text_t3Upyy": {
           "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
@@ -232,6 +281,7 @@
         "text_list_zXaJAJ",
         "text_list_mbVikB"
       ],
+      "disabled": true,
       "name": "t:sections.media-with-text-list.presets.name",
       "settings": {
         "section_visibility": "always",
@@ -249,7 +299,6 @@
     },
     "slideshow_hV7Eh6": {
       "type": "slideshow",
-      "disabled": true,
       "blocks": {
         "slide_7i6Jcf": {
           "type": "slide",
@@ -369,7 +418,6 @@
     },
     "image_with_text_WPQrbW": {
       "type": "image-with-text",
-      "disabled": true,
       "blocks": {
         "subheading_YzcW7m": {
           "type": "subheading",
@@ -380,7 +428,7 @@
         "heading_cV39fR": {
           "type": "heading",
           "settings": {
-            "heading": "Based in Florida. Shipped to your door.",
+            "heading": "Join The Most Colorful Club On Earth",
             "heading_size": "h2",
             "seo_heading": "h2",
             "highlighted_color": "#eff341"
@@ -389,7 +437,7 @@
         "text_VXVwHe": {
           "type": "text",
           "settings": {
-            "text": "<p>Free Spirited is a Florida-based company. Tie-dye shirt orders ship directly from our shop, packed by the team you see here. Real people, fast shipping, and shirts we stand behind 100%.</p>",
+            "text": "<p>We love connecting with women who enjoy creativity, individuality, and plenty of color. That spirit has helped shape our Free Spirited community. Free Spirited Insiders Club members get even more reasons to enjoy being part of our community. Club members receive:</p><ul><li>A $30 monthly credit</li><li>Special pricing</li><li>Exclusive designs</li><li>Early access to new drops</li><li>Free shipping</li><li>Surprise perks</li><li>VIP pricing</li></ul><p>We also support To Write Love On Her Arms, a nonprofit that connects people with hope, treatment, recovery, and helpful resources.</p>",
             "text_size": "medium"
           }
         }
@@ -410,7 +458,7 @@
         "image_width": "medium",
         "image_position": "right",
         "content_position": "center",
-        "content_alignment": "center_center",
+        "content_alignment": "flex-start_left",
         "hide_row_count": false,
         "color_scheme": "",
         "section_background": "",
@@ -423,7 +471,6 @@
     },
     "image_with_text_AaJaAz": {
       "type": "image-with-text",
-      "disabled": true,
       "blocks": {
         "subheading_BD7Ry8": {
           "type": "subheading",
@@ -434,7 +481,7 @@
         "heading_mQBCRC": {
           "type": "heading",
           "settings": {
-            "heading": "Tie-Dye Tees for $12",
+            "heading": "Shop With A Family-Owned American Brand",
             "heading_size": "h2",
             "seo_heading": "h2",
             "highlighted_color": "#eff341"
@@ -443,7 +490,7 @@
         "text_NanfYJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Get yours before they're gone!</p>",
+            "text": "<p>Our proudly family-owned team is based in the USA. Our team is made up of people who share our love for all things tie-dye and colorful. We prepare each order from our Florida shop and prioritize friendly service for every customer, from shopping through delivery.</p><p>Our long-time customers already know us for quality, personality, passion, and plenty of color. Thousands of women have joined our growing Free Spirited community because they love our <a href=\"https://shopfreespirited.com/collections/tie-dye-shirts\"><span style=\"text-decoration:underline\">tie-dye shirts</span></a> and <a href=\"https://shopfreespirited.com/collections/pullover-hoodies\"><span style=\"text-decoration:underline\">hoodies</span></a>.</p>",
             "text_size": "medium"
           }
         }
@@ -482,7 +529,7 @@
           "settings": {
             "review_data": "sample_data",
             "max_width": 1200,
-            "show_shop_reviews": true,
+            "show_shop_reviews": false,
             "empty_state": "empty_widget"
           }
         }
@@ -500,39 +547,39 @@
       }
     },
     "collapsible_content_BTNAaz": {
-      "disabled": true,
       "type": "collapsible-content",
       "blocks": {
         "content_DkJCN7": {
           "type": "content",
           "settings": {
-            "heading": "Where are you located?",
-            "content": "<p>Free Spirited is proudly based in sunny Sunrise, Florida! We ship all our tie-dye shirt orders directly from here! 🇺🇸</p>"
+            "heading": "What Is A Tie-Dye Kit?",
+            "content": "<p>A tie-dye kit gives you a simple way to enjoy tie-dye projects at home. It lets you explore colors and create designs that match your personality.</p><p>Check each product description before ordering for details about that kit. You can then choose the option that suits your project.</p>"
           }
         },
         "content_hGyciK": {
           "type": "content",
           "settings": {
-            "heading": "Are all of your shirts really made by hand?",
-            "content": "<p>Yes! Every single shirt is dyed by hand, then pre-washed and pre-shrunk before it ships. Want to see for yourself? Check out <a href=\"/pages/how-we-make-your-shirt\" title=\"How we make your shirt\">how we make your shirt.</a></p>"
+            "heading": "Who Can Use Tie Dye Kits?",
+            "content": "<p>Tie-dye kits can suit anyone who enjoys color and creative activities. They're a fun choice for solo projects or shared activities.</p><p>You can enjoy tie-dye with friends or family members. Always follow the directions supplied with your chosen product during your project.</p>"
           }
         },
         "content_zB7xPz": {
           "type": "content",
           "settings": {
-            "heading": "Will I get a tracking number for my order?",
-            "content": "<p>Of course! As soon as your order ships, you’ll get a tracking email so you can follow your package’s magical journey to your doorstep.</p>"
+            "heading": "Are Tie-Dye Kits Fun For Groups?",
+            "content": "<p>Yes! Bulk tie-dye can make a colorful activity for friends, families, parties, and creative get-togethers. Everyone gets the chance to create something different.</p><p>Choose enough supplies for everyone taking part before you begin. Check your selected kit’s product details to see what's included.</p>"
           }
         },
         "content_N3HAa6": {
           "type": "content",
           "settings": {
-            "heading": "What size would fit me best?",
-            "content": "<p>We get it—sizing can be tricky! That’s why we include a handy size chart on every product page. Still unsure? Reach out to us using the “Contact Us” form or email us at <a><strong>support@shopfreespirited.com</strong></a>. We’re here to help! Fun fact: 98.4% of our customers say our shirts fit true to size. 💫</p>"
+            "heading": "Why Shop Tie-Dye Kits From Free Spirited Clothing?",
+            "content": "<p>We live and breathe tie-dye at Free Spirited Clothing. Our family-owned American brand celebrates color, creativity, individuality, and real connections.</p><p>We've built a community around those values. Shop with us and become part of the most colorful club on earth.</p>"
           }
         },
         "content_JJDzzM": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "heading": "What are your shirts made from?",
             "content": "<p>Our shirts are crafted from premium fabrics that feel amazing to wear:</p><ul><li><strong>Tees and Tank Tops</strong>: 100% pre-shrunk, softer-than-soft cotton.</li><li><strong>V-Necks</strong>: A comfy blend of 60% ring-spun cotton and 40% polyester.</li><li><strong>Long Sleeves</strong>: Made from durable, pre-shrunk 100% heavyweight cotton.</li></ul><p>That’s why they’re not just soft—they’re <em>softer-than-soft!</em> 🌈</p>"
@@ -540,6 +587,7 @@
         },
         "content_rbQYYK": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "heading": "Do you offer plus sizes?",
             "content": "<p>Yes! We proudly offer sizes from S to 5XL, so everyone can join the tie-dye fun. We offer every style in at least a 3XL, and you can check out our 4XL and 5XL designs <a href=\"https://shopfreespirited.com/collections/shop-sale?filter.v.price.gte=&filter.v.price.lte=&filter.v.option.size=4XL&filter.v.option.size=5XL&sort_by=manual\" title=\"https://shopfreespirited.com/collections/shop-sale?filter.v.price.gte=&filter.v.price.lte=&filter.v.option.size=4XL&filter.v.option.size=5XL&sort_by=manual\">here</a>.</p>"
@@ -547,6 +595,7 @@
         },
         "content_fUXj3w": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "heading": "What if I need to return my shirts?",
             "content": "<p>No worries—we’ve got a problem-free philosophy! If you’re not totally in love with your purchase, you can return it for a full refund within 30 days. Just make sure it’s unworn and unwashed, and we’ll handle the rest.</p>"
@@ -554,13 +603,15 @@
         },
         "content_wRNY9t": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "heading": "Why are these shirts discounted so much?",
-            "content": "<p>Insider Pricing is one benefit of the Free Spirited Insiders Club and helps make our lowest prices possible. Every product is also available at Full Price with no Club membership. Same premium hand-dyed quality either way.</p>"
+            "content": "<p>Choose Insider Pricing for our lowest price and a <strong>21-day Free Spirited Insiders Club trial</strong>. After the trial, recurring Club membership renews at <strong>$24.95/month plus applicable taxes unless canceled</strong>. Prefer a standard one-time purchase? Choose Full Price in the cart drawer. You can <a href=\"https://insiders.shopfreespirited.com/login?action=CANCEL\" title=\"https://insiders.shopfreespirited.com/login?action=CANCEL\">cancel anytime here.</a></p>"
           }
         },
         "content_NrE6rf": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "heading": "Are you closing your entire store?",
             "content": "<p><strong>No, we’re not closing our store!</strong> We run collection closing sales to make room for new designs. Some of our current styles will be <strong>retired</strong>, while others may return in our upcoming collections.</p><p>If you see a design you love, we recommend grabbing it before it’s gone—prices and availability may change in future collections!</p>"
@@ -596,7 +647,6 @@
       }
     },
     "collection_list_VeDAfC": {
-      "disabled": true,
       "type": "collection-list",
       "blocks": {
         "collection_9qcCcx": {
@@ -738,7 +788,6 @@
       }
     },
     "images_carousel_eYEm88": {
-      "disabled": true,
       "type": "images-carousel",
       "blocks": {
         "image_QGY8yh": {
@@ -796,7 +845,6 @@
       }
     },
     "custom_liquid_VGAqRM": {
-      "disabled": true,
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
@@ -812,7 +860,6 @@
       }
     },
     "video_Mbewhq": {
-      "disabled": true,
       "type": "video",
       "settings": {
         "section_visibility": "always",
@@ -864,7 +911,6 @@
       }
     },
     "product_details_WGEkdJ": {
-      "disabled": true,
       "type": "product-details",
       "blocks": {
         "collapsible_tab_XxxDNp": {
@@ -966,10 +1012,10 @@
       ],
       "settings": {
         "make_section_rounded": true,
-        "heading": "UNLOCK INSIDER PRICING",
+        "heading": "BECOME AN INSIDER!",
         "heading_size": "h3",
         "seo_heading": "h3",
-        "description": "<p>The price shown first is Insider Pricing and includes a 21-day Free Spirited Insiders Club trial. After the trial, recurring Club membership is $24.95/month plus applicable taxes unless canceled. Prefer a standard one-time purchase? Choose Full Price in the cart drawer.</p>",
+        "description": "<p>Choose Insider Pricing to join the Free Spirited Insiders Club and unlock our lowest prices. Insider Pricing includes a 21-day trial, then recurring Club membership at $24.95/month plus applicable taxes unless canceled. Or choose Full Price for a standard one-time purchase. Sitewide promotional discounts apply to both carts unless a specific offer says otherwise. <a href=\"https://insiders.shopfreespirited.com/login?action=CANCEL\" title=\"https://insiders.shopfreespirited.com/login?action=CANCEL\">Cancel anytime by clicking here.</a></p>",
         "content_alignment": "text-center",
         "open_first": false,
         "spec_heading": "Specifications",
@@ -989,12 +1035,10 @@
       }
     },
     "zp-product-footer-content": {
-      "disabled": true,
       "type": "product-footer-content-zipifypages",
       "settings": {}
     },
     "image_with_text_iWhzie": {
-      "disabled": true,
       "type": "image-with-text",
       "blocks": {
         "subheading_X4pgNY": {
@@ -1062,7 +1106,6 @@
       }
     },
     "1731004931aee2e868": {
-      "disabled": true,
       "type": "apps",
       "blocks": {
         "judge_me_reviews_featured_carousel_T6FyFf": {
@@ -1100,6 +1143,7 @@
     "1739977390c22e791b",
     "zp-product-header-content",
     "main",
+    "rich_text_ritHw6",
     "1768418027650ac097",
     "media_with_text_list_4X4444",
     "slideshow_hV7Eh6",

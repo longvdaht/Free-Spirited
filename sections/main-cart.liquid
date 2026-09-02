@@ -1,5 +1,43 @@
 <link rel="preload" as="style" href="{{ 'cart.css' | asset_url }}">
 {{ 'cart.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign fs_cart_mode = cart.attributes.pricing_mode | default: 'insider'
+  assign fs_membership_product_id = settings.insider_mode_free_product.id
+  assign fs_insider_total = 0
+
+  for fs_line in cart.items
+    unless fs_line.product_id == fs_membership_product_id
+      assign fs_line_insider = 0
+      if fs_line.variant.metafields.custom.insider_price.value != blank
+        assign fs_line_insider = fs_line.variant.metafields.custom.insider_price.value | times: 1 | round
+      endif
+      if fs_cart_mode == 'insider' and fs_line_insider > 0 and fs_line_insider < fs_line.variant.price
+        assign fs_line_total = fs_line_insider | times: fs_line.quantity
+        assign fs_insider_total = fs_insider_total | plus: fs_line_total
+      else
+        assign fs_insider_total = fs_insider_total | plus: fs_line.final_line_price
+      endif
+    endunless
+  endfor
+
+  assign fs_insider_savings = cart.original_total_price | minus: fs_insider_total
+-%}
+
+<style>
+  .fs-cart-membership-row { display: none !important; }
+  .fs-cart-mode-status {
+    margin: 0 0 16px;
+    padding: 12px 14px;
+    border: 2px solid #a9cf00;
+    border-radius: 10px;
+    background: #f5fae8;
+    color: #102f3b;
+  }
+  .fs-cart-mode-status strong { display: block; font-size: 1rem; }
+  .fs-cart-mode-status span { display: block; margin-top: 2px; font-size: .875rem; line-height: 1.35; }
+  .fs-cart-price-label { margin-right: 5px; color: #087b9b; font-size: .75em; font-weight: 700; text-transform: uppercase; }
+</style>
 <div
   class="section-container {{ section.settings.color_scheme }}-scheme"
   data-section="{{ section.id }}"
@@ -86,8 +124,17 @@
                           assign isGiftWrapProduct = true
                         endif
                       %}
-                      {%- comment -%} See ajax-cart-drawer.liquid: read by cart-mode.js. {%- endcomment -%}
-                      <tr id="cartItem{{ forloop.index }}" data-cart-item data-line-key="{{ item.key }}" data-fs-join-source="{{ item.properties._fs_join_source }}">
+                      {% liquid
+  assign fs_item_insider = 0
+  if item.variant.metafields.custom.insider_price.value != blank
+    assign fs_item_insider = item.variant.metafields.custom.insider_price.value | times: 1 | round
+  endif
+  assign fs_item_has_insider = false
+  if fs_cart_mode == 'insider' and fs_item_insider > 0 and fs_item_insider < item.variant.price
+    assign fs_item_has_insider = true
+  endif
+%}
+<tr id="cartItem{{ forloop.index }}" class="{% if item.product_id == fs_membership_product_id %}fs-cart-membership-row{% endif %}" data-cart-item>
                         <td class="cart-product-name">
                           <div class="cart-product-item">
                             <a href="{{ item.url }}" class="cart-product-item-img">
@@ -148,7 +195,14 @@
                                   data-item-original="{{ item.original_price }}"
                                   data-item-final="{{ item.final_price }}"
                                 >
-                                  {%- if item.original_price != item.final_price -%}
+                                  {%- if fs_item_has_insider -%}
+  <span class="product-actual-price">
+    <span class="fs-cart-price-label">Insider</span>{{- fs_item_insider | money -}}
+  </span>
+  <span class="product-compare-price">
+    {{- item.original_price | money -}}
+  </span>
+{%- elsif item.original_price != item.final_price -%}
                                     <span class="product-actual-price">
                                       {{- item.final_price | money -}}
                                     </span>
@@ -294,7 +348,10 @@
                         </td>
                         <td class="cart-product-total">
                           <div class="product-pricing">
-                            {%- if item.original_line_price != item.final_line_price -%}
+                            {%- if fs_item_has_insider -%}
+  <span class="product-actual-price">{{- fs_item_insider | times: item.quantity | money -}}</span>
+  <span class="product-compare-price">{{- item.original_line_price | money -}}</span>
+{%- elsif item.original_line_price != item.final_line_price -%}
                               <span class="product-actual-price">{{- item.final_line_price | money -}}</span>
                               <span class="product-compare-price">{{- item.original_line_price | money -}}</span>
                             {%- else -%}
@@ -428,6 +485,15 @@
                 {% endif %}
               </div>
               <div class="cart-summary-price" data-cart-prices>
+  <div class="fs-cart-mode-status" role="status">
+    {% if fs_cart_mode == 'insider' %}
+      <strong>✓ Insider pricing selected</strong>
+      <span>21 days free, then $24.95/month. Includes a $30 monthly credit. Checkout will use Insider pricing.</span>
+    {% else %}
+      <strong>Full Price selected</strong>
+      <span>One-time purchase with no Club membership. Checkout will use Full Price.</span>
+    {% endif %}
+  </div>
                 {%- for discount in cart.cart_level_discount_applications -%}
                   <div class="cart-summary-price-item discount-item">
                     <h6 class="text cart-summary-price-title">{{ discount.title }}</h6>
@@ -437,8 +503,8 @@
                   </div>
                 {%- endfor -%}
                 <div class="cart-summary-price-item">
-                  <h6 class="text cart-summary-price-title">{{ 'sections.cart.estimated_total' | t }}</h6>
-                  <h6 class="h5 cart-summary-price-amount">{{ cart.total_price | money }}</h6>
+                  <h6 class="text cart-summary-price-title">{% if fs_cart_mode == 'insider' %}Insider total{% else %}{{ 'sections.cart.estimated_total' | t }}{% endif %}</h6>
+                  <h6 class="h5 cart-summary-price-amount">{% if fs_cart_mode == 'insider' %}{{ fs_insider_total | money }}{% else %}{{ cart.total_price | money }}{% endif %}</h6>
                 </div>
               </div>
               <div class="main-cart-buttons">
@@ -451,14 +517,17 @@
                     render 'button' type: 'button', id: id, button_size: button_size, button_text: buttonText, buttonAttributes: buttonAttributes
                   %}
                 </noscript>
-                {%- comment -%}
-                  Was hardcoded to name="checkout2", which sent every cart page
-                  checkout to Checkout Champ — Full Price included, against the
-                  "standard Shopify checkout" the Insiders Club page promises.
-                  The snippet routes on the pricing mode and on whether the Club
-                  is in the cart; see snippets/fs-checkout-button.liquid.
-                {%- endcomment -%}
-                {%- render 'fs-checkout-button', button_size: 'medium', button_id: 'cartCheckout' -%}
+                {% liquid
+                  if fs_cart_mode == 'insider'
+  assign buttonAttributes = 'type="submit" name="checkout2" form="cart"'
+else
+  assign buttonAttributes = 'type="submit" name="checkout" form="cart"'
+endif
+                  assign buttonText = 'sections.cart.checkout' | t
+                  assign id = 'cartCheckout'
+                  assign button_size = 'medium'
+                  render 'button' type: 'button', id: id, button_size: button_size, button_text: buttonText, buttonAttributes: buttonAttributes
+                %}
               
               </div>
               <p class="cart-summary-tax-info text-small">

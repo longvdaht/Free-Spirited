@@ -888,7 +888,22 @@ function checkShippingAvailablity() {
     }
 }
 
+function fsShippingTotal(fallbackTotal) {
+    var mode = (window.FS_INSIDER && window.FS_INSIDER.mode) || 'insider';
+    if (mode !== 'insider') return fallbackTotal;
+
+    // Scoped to the footer on purpose. That block is replaced on every cart
+    // update, so its value is current; anything outside it is not re-rendered
+    // and would go stale after a quantity change.
+    var el = document.querySelector('[data-cart-drawer-footer] [data-insider-total]');
+    if (!el) return fallbackTotal;
+
+    var insiderTotal = parseInt(el.getAttribute('data-insider-total'), 10);
+    return isNaN(insiderTotal) ? fallbackTotal : insiderTotal;
+}
+
 function freeShippingBar(totalPrice, itemCount) {
+    totalPrice = fsShippingTotal(totalPrice);
     let shippingCountryAvailable = checkShippingAvailablity();
       console.log("shippingCountryAvailable",shippingCountryAvailable)
   
@@ -1457,6 +1472,7 @@ function updateVariantPrice(_productSection, priceContainer, selectedVariant, sh
 
             Array.from(priceContainer.querySelectorAll('[data-full-price]')).forEach(function(fullPriceSelector) {
                 fullPriceSelector.innerHTML = Shopify.formatMoney(price, moneyFormat);
+                fullPriceSelector.classList.toggle('hidden', !hasInsiderPrice);
             });
 
             // Both blocks and labels always exist in the DOM, so only classes
@@ -1469,6 +1485,10 @@ function updateVariantPrice(_productSection, priceContainer, selectedVariant, sh
                 label.classList.toggle('hidden', !hasInsiderPrice);
             });
 
+            Array.from(priceContainer.querySelectorAll('[data-insider-terms]')).forEach(function(term) {
+                term.classList.toggle('hidden', !hasInsiderPrice);
+            });
+
             Array.from(priceContainer.querySelectorAll('[data-price-group]')).forEach(function(group) {
                 group.classList.toggle('is-single-price', !hasInsiderPrice);
                 group.setAttribute('data-has-insider', hasInsiderPrice ? 'true' : 'false');
@@ -1476,6 +1496,7 @@ function updateVariantPrice(_productSection, priceContainer, selectedVariant, sh
 
             Array.from(savingPercentageSelector).forEach(function(spSelector) {
                 spSelector.innerHTML = showSaving ? savingPercentage : '';
+                spSelector.setAttribute('data-insider-saving', hasInsiderPrice ? 'true' : 'false');
                 spSelector.classList.toggle('hidden', !showSaving);
             });
 

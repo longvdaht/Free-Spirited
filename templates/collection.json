@@ -11,13 +11,14 @@
   "sections": {
     "breadcrumb_CA79zc": {
       "type": "breadcrumb",
+      "disabled": true,
       "settings": {
         "section_visibility": "always",
         "color_scheme": "",
-        "top_space_desktop": 15,
+        "top_space_desktop": 10,
         "bottom_space_desktop": 15,
-        "top_space_mobile": 10,
-        "bottom_space_mobile": 10
+        "top_space_mobile": 5,
+        "bottom_space_mobile": 5
       }
     },
     "countdown_wGcfkg": {
@@ -81,7 +82,7 @@
           "type": "collection",
           "settings": {
             "collection": "tie-dye-dresses",
-            "heading": "Tie-Dye Maxi Dresses"
+            "heading": "Dresses"
           }
         },
         "collection_YjDrPj": {
@@ -97,28 +98,28 @@
           "settings": {
             "collection": "bundle-to-save",
             "image": "shopify://shop_images/long-sleeve-best-sellers-bundle-927958_95d1c4fd-0d42-4542-a122-4bd4f820529d.png",
-            "heading": "The Best Deal: Bundles"
+            "heading": "Bundles"
           }
         },
         "collection_qwbKq6": {
           "type": "collection",
           "settings": {
             "collection": "new-arrivals",
-            "heading": ""
+            "heading": "New Arrivals"
           }
         },
         "collection_ywiaLr": {
           "type": "collection",
           "settings": {
             "collection": "kids-tie-dye-shirt",
-            "heading": "Kids Tie-Dye Tees"
+            "heading": "Kids Tees"
           }
         },
         "collection_WBYPik": {
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-hoodie",
-            "heading": ""
+            "heading": "Hoodies"
           }
         },
         "collection_XRHh6E": {
@@ -137,53 +138,54 @@
         }
       },
       "block_order": [
+        "collection_qwbKq6",
         "collection_EefHEp",
         "collection_JRGRe3",
-        "collection_Q8KGKV",
-        "collection_NnxUHH",
         "collection_YjDrPj",
-        "collection_ffdq6W",
-        "collection_qwbKq6",
-        "collection_ywiaLr",
         "collection_WBYPik",
-        "collection_XRHh6E",
-        "collection_MGNkKw"
+        "collection_ffdq6W"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.categories-wrapper {margin-bottom: 0 !important; padding-bottom: 0 !important; }}"
       ],
       "settings": {
         "section_visibility": "always",
         "make_section_rounded": false,
-        "heading": "",
-        "heading_size": "h3",
-        "seo_heading": "h3",
+        "heading": "Keep Exploring",
+        "heading_size": "h4",
+        "seo_heading": "h2",
         "heading_alignment": "text-center",
         "column_style": "rounded",
         "desktop_column_count": 6,
         "desktop_column_gap": 9,
         "desktop_column_width": "65%",
         "card_hover_style": "inside-shadow",
-        "mobile_column_count": "2",
-        "mobile_column_gap": 12,
+        "mobile_column_count": "3",
+        "mobile_column_gap": 5,
         "mobile_column_width": "75%",
         "enable_swipe_mobile": true,
         "color_scheme": "",
         "highlighted_color": "#eff341",
         "section_background": "",
-        "top_space_desktop": 0,
+        "top_space_desktop": 50,
         "bottom_space_desktop": 0,
-        "top_space_mobile": 10,
-        "bottom_space_mobile": 0
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 25
       }
     },
     "main-collection-banner": {
       "type": "main-collection-banner",
+      "custom_css": [
+        "@media (max-width: 768px) {.main-collection-banner {margin-top: 0 !important; padding-top: 0 !important; }}"
+      ],
       "settings": {
         "collection_title": true,
-        "collection_description": true,
+        "collection_description": false,
         "heading_overly": false,
         "description_overly": false,
         "collection_image_checker": false,
         "heading_size": "h3",
-        "seo_heading": "h3",
+        "seo_heading": "h1",
         "banner_height_desktop": "250px",
         "banner_height_mobile": "100px",
         "content_width": "medium",
@@ -195,7 +197,7 @@
         "top_space_desktop": 0,
         "bottom_space_desktop": 20,
         "top_space_mobile": 0,
-        "bottom_space_mobile": 20
+        "bottom_space_mobile": 0
       }
     },
     "main-collection": {
@@ -217,13 +219,25 @@
         "top_space_mobile": 0,
         "bottom_space_mobile": 35
       }
+    },
+    "read_more_description_fVWYVM": {
+      "type": "read-more-description",
+      "name": "Read more description",
+      "settings": {
+        "heading_size": 32,
+        "text_size": 15,
+        "bt_size": 18,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
     }
   },
   "order": [
-    "breadcrumb_CA79zc",
-    "countdown_wGcfkg",
-    "categories_9UpaFm",
     "main-collection-banner",
-    "main-collection"
+    "main-collection",
+    "categories_9UpaFm",
+    "read_more_description_fVWYVM",
+    "breadcrumb_CA79zc",
+    "countdown_wGcfkg"
   ]
 }

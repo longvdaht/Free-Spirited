@@ -1,0 +1,205 @@
+{% comment %}
+This section displays the collection title with a "Read More" button to toggle the collection description visibility with a smooth animation. Built for Shopify 2.0 with schema settings.
+{% endcomment %}
+<style>
+.collection-read-more-section {
+text-align: center;
+margin: 20px 0;
+}
+.collection-title {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 15px;
+}
+.collection-description {
+text-align:left;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.5s ease, padding 0.5s ease;
+padding: 0; /* Initially remove padding */
+}
+.collection-description.expanded {
+max-height: 100%; /* Adjust this value to suit the content height */
+padding: 15px 0; /* Padding restored when expanded */
+}
+.collection-read-more-section.section-spacing--{{ section.id }}  .read-more-btn {
+color: #000;
+border: none;
+cursor: pointer;
+font-size: {{section.settings.bt_size}}px;
+}
+.collection-read-more-section.section-spacing--{{ section.id }} .collection-title h2{
+font-size:{{ section.settings.heading_size }}px!important;
+  margin-bottom:0px!important
+}
+@media(max-width:749px){
+.collection-read-more-section .collection-title{
+align-items: unset;
+flex-direction: column;
+}
+.collection-description {
+text-align:center;
+}
+.collection-read-more-section.section-spacing--{{ section.id }} .collection-title h2{
+margin-bottom: 10px !important;
+        line-height: 1.2;
+        font-size: 22px !important;
+}
+}
+.section-spacing--{{ section.id }} {
+padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+}
+@media screen and (min-width: 750px) {
+.section-spacing--{{ section.id }} {
+padding-top: {{ section.settings.padding_top }}px;
+padding-bottom: {{ section.settings.padding_bottom }}px;
+padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+}
+.collection-description{
+  max-width: 60%;
+    margin: 0 auto;
+}
+.collection-title {
+    max-width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+}
+.collection-read-more-section.section-spacing--{{ section.id }} .collection-description.rte p, .collection-read-more-section.section-spacing--{{ section.id }} .collection-description.rte div{
+font-size:{{ section.settings.text_size }}px;
+}
+  .collection-description h1, .collection-description h2, .collection-description h3, .collection-description h4, .collection-description h5, .collection-description h6{
+    margin-bottom:16px
+  }
+  .read-more-btn{
+    background: unset;
+  }
+  @media(max-width:749px){
+    .collection-read-more-section{
+      padding-left: 1rem;
+    padding-right: 1rem;
+    }
+    .collection-title h2{
+        font-size: 32px !important;
+    }
+  }
+  .collection-title h2{
+margin-top: unset!important;
+}
+.metafield-rich_text_field p{
+    margin-bottom: 14px;
+}
+</style>
+{% if template contains 'collection' %}
+{% if collection.metafields.custom.meta_title %}
+<section class="collection-read-more-section wrapper--full section-padding section-spacing--{{ section.id }}">
+<div class="collection-title">
+<h2>{{ collection.metafields.custom.meta_title }}</h2>
+<button id="read-more-btn" class="read-more-btn" onclick="toggleDescription()">Read more</button>
+</div>
+<div class="collection-description rte" id="collection-description">
+{{ collection.metafields.custom.meta_description | metafield_tag | newline_to_br }}
+</div>
+</section>
+{% endif %}
+{% else %}
+  {% if product.metafields.custom.meta_title %}
+<section class="collection-read-more-section wrapper--full section-padding section-spacing--{{ section.id }}">
+<div class="collection-title">
+<h2>{{ product.metafields.custom.meta_title }}</h2>
+<button id="read-more-btn" class="read-more-btn" onclick="toggleDescription()">Read more</button>
+</div>
+<div class="collection-description rte" id="collection-description">
+{{ product.metafields.custom.meta_description | metafield_tag }}
+</div>
+</section>
+{% endif %}  
+{% endif %}    
+<script>
+  function toggleDescription() {
+    var description = document.getElementById('collection-description');
+    var button = document.getElementById('read-more-btn');
+    if (description.classList.contains('expanded')) {
+      description.classList.remove('expanded');
+      button.innerText = "Read More";
+    } else {
+      description.classList.add('expanded');
+      button.innerText = "Read less";
+    }
+  }
+</script>
+{% schema %}
+{
+  "name": "Read more description",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Fonts"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Title font size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Description font size",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "bt_size",
+      "min": 12,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Read more button font size",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Spacing top",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Spacing bottom",
+      "default": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "Read more description"
+    }
+  ]
+}
+{% endschema %}

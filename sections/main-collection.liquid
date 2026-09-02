@@ -89,6 +89,7 @@
                     | append: '-'
                     | append: collection.handle
                   %}
+                  
                   <div class="col-6 col-sm-6 col-md-4 {{ columnsValue }}">
                     {% assign aosDelay = forloop.index | times: 50 %}
                     {%- capture current -%}{% cycle section.id: 1, 2, 3, 4 %}{%- endcapture -%}

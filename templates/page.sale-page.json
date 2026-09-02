@@ -138,7 +138,7 @@
           "settings": {
             "heading": "Mardi Gras Sale! Tie-dye starting at just $9.95",
             "heading_size": "h2",
-            "seo_heading": "h2",
+            "seo_heading": "h1",
             "highlighted_color": "#eff341"
           }
         },
@@ -308,7 +308,7 @@
         "mobile_height": "350px",
         "color_scheme": "",
         "section_background": "",
-        "highlighted_color": "#EFF341",
+        "highlighted_color": "#eff341",
         "top_space_desktop": 30,
         "bottom_space_desktop": 70,
         "top_space_mobile": 20,

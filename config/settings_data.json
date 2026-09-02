@@ -71,7 +71,7 @@
     "shipping_text": "Ships fast from our Florida studio.",
     "show_swatches": false,
     "content_swatches": true,
-    "sale_label": true,
+    "sale_label": false,
     "soldout_label": true,
     "new_label_text": "Valentine Sale",
     "new_collection_label": false,
@@ -85,7 +85,7 @@
     "quickview": true,
     "quick_view_button_mobile": true,
     "quickview_style": "drawer",
-    "heading_size": "h3",
+    "heading_size": "h1",
     "blog_grid_image_size": "square",
     "show_content_overlay": true,
     "enable_cartdrawer": true,
@@ -99,29 +99,35 @@
     "shipping_success": "Congratulations! You've got free shipping!",
     "enable_recommendation": true,
     "recomded_products": [
+      "tie-dye-mystery-tee",
+      "tie-dye-socks",
+      "pink-heart-tie-dye-tee",
       "shipping-protection",
-      "forever-coverage-by-mary",
-      "camo-swirl-hand-dyed-long-sleeve",
-      "camo-swirl-hand-dyed-long-sleeve-copy-1",
-      "blue-ocean-hand-dyed-long-sleeve",
-      "camo-swirl-hand-dyed-long-sleeve-copy"
+      "forever-coverage-by-mary"
     ],
-    "cart_notification_bar": "Items in your cart are limited. Complete checkout to secure your sizes.",
+    "cart_notification_bar": "<strong>⚡ Ships next business day.</strong>",
     "insider_mode_free_product": "free-spirited-insiders",
     "enable_recent_search": true,
     "enable_queries": true,
     "enable_collections": true,
     "enable_suggestion": true,
-    "suggestion_product": [],
+    "suggestion_heading": "Customer favorites",
+    "suggestion_product": [
+      "tie-dye-mystery-tee",
+      "pink-heart-tie-dye-tee",
+      "crystal-purple-tie-dye-tee",
+      "flag-premium-hand-dyed-comfort-shirt-copy"
+    ],
     "social_twitter_link": "",
-    "social_facebook_link": "",
+    "social_facebook_link": "https://www.facebook.com/profile.php?id=100086887511737",
     "social_pinterest_link": "",
-    "social_instagram_link": "",
+    "social_instagram_link": "https://www.instagram.com/shop_freespirited/",
     "social_tiktok_link": "",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
-    "social_youtube_link": "",
+    "social_youtube_link": "https://www.youtube.com/@ShopFreeSpirited",
     "social_vimeo_link": "",
+    "social_facebook": true,
     "social_tiwtter": true,
     "social_pinterest": true,
     "newsletter_pop_enable": false,
@@ -267,11 +273,6 @@
     },
     "content_for_index": [],
     "blocks": {
-      "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {}
-      },
       "10864971697205422121": {
         "type": "shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa",
         "disabled": false,
@@ -284,28 +285,8 @@
           "account_param": ""
         }
       },
-      "6610233760104865948": {
-        "type": "shopify://apps/pushowl-brevo/blocks/pushowl-app-embed-3d2ff2b5/fa20c3ba-38bf-43e0-ba5c-431f6ae07d95",
-        "disabled": false,
-        "settings": {}
-      },
       "8037605124156046748": {
         "type": "shopify://apps/zipify-pages-builder/blocks/theme-helper/d7b69cdc-95f1-4a0b-8f02-416acb4f0b1c",
-        "disabled": false,
-        "settings": {}
-      },
-      "11104565113590962351": {
-        "type": "shopify://apps/tinyseo-seo-speed/blocks/article-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
-        "disabled": false,
-        "settings": {}
-      },
-      "2353461558643755616": {
-        "type": "shopify://apps/tinyseo-seo-speed/blocks/breadcrumbs-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
-        "disabled": false,
-        "settings": {}
-      },
-      "15154131639906026026": {
-        "type": "shopify://apps/tinyseo-seo-speed/blocks/broken-link-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
         "disabled": false,
         "settings": {}
       },
@@ -329,16 +310,6 @@
         "disabled": false,
         "settings": {}
       },
-      "15181020662106344915": {
-        "type": "shopify://apps/judge-me-reviews/blocks/popup_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {}
-      },
-      "5134484470793087125": {
-        "type": "shopify://apps/vitals/blocks/app-embed/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
-        "disabled": false,
-        "settings": {}
-      },
       "15316669992541710076": {
         "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-snippet/92a082e5-b297-4e88-b428-ac96cbc505f9",
         "disabled": true,
@@ -356,38 +327,8 @@
           "show_empty_stars": false
         }
       },
-      "12120936241911852800": {
-        "type": "shopify://apps/judge-me-reviews/blocks/reviews_tab/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {
-          "position": "right"
-        }
-      },
-      "13392549970259155148": {
-        "type": "shopify://apps/xo-insert-code/blocks/insert-code-header/72017b12-3679-442e-b23c-5c62460717f5",
-        "disabled": false,
-        "settings": {
-          "custom_liquid": "",
-          "custom_css": "",
-          "custom_js": ""
-        }
-      },
-      "10148494829067693542": {
-        "type": "shopify://apps/xo-insert-code/blocks/insert-code-body/72017b12-3679-442e-b23c-5c62460717f5",
-        "disabled": true,
-        "settings": {
-          "custom_liquid": "",
-          "custom_css": "",
-          "custom_js": ""
-        }
-      },
       "16846712197000795875": {
         "type": "shopify://apps/emotive-cartai/blocks/app-embed/46f55050-1763-422b-86da-a34fd5035e86",
-        "disabled": false,
-        "settings": {}
-      },
-      "13806277301757811102": {
-        "type": "shopify://apps/emotive/blocks/emotive_popups_prod/01999eb5-af45-7446-970b-598cbacf7120",
         "disabled": false,
         "settings": {}
       },
@@ -396,14 +337,66 @@
         "disabled": false,
         "settings": {}
       },
-      "5674012996228588682": {
-        "type": "shopify://apps/cartbot/blocks/cartbot-script-append/f7a44e3b-3901-4412-9d5a-3db0980a9db0",
-        "disabled": false,
-        "settings": {}
-      },
       "17676059084223943535": {
         "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
+        "settings": {}
+      },
+      "11104565113590962351": {
+        "type": "shopify://apps/tinyseo/blocks/article-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {
+          "author_name": "",
+          "author_url": ""
+        }
+      },
+      "2353461558643755616": {
+        "type": "shopify://apps/tinyseo/blocks/breadcrumbs-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {
+          "include_first_collection": false
+        }
+      },
+      "15154131639906026026": {
+        "type": "shopify://apps/tinyseo/blocks/broken-link-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {}
+      },
+      "6610233760104865948": {
+        "type": "shopify://apps/brevo-pushowl/blocks/pushowl-app-embed-3d2ff2b5/fa20c3ba-38bf-43e0-ba5c-431f6ae07d95",
+        "disabled": false,
+        "settings": {}
+      },
+      "12120936241911852800": {
+        "type": "shopify://apps/judge-me-reviews/blocks/reviews_tab/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+          "position": "right"
+        }
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "15181020662106344915": {
+        "type": "shopify://apps/judge-me-reviews/blocks/popup_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "4252583770683550135": {
+        "type": "shopify://apps/redo/blocks/redo_app_embed/c613644b-6df4-4d11-b336-43a5c06745a1",
+        "disabled": true,
+        "settings": {}
+      },
+      "13806277301757811102": {
+        "type": "shopify://apps/emotive/blocks/emotive_popups_prod/01999eb5-af45-7446-970b-598cbacf7120",
+        "disabled": true,
+        "settings": {}
+      },
+      "5134484470793087125": {
+        "type": "shopify://apps/vitals/blocks/app-embed/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
+        "disabled": true,
         "settings": {}
       }
     },

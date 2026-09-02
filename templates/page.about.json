@@ -106,7 +106,7 @@
           "settings": {
             "heading": "<strong>CELEBRATING INDIVIDUALITY, CREATIVITY, AND FREE SPIRITS EVERYWHERE!</strong>",
             "heading_size": "h5",
-            "seo_heading": "h2",
+            "seo_heading": "h1",
             "highlighted_color": "#006f94"
           }
         },
@@ -244,7 +244,7 @@
           "type": "column",
           "settings": {
             "heading": "<strong>Building a Community of Free Spirits</strong>",
-            "description": "Free Spirited isn’t just about selling clothes—it’s about creating a community of like-minded individuals who value creativity, authenticity, and self-expression. Our customers are more than just shoppers; they’re part of the Free Spirited family.\n\nThrough our Insiders membership program, we offer even more ways to connect with our brand and each other. Members get exclusive access to limited-edition designs, early releases, loyalty rewards, and even the chance to vote on future collections. We believe in building relationships, not just transactions, and our community is at the heart of everything we do.",
+            "description": "Free Spirited isn’t just about selling clothes—it’s about creating a community of like-minded individuals who value creativity, authenticity, and self-expression. Our customers are more than just shoppers; they’re part of the Free Spirited family.\n\nThrough the Free Spirited Insiders Club, we offer even more ways to connect with our brand and each other. Club members get exclusive access to limited-edition designs, early releases, loyalty rewards, and even the chance to vote on future collections. We believe in building relationships, not just transactions, and our community is at the heart of everything we do.",
             "link_label": "",
             "link_url": "",
             "column_background": true,
@@ -429,7 +429,7 @@
         "text_49eMfK": {
           "type": "text",
           "settings": {
-            "text": "<p>Ready to embrace the vibrant, carefree spirit of Free Spirited? Whether you’re shopping for your next favorite tee or joining our Insiders membership for exclusive perks, we’re thrilled to have you with us. Follow us on social media and join our community of free spirits who live boldly, love deeply, and wear their creativity on their sleeves.</p><p></p><h4><strong>Be Wild. Be Free. Be You.</strong></h4>"
+            "text": "<p>Ready to embrace the vibrant, carefree spirit of Free Spirited? Whether you’re shopping for your next favorite tee or joining the Free Spirited Insiders Club for exclusive perks, we’re thrilled to have you with us. Follow us on social media and join our community of free spirits who live boldly, love deeply, and wear their creativity on their sleeves.</p><p></p><h4><strong>Be Wild. Be Free. Be You.</strong></h4>"
           }
         },
         "button_VcTE3q": {

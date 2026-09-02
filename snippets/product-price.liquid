@@ -1,25 +1,178 @@
-{%liquid
+{%- liquid
 
 assign current_variant = product.selected_or_first_available_variant
 assign price = current_variant.price | default: 1999
 assign money_price = price | money
-%}
 
-{% if settings.show_save_amount %}
+# Read custom.insider_price and normalise to cents, which is what
+# variant.price uses.
+#
+# In Liquid a `money` metafield returns a value already expressed in cents, so
+# it is directly comparable to variant.price and renders with `| money` as is.
+# There is no `.amount` in Liquid: that field exists only in the GraphQL Admin
+# API, and reading it here silently yields nothing. Multiplying by 100 was the
+# cause of prices rendering 100x too large.
+#
+# `times: 1` forces numeric coercion before rounding.
+assign insider_metafield = current_variant.metafields.custom.insider_price
+assign insider_cents = 0
+
+if insider_metafield.value != blank
+  assign insider_cents = insider_metafield.value | times: 1 | round
+endif
+
+# A variant only takes part in Insider pricing when the metafield is strictly
+# below the selling price. Three catalogue groups collapse into this one test:
+#   - flipped variants        insider < price   -> show both prices
+#   - no compare-at set       insider == price  -> show one price
+#   - compare-at == price     insider == price  -> show one price
+assign has_insider_price = false
+if insider_cents > 0 and insider_cents < price
+  assign has_insider_price = true
+endif
+
+assign insider_money = insider_cents | money
+
+# Keep the legacy compare-at strikethrough available for genuine sales, but
+# never when it merely repeats the selling price.
+assign show_compare_at = false
+if current_variant.compare_at_price > price
+  assign show_compare_at = true
+endif
+
+# Saving percentage prefers the Insider gap, falling back to compare-at.
+# The fallback matters: before the price flip no variant has an Insider gap, and
+# without it every existing discount badge in the catalogue would disappear.
+# After the flip, compare_at equals price on flipped variants so the first
+# branch takes over automatically.
+assign saving_percent = 0
+assign show_saving = false
+
+if has_insider_price
+  assign saving_percent = price | minus: insider_cents | times: 100 | divided_by: price
+  assign show_saving = true
+elsif show_compare_at
+  assign saving_percent = current_variant.compare_at_price | minus: price | times: 100 | divided_by: current_variant.compare_at_price
+  assign show_saving = true
+endif
+
+-%}
+
+{%- comment -%}
+  Variant metafields are not present in `product.variants | json`, so the
+  variant switching script cannot read Insider prices from the variant data it
+  already has. This map exposes them separately, keyed by variant id, already
+  normalised to cents. Null means the variant has no Insider price.
+{%- endcomment -%}
+<script type="application/json" data-name="product-insider-prices">
+{
+{%- for variant in product.variants -%}
+  {%- assign mf = variant.metafields.custom.insider_price -%}
+  "{{ variant.id }}": {% if mf.value != blank %}{{ mf.value | times: 1 | round }}{% else %}null{% endif %}{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+}
+</script>
+
+{%- if request.design_mode -%}
+  {%- comment -%}
+    Theme editor only. Makes a blank or wrongly scaled Insider price traceable
+    to the metafield rather than guessed at.
+  {%- endcomment -%}
+  <div style="font:12px/1.5 monospace;background:#ffd;border:1px solid #cc0;padding:6px;margin:6px 0">
+    variant_id: {{ current_variant.id }}<br>
+    variant.price (cents): {{ current_variant.price }}<br>
+    metafield type: {{ insider_metafield.type | default: '(none)' }}<br>
+    raw value (expect cents): {{ insider_metafield.value | default: '(none)' }}<br>
+    insider_cents: {{ insider_cents }} rendered as {{ insider_money }}<br>
+    has_insider_price: {{ has_insider_price }}
+  </div>
+{%- endif -%}
+
+{%- if settings.show_save_amount -%}
   <div class="product-pricing-inner">
-  {% assign offText = 'products.product.off' | t %}
-    <span class="product-discount-price {% if current_variant.compare_at_price > current_variant.price %}price-saving{% else %}hidden{% endif %}"  data-price-saving> 
-        {%- if current_variant.compare_at_price > current_variant.price -%}
-          {{- current_variant.compare_at_price | minus: current_variant.price | times: 100 | divided_by: current_variant.compare_at_price | append: '% ' | append: offText -}}
-        {% endif %}
+    {%- assign offText = 'products.product.off' | t -%}
+    <span
+      class="product-discount-price {% if show_saving %}price-saving{% else %}hidden{% endif %}"
+      data-insider-saving="{{ has_insider_price }}"
+      data-price-saving
+    >
+      {%- if show_saving -%}
+        {{- saving_percent | append: '% ' | append: offText -}}
+      {%- endif -%}
     </span>
   </div>
-{% endif %}
-<p class="hidden">{%- if current_variant.compare_at_price > current_variant.price -%}{{ 'products.product.price.sale_price' | t }}{%- else -%}{{ 'products.product.price.regular_price' | t }}{% endif %}</p>
-<span class="product-actual-price  {% if sticky != true %}h5{% endif %}" data-actual-price>{{ money_price }}</span>
+{%- endif -%}
+
+<p class="hidden">
+  {%- if show_saving -%}
+    {{ 'products.product.price.sale_price' | t }}
+  {%- else -%}
+    {{ 'products.product.price.regular_price' | t }}
+  {%- endif -%}
+</p>
+
+{%- comment -%}
+  Insider price first, full price second. Both elements are always rendered so
+  the variant switching script only toggles the `hidden` class and rewrites
+  text, never builds or removes DOM nodes.
+{%- endcomment -%}
+<div
+  class="product-price-group{% unless has_insider_price %} is-single-price{% endunless %}"
+  data-price-group
+  data-has-insider="{{ has_insider_price }}"
+>
+  <span
+    class="product-actual-price fs-labeled-price {% if sticky != true %}h5{% endif %}"
+    data-price-label="Insider price"
+    data-actual-price
+  >{% if has_insider_price %}{{ insider_money }}{% else %}{{ money_price }}{% endif %}</span>
+
+  <span
+    class="product-compare-price product-full-price fs-labeled-price {% if sticky != true %}h6{% endif %}{% unless has_insider_price %} hidden{% endunless %}"
+    data-price-label="Full price"
+    data-full-price
+  >{{ money_price }}</span>
+
+  {%- if sticky != true -%}
+    <a
+      class="fs-insider-benefits-card{% unless has_insider_price %} hidden{% endunless %}"
+      href="/pages/insiders-club"
+      aria-label="See all Free Spirited Insiders Club benefits"
+    >
+      <span class="fs-insider-benefits-card__copy">
+        <strong>✦ See all Club benefits</strong>
+        <small>21-day free trial · $30 monthly credit · early access</small>
+      </span>
+      <span class="fs-insider-benefits-card__arrow" aria-hidden="true">→</span>
+    </a>
+    <span class="fs-insider-price-terms text-xsmall{% unless has_insider_price %} hidden{% endunless %}" data-insider-terms>Then $24.95/month plus applicable taxes until canceled. Cancel anytime. Full Price is available in the cart.</span>
+    <style>
+      .product-price-group[data-has-insider="true"] .fs-labeled-price::before { content: attr(data-price-label); display: inline-block; margin-right: .45em; font-size: .56em; line-height: 1; letter-spacing: .05em; text-transform: uppercase; font-weight: 700; text-decoration: none; vertical-align: middle; }
+      .product-discount-price[data-insider-saving="true"]::after { content: " with Insider"; }
+      .fs-insider-benefits-card { align-items: center; background: linear-gradient(135deg, #f3fafb 0%, #fbfde9 100%); border: 1px solid rgba(6, 122, 157, .32); border-radius: 14px; color: #1e2224; display: flex; flex-basis: 100%; gap: .75rem; justify-content: space-between; margin-top: .75rem; padding: .72rem .85rem; text-decoration: none; width: 100%; }
+      .fs-insider-benefits-card__copy { display: grid; gap: .18rem; }
+      .fs-insider-benefits-card__copy strong { color: #057b9f; font-size: .9rem; line-height: 1.2; }
+      .fs-insider-benefits-card__copy small { color: #535b5e; font-size: .73rem; line-height: 1.25; }
+      .fs-insider-benefits-card__arrow { align-items: center; background: #b6d500; border-radius: 50%; color: #142126; display: inline-flex; flex: 0 0 auto; font-size: 1rem; font-weight: 900; height: 2rem; justify-content: center; width: 2rem; }
+      .fs-insider-benefits-card:hover { border-color: #057b9f; box-shadow: 0 6px 18px rgba(5, 91, 119, .11); transform: translateY(-1px); }
+      .product-price-group[data-has-insider="false"] .fs-insider-benefits-card { display: none; }
+      .fs-insider-price-terms { display: block; flex-basis: 100%; width: 100%; margin-top: .48rem; line-height: 1.4; }
+      @media (max-width: 480px) {
+        .fs-insider-benefits-card { padding: .68rem .72rem; }
+        .fs-insider-benefits-card__copy strong { font-size: .86rem; }
+        .fs-insider-benefits-card__copy small { font-size: .68rem; }
+      }
+    </style>
+  {%- endif -%}
+</div>
+
 <span class="hidden">{{ 'products.product.price.regular_price' | t }}</span>
-<span class="product-compare-price {% if sticky != true %}h6{% endif %} {%- if current_variant.compare_at_price > current_variant.price -%} compare-price-data {% else %} hidden{% endif %}" data-compare-price>
- {{ current_variant.compare_at_price | money }}
+
+<span
+  class="product-compare-price {% if sticky != true %}h6{% endif %} {% if show_compare_at %}compare-price-data{% else %}hidden{% endif %}"
+  data-compare-price
+>
+  {{- current_variant.compare_at_price | money -}}
 </span>
 
 <span class="hidden" data-soldout>{{ 'products.product.sold_out' | t }}</span>
@@ -28,7 +181,13 @@ assign money_price = price | money
 </span>
 
 <span class="hidden">{{ 'products.product.price.unit_price' | t }}</span>
-<span class="product-unit-price text-small" {%- if current_variant.unit_price_measurement -%}product-unite-price {% else %} hidden {% endif %}" data-unit-price>
-  {{ current_variant.unit_price | money }} / {% if current_variant.unit_price_measurement.reference_value != 1 %}{{ current_variant.unit_price_measurement.reference_value }}{% endif %} {{ current_variant.unit_price_measurement.reference_unit }}
+<span
+  class="product-unit-price text-small{% unless current_variant.unit_price_measurement %} hidden{% endunless %}"
+  data-unit-price
+>
+  {{- current_variant.unit_price | money }} /
+  {%- if current_variant.unit_price_measurement.reference_value != 1 %}
+    {{- current_variant.unit_price_measurement.reference_value }}
+  {%- endif %}
+  {{ current_variant.unit_price_measurement.reference_unit -}}
 </span>
-

@@ -61,6 +61,7 @@
         },
         "text_PwNXKK": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>This order includes Free Spirited Insiders benefits (21-day trial, then $24.95/mo).</p>"
           }
@@ -230,7 +231,7 @@
         "heading_alignment": "text-left",
         "color_scheme": "",
         "section_background": "",
-        "highlighted_color": "#EFF341",
+        "highlighted_color": "#eff341",
         "top_space_desktop": 40,
         "bottom_space_desktop": 40,
         "top_space_mobile": 35,

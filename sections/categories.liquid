@@ -44,14 +44,14 @@
                         </div>
                     </div>
                     <div class="categories-box-content">
-                        <h6 class="categories-box-heading text-medium text-center">
+                        <p class="categories-box-heading text-medium text-center">
                           {%- if block.settings.heading != blank -%}
                             {{ block.settings.heading -}}
                           {% elsif collection != blank %}
                             {{- collection.title | strip_html -}}
                           {%- else -%}
                             {{ 'sections.collection_carousel.collection' | t }}
-                          {%- endif %}</h6>
+                          {%- endif %}</p>
                     </div>
                     {% if collection != blank  %}
                     <a href="{{ collection.url }}" aria-label="{{ collection.title }}" class="categories-box-link"></a>

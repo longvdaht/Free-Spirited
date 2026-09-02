@@ -137,7 +137,7 @@
           "settings": {
             "heading": "Mother's Day Sale!",
             "heading_size": "h2",
-            "seo_heading": "h2",
+            "seo_heading": "h1",
             "highlighted_color": "#eff341"
           }
         },
@@ -507,7 +507,7 @@
         "text_Y8EPnX": {
           "type": "text",
           "settings": {
-            "text": "<p>When you shop Free Spirited Co. You know you're in good hands.</p>"
+            "text": "<p>When you shop Free Spirited Clothing. You know you're in good hands.</p>"
           }
         },
         "button_Rkf69e": {
@@ -714,7 +714,7 @@
         "text_XDmY8G": {
           "type": "text",
           "settings": {
-            "text": "<p>Know the difference when you feel our unique textures, with exceptional breathability, made with quality fabrics. Only at Free Spirited Co.</p>"
+            "text": "<p>Know the difference when you feel our unique textures, with exceptional breathability, made with quality fabrics. Only at Free Spirited Clothing.</p>"
           }
         },
         "button_KUarmA": {

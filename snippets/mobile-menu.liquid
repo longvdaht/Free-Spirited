@@ -22,7 +22,7 @@
               endcapture
             -%}
             <li
-              class="mobile-menu-item {% if link.links.size > 0 or megaMenuData != blank %} has-children{% endif %}{% if megaMenuData != blank %} has-megamenu{% endif %}"
+              class="mobile-menu-item menu-{{ linkTitle }} {% if link.links.size > 0 or megaMenuData != blank %} has-children{% endif %}{% if megaMenuData != blank %} has-megamenu{% endif %}"
               data-children-menu
             >
               <div class="mobile-menu-item-inner"{% if link.links.size > 0 or megaMenuData != blank %} data-mobile-hamburger{% endif %}>

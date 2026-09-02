@@ -9,7 +9,12 @@
       </button>
       <div class="search-drawer-content" data-search-content>
         <div class="serach-drawer-header">
-          <h4 class="serach-drawer-heading">{{ 'general.search.search' | t }}</h4>
+          <p style="
+    color: var(--heading-color);
+    font-family: var(--heading-font-family);
+    font-style: var(--heading-font-style);
+    font-weight: var(--heading-font-weight);"
+     class="serach-drawer-heading h4">{{ 'general.search.search' | t }}</p>
           <form action="{{ routes.search_url }}" method="get" role="search" class="search" data-search-form>
             <div class="serach-drawer-input-group">
               <button type="submit" class="serach-drawer-button" aria-label="{{ 'general.search.search' | t }}">

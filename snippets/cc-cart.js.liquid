@@ -84,14 +84,6 @@
         });
       }
 
-      // Shopify's own checkout. Used whenever the Checkout Champ handoff cannot
-      // be built: a completed Shopify order beats a dead button or a Checkout
-      // Champ page with an empty cart, and it leaves a visible trail either way.
-      function fallbackToShopifyCheckout(reason) {
-        debug('Checkout Champ handoff unavailable, using Shopify checkout:', reason);
-        window.location.href = '/checkout';
-      }
-
       function checkout(event) {
         event.preventDefault();
         event.stopPropagation();
@@ -100,26 +92,9 @@
           fetch('/cart?view=meta-data.json').then(function (r) { return r.json(); }),
           verifiedCoupon()
         ]).then(function (results) {
-          var data = results[0];
-          var items = (data && data.meta_product_id_array) || [];
-
-          // No line in the cart carries a Checkout Champ id, so `products=` would
-          // go out empty and drop the shopper on a checkout with nothing in it —
-          // no cart, no way back. A cart holding only the Insiders Club is that
-          // cart today: the Club product has no productId metafield.
-          if (!items.length) {
-            fallbackToShopifyCheckout('no Checkout Champ product ids in the cart');
-            return;
-          }
-
-          var checkoutUrl = getCheckoutURL(data, results[1]);
+          var checkoutUrl = getCheckoutURL(results[0], results[1]);
           debug('Checkout ->', checkoutUrl);
           window.location.href = checkoutUrl;
-        }).catch(function (e) {
-          // There was no catch here at all. A rejected fetch, or the invalid JSON
-          // the meta-data template used to emit, was swallowed silently and the
-          // checkout button simply did nothing when clicked.
-          fallbackToShopifyCheckout(e);
         });
       }
 
@@ -133,23 +108,15 @@
 
       function getCheckoutURL(data, couponCode) {
         var cookie = getCartCookie('cart');
-        // Was getCartCookie('?affId'). The '?' went straight into the RegExp,
-        // where it made the leading `(^| )` optional instead of naming a cookie —
-        // so the name matched as a SUFFIX of any other cookie ending in "affId".
-        var affId = getCartCookie('affId');
+        var affId = getCartCookie('?affId');
 
         var urlLineItems = Object.keys(data.meta_product_id_array).reduce(function (output, productId) {
           return output.concat([ data.meta_product_id_array[productId].id + ':' + data.meta_product_id_array[productId].quantity ]);
         }, []).join(';');
 
         var checkoutUrl = self.options.checkoutUrl + '?products=' + urlLineItems + '&cartId=' + cookie;
-        // Was `typeof affId !== 'undefined'`, which is ALWAYS true: getCartCookie
-        // returns null when the cookie is absent, and `typeof null` is 'object'.
-        // Every checkout URL therefore carried the literal string `affId=null`,
-        // which Checkout Champ records as the affiliate id. Send it only when a
-        // real value exists.
-        if (affId) {
-          checkoutUrl += '&affId=' + encodeURIComponent(affId);
+        if (typeof affId !== 'undefined') {
+          checkoutUrl += '&affId=' + affId;
         }
         // Verified codes only — see the comment at the top of this file.
         if (couponCode) {

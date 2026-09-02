@@ -135,7 +135,7 @@
         "btn_size": "regular",
         "color_scheme": "",
         "section_background": "",
-        "highlighted_color": "#EFF341",
+        "highlighted_color": "#eff341",
         "overlay_background": "#000000",
         "overlay_opacity": 0,
         "top_space_desktop": 0,
@@ -169,7 +169,7 @@
           "settings": {
             "heading": "<strong>Our Memorial Day Sale is Live!</strong> Ships Fast from Florida.",
             "heading_size": "h2",
-            "seo_heading": "h2",
+            "seo_heading": "h1",
             "highlighted_color": "#ffd700"
           }
         },
@@ -807,7 +807,7 @@
         "text_Y8EPnX": {
           "type": "text",
           "settings": {
-            "text": "<p>When you shop Free Spirited Co. You know you're in good hands.</p>"
+            "text": "<p>When you shop Free Spirited Clothing. You know you're in good hands.</p>"
           }
         },
         "button_Rkf69e": {
@@ -1014,7 +1014,7 @@
         "text_XDmY8G": {
           "type": "text",
           "settings": {
-            "text": "<p>Know the difference when you feel our unique textures, with exceptional breathability, made with quality fabrics. Only at Free Spirited Co.</p>"
+            "text": "<p>Know the difference when you feel our unique textures, with exceptional breathability, made with quality fabrics. Only at Free Spirited Clothing.</p>"
           }
         },
         "button_KUarmA": {

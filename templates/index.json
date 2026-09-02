@@ -16,16 +16,16 @@
         "enable_full_width": true,
         "enable_parallax": false,
         "enable_content_parallax": false,
-        "image": "shopify://shop_images/ChatGPT_Image_May_12_2026_02_18_20_PM_ef54b64d-7167-45d2-b11d-ddee867b61b0.png",
-        "desktop_height": "100vh",
+        "image": "shopify://shop_images/free-spirited-homepage-hand-dye-hero-optimized.webp",
+        "desktop_height": "700px",
         "mobile_height": "500px",
-        "banner_title": "Free Spirited Co is now Free Spirited Clothing!",
+        "banner_title": "The tie-dye people stop you to ask about.",
         "heading_size": "h3",
-        "seo_heading": "h3",
-        "banner_desc": "$11.95 Insider pricing with Free Spirited Insiders membership. Membership details shown at checkout. Hand dyed. One of a kind. Made with love and shipped fast from Florida.",
+        "seo_heading": "h1",
+        "banner_desc": "Hand-dyed in small batches. Unbelievably soft, completely one of a kind, and made to stay vibrant wash after wash.",
         "button_style": "solid",
-        "button_text": "Shop Insider Sale",
-        "button_link": "shopify://collections/twloha",
+        "button_text": "Shop Best Sellers",
+        "button_link": "shopify://collections/shop-sale",
         "button_size": "regular",
         "content_width": "medium",
         "desktop_position": "middle",
@@ -36,7 +36,7 @@
         "highlighted_color": "#eff341",
         "desc_color": "#ffffff",
         "overlay_color": "#000000",
-        "overlay_opacity": 10,
+        "overlay_opacity": 25,
         "btn_bg_color": "{{ shop.brand.colors.primary[1].background }}",
         "btn_text_color": "#ffffff",
         "btn_border_color": "#adcc0d",
@@ -116,7 +116,8 @@
         "bottom_space_desktop": 0,
         "top_space_mobile": 0,
         "bottom_space_mobile": 0
-      }
+      },
+      "disabled": true
     },
     "categories_AwydGQ": {
       "type": "categories",
@@ -133,49 +134,49 @@
           "type": "collection",
           "settings": {
             "collection": "new-arrivals",
-            "heading": ""
+            "heading": "New Arrivals"
           }
         },
         "collection_qbg7qb": {
           "type": "collection",
           "settings": {
             "collection": "bundle-to-save",
-            "heading": ""
+            "heading": "Bundles"
           }
         },
         "collection_Y6jk3b": {
           "type": "collection",
           "settings": {
             "collection": "tie-dye-shirts",
-            "heading": ""
+            "heading": "Tie-Dye Tees"
           }
         },
         "collection_A3gREr": {
           "type": "collection",
           "settings": {
             "collection": "tank-tops",
-            "heading": ""
+            "heading": "Tank Tops"
           }
         },
         "collection_jWnHjF": {
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-hoodie",
-            "heading": ""
+            "heading": "Hoodies"
           }
         },
         "collection_mDbqYg": {
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-tie-dye-shirts",
-            "heading": ""
+            "heading": "Long Sleeves"
           }
         },
         "collection_tcCAzm": {
           "type": "collection",
           "settings": {
-            "collection": "tie-dye-maxi-dresses",
-            "heading": ""
+            "collection": "tie-dye-dresses",
+            "heading": "Dresses"
           }
         },
         "collection_bayHXV": {
@@ -208,28 +209,22 @@
         }
       },
       "block_order": [
-        "collection_CWQqxE",
         "collection_hqF69A",
-        "collection_qbg7qb",
         "collection_Y6jk3b",
         "collection_A3gREr",
-        "collection_jWnHjF",
         "collection_mDbqYg",
-        "collection_tcCAzm",
-        "collection_bayHXV",
-        "collection_dL3TeX",
-        "collection_z6cMjx",
-        "collection_cYkTf6"
+        "collection_jWnHjF",
+        "collection_qbg7qb"
       ],
       "settings": {
         "section_visibility": "always",
         "make_section_rounded": false,
-        "heading": "",
+        "heading": "Shop by Style",
         "heading_size": "h3",
-        "seo_heading": "h3",
+        "seo_heading": "h2",
         "heading_alignment": "text-center",
         "column_style": "rounded",
-        "desktop_column_count": 8,
+        "desktop_column_count": 6,
         "desktop_column_gap": 20,
         "desktop_column_width": "65%",
         "card_hover_style": "inside-shadow",
@@ -240,10 +235,10 @@
         "color_scheme": "",
         "highlighted_color": "#eff341",
         "section_background": "",
-        "top_space_desktop": 40,
-        "bottom_space_desktop": 35,
-        "top_space_mobile": 35,
-        "bottom_space_mobile": 35
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "image_with_text_9XaJWE": {
@@ -261,7 +256,7 @@
         "text_3NkVVM": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Become a Free Spirited Insider for $24.95/month plus applicable taxes. Unlock member-only pricing, a $30 monthly credit toward new shirts, exclusive drops, flash sales, and priority support. Pause or cancel anytime.</strong></p>",
+            "text": "<p><strong>Become a Free Spirited Insider for $24.95/month plus applicable taxes. Unlock member-only pricing, a $30 monthly credit toward new shirts of your choosing, exclusive drops, flash sales, and priority support. Pause or cancel anytime.</strong></p>",
             "text_size": "medium"
           }
         },
@@ -304,7 +299,8 @@
         "bottom_space_desktop": 70,
         "top_space_mobile": 50,
         "bottom_space_mobile": 10
-      }
+      },
+      "disabled": true
     },
     "image_with_text_HR7n83": {
       "type": "image-with-text",
@@ -327,7 +323,7 @@
         "text_DHzGyi": {
           "type": "text",
           "settings": {
-            "text": "<p>No problem — if you’d rather not sign up, you can still shop our full-priced collection on Etsy (no membership required).</p>",
+            "text": "<p>Every product is available at full price with a standard checkout — no membership, no trial, nothing extra. Just choose Full Price in the cart drawer and check out.</p>",
             "text_size": "medium"
           }
         },
@@ -335,8 +331,8 @@
           "type": "button",
           "settings": {
             "button_style_1": "solid",
-            "btn_text": "Shop Without Joining",
-            "btn_url": "https://shopfreespiritedco.etsy.com",
+            "btn_text": "Shop Full Price",
+            "btn_url": "shopify://collections/shop-sale",
             "btn_size": "regular",
             "button_style_2": "solid",
             "btn_text_2": "",
@@ -357,7 +353,7 @@
         "make_section_rounded": false,
         "section_fullwidth": false,
         "card_background": false,
-        "image": "shopify://shop_images/Screenshot_2025-11-03_at_11.57.41_AM_2f5fc6dc-1a4a-4f36-81cd-388fc0d0e190.png",
+        "image": "shopify://shop_images/full-price-cart-choice.png",
         "image_overlay_enable": false,
         "image_width": "medium",
         "image_position": "left",
@@ -371,7 +367,8 @@
         "bottom_space_desktop": 70,
         "top_space_mobile": 50,
         "bottom_space_mobile": 0
-      }
+      },
+      "disabled": true
     },
     "contact_form_jDtGJb": {
       "type": "contact-form",
@@ -391,7 +388,8 @@
         "bottom_space_desktop": 0,
         "top_space_mobile": 0,
         "bottom_space_mobile": 0
-      }
+      },
+      "disabled": true
     },
     "marquee_pN3iRh": {
       "type": "marquee",
@@ -399,12 +397,12 @@
         "text_x9zETJ": {
           "type": "text",
           "settings": {
-            "text": "FREE SHIPPING ON ORDERS OVER $50",
+            "text": "HAND-DYED IN SMALL BATCHES • FREE U.S. SHIPPING ON ORDERS $50+",
             "text_gap": 50,
             "text_style": "outline-filled",
             "font_family": "heading",
-            "desktop_font": 28,
-            "mobile_font": 28,
+            "desktop_font": 22,
+            "mobile_font": 18,
             "outline_thickness": 2,
             "color": "#fb76ff",
             "outline_color": "#000000",
@@ -417,12 +415,12 @@
         "text_N8JKgE": {
           "type": "text",
           "settings": {
-            "text": "DESIGNER-QUALITY TIE DYE STARTING @ JUST $12",
+            "text": "INSIDER PRICING OR FULL PRICE — YOU CHOOSE IN THE CART",
             "text_gap": 50,
             "text_style": "outline-filled",
             "font_family": "heading",
-            "desktop_font": 28,
-            "mobile_font": 28,
+            "desktop_font": 22,
+            "mobile_font": 18,
             "outline_thickness": 2,
             "color": "#adcc0d",
             "outline_color": "#000000",
@@ -457,7 +455,7 @@
         "heading_WRAQKt": {
           "type": "heading",
           "settings": {
-            "heading": "Free Spirited Insiders – Join the Club Everyone’s Talking About",
+            "heading": "Join the Free Spirited Insiders Club",
             "heading_size": "h3",
             "seo_heading": "h2",
             "highlighted_color": "#eff341"
@@ -466,7 +464,7 @@
         "text_qpKc7Q": {
           "type": "text",
           "settings": {
-            "text": "<p>This store is exclusively for Free Spirited Insiders. Every purchase includes enrollment in our membership program, and that's what makes these prices possible.<br/><br/>For just <strong>$24.95/month plus applicable state taxes</strong>, Free Spirited Insiders get <em>real, tangible perks</em> that easily pay for themselves in your first order:</p><p></p><ul><li><strong>$30 Insider Credit</strong> every month to spend on <em>anything you want</em>—tees, jewelry, hoodies, yoga pants, new arrivals, you name it.</li><li><strong>Up to 60% off</strong> regular prices, every day.</li><li><strong>Exclusive $5 Tees of the Month</strong> (members grab them before they sell out).</li><li><strong>First access</strong> to limited-run tie-dye designs and seasonal collections.</li><li><strong>Priority support</strong> and insider-only flash sales.</li><li><strong>Behind-the-scenes drops</strong>, sneak peeks, and styling tips.</li></ul><p></p><p>That's hundreds of dollars in annual savings, just for being part of the most colorful club on earth. Not ready to join? No worries. Scroll down to shop our full-priced collection on Etsy with no membership required.</p>",
+            "text": "<p>Choose Insider Pricing in the cart for our lowest prices and a 21-day Club trial. After the trial, recurring Club membership is $24.95/month plus applicable taxes unless canceled. Prefer a one-time purchase? Select Full Price in the cart. Either way, shopping stays simple.</p><p><strong>Club members also get a $30 monthly credit, early access to new drops, special offers, and a free U.S. shipping code in the member portal for future eligible orders.</strong></p>",
             "text_size": "medium"
           }
         },
@@ -474,7 +472,7 @@
           "type": "button",
           "settings": {
             "button_style_1": "solid",
-            "btn_text": "Start Your Free Trial",
+            "btn_text": "Explore Club Benefits",
             "btn_url": "shopify://products/free-spirited-insiders",
             "btn_size": "regular",
             "button_style_2": "solid",
@@ -505,10 +503,10 @@
         "color_scheme": "",
         "section_background": "",
         "card_color": "",
-        "top_space_desktop": 70,
-        "bottom_space_desktop": 70,
-        "top_space_mobile": 50,
-        "bottom_space_mobile": 0
+        "top_space_desktop": 60,
+        "bottom_space_desktop": 60,
+        "top_space_mobile": 35,
+        "bottom_space_mobile": 35
       }
     },
     "image_with_text_x6fGRw": {
@@ -517,7 +515,7 @@
         "heading_hVjwbh": {
           "type": "heading",
           "settings": {
-            "heading": "Free Spirited Insiders: Your July Insider Member Credit Is Live!",
+            "heading": "Free Spirited Insiders: Your August Insider Member Credit Is Live!",
             "heading_size": "h2",
             "seo_heading": "h2",
             "highlighted_color": "#eff341"
@@ -534,7 +532,7 @@
           "type": "button",
           "settings": {
             "button_style_1": "solid",
-            "btn_text": "Unlock my July Credit",
+            "btn_text": "Unlock my August Credit",
             "btn_url": "https://insiders.shopfreespirited.com/login",
             "btn_size": "regular",
             "button_style_2": "solid",
@@ -555,7 +553,7 @@
         "make_section_rounded": false,
         "section_fullwidth": false,
         "card_background": false,
-        "image": "shopify://shop_images/ChatGPT_Image_Jul_6_2026_12_09_26_PM.png",
+        "image": "shopify://shop_images/ChatGPT_Image_Aug_4_2026_10_36_30_AM.png",
         "image_overlay_enable": false,
         "image_width": "small",
         "image_position": "left",
@@ -569,7 +567,8 @@
         "bottom_space_desktop": 70,
         "top_space_mobile": 50,
         "bottom_space_mobile": 50
-      }
+      },
+      "disabled": true
     },
     "image_with_text_VQAMAA": {
       "type": "image-with-text",
@@ -577,7 +576,7 @@
         "heading_pNnCWK": {
           "type": "heading",
           "settings": {
-            "heading": "Every shirt is dyed by hand.",
+            "heading": "Hand-dyed. Pre-washed. Made to stand out.",
             "heading_size": "h2",
             "seo_heading": "h2",
             "highlighted_color": "#eff341"
@@ -586,7 +585,7 @@
         "text_eAfPRL": {
           "type": "text",
           "settings": {
-            "text": "<p>See exactly how we make your shirt, from hand-dyeing to pre-washing to your doorstep.</p>",
+            "text": "<p>Every shirt is dyed by hand, so yours is genuinely one of a kind. See how we create the color, softness, and quality Free Spirited customers love.</p>",
             "text_size": "medium"
           }
         },
@@ -594,7 +593,7 @@
           "type": "button",
           "settings": {
             "button_style_1": "solid",
-            "btn_text": "See how it's made.",
+            "btn_text": "See How It’s Made",
             "btn_url": "shopify://pages/how-we-make-your-shirt",
             "btn_size": "regular",
             "button_style_2": "solid",
@@ -649,8 +648,8 @@
         "section_visibility": "always",
         "top_space_desktop": 15,
         "bottom_space_desktop": 40,
-        "top_space_mobile": 35,
-        "bottom_space_mobile": 35
+        "top_space_mobile": 25,
+        "bottom_space_mobile": 25
       }
     },
     "collection_carousel_KVtjcD": {
@@ -761,7 +760,8 @@
         "bottom_space_desktop": 40,
         "top_space_mobile": 35,
         "bottom_space_mobile": 35
-      }
+      },
+      "disabled": true
     },
     "slideshow_gDt9P8": {
       "type": "slideshow",
@@ -834,7 +834,8 @@
         "bottom_space_desktop": 0,
         "top_space_mobile": 0,
         "bottom_space_mobile": 0
-      }
+      },
+      "disabled": true
     },
     "before_after_image_xqYfhj": {
       "type": "before-after-image",
@@ -883,15 +884,16 @@
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "section_visibility": "always",
-        "custom_liquid": "<!-- \n  FREE SPIRITED - Homepage Community Section\n  \n  INSTRUCTIONS:\n  1. Go to Settings > Files in Shopify admin\n  2. Upload both testimonial images\n  3. Replace PASTE_FIRST_IMAGE_URL_HERE and PASTE_SECOND_IMAGE_URL_HERE with the Shopify CDN URLs\n  4. Copy this entire code block\n  5. Add a Custom Liquid section to your homepage in the theme editor\n  6. Paste it in, save, and preview\n-->\n\n<style>\n  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap');\n\n  .fs-community {\n    padding: 60px 20px;\n    background: linear-gradient(180deg, #ffffff 0%, #f7f5f0 100%);\n    text-align: center;\n    font-family: 'DM Sans', sans-serif;\n  }\n\n  .fs-community-inner {\n    max-width: 1000px;\n    margin: 0 auto;\n  }\n\n  .fs-eyebrow {\n    font-size: 13px;\n    font-weight: 700;\n    letter-spacing: 3px;\n    text-transform: uppercase;\n    color: #d4a259;\n    margin-bottom: 12px;\n  }\n\n  .fs-headline {\n    font-family: 'Playfair Display', serif;\n    font-size: 38px;\n    font-weight: 700;\n    color: #1a1a1a;\n    line-height: 1.2;\n    margin: 0 0 8px 0;\n  }\n\n  .fs-headline em {\n    font-style: italic;\n    color: #006F94;\n  }\n\n  .fs-subhead {\n    font-size: 17px;\n    color: #666;\n    max-width: 600px;\n    margin: 0 auto 14px auto;\n    line-height: 1.6;\n  }\n\n  .fs-member-count {\n    display: inline-block;\n    background: #006F94;\n    color: #fff;\n    font-size: 14px;\n    font-weight: 700;\n    padding: 6px 18px;\n    border-radius: 50px;\n    margin-bottom: 35px;\n    letter-spacing: 0.5px;\n  }\n\n  .fs-reviews-grid {\n    display: flex;\n    gap: 20px;\n    justify-content: center;\n    flex-wrap: wrap;\n    margin-bottom: 35px;\n  }\n\n  .fs-reviews-grid img {\n    max-width: 47%;\n    min-width: 280px;\n    border-radius: 10px;\n    box-shadow: 0 4px 20px rgba(0,0,0,0.08);\n    transition: transform 0.2s ease;\n  }\n\n  .fs-reviews-grid img:hover {\n    transform: scale(1.02);\n  }\n\n  .fs-social-proof {\n    display: flex;\n    justify-content: center;\n    gap: 40px;\n    flex-wrap: wrap;\n    margin-bottom: 35px;\n    padding: 25px 0;\n    border-top: 1px solid #e5e0d8;\n    border-bottom: 1px solid #e5e0d8;\n  }\n\n  .fs-stat {\n    text-align: center;\n  }\n\n  .fs-stat-number {\n    font-family: 'Playfair Display', serif;\n    font-size: 32px;\n    font-weight: 700;\n    color: #006F94;\n    display: block;\n  }\n\n  .fs-stat-label {\n    font-size: 13px;\n    color: #888;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    margin-top: 4px;\n  }\n\n  .fs-cta-wrap {\n    margin-top: 10px;\n  }\n\n  .fs-cta-text {\n    font-family: 'Playfair Display', serif;\n    font-style: italic;\n    font-size: 20px;\n    color: #444;\n    margin-bottom: 18px;\n  }\n\n  .fs-cta-btn {\n    display: inline-block;\n    background: #006F94;\n    color: #fff;\n    font-family: 'DM Sans', sans-serif;\n    font-size: 16px;\n    font-weight: 700;\n    text-decoration: none;\n    padding: 14px 40px;\n    border-radius: 50px;\n    letter-spacing: 0.5px;\n    transition: background 0.2s ease, transform 0.2s ease;\n  }\n\n  .fs-cta-btn:hover {\n    background: #005a78;\n    transform: translateY(-2px);\n    color: #fff;\n    text-decoration: none;\n  }\n\n  @media (max-width: 600px) {\n    .fs-community {\n      padding: 40px 15px;\n    }\n    .fs-headline {\n      font-size: 28px;\n    }\n    .fs-subhead {\n      font-size: 15px;\n    }\n    .fs-reviews-grid img {\n      max-width: 100%;\n      min-width: unset;\n    }\n    .fs-social-proof {\n      gap: 25px;\n    }\n    .fs-stat-number {\n      font-size: 26px;\n    }\n  }\n</style>\n\n<div class=\"fs-community\">\n  <div class=\"fs-community-inner\">\n\n    <div class=\"fs-eyebrow\">Join the Movement</div>\n    <h2 class=\"fs-headline\">Thousands of Women Already <em>Love</em> Their Shirts</h2>\n    <p class=\"fs-subhead\">Real reviews from real members. No filters, no fuss. Just women who found their favorite tee and never looked back.</p>\n    <div class=\"fs-member-count\">&#10026; Thousands of Happy Members & Growing</div>\n\n    <div class=\"fs-reviews-grid\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/Comments_1.png?v=1775488694\" alt=\"Real Facebook reviews from Free Spirited customers\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/Comments_2.png?v=1775488696\" alt=\"More real customer reviews from Free Spirited members\">\n    </div>\n\n    <div class=\"fs-social-proof\">\n      <div class=\"fs-stat\">\n        <span class=\"fs-stat-number\">4.8 &#9733;</span>\n        <span class=\"fs-stat-label\">Average Rating</span>\n      </div>\n      <div class=\"fs-stat\">\n        <span class=\"fs-stat-number\">5,000+</span>\n        <span class=\"fs-stat-label\">Happy Members</span>\n      </div>\n      <div class=\"fs-stat\">\n        <span class=\"fs-stat-number\">Handmade</span>\n        <span class=\"fs-stat-label\">Every Single Shirt</span>\n      </div>\n    </div>\n\n    <div class=\"fs-cta-wrap\">\n      <div class=\"fs-cta-text\">See what all the fuss is about.</div>\n      <a href=\"/collections/shop-sale\" class=\"fs-cta-btn\">Shop Now & Join the Family</a>\n    </div>\n\n  </div>\n</div>\n<parameter name=\"file_text\">",
+        "custom_liquid": "<style>\n  .fs-ugc-proof,\n  .fs-ugc-proof * {\n    box-sizing: border-box;\n  }\n\n  .fs-ugc-proof {\n    padding: 54px 20px 58px;\n    overflow: hidden;\n    color: #151515;\n    background: linear-gradient(180deg, #f7f8f2 0%, #ffffff 100%);\n  }\n\n  .fs-ugc-proof__inner {\n    max-width: 1120px;\n    margin: 0 auto;\n    text-align: center;\n  }\n\n  .fs-ugc-proof__eyebrow {\n    margin: 0 0 9px;\n    color: #016f94;\n    font-size: 12px;\n    font-weight: 850;\n    line-height: 1.2;\n    letter-spacing: .095em;\n    text-transform: uppercase;\n  }\n\n  .fs-ugc-proof__title {\n    max-width: 760px;\n    margin: 0 auto 10px;\n    font-size: clamp(28px, 4vw, 48px);\n    line-height: 1.08;\n  }\n\n  .fs-ugc-proof__copy {\n    max-width: 690px;\n    margin: 0 auto 28px;\n    color: #484848;\n    font-size: 16px;\n    line-height: 1.55;\n  }\n\n  .fs-ugc-proof__carousel {\n    position: relative;\n    max-width: 930px;\n    margin: 0 auto;\n  }\n\n  .fs-ugc-proof__grid {\n    display: grid;\n    grid-template-columns: none;\n    grid-auto-flow: column;\n    grid-auto-columns: calc((100% - 18px) / 2);\n    margin: 0;\n    padding: 8px 4px 16px;\n    gap: 18px;\n    overflow-x: auto;\n    overscroll-behavior-inline: contain;\n    scroll-behavior: smooth;\n    scroll-snap-type: x mandatory;\n    scrollbar-width: none;\n  }\n\n  .fs-ugc-proof__grid::-webkit-scrollbar {\n    display: none;\n  }\n\n  .fs-ugc-proof__card {\n    display: block;\n    overflow: hidden;\n    background: #fff;\n    border: 1px solid rgba(1, 111, 148, .13);\n    border-radius: 16px;\n    box-shadow: 0 10px 28px rgba(17, 39, 48, .09);\n    scroll-snap-align: start;\n    transition: transform .2s ease, box-shadow .2s ease;\n  }\n\n  .fs-ugc-proof__card:hover {\n    transform: translateY(-3px);\n    box-shadow: 0 14px 32px rgba(17, 39, 48, .14);\n  }\n\n  .fs-ugc-proof__card img {\n    display: block;\n    width: 100%;\n    height: auto;\n    aspect-ratio: 4 / 5;\n    object-fit: cover;\n  }\n\n  .fs-ugc-proof__nav {\n    position: absolute;\n    top: 50%;\n    z-index: 2;\n    display: inline-flex;\n    width: 46px;\n    height: 46px;\n    padding: 0;\n    align-items: center;\n    justify-content: center;\n    color: #016f94;\n    background: rgba(255, 255, 255, .96);\n    border: 1px solid rgba(1, 111, 148, .22);\n    border-radius: 50%;\n    box-shadow: 0 8px 22px rgba(17, 39, 48, .18);\n    cursor: pointer;\n    transform: translateY(-50%);\n    transition: opacity .2s ease, transform .2s ease;\n  }\n\n  .fs-ugc-proof__nav:hover:not(:disabled) {\n    transform: translateY(-50%) scale(1.05);\n  }\n\n  .fs-ugc-proof__nav:focus-visible {\n    outline: 3px solid #adcc0c;\n    outline-offset: 3px;\n  }\n\n  .fs-ugc-proof__nav:disabled {\n    opacity: 0;\n    cursor: default;\n    pointer-events: none;\n  }\n\n  .fs-ugc-proof__nav--prev {\n    left: 12px;\n  }\n\n  .fs-ugc-proof__nav--next {\n    right: 12px;\n  }\n\n  .fs-ugc-proof__note {\n    margin: 17px 0 0;\n    color: #666;\n    font-size: 12px;\n    line-height: 1.4;\n  }\n\n  .fs-ugc-proof__swipe {\n    margin: 0;\n    color: #666;\n    font-size: 11px;\n    line-height: 1.4;\n  }\n\n  .fs-ugc-proof__hint-mobile {\n    display: none;\n  }\n\n  .fs-ugc-proof__cta {\n    display: inline-flex;\n    min-height: 50px;\n    margin-top: 22px;\n    padding: 12px 28px;\n    align-items: center;\n    justify-content: center;\n    color: #fff;\n    background: #016f94;\n    border: 2px solid #adcc0c;\n    border-radius: 999px;\n    font-size: 15px;\n    font-weight: 850;\n    line-height: 1.2;\n    text-decoration: none;\n    transition: transform .2s ease, background .2s ease;\n  }\n\n  .fs-ugc-proof__cta:hover {\n    color: #fff;\n    background: #005d7c;\n    transform: translateY(-2px);\n  }\n\n  @media (max-width: 767px) {\n    .fs-ugc-proof {\n      padding: 38px 0 42px;\n    }\n\n    .fs-ugc-proof__inner {\n      padding: 0 18px;\n    }\n\n    .fs-ugc-proof__eyebrow {\n      font-size: 10px;\n    }\n\n    .fs-ugc-proof__title {\n      font-size: 30px;\n    }\n\n    .fs-ugc-proof__copy {\n      margin-bottom: 21px;\n      font-size: 14px;\n    }\n\n    .fs-ugc-proof__carousel {\n      max-width: none;\n      margin-right: -18px;\n    }\n\n    .fs-ugc-proof__grid {\n      grid-auto-columns: 86%;\n      padding: 6px 18px 14px 0;\n      gap: 12px;\n    }\n\n    .fs-ugc-proof__card {\n      border-radius: 13px;\n    }\n\n    .fs-ugc-proof__nav {\n      display: none;\n    }\n\n    .fs-ugc-proof__hint-desktop {\n      display: none;\n    }\n\n    .fs-ugc-proof__hint-mobile {\n      display: inline;\n    }\n\n    .fs-ugc-proof__cta {\n      width: 100%;\n      margin-top: 18px;\n    }\n  }\n\n  @media (prefers-reduced-motion: reduce) {\n    .fs-ugc-proof__grid {\n      scroll-behavior: auto;\n    }\n\n    .fs-ugc-proof__card,\n    .fs-ugc-proof__cta,\n    .fs-ugc-proof__nav {\n      transition: none;\n    }\n  }\n</style>\n\n<section class=\"fs-ugc-proof\" aria-labelledby=\"fs-ugc-proof-title\">\n  <div class=\"fs-ugc-proof__inner\">\n    <p class=\"fs-ugc-proof__eyebrow\">Photos from our customers. Every day.</p>\n    <h2 class=\"fs-ugc-proof__title\" id=\"fs-ugc-proof-title\">Worn by real people. Made to be noticed.</h2>\n    <p class=\"fs-ugc-proof__copy\">Customers tell us it’s how they feel when they put it on—bold, bright, and unmistakably themselves. Every shirt is hand-dyed, pre-washed, and made to be lived in.</p>\n\n    <div class=\"fs-ugc-proof__carousel\">\n      <button class=\"fs-ugc-proof__nav fs-ugc-proof__nav--prev\" type=\"button\" aria-label=\"Show previous customer photos\" data-fs-ugc-prev disabled>←</button>\n      <div class=\"fs-ugc-proof__grid\" aria-label=\"Real Free Spirited customer photos\" data-fs-ugc-track>\n        <a class=\"fs-ugc-proof__card\" href=\"/collections/shop-sale\" aria-label=\"Shop customer-favorite tie-dye styles\">\n        <img\n          src=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-1.jpg?v=1787857564&width=900\"\n          srcset=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-1.jpg?v=1787857564&width=540 540w, https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-1.jpg?v=1787857564&width=900 900w, https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-1.jpg?v=1787857564&width=1080 1080w\"\n          sizes=\"(max-width: 767px) 82vw, 450px\"\n          width=\"1080\"\n          height=\"1350\"\n          loading=\"lazy\"\n          decoding=\"async\"\n          alt=\"Real Free Spirited customers wearing colorful hand-dyed tie-dye clothing\"\n        >\n        </a>\n\n        <a class=\"fs-ugc-proof__card\" href=\"/collections/shop-sale\" aria-label=\"Shop customer-favorite hand-dyed shirts\">\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-01.jpg?v=1787858490&width=900\"\n            srcset=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-01.jpg?v=1787858490&width=540 540w, https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-01.jpg?v=1787858490&width=900 900w, https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-01.jpg?v=1787858490&width=1080 1080w\"\n            sizes=\"(max-width: 767px) 82vw, 450px\"\n            width=\"1080\"\n            height=\"1350\"\n            loading=\"lazy\"\n            decoding=\"async\"\n            alt=\"Real Free Spirited customers wearing hand-dyed shirts in everyday life\"\n          >\n        </a>\n\n        <a class=\"fs-ugc-proof__card\" href=\"/collections/shop-sale\" aria-label=\"See colorful customer-favorite tie-dye styles\">\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-07.jpg?v=1787858494&width=900\"\n            srcset=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-07.jpg?v=1787858494&width=540 540w, https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-07.jpg?v=1787858494&width=900 900w, https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-07.jpg?v=1787858494&width=1080 1080w\"\n            sizes=\"(max-width: 767px) 82vw, 450px\"\n            width=\"1080\"\n            height=\"1350\"\n            loading=\"lazy\"\n            decoding=\"async\"\n            alt=\"Real Free Spirited customers and friends wearing colorful tie-dye clothing\"\n          >\n        </a>\n\n        <a class=\"fs-ugc-proof__card\" href=\"/collections/shop-sale\" aria-label=\"See more customer-favorite tie-dye styles\">\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-2.png?v=1787857568&width=900\"\n            srcset=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-2.png?v=1787857568&width=540 540w, https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-2.png?v=1787857568&width=900 900w, https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-2.png?v=1787857568&width=1080 1080w\"\n            sizes=\"(max-width: 767px) 82vw, 450px\"\n            width=\"1080\"\n            height=\"1350\"\n            loading=\"lazy\"\n            decoding=\"async\"\n            alt=\"More real Free Spirited customers wearing colorful hand-dyed tie-dye clothing\"\n          >\n        </a>\n\n        <a class=\"fs-ugc-proof__card\" href=\"/collections/shop-sale\" aria-label=\"Shop hand-dyed styles worn by our community\">\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-03.jpg?v=1787858502&width=900\"\n            srcset=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-03.jpg?v=1787858502&width=540 540w, https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-03.jpg?v=1787858502&width=900 900w, https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-03.jpg?v=1787858502&width=1080 1080w\"\n            sizes=\"(max-width: 767px) 82vw, 450px\"\n            width=\"1080\"\n            height=\"1350\"\n            loading=\"lazy\"\n            decoding=\"async\"\n            alt=\"A diverse group of real Free Spirited customers wearing hand-dyed shirts\"\n          >\n        </a>\n\n        <a class=\"fs-ugc-proof__card\" href=\"/collections/shop-sale\" aria-label=\"Shop colorful styles for friends and family\">\n          <img\n            src=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-06.jpg?v=1787858498&width=900\"\n            srcset=\"https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-06.jpg?v=1787858498&width=540 540w, https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-06.jpg?v=1787858498&width=900 900w, https://cdn.shopify.com/s/files/1/0624/1917/3575/files/free-spirited-real-customers-community-06.jpg?v=1787858498&width=1080 1080w\"\n            sizes=\"(max-width: 767px) 82vw, 450px\"\n            width=\"1080\"\n            height=\"1350\"\n            loading=\"lazy\"\n            decoding=\"async\"\n            alt=\"Free Spirited customers, friends and family wearing colorful tie-dye\"\n          >\n        </a>\n      </div>\n      <button class=\"fs-ugc-proof__nav fs-ugc-proof__nav--next\" type=\"button\" aria-label=\"Show more customer photos\" data-fs-ugc-next>→</button>\n    </div>\n\n    <p class=\"fs-ugc-proof__swipe\" aria-hidden=\"true\">\n      <span class=\"fs-ugc-proof__hint-desktop\">Use the arrows to see more customer photos →</span>\n      <span class=\"fs-ugc-proof__hint-mobile\">Swipe to see more customer photos →</span>\n    </p>\n    <p class=\"fs-ugc-proof__note\">Real Free Spirited customers, shared with permission.</p>\n    <a class=\"fs-ugc-proof__cta\" href=\"/collections/shop-sale\">Shop Customer Favorites</a>\n  </div>\n</section>\n\n<script>\n  (() => {\n    const script = document.currentScript;\n    const section = script && script.previousElementSibling;\n    if (!section || !section.classList.contains('fs-ugc-proof')) return;\n\n    const track = section.querySelector('[data-fs-ugc-track]');\n    const previous = section.querySelector('[data-fs-ugc-prev]');\n    const next = section.querySelector('[data-fs-ugc-next]');\n    if (!track || !previous || !next) return;\n\n    const updateButtons = () => {\n      const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);\n      previous.disabled = track.scrollLeft <= 4;\n      next.disabled = track.scrollLeft >= maxScroll - 4;\n    };\n\n    const move = direction => {\n      const card = track.querySelector('.fs-ugc-proof__card');\n      const gap = Number.parseFloat(getComputedStyle(track).columnGap) || 0;\n      const distance = card ? card.getBoundingClientRect().width + gap : track.clientWidth;\n      track.scrollBy({ left: direction * distance, behavior: 'smooth' });\n    };\n\n    previous.addEventListener('click', () => move(-1));\n    next.addEventListener('click', () => move(1));\n    track.addEventListener('scroll', () => requestAnimationFrame(updateButtons), { passive: true });\n    window.addEventListener('resize', updateButtons, { passive: true });\n    updateButtons();\n  })();\n</script>\n",
         "content_width": "medium",
         "text_alignment": "center",
         "color_scheme": "",
-        "top_space_desktop": 85,
-        "bottom_space_desktop": 40,
-        "top_space_mobile": 35,
-        "bottom_space_mobile": 35
-      }
+                "top_space_desktop": 0,
+                "bottom_space_desktop": 0,
+                "top_space_mobile": 0,
+                "bottom_space_mobile": 0
+            }
+      
     },
     "featured_collection_jKwNRg": {
       "type": "featured-collection",
@@ -900,16 +902,16 @@
         "make_section_rounded": false,
         "collection": "shop-sale",
         "products_style": "carousel",
-        "enable_swipe_mobile": false,
-        "products_to_show": 4,
+        "enable_swipe_mobile": true,
+        "products_to_show": 8,
         "grid_image_size": "auto",
         "image_fit": "cover",
         "content_alignment": "text-left",
-        "title": "Brighten Your Wardrobe",
-        "heading_size": "h4",
-        "seo_heading": "h3",
-        "description": "",
-        "btntext": "",
+        "title": "Shop Customer Favorites",
+        "heading_size": "h3",
+        "seo_heading": "h2",
+        "description": "The hand-dyed styles customers come back for.",
+        "btntext": "Shop all best sellers",
         "promotion_card": false,
         "promotion_border": false,
         "promotion_in_stacked": 1,
@@ -917,8 +919,8 @@
         "pr_seo_heading": "h5",
         "pr_description": "Add short description for this section",
         "button_style": "solid",
-        "btn_text": "",
-        "btn_link": "",
+        "btn_text": "Shop all best sellers",
+        "btn_link": "shopify://collections/shop-sale",
         "color_scheme": "",
         "section_background": "",
         "highlighted_color": "#eff341",
@@ -932,10 +934,10 @@
         "btn_hover_border_color": "#a60c0c",
         "background_color": "#ffffff",
         "background_opacity": 30,
-        "top_space_desktop": 20,
-        "bottom_space_desktop": 5,
-        "top_space_mobile": 10,
-        "bottom_space_mobile": 10
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 25,
+        "bottom_space_mobile": 25
       }
     },
     "video_rKTtkk": {
@@ -968,7 +970,8 @@
         "bottom_space_desktop": 25,
         "top_space_mobile": 35,
         "bottom_space_mobile": 35
-      }
+      },
+      "disabled": true
     },
     "image_with_text_8FdfUm": {
       "type": "image-with-text",
@@ -1027,7 +1030,8 @@
         "bottom_space_desktop": 70,
         "top_space_mobile": 50,
         "bottom_space_mobile": 50
-      }
+      },
+      "disabled": true
     },
     "image_with_text_9Naqky": {
       "type": "image-with-text",
@@ -1035,7 +1039,7 @@
         "heading_mLgt4G": {
           "type": "heading",
           "settings": {
-            "heading": "Supporting mental health",
+            "heading": "Color with a purpose",
             "heading_size": "h2",
             "seo_heading": "h2",
             "highlighted_color": "#eff341"
@@ -1044,7 +1048,7 @@
         "text_RCFTA3": {
           "type": "text",
           "settings": {
-            "text": "<p>Free Spirited supports To Write Love On Her Arms, a nonprofit connecting people to hope, treatment, and recovery.</p>",
+            "text": "<p>Free Spirited is built around joyful color, one-of-a-kind style, and the belief that what you wear should feel personal. Every purchase also helps support To Write Love On Her Arms, a nonprofit connecting people to hope, treatment, and recovery.</p>",
             "text_size": "medium"
           }
         },
@@ -1052,8 +1056,8 @@
           "type": "button",
           "settings": {
             "button_style_1": "solid",
-            "btn_text": "Shop to make a difference",
-            "btn_url": "shopify://collections/best-sellers",
+            "btn_text": "Shop with Purpose",
+            "btn_url": "shopify://collections/shop-sale",
             "btn_size": "large",
             "button_style_2": "solid",
             "btn_text_2": "",
@@ -1242,7 +1246,8 @@
         "bottom_space_desktop": 40,
         "top_space_mobile": 35,
         "bottom_space_mobile": 35
-      }
+      },
+      "disabled": true
     },
     "images_carousel_8hp8Yk": {
       "type": "images-carousel",
@@ -1300,7 +1305,8 @@
         "bottom_space_desktop": 70,
         "top_space_mobile": 20,
         "bottom_space_mobile": 40
-      }
+      },
+      "disabled": true
     },
     "multicolumn_EtRVFd": {
       "type": "multicolumn",
@@ -1339,7 +1345,7 @@
           "settings": {
             "image": "shopify://shop_images/Untitled_design_-_2024-11-07T125730.271.png",
             "heading": "Rewards with Every Purchase",
-            "description": "With every purchase, you’ll earn loyalty points that can be redeemed for discounts, exclusive designs, and even free items. The more you shop Free Spirited Co, the more you save!",
+            "description": "With every purchase, you’ll earn loyalty points that can be redeemed for discounts, exclusive designs, and even free items. The more you shop Free Spirited Clothing, the more you save!",
             "link_label": "",
             "link_url": "",
             "column_background": true,
@@ -1396,7 +1402,7 @@
             "image": "shopify://shop_images/Untitled_design_-_2024-11-07T130815.743.png",
             "heading": "Free Shipping for Insiders",
             "description": "As a member, you'll get access to a free U.S. shipping code in your member portal. Log in after starting your free trial to grab yours!",
-            "link_label": "",
+            "link_label": "After joining, retrieve your free U.S. shipping code from the member portal for future eligible orders.",
             "link_url": "",
             "column_background": true,
             "column_background_color": "#f2f2f2",
@@ -1447,7 +1453,8 @@
         "bottom_space_desktop": 40,
         "top_space_mobile": 35,
         "bottom_space_mobile": 35
-      }
+      },
+      "disabled": true
     },
     "collapsible_content_WLFhP6": {
       "type": "collapsible-content",
@@ -1462,15 +1469,15 @@
         "content_g6G89R": {
           "type": "content",
           "settings": {
-            "heading": "What are the benefits of becoming an Insider?",
-            "content": "<p>As an Insider, you'll receive a $30 monthly credit, exclusive discounts of up to 60% off, access to limited-edition designs, $5 Tee of the Month deals, early access to new collections, free shipping code in your member portal, and priority support</p>"
+            "heading": "What are the benefits of the Free Spirited Insiders Club?",
+            "content": "<p>Club members receive a $30 monthly credit, our lowest Insider Pricing, early access to new drops, special offers, priority support, and a free U.S. shipping code in the member portal for future eligible orders.</p>"
           }
         },
         "content_8wVekt": {
           "type": "content",
           "settings": {
-            "heading": "How do I join the Free Spirited Insiders membership?",
-            "content": "<p>Joining is easy! Simply click <a href=\"/products/free-spirited-insiders\" title=\"Free Spirited Insiders\"><strong>“Join Now</strong></a><strong>” </strong>on our website and sign up to enjoy exclusive benefits like early access to new designs, members-only discounts, and your monthly member credit.</p>"
+            "heading": "How do I join the Free Spirited Insiders Club?",
+            "content": "<p>Choose Insider Pricing in the cart or <a href=\"/products/free-spirited-insiders\" title=\"Free Spirited Insiders Club\"><strong>join the Club directly</strong></a>. Insider Pricing includes a 21-day Club trial; after that, recurring Club membership is $24.95/month plus applicable taxes unless canceled.</p>"
           }
         },
         "content_FHkFKA": {
@@ -1484,7 +1491,7 @@
           "type": "content",
           "settings": {
             "heading": "How much does shipping cost?",
-            "content": "<p>We offer <strong>free U.S. shipping on orders over $50</strong>. For orders under $50, shipping fees are $4.95. Shipping is always free for Insiders!</p>"
+            "content": "<p>We offer free U.S. shipping on orders over $50. For orders under $50, shipping fees are $4.95. After joining, retrieve your free U.S. shipping code from the member portal for future eligible orders.</p>"
           }
         },
         "content_3rekQA": {
@@ -1504,8 +1511,8 @@
         "content_wLzhNq": {
           "type": "content",
           "settings": {
-            "heading": "Can I shop without joining Free Spirited Insiders?",
-            "content": "<p>All purchases on our website include enrollment in our Insiders membership. If you'd prefer to shop without joining, you can browse our full-priced collection on our Etsy store at <a href=\"https://shopfreespiritedco.etsy.com\" title=\"https://shopfreespiritedco.etsy.com\">shopfreespiritedco.etsy.com</a> with no membership required.</p>"
+            "heading": "Can I shop at Full Price without joining the Club?",
+            "content": "<p>Yes. Every product can be purchased two ways. Insider Pricing is selected by default and includes the Free Spirited Insiders Club trial. Or select Full Price in the cart drawer for a standard one-time purchase with no Club membership.</p>"
           }
         },
         "content_hUnJgU": {
@@ -1548,24 +1555,19 @@
         "content_DeJHiW",
         "content_g6G89R",
         "content_8wVekt",
+        "content_wLzhNq",
         "content_FHkFKA",
         "content_BmjRic",
         "content_3rekQA",
-        "content_UJC66F",
-        "content_wLzhNq",
-        "content_hUnJgU",
-        "content_z9dWYL",
-        "content_R8f4Tx",
-        "content_C4CDfi",
-        "content_gDe66p"
+        "content_hUnJgU"
       ],
       "settings": {
         "section_visibility": "always",
         "make_section_rounded": false,
         "show_first_default": true,
-        "heading": "FREQUENTLY ASKED QUESTIONS",
-        "heading_size": "h5",
-        "seo_heading": "h4",
+        "heading": "Questions Before You Order?",
+        "heading_size": "h3",
+        "seo_heading": "h2",
         "heading_alignment": "text-center",
         "color_scheme": "",
         "highlighted_color": "#eff341",
@@ -1582,8 +1584,8 @@
         "section_visibility": "always",
         "make_section_rounded": false,
         "newsletter_background": false,
-        "heading": "Join our newsletter",
-        "heading_size": "h2",
+        "heading": "Get First Dibs on New Drops",
+        "heading_size": "h3",
         "seo_heading": "h2",
         "placeholder": "",
         "content_alignment": "text-center",
@@ -1593,10 +1595,10 @@
         "highlighted_color": "#eff341",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 0.5,
-        "top_space_desktop": 100,
-        "bottom_space_desktop": 100,
-        "top_space_mobile": 50,
-        "bottom_space_mobile": 50
+        "top_space_desktop": 70,
+        "bottom_space_desktop": 70,
+        "top_space_mobile": 40,
+        "bottom_space_mobile": 40
       }
     },
     "featured_blog_d6eGcb": {
@@ -1625,34 +1627,36 @@
         "bottom_space_desktop": 60,
         "top_space_mobile": 40,
         "bottom_space_mobile": 40
-      }
+      },
+      "disabled": true
     }
   },
   "order": [
     "media_banner_kJd6pg",
-    "slideshow_JyCYWp",
+    "marquee_pN3iRh",
+    "featured_collection_jKwNRg",
+        "custom_liquid_PcMnFE",
     "categories_AwydGQ",
+    "image_with_text_VQAMAA",
+    "before_after_image_xqYfhj",
+    "1730999833cf34f07b",
+    "image_with_text_n34CeF",
+    "image_with_text_9Naqky",
+    "collapsible_content_WLFhP6",
+    "newsletter_DcBcMy",
+    "slideshow_JyCYWp",
     "image_with_text_9XaJWE",
     "image_with_text_HR7n83",
     "contact_form_jDtGJb",
-    "marquee_pN3iRh",
-    "image_with_text_n34CeF",
     "image_with_text_x6fGRw",
-    "image_with_text_VQAMAA",
-    "1730999833cf34f07b",
     "collection_carousel_KVtjcD",
     "slideshow_gDt9P8",
-    "before_after_image_xqYfhj",
-    "custom_liquid_PcMnFE",
-    "featured_collection_jKwNRg",
+    
     "video_rKTtkk",
     "image_with_text_8FdfUm",
-    "image_with_text_9Naqky",
     "logo_list_Hmn4kX",
     "images_carousel_8hp8Yk",
     "multicolumn_EtRVFd",
-    "collapsible_content_WLFhP6",
-    "newsletter_DcBcMy",
     "featured_blog_d6eGcb"
   ]
 }

@@ -6,6 +6,9 @@
     assign product_form_id = 'product-form-' | append: section.id
     assign section_id = section.id
   endif
+  assign fs_display_title = product.title
+  assign fs_display_title = fs_display_title | replace: ' Premium Hand-Dyed Comfort Shirt', ' Hand-Dyed Tee'
+  assign fs_display_title = fs_display_title | replace: ' Hand-Dyed Comfort Shirt', ' Hand-Dyed Tee'
 %}
 
 {%- comment -%} {% assign product_form_id = 'product-form-' | append: section.id %} {%- endcomment -%}
@@ -21,11 +24,11 @@
           href="{{ product.url }}"
           {{ block.shopify_attributes }}
         >
-          {{- product.title | strip_html -}}
+          {{- fs_display_title | strip_html -}}
         </a>
       {% else %}
         <{{block.settings.seo_heading}} class="product-title-heading {{block.settings.heading_size}} heading-font" {{ block.shopify_attributes }}>
-          {{ product.title | escape }}
+          {{ fs_display_title | escape }}
         </{{block.settings.seo_heading}}>
       {% endif %}
     {% when 'price' %}

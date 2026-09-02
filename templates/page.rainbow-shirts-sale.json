@@ -137,7 +137,7 @@
           "settings": {
             "heading": "<strong>Rainbow Shirt Sale is Live!</strong> <em>Ships Fast from Florida.</em>",
             "heading_size": "h2",
-            "seo_heading": "h2",
+            "seo_heading": "h1",
             "highlighted_color": "#ffd700"
           }
         },
@@ -743,7 +743,7 @@
         "text_Y8EPnX": {
           "type": "text",
           "settings": {
-            "text": "<p>When you shop Free Spirited Co. You know you're in good hands.</p>"
+            "text": "<p>When you shop Free Spirited Clothing. You know you're in good hands.</p>"
           }
         },
         "button_Rkf69e": {
@@ -958,7 +958,7 @@
           "settings": {
             "button_style": "solid",
             "text": "Shop Rainbow Sale",
-            "link": "https://shopfreespirited.com/collections/pride-sale",
+            "link": "https://shopfreespirited.com/collections/new",
             "button_size": "medium"
           }
         }

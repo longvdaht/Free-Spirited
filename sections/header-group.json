@@ -17,7 +17,7 @@
         "6d70f3eb-3b40-48e6-b256-a3a8fb0d06f1": {
           "type": "announcement",
           "settings": {
-            "announcement_text": "<strong>Small batch. When it's gone, it's gone.</strong>",
+            "announcement_text": "<strong>Small batch. Selling out fast!</strong>",
             "background_color": "#ffffff",
             "text_color": "#000000",
             "link_color": "#a60c0c"
@@ -31,21 +31,11 @@
             "text_color": "#000000",
             "link_color": "#ff0000"
           }
-        },
-        "5fa576c0-2e92-4dcc-8cdd-276bee5c2b0a": {
-          "type": "announcement",
-          "settings": {
-            "announcement_text": "<strong>Make your purchase to join Free Spirit Insiders!</strong>",
-            "background_color": "#ffffff",
-            "text_color": "#000000",
-            "link_color": "#ff0000"
-          }
         }
       },
       "block_order": [
         "6d70f3eb-3b40-48e6-b256-a3a8fb0d06f1",
-        "c0f5b017-a1df-4b2b-8c87-536db035d7a8",
-        "5fa576c0-2e92-4dcc-8cdd-276bee5c2b0a"
+        "c0f5b017-a1df-4b2b-8c87-536db035d7a8"
       ],
       "settings": {
         "enable_announcement": true,
@@ -69,8 +59,8 @@
         "enable_sticky_header": true,
         "sticky_header_type": "always",
         "logo": "shopify://shop_images/free-spirited-logo-white-text-transparent.png",
-        "logo_width": 140,
-        "logo_width_mobile": 70,
+        "logo_width": 100,
+        "logo_width_mobile": 60,
         "desktop_transparent_header": false,
         "mobile_transparent_header": false,
         "transparent_color": "#ffffff",

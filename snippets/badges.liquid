@@ -38,7 +38,15 @@
 
     {% if settings.sale_label and cProduct.compare_at_price_max %}
       {% if cProduct.compare_at_price_max > cProduct.price %}
-        <span class="product-badge sale heading-font">{{ 'general.badges.sale' | t }}</span>
+        {%- assign has_insider_badge = false -%}
+        {%- for variant in cProduct.variants -%}
+          {%- assign badge_insider_cents = variant.metafields.custom.insider_price.value | times: 1 | round -%}
+          {%- if badge_insider_cents > 0 and badge_insider_cents < variant.price -%}
+            {%- assign has_insider_badge = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <span class="product-badge sale heading-font">{% if has_insider_badge %}Insider price{% else %}{{ 'general.badges.sale' | t }}{% endif %}</span>
       {% endif %}
     {% endif %}
     {% if settings.preorder_label %}
