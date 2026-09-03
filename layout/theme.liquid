@@ -1191,6 +1191,14 @@
   #cart-side-drawer .fs-mode-disclosure {
     display: none !important;
   }
+  {% unless settings.show_insider_terms_mobile %}
+    @media screen and (max-width: 767px) {
+      #cart-side-drawer .fs-mode-detail,
+      .fs-insider-price-terms {
+        display: none !important;
+      }
+    }
+  {% endunless %}
   #cart-side-drawer .fs-discount-details {
     margin: 6px 0 10px;
   }
