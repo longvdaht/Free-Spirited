@@ -7,6 +7,19 @@
     "theme_documentation_url": "https:\/\/shinedezign.gitbook.io\/shark-documentation\/",
     "theme_support_url": "https:\/\/shinedezigninfonet.com\/theme-contact-us"
   },
+    {
+    "name": "Insiders Club",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_insider_terms_mobile",
+        "label": "Show Insider terms on mobile",
+        "info": "Shows renewal and cancellation details on product pages and in the cart. Checkout disclosures are not affected.",
+        "default": false
+      }
+    ]
+  },
+
   {
     "name": "t:settings_schema.preloader.name",
     "settings": [
